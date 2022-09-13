@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>庆祝建国70周年</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/dang.ico" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/font-awesome.css">-->
+		<!--<link rel="stylesheet" type="text/css" href="css/shiping.css">-->
+		<link rel="stylesheet" type="text/css" href="css/jievideo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tec.css" />
+		<link rel="stylesheet" type="text/css" href="css/mymove.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="css/map.css" />
+		<link rel="stylesheet" type="text/css" href="css/top.css" />
+		<link rel="stylesheet" type="text/css" href="css/five_china.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/time.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/end.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/life.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/historyPicture.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+
+		<script>
+			$('document').ready(function() {
+				var i = 0;
+				var timer = setInterval(run, 1500);
+
+				function run() {
+					i++;
+					i = i == 4 ? 0 : i;
+					$(".top .wrapper .tex").eq(i).fadeIn(300).siblings('.tex').fadeOut(300); //i号显示其他隐藏
+					$('.top .wrapper ul li').eq(i).css('background-color', 'red').siblings('li').css('background-color', '#C4E3F3');
+				}
+
+				$('.flash ,.header').hover(function() {
+					clearInterval(timer);
+				}, function() {
+					timer = setInterval(run, 1500);
+				});
+				$(".flash ul li").mouseenter(function() {
+					i = $(this).index();
+					$(".top .wrapper .tex").eq(i).fadeIn(300).siblings('.tex').fadeOut(300); //i号显示其他隐藏
+					$('.top .wrapper ul li').eq(i).css('background-color', 'red').siblings('li').css('background-color', '#C4E3F3');
+				})
+			})
+			$(function() {
+				$(".bigmap .map .mp").mouseover(function() {
+					$(this).find(".diaplayy").show();
+				}).mouseout(function() {
+					$(this).find(".diaplayy").hide();
+
+				});
+			})
+			//			/*通过jq来实现功能*/
+			//			$(function() {  
+			//				/*1.获取播放器*/
+			//				var video = $("video")[0];
+			//
+			//				/*2.实现播放与暂停*/
+			//				$(".switch").click(function() { 
+			//					/*实现播放与暂停的切换：如果是暂停>>播放  ，如果是播放 >> 暂停*/
+			//					if(video.paused) {
+			//						video.play();
+			//						$(this).css("background-image", "url(img/play.png)");
+			//						/*移除暂停样式，添加播放样式*/
+			//					} else {
+			//						video.pause();
+			//						$(this).css("background-image", "url(img/stop.png)");
+			//						/*移除播放样式，添加暂停样式*/
+			//					}
+			//					/*设置标签的样式  fa-pause:暂停   fa-play：播放*/
+			//					$(this).toggleClass("fa-play fa-pause");
+			//				});
+			//
+			//				/*3.实现全屏操作*/
+			//				$(".expand").click(function() {
+			//					/*全屏>>不同浏览器需要添加不同的前缀>>能力测试*/
+			//					if(video.requestFullScreen) {
+			//						video.requestFullScreen();
+			//					} else if(video.webkitRequestFullScreen) {
+			//						video.webkitRequestFullScreen();
+			//					} else if(video.mozRequestFullScreen) {
+			//						video.mozRequestFullScreen();
+			//					} else if(video.msRequestFullScreen) {
+			//						video.msRequestFullScreen();
+			//					}
+			//				});
+			//
+			//				/*4.实现播放业务逻辑：当视频文件可以播放时触发下面的事件*/
+			//				video.oncanplay = function() {
+			//					setTimeout(function() {
+			//						/*1.将视频文件设置为显示*/
+			//						video.style.display = "block";
+			//						/*2.获取当前视频文件的总时长(以秒做为单位，同时获取了小数值)，计算出时分秒*/
+			//						var total = video.duration; //01:01:40   00:00:36
+			//						/*3.计算时分少  60*60=3600
+			//						 * 3700:3700/3600
+			//						 * 3700:3700%3600 >> 100 /60*/
+			//						/*var hour=Math.floor(total/3600);
+			//						/!*补0操作*!/
+			//						hour=hour<10?"0"+hour:hour;
+			//						var minute=Math.floor(total%3600/60);
+			//						minute=minute<10?"0"+minute:minute;
+			//						var second=Math.floor(total%60);
+			//						second=second<10?"0"+second:second;*/
+			//						var result = getResult(total)
+			//						/*4.将计算结果展示在指定的dom元素中*/
+			//						$(".totalTime").html(result);
+			//					}, 2000);
+			//				}
+			//
+			//				/*通过总时长计算出时分秒*/
+			//				function getResult(time) {
+			//					var hour = Math.floor(time / 3600);
+			//					/*补0操作*/
+			//					hour = hour < 10 ? "0" + hour : hour;
+			//					var minute = Math.floor(time % 3600 / 60);
+			//					minute = minute < 10 ? "0" + minute : minute;
+			//					var second = Math.floor(time % 60);
+			//					second = second < 10 ? "0" + second : second;
+			//					/*返回结果*/
+			//					return hour + ":" + minute + ":" + second;
+			//				}
+			//
+			//				/*5.实现播放过程中的业务逻辑，当视频播放时会触发ontimeupdate事件
+			//				 * 如果修改currentTime值也会触发这个事件，说白了，只要currenTime值变化，就会触发这个事件*/
+			//				video.ontimeupdate = function() {
+			//					/*1.获取当前的播放时间*/
+			//					var current = video.currentTime;
+			//					/*2.计算出时分秒*/
+			//					var result = getResult(current);
+			//					/*3.将结果展示在指定的dom元素中*/
+			//					$(".currentTime").html(result);
+			//					/*4.设置当前播放进度条样式  0.12>>0.12*100=12+%>12%*/
+			//					var percent = current / video.duration * 100 + "%";
+			//					$(".elapse").css("width", percent);
+			//				}
+			//
+			//				/*6.实现视频的跳播*/
+			//				$(".bar").click(function(e) {
+			//					/*1.获取当前鼠标相对于父元素的left值--偏移值*/
+			//					var offset = e.offsetX;
+			//					/*2.计算偏移值相对总父元素总宽度的比例*/
+			//					var percent = offset / $(this).width();
+			//					/*3.计算这个位置对应的视频进度值*/
+			//					var current = percent * video.duration;
+			//					/*4.设置当前视频的currentTime*/
+			//					video.currentTime = current;
+			//				});
+			//
+			//				/*7.播放完毕之后，重置播放器的状态*/
+			//				video.onended = function() {
+			//					video.currentTime = 0;
+			//					$(".switch").removeClass("fa-pause").addClass("fa-play");
+			//				}
+			//			});
+			window.onload = function() {
+				let video1 = document.getElementById("video1");
+				let nowTime = document.getElementById("nowTime");
+				let stop = document.getElementById("stop");
+
+				video1.onclick = function() {
+					if(video1.paused) {
+						video1.play();
+						stop.style.display = "none";
+						controlStop.src = "src/stop2.jpg";
+					} else {
+						video1.pause();
+						stop.style.display = "block";
+						controlStop.src = "src/play.jpg";
+					}
+				};
+
+				stop.onclick = function() {
+					if(video1.paused) {
+						video1.play();
+						stop.style.display = "none";
+						controlStop.src = "src/stop2.jpg";
+					} else {
+						video1.pause();
+						stop.style.display = "block";
+						controlStop.src = "src/play.jpg";
+					}
+				};
+
+				let controlStop = document.getElementById("controlStop");
+
+				controlStop.onclick = function() {
+					if(video1.paused) {
+						video1.play();
+						controlStop.src = "src/stop2.jpg";
+						stop.style.display = "none";
+					} else {
+						video1.pause();
+						controlStop.src = "src/play.jpg";
+						stop.style.display = "block";
+					}
+				};
+
+				let progress = document.getElementById("progress");
+				let radius = document.getElementById("radius");
+				let progressWrap = document.getElementById("progressWrap");
+
+				video1.addEventListener("loadedmetadata", function() {
+					nowTime.innerText = convertTime(video1.currentTime) + " / " + convertTime(video1.duration);
+				}, false);
+
+				video1.addEventListener("timeupdate", function() {
+					nowTime.innerText = convertTime(video1.currentTime) + " / " + convertTime(video1.duration);
+					let percent = video1.currentTime / video1.duration;
+					progress.style.width = percent * (progressWrap.offsetWidth) - 2 + "px";
+					radius.style.left = percent * (progressWrap.offsetWidth) - 2 + "px";
+				}, false);
+
+				progressWrap.onclick = function(e) {
+					// console.log(e.offsetX / progressWrap.offsetWidth);
+					video1.currentTime = (e.offsetX / progressWrap.offsetWidth) * video1.duration;
+				};
+
+				function convertTime(time) {
+					time = Math.round(time);
+					let second = time % 60 + "";
+					let minutes = Math.round(time / 60);
+					if(second.length < 2) second = "0" + second;
+					return minutes + ":" + second;
+				}
+
+				let control = document.getElementById("control");
+				let nav = document.getElementById("nav");
+				//				nav.onmouseover = function() {
+				//					control.style.display = "block";
+				//				};
+				//				nav.onmouseout = function() {
+				//					control.style.display = "none";
+				//				};
+				var video = $("video")[0];
+				$(".expand").click(function() {
+					/*全屏>>不同浏览器需要添加不同的前缀>>能力测试*/
+					if(video.requestFullScreen) {
+						video.requestFullScreen();
+					} else if(video.webkitRequestFullScreen) {
+						video.webkitRequestFullScreen();
+					} else if(video.mozRequestFullScreen) {
+						video.mozRequestFullScreen();
+					} else if(video.msRequestFullScreen) {
+						video.msRequestFullScreen();
+					}
+				});
+			};
+			//			$('document').ready(function() {
+			//				$('.historyPicture .one').mouseover(function() {
+			//					$('.historyPicture .one').css({
+			//						"margin-left": "450px",
+			//						"margin-top": "400px"
+			//					});
+			//					$('.historyPicture .one').siblings('.historyPicture .box').css("display", "none");
+			//				});
+			//				$('.historyPicture .one').mouseout(function() {
+			//					$('.historyPicture .one').css({
+			//						"margin-left": "250px",
+			//						"margin-top": "0px"
+			//					});
+			//					$('.historyPicture .one').siblings('.historyPicture .box').css("display", "block");
+			//				}); 
+			//			})
+			$('document').ready(function(){
+				$(".header .nav li").mouseover(function(){
+//					$(this).addClass("nav_over");
+					$(this).children("div").css("display","block");
+				});
+				$(".header .nav li").mouseout(function(){
+//					$(this).removeClass("nav_over");
+					$(this).children("div").css("display","none");
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="logo">
+				<a href="#"><img src="img/logo.png" /></a>
+			</div>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="#jianguo">建国伟业</a>
+						<div class="littlebottom"></div>
+					</li>
+					<li>
+						<a href="#licheng">光辉历程</a>
+						<div class="littlebottom"></div>
+					</li>
+					<li>
+						<a href="#hongge">红歌颂党</a>
+						<div class="littlebottom"></div>
+					</li>
+					<li>
+						<a href="#keji">科技兴国</a>
+						<div class="littlebottom"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="top">
+			<img src="img/7_meitu_1.jpg" />
+			<div class="wrapper">
+
+				<div style="width: 100%;height: 70px;overflow: hidden;">
+					<div class="tex" style="display: block;">
+						<h1>峥嵘七十载，与国同梦</h1>
+						<p>Eventful 70 years, dream together with the country</p>
+						<div class="extra-space"></div>
+						<a class="btn" href="#" target="_blank"></a>
+					</div>
+					<div class="tex">
+						<h1>不忘初心，砥砺前行</h1>
+						<p>Never forget the original intention and forge ahead with perseverance</p>
+						<div class="extra-space"></div>
+						<a class="btn" href="#" target="_blank"></a>
+					</div>
+					<div class="tex">
+						<h1>奋进新时代，谱写新篇章</h1>
+						<p>Forge ahead in the new era and write a new chapter</p>
+						<div class="extra-space"></div>
+						<a class="btn" href="#" target="_blank"></a>
+					</div>
+					<div class="tex">
+						<h1>万水千山，最美中国道路</h1>
+						<p>The long march，The most beautiful road in China</p>
+						<div class="extra-space"></div>
+						<a class="btn" href="#" target="_blank"></a>
+					</div>
+
+				</div>
+
+				<ul>
+					<li style="background-color: red;"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<a name="jianguo"></a>
+		<div class="one">
+
+			<div class="title1">
+				<div class="begin">
+
+					<h1>建国伟业</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="five">
+			<div class="five_text">
+				<a href="#">
+					<img src="img/c.png" />
+					<div class="word">1949-1957年为新民主主义社会阶段。这一阶段中1949-1952年为国民经济恢复时期，1953-1956年底为三大改造时期（社会主义制度确立）</div>
+				</a>
+			</div>
+			<div class="five_text">
+				<a href="#">
+					<img src="img/h.png" />
+					<div class="word">1958-1962年为十年探索时期（即全面建设社会主义时期）前半段，中共从“八大”的正确决策到1957年反“右”倾斗争扩大化和1958年全面建设社会主义总路线出台.</div>
+				</a>
+			</div>
+			<div class="five_text">
+				<a href="#">
+					<img src="img/i.png" />
+					<div class="word">1963-1965年为国民经济在曲折中前进时期，我国物质文明与精神文明建设均有发展</div>
+				</a>
+			</div>
+			<div class="five_text">
+				<a href="#">
+					<img src="img/n.png" />
+					<div class="word">1966-1976年是文革十年。这一时期阶级斗争严重，党内的左倾错误泛滥，经济遭到严重破坏，社会动荡，但在广大干部群众的努力下，国民经济也有所发展</div>
+				</a>
+			</div>
+			<div class="five_text">
+				<a href="#">
+					<img src="img/a.png" />
+					<div class="word">1976-2000年这一阶段中1976-1978年为国民经济在徘徊中前进的两年，1978年十一届三中全会后我国进入社会主义发展的新时期。</div>
+				</a>
+			</div>
+		</div>
+		<div class="titleH">
+			<p>建国伟人</p>
+		</div>
+		<div class="bigmap">
+			<div class="map">
+				<div class="mp mp1">
+					<div class="diaplayy" style="display: none;">
+						<div class="tree">
+							<div class="sang">
+							</div>
+							<div class="boou">
+								<img src="img/zhu.jpg" alt="" /></div>
+							<div class="du_size">
+								<p>
+									朱德，四川仪陇人，协助毛泽东指挥辽沈战役、平津战役、淮海战役，对夺取解放战争的胜利作出了巨大贡献
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mito">
+						仪陇
+					</div>
+				</div>
+				<div class="mp mp2">
+					<div class="diaplayy" style="display: none;">
+						<div class="tree">
+							<div class="sang">
+							</div>
+							<div class="boou">
+								<img src="img/pengdehuai.jpg" alt="" /></div>
+							<div class="du_size">
+								<p>
+									彭德怀，湖南湘潭人，一直在第一线指挥战斗，这一点全军无人能比，是第一野战军的代表。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mito">
+						湘潭
+					</div>
+				</div>
+				<div class="mp mp3">
+					<div class="diaplayy" style="display: none;">
+						<div class="tree">
+							<div class="sang">
+							</div>
+							<div class="boou">
+								<img src="img/liubocheng.jpg" alt="" /></div>
+							<div class="du_size">
+								<p>
+									刘伯承，四川开县人，第二野战军代表，军事生涯仅限于朱德，在军事指挥和学术上都有很高造诣，对中国军队正规化影响巨大。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mito">
+						开县
+					</div>
+				</div>
+				<div class="mp mp4">
+					<div class="diaplayy" style="display: none;">
+						<div class="tree">
+							<div class="sang">
+							</div>
+							<div class="boou">
+								<img src="img/chenyi.jpg" alt="" /></div>
+							<div class="du_size">
+								<p>
+									陈毅，四川乐至人，他是半路从军的文人，代表着南方三年游击战，新四军，第三野战军三个派系。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mito">
+						乐至
+					</div>
+				</div>
+				<div class="mp mp5">
+					<div class="diaplayy" style="display: none;">
+						<div class="tree">
+							<div class="sang">
+							</div>
+							<div class="boou">
+								<img src="img/mao.jpg" alt="" /></div>
+							<div class="du_size">
+								<p>
+									毛泽东，湖南长沙人担任中华人民共和国最高领导人。他对马克思列宁主义的发展、军事理论的贡献以及对共产党的理论贡献被称为毛泽东思想
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mito">
+						长沙
+					</div>
+				</div>
+				<div class="mp mp6">
+					<div class="diaplayy" style="display: none;">
+						<div class="tree">
+							<div class="sang">
+							</div>
+							<div class="boou">
+								<img src="img/zhou.jpg" alt="" /></div>
+							<div class="du_size">
+								<p>
+									周恩来，浙江绍兴人，1921年加入中国共产党，是伟大的马克思主义者、无产阶级革命家、政治家、军事家、外交家，党和国家主要领导人之一
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mito">
+						绍兴
+					</div>
+				</div>
+				<div class="mp mp7">
+					<div class="diaplayy" style="display: none;">
+						<div class="tree">
+							<div class="sang">
+							</div>
+							<div class="boou">
+								<img src="img/songqinling.jpg" alt="" /></div>
+							<div class="du_size">
+								<p>
+									宋庆龄（1893年1月27日－1981年5月29日），是已故中国革命家及中华民国国父孙中山的第二任妻子。1927年11月1日，宋庆龄等成立国民党临时行动委员会。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mito">
+						上海
+					</div>
+				</div>
+				<div class="mp mp8">
+					<div class="diaplayy" style="display: none;">
+						<div class="tree">
+							<div class="sang">
+							</div>
+							<div class="boou">
+								<img src="img/liushaoqi.jpg" alt="" /></div>
+							<div class="du_size">
+								<p>
+									刘少奇，生于湖南省宁乡县，伟大的马克思主义者，伟大的无产阶级革命家、政治家、理论家，党和国家主要领导人之一，中华人民共和国开国元
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mito">
+						宁乡
+					</div>
+				</div>
+			</div>
+		</div>
+		<a name="licheng"></a>
+		<div class="two">
+
+			<div class="title1">
+				<div class="begin">
+
+					<a href="html/life.html" target="_blank">
+						<h1>光辉历程</h1></a>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="historyPicture">
+			<div class="box one">
+				<div><img src="img/pk1.png" />
+					<p>1949年，中华人民共和国成立</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1950年，同苏联等17个国家建立外交关系</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1950年，颁布中华人民共和国土地改革法，进行土地改革</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1951年，西藏和平解放，大陆获得统一，各族人民团结</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1952年，土地改革完成，摧毁了两千多年的封建土地制度</p>
+				</div>
+			</div>
+			<div class="box two">
+				<div><img src="img/pk1.png" />
+					<p>1953年，抗美援朝胜利，一五计划开始实行</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1954年，第一届人大召开，制定中华人民共和国宪法</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1955年，万隆亚非会议，周恩来提出求同存异方针</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1957年，一五计划超额完成，开始改变工业落后的面貌</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1961年，全面调整国民经济</p>
+				</div>
+			</div>
+			<div class="box three">
+				<div><img src="img/pk1.png" />
+					<p>1964年，第一颗原子弹爆炸成功</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1971年，粉碎林彪反革命集团</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1972年，美国总统尼克松访华，中日建交也在这一年</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1973年，袁隆平首次培育成功杂交水稻</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1974年，研制成功第一艘核潜艇</p>
+				</div>
+			</div>
+			<div class="box four">
+				<div><img src="img/pk1.png" />
+					<p>1977年，恢复高考</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1978年，展开关于真理检验标准的讨论</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1979年，中美正式建交，承认只有一个中国</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1980年，为刘少奇恢复名誉</p>
+				</div>
+				<div><img src="img/pk1.png" />
+					<p>1986年，提出863计划；颁布中华人民义务教育法</p>
+				</div>
+			</div>
+			<div class="box five1">
+				<div><img src="img/pk1.png" />
+					<p>庆祝建国七十周年</p>
+				</div>
+			</div>
+			<a name="hongge"></a>
+			<div class="three">
+
+				<div class="title1">
+					<div class="begin">
+
+						<h1>红歌颂党</h1>
+					</div>
+				</div>
+			</div>
+			<!--<div class="shipingAll">
+			<div class="player">
+				<video src="234.mp4"></video>
+				<div class="controls">
+					<a href="javascript:;" class="switch fa fa-play"></a>
+					<!--开关-->
+			<!--<a href="javascript:;" class="expand fa fa-expand"></a>
+					<!--放大全屏-->
+			<!--<div class="progress">
+						<div class="bar"></div>-->
+			<!--相应事件-->
+			<!--<div class="loaded"></div>-->
+			<!--已加载-->
+			<!--<div class="elapse"></div>-->
+			<!--进度-->
+			<!--</div>
+					<div class="time">
+						<span class="currentTime">00:00:00</span>
+						<span class="totalTime">00:00:00</span>
+					</div>
+				</div>
+			</div>
+		</div>-->
+			<div id="background">
+				<div id="bg">
+					<div id="nav">
+						<img src="src/stop.jpg" id="stop" alt="not find!" />
+						<video id="video1" src="234.mp4" width="600px" height="340px"></video>
+						<div id="control">
+							<div style="position: relative">
+								<img src="src/play.jpg" id="controlStop" alt="not find!">
+								<span id="nowTime"></span>
+							</div>
+							<div id="progressWrap">
+								<div id="progress">
+									<div id="radius"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="javascript:;" class="expand fa fa-expand"></a>
+				</div>
+			</div>
+
+			<div class="mymove">
+				<ul>
+					<li><img id="move" src="img/move1.jpg" /><img id="con" src="img/sowhat.png" /></li>
+					<li><img id="move" src="img/move2.jpg" /><img id="con" src="img/sowhat.png" /></li>
+					<li><img id="move" src="img/move3.jpg" /><img id="con" src="img/sowhat.png" /></li>
+					<li><img id="move" src="img/move4.jpg" /><img id="con" src="img/sowhat.png" /></li>
+					<li><img id="move" src="img/move5.jpg" /><img id="con" src="img/sowhat.png" /></li>
+
+					<li><img id="move" src="img/move1.jpg" /><img id="con" src="img/sowhat.png" /></li>
+					<li><img id="move" src="img/move2.jpg" /><img id="con" src="img/sowhat.png" /></li>
+					<li><img id="move" src="img/move3.jpg" /><img id="con" src="img/sowhat.png" /></li>
+					<li><img id="move" src="img/move4.jpg" /><img id="con" src="img/sowhat.png" /></li>
+					<li><img id="move" src="img/move5.jpg" /><img id="con" src="img/sowhat.png" /></li>
+
+				</ul>
+			</div>
+			<a name="keji"></a>
+			<div class="four">
+
+				<div class="title1">
+					<div class="begin">
+
+						<h1>科技兴国</h1>
+					</div>
+				</div>
+			</div>
+			<div id="tec">
+				<img src="img/tian.jpg" alt="" />
+				<div id="show">
+					<div id="item1">
+						<div id="rel">
+							<div class="box-image">
+								<div class="box-image_box">
+									<a class="box-image_bg" href="#" style="background-image: url('img/tec/space.jpg');background-repeat: no-repeat">
+									</a>
+									<div class="box-image_info">
+										<p class="box-image_country">载人航天</p>
+										<span class="box-image_date">2003 / 10 / 15</span>
+									</div>
+								</div>
+								<div class="box-image_info_right">
+									<h6 class="box-image_tour">
+                            <a href="#">中国酒泉 神舟五号</a>
+                        </h6>
+									<p class="box-image_text">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2003年10月15日9时整，我国自行研制的神舟五号载人飞船在中国酒泉卫星发射中心发射升空。这是中国首次进行载人航天飞行。乘坐“神舟”五号载人飞船执行任务的航天员是38岁的杨利伟
+									</p>
+									<a class="box-image_view" href="#">返回导航</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item2">
+						<div id="rel2">
+							<div class="box-image">
+								<div class="box-image_box">
+									<a class="box-image_bg" href="#" style="background-image: url('img/tec/jiaolong.jpg');">
+									</a>
+									<div class="box-image_info">
+										<p class="box-image_country">蛟龙入海</p>
+										<span class="box-image_date"> 2012 / 6 / 27</span>
+									</div>
+								</div>
+								<div class="box-image_info_right">
+									<h6 class="box-image_tour">
+                            <a href="#">太平洋 马里亚纳</a>
+                        </h6>
+									<p class="box-image_text">
+										2012年6月27日11时47分，“蛟龙”再次刷新“中国深度”——下潜7062米。6月3日，“蛟龙”出征以来，连续书写了5个“中国深度”新纪录：6671米、6965米、6963米、7020米、7062米。
+									</p>
+									<a class="box-image_view" href="#">返回导航</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item3">
+						<div id="rel3">
+							<div class="box-image">
+								<div class="box-image_box">
+									<a class="box-image_bg" href="#" style="background-image: url('img/tec/tianyan.jpeg');">
+									</a>
+									<div class="box-image_info">
+										<p class="box-image_country">中国天眼</p>
+										<span class="box-image_date"> 2015 / 9 / 25</span>
+									</div>
+								</div>
+								<div class="box-image_info_right">
+									<h6 class="box-image_tour">
+                            <a href="#">中国贵州 500米</a>
+                        </h6>
+									<p class="box-image_text">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016年9月25日，在贵州省平塘县的喀斯特洼坑中落成启用，开始接收来自宇宙深处的电磁波，“天眼”方圆5公里将成为“静默区”。
+									</p>
+									<a class="box-image_view" href="#">返回导航</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item4">
+						<div id="rel4">
+							<div class="box-image">
+								<div class="box-image_box">
+									<a class="box-image_bg" href="#" style="background-image: url('img/tec/taihu.png');">
+									</a>
+									<div class="box-image_info">
+										<p class="box-image_country">神威太湖</p>
+										<span class="box-image_date"> 2012 / 6 / 20</span>
+									</div>
+								</div>
+								<div class="box-image_info_right">
+									<h6 class="box-image_tour">
+                            <a href="#">中国无锡 国之重器</a>
+                        </h6>
+									<p class="box-image_text">
+										1. 峰值性能<br>&nbsp;&nbsp;&nbsp;&nbsp;世界第二<br> 2. 持续性能<br>&nbsp;&nbsp;&nbsp;&nbsp;世界第一<br> 3. 性能功耗比<br>&nbsp;&nbsp;&nbsp;&nbsp;还是世界第一<br>
+									</p>
+									<a class="box-image_view" href="#">返回导航</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="end">
+				<div id="end_rel">
+					<div class="end_tour">
+						<h3>Tour</h3>
+						<ul>
+							<li>
+								<a href="#jianguo"><span></span>
+									<p>建国伟业</p>
+								</a>
+							</li>
+							<li>
+								<a href="#licheng"><span></span>
+									<p>光辉历程</p>
+								</a>
+							</li>
+							<li>
+								<a href="#hongge"><span></span>
+									<p>红歌颂党</p>
+								</a>
+							</li>
+							<!--<li>
+							<a href="#"><span></span>
+								<p>红船精神</p>
+							</a>
+						</li>-->
+							<li>
+								<a href="#keji"><span></span>
+									<p>科技兴国</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="author">
+						<h3>author</h3>
+						<div id="author_1">
+							<div class="author_left">
+								<img src="img/end/dog.jpg" alt="">
+							</div>
+							<div class="author_right">
+								<h5><span id="name"></span><p>晴</p></h5>
+								<ul>
+									<li><span class="date"></span>April 20, 2019</li>
+									<li><span class="qq"></span>2222222222</li>
+								</ul>
+							</div>
+						</div>
+						<div id="author_2">
+							<div class="author_left">
+								<img src="img/end/dog.jpg" alt="">
+							</div>
+							<div class="author_right">
+								<h5><span id="name"></span><p>敏</p></h5>
+								<ul>
+									<li><span class="date"></span>April 20, 2019</li>
+									<li><span class="qq"></span>2222222222</li>
+								</ul>
+							</div>
+						</div>
+						<div id="author_3">
+							<div class="author_left">
+								<img src="img/end/dog.jpg" alt="">
+							</div>
+							<div class="author_right">
+								<h5><span id="name"></span><p>杰</p></h5>
+								<ul>
+									<li><span class="date"></span>April 20, 2019</li>
+									<li><span class="qq"></span>2222222222</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="copyright">
+						<div style=" width:100%;text-align: center">
+							<p>Copyright &copy; 2019.二狗队 name All rights reserved.</p>
+						</div>
+					</div>
+
+					<div id="about">
+						<h3>about</h3>
+						<div>
+							<span>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本网页由苟雨晴、刘杰、钟琳敏倾力打造，请勿抄袭，解释权归本队所有。
+                </span>
+						</div>
+					</div>
+				</div>
+			</div>
+	</body>
+
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<TITLE>吾辈楷模</TITLE>
+		<html>
+			<head lang="en">
+				<meta charset="UTF-8">
+				<title>吾辈楷模</title>
+				<!-- 人物旋转样式 -->
+				<style>
+			
+
+					* {
+						padding: 0;
+						margin: 0;
+						border: none;
+						outline: none;
+						box-sizing: border-box;
+					}
+
+					*:before,
+					*:after {
+						box-sizing: border-box;
+					}
+
+					html,
+					body {
+						height: 100%;
+					}
+
+
+					.wws-header-box .wws-header .header-left .logo {
+						margin-right: 100px;
+						margin-top: 40px;
+						-webkit-transform: translateY(-50%);
+						-ms-transform: translateY(-50%);
+						transform: translateY(-50%);
+					}
+
+					.wws-header-box .wws-header .header-left .logo .img {
+						display: block;
+					}
+
+					.logo {
+						color: #FFFFFF;
+						font-size: 35px;
+						line-height: 80px;
+						padding: 0 20px;
+						font-weight: bold;
+						font-family: "STKaiti";
+					}
+
+					.rIndex {
+						margin-top: 15px;
+						float: right;
+						color: #FFFFFF;
+						font-size: 20px;
+						display: inline-block;
+						text-align: center;
+						line-height: 50px;
+						margin-right: 100px;
+						font-weight: bold;
+						font-family: 'STKaiti';
+						background-color: #0060E5;
+						height: 50px;
+						width: 70px;
+						border-radius: 20px;
+					}
+
+					.rIndex:hover {
+						cursor: pointer;
+						background-color: #007AFF;
+					}
+
+					.fl>img {
+						margin-top: 15px;
+						width: 50px;
+						margin-left: 20px;
+						height: 50px;
+					}
+
+					.fl {
+						float: left;
+					}
+
+					.d_ywjj .fl,
+					.d_ywjj .fr {
+						width: 580px;
+					}
+
+					.wws-header-box {
+						height: 80px;
+						width: 100%;
+					}
+
+					.wws-header-box .wws-header {
+						width: 1200px;
+						margin: 0 auto;
+						font-size: 16px;
+						color: #fff;
+						position: relative;
+					}
+
+					.wws-header-box .wws-header .header-left {
+						height: 80px;
+					}
+
+					.wws-header-box .wws-header .header-left .logo {
+						margin-right: 100px;
+						margin-top: 40px;
+						-webkit-transform: translateY(-50%);
+						-ms-transform: translateY(-50%);
+						transform: translateY(-50%);
+					}
+
+					.wws-header-box .wws-header .header-left .logo .img {
+						display: block;
+					}
+
+					.Container {
+						margin: 7% auto;
+						margin-bottom: 220px;
+						width: 210px;
+						height: 140px;
+						position: relative;
+						perspective: 600px;
+					}
+
+					#carousel {
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						transform-style: preserve-3d;
+						animation: rotation 20s infinite linear;
+					}
+
+					#carousel:hover {
+						animation-play-state: paused;
+					}
+
+					#carousel figure {
+						display: block;
+						position: absolute;
+						width: 120px;
+						height: 180px;
+						left: 10px;
+						top: 10px;
+						background: black;
+						overflow: hidden;
+						border: solid 3px #000000;
+					}
+
+					figure>img {
+						filter: grayscale(0);
+						cursor: pointer;
+						transition: all 0.3s ease 0s;
+						width: 100%;
+						height: 100%;
+					}
+
+					figure>img:hover {
+						filter: grayscale(0.5);
+						/* 灰度 */
+						transform: scale(1.3, 1.3);
+					}
+
+					#show {
+						margin-left: 15%;
+						padding-right: 150px;
+						padding-top: 20px;
+						/* text-align: center; */
+						font-weight: bolder;
+						font-size: 25px;
+						font-family: STKaiti;
+						color: #880009;
+						background:  url(img/bg_text1.png) 0 0 no-repeat;
+						background-size: cover;
+						width: 1000px;
+						height: 200px;
+						border-radius: 30px;
+					}
+
+					/*footer 底部文字显示*/
+					.footer {
+						margin-top: 40px;
+						font-size: 12px;
+						height: 40px;
+						line-height: 40px;
+						background: #b43b22;
+					}
+
+					.footer a,
+					.footer a:hover {
+						color: #fefefe;
+						text-decoration: none;
+					}
+
+					.f_link {
+						float: right;
+						margin-top: 11px;
+					}
+
+					.f_link li {
+						float: left;
+						height: 18px;
+						line-height: 18px;
+						padding: 0 10px;
+						background-position: 100% -487px;
+					}
+
+					.f_link li.last {
+						background: none;
+					}
+
+					.footer .f_fcfloat: {
+						left;
+					}
+
+					.wrap,
+					.hd,
+					.bd,
+					.d,
+					.inn,
+					.inn2,
+					.menu,
+					.u,
+					.u li,
+					.pic,
+					.txt,
+					.ptC,
+					.ptC2,
+					.ptC4,
+					.hd2,
+					.box,
+					.wzC {
+						position: relative;
+						clear: both;
+						overflow: hidden;
+					}
+
+					.wrap,
+					.header,
+					.footer,
+					.area {
+						position: relative;
+						clear: both;
+						width: 100%;
+						overflow: hidden;
+						min-width: 1200px;
+					}
+
+					.inn,
+					.inn2 {
+						width: 1200px;
+						margin: 0 auto;
+					}
+
+					.d_ywjj .fl,
+					.d_ywjj .fr {
+						width: 580px;
+					}
+
+					.f_link {
+						float: right;
+						margin-top: 11px;
+					}
+
+					.f_link li {
+						float: left;
+						height: 18px;
+						line-height: 18px;
+						padding: 0 10px;
+						background-position: 100% -487px;
+					}
+
+					.f_link li.last {
+						background: none;
+					}
+
+					/*footer 底部文字显示*/
+					
+					.goTop {
+						background: url(img/20220322bg_p6.jpg) 0 center no-repeat;
+						background-attachment:fixed;
+						padding: 0; margin: 0; 
+						background-size: 100%,100%;
+						position: static;
+						width:100%; height:100%; z-index:-1;
+						animation: move1 1.5s linear both;
+						-webkit-animation: move1 1.5s linear both;
+						animation-play-state: paused;
+					}
+					
+					
+					.goTop2 {
+						background: url(img/20220322bg_p6.jpg) 0 center no-repeat;
+						background-attachment:fixed;
+						padding: 0; margin: 0; 
+						background-size: 100%,100%;
+						position: static;
+						width:100%; height:100%; z-index:-1;
+						
+						animation: move2 1.5s linear both;
+						-webkit-animation: move2 1.5s linear both;
+					}
+					
+					/* 关键帧 */
+					@keyframes move1 {
+						0%{ opacity: 1; }
+						1%{ opacity: 0.5; }
+						50% { opacity: 0.8; }
+						100% { opacity: 1; }
+					}
+					
+					@keyframes move2 {
+						0%{ opacity: 0.5; }
+						50% { opacity: 0.8; }
+						100% { opacity: 1; }
+					}
+					/* 关键帧 */
+
+ 
+					#carousel figure:nth-child(1) {
+						transform: rotateY(0deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(2) {
+						transform: rotateY(25.7deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(3) {
+						transform: rotateY(51.4deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(4) {
+						transform: rotateY(77.1deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(5) {
+						transform: rotateY(102.8deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(6) {
+						transform: rotateY(128.5deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(7) {
+						transform: rotateY(154.2deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(8) {
+						transform: rotateY(179.9deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(9) {
+						transform: rotateY(205.6deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(10) {
+						transform: rotateY(231.3deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(11) {
+						transform: rotateY(257deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(12) {
+						transform: rotateY(282.7deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(13) {
+						transform: rotateY(308.4deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(14) {
+						transform: rotateY(334.1deg) translateZ(288px);
+					}
+
+					#carousel figure:nth-child(15) {
+						transform: rotateY(359.8deg) translateZ(288px);
+					}
+
+					@keyframes rotation {
+						from {
+							transform: rotateY(0deg);
+						}
+
+						to {
+							transform: rotateY(360deg);
+						}
+					}
+				</style>
+			</head>
+	<body>
+		<div id="bgImg" class="goTop">
+			<div class="wws-header-box" style="background: rgb(196, 32, 10);">
+				<div class="fl"><img src="img/logo.png"></div>
+				<div class="logo fl" style="">吾辈当自强 楷模记心堂</div>
+				<div class="rIndex" id="index">主页</div>
+			</div>
+			<div class="Container">
+				<div id="carousel">
+					<figure><img id="cdx" src="img/km_cdx.jpg"></figure>
+					<figure><img id="chs" src="img/km_chs.jpg"></figure>
+					<figure><img id="ldz" src="img/km_ldz.jpg"></figure>
+					<figure><img id="qjb" src="img/km_qjb.jpg"></figure>
+					<figure><img id="rbs" src="img/km_rbs.jpg"></figure>
+					<figure><img id="dbw" src="img/km_dbw.png"></figure>
+					<figure><img id="xjy" src="img/km_xjy.jpg"></figure>
+					<figure><img id="zel" src="img/km_zel.jpg"></figure>
+					<figure><img id="lsq" src="img/km_lsq.png"></figure>
+					<figure><img id="dem" src="img/km_dem.jpg"></figure>
+					<figure><img id="pp" src="img/km_pp.jpg"></figure>
+					<figure><img id="cyn" src="img/km_cyn1.jpg"></figure>
+					<figure><img id="wjm" src="img/km_wjm.jpeg"></figure>
+					<figure><img id="cjg" src="img/km_cjg.jpeg"></figure>
+				</div>
+			</div>
+			<strong id="word" style="font-size: 0px;">《敬英雄》<br><br>⾰命征程迈百年，腥风⾎⾬铸功⾂。<br><br>和平崛起兴华夏，⽴党为公旨为民。</strong>
+			<!-- <img src="img/bg_text2.png"  style="height: 200px;width: 140px;float: left;padding-bottom: 50px;margin-left: 150px;position: static;" alt=""> -->
+			<div >
+				<img src="img/bg_text2.png"  style="height: 200px;width: 140px;float: left;margin-left: 170px;position: static;padding-bottom: 20px;" alt="">
+			       <p id="show"></p>
+			</div>
+			
+			<div class="footer">
+				<div class="inn2">
+					<div class="fl" style="color: white;font-size: 18px;font-family: STkaiti;">热烈庆祝祖国建团100周年,祝祖国繁荣昌盛 </div>
+					<ul class="f_link">
+						<li style="color: white;font-size: 18px;font-family: STkaiti;">攀枝花学院</li>
+						<!-- <li class="last" style="color: white;">20软二冯某人制作</li> -->
+					</ul>
+				</div>
+			</div>
+	  </div>
+	</body>
+	<script>
+		
+	</script>
+	<script type="text/javascript">
+		var timer;
+		//模拟打字输入js
+		//js文字打字输入效果
+		window.onload = function() {
+			var story = document.getElementById('word');
+			var s = document.getElementById('show');
+			var i = 0;
+			//设置周期函数来模拟打字效果
+			timer = setInterval(function() {
+				s.innerHTML = story.innerHTML.substring(0, i);
+				i++;
+				if (s.innerText == story.innerText) {
+					clearInterval(timer);
+					flag = 1;
+				}
+			}, 100);
+		}
+		
+		function getWord(str){
+			clearInterval(timer);
+			var s = document.getElementById('show'); //获取输入的地方
+			// s.style.textAlign = "left";
+			var i = 0;
+			//设置周期函数来模拟打字效果
+			timer = setInterval(function() {
+				s.innerHTML = str.substring(0, i);
+				i++;
+				if (s.innerText == str) {
+					clearInterval(timer);
+					flag = 1;
+				}
+			}, 100);
+		}
+		
+		var toTop = document.getElementById("bgImg");
+		document.getElementById('index').onclick = function() {
+			window.location.href = "./index.html";
+		}
+		
+		document.getElementById("cjg").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_cjg.png)";
+		   getWord("崔建功（1915年-2004年9月10日），河北省魏县人，1935年参加中国工农红军，同年加入中国共产主义青年团，1936年加入中国共产党。解放战争时期，他历任军分区司令员、副旅长、旅长、旅政委、师长等职，参加了平汉、汲县、安阳、豫北、豫西、淮海、渡江、广东、广西等战役战斗。新中国成立后，他历任副军长、昆明军区司令部参谋长、军区顾问等职。");
+		};//v
+		
+		document.getElementById("wjm").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_wjm.png)";
+		   getWord("王尽美（1898年-1925年8月19日），原名王瑞俊，山东省莒县大北杏村（今属诸城市）人，中国共产党创始人之一，山东党组织最早的组织者和领导者，在党的创建和早期革命活动中，做出了卓越贡献。1920年，王尽美与邓恩铭等人发起成立“励新学会”，创办《励新》半月刊，研究和传播新思想、新文化。1921年，作为代表参与中共一大会议。1922年7月中下旬，出席中国共产党第二次全国代表大会。");
+		};//v
+		
+		document.getElementById("dem").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_dem.png)";
+		   getWord("邓恩铭（1901年1月 -1931年4月5日），又名恩明，字仲尧，水族，贵州荔波人，无产阶级革命家，中国共产党创始人之一。 邓恩铭是中国共产党第一次全国代表大会的代表，曾任中共山东省委书记，是山东党组织早期组织者和领导者 。后又作为代表参加了中国共产党第二次代表大会。1920年11月，邓恩铭与王尽美等人组织成立“励新学会”，创办《励新》半月刊。");
+		};//v
+		
+		
+		document.getElementById("xjy").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_xjy.png)";
+		   getWord("向警予（1895～1928年），女，原名向俊贤，1895年生于湖南溆浦县。土家族，中国共产党创始人及早期领导人之一  ，杰出的共产主义战士，忠诚的无产阶级革命家，中国妇女运动的先驱和领袖 。1928年3月20日，由于叛徒的出卖，向警予在汉口法租界三德里被捕，同年5月1日向警予被押赴余记里空坪刑场，终年33岁。");
+		};
+		
+		document.getElementById("zel").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_zel.png)";
+		   getWord("周恩来（1898年3月5日-1976年1月8日） ，字翔宇，曾用名飞飞、伍豪、少山、冠生等 ，原籍浙江绍兴，1898年3月5日生于江苏淮安。1921年加入中国共产党，是伟大的马克思主义者，伟大的无产阶级革命家、政治家、军事家、外交家，党和国家主要领导人之一，中国人民解放军主要创建人之一，中华人民共和国的开国元勋，是以毛泽东同志为核心的党的第一代中央领导集体的重要成员 。");
+		};
+		
+		document.getElementById("chs").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_chs.png)";
+		   getWord("蔡和森（1895年3月30日 [28]  —1931年8月4日），字润寰，号泽膺，原籍湖南省湘乡县永丰镇（今属双峰县）。中国共产党早期的重要领导人，杰出的共产主义战士，无产阶级革命家、理论家和宣传家。 蔡和森同志是中共第二、三、四、五、六届中央委员，第三、四届中央局委员，第五届中央政治局委员（任职至1927年8月），第六届中央政治局委员（1928年11月中央政治局会议解职），第五届中央政治局常委（任职至1927年7月）。");
+		};
+		
+
+		
+		document.getElementById("qjb").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_qjb.png)";
+		   getWord("瞿秋白（1899年1月29日—1935年6月18日），本名双，后改瞿爽、瞿霜，字秋白，生于江苏常州。中国共产党早期主要领导人之一，伟大的马克思主义者，卓越的无产阶级革命家、理论家、文学家和宣传家，中国革命文学事业的重要奠基者之一。 1917年秋考入北京俄文专修馆学习。1922年春，正式加入中国共产党。1923年，主编中共中央另一机关刊物《前锋》，参加编辑《向导》。 1925年1月当选为中共中央局委员。1927年4月至5月任中共中央常务委员会委员。");
+		};
+		
+		document.getElementById("pp").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_pp.png)";
+		   getWord("彭湃（1896年10月22日—1929年8月30日），乳名天泉，原名彭汉育， 广东省海丰县城郊桥东社人（今广东省汕尾市海丰县海城镇），曾用过王子安、孟安等化名。 出身于一个工商地主家庭。1921年加入中国社会主义青年团，1924年初由团转入中国共产党。1927年10月，在广东海陆丰地区（今汕尾市）领导武装起义后，建立了海丰、陆丰县苏维埃政府（这是中国第一个农村苏维埃政权）。1929年8月30日在上海龙华英勇就义，时年仅33岁。");
+		};
+		
+		document.getElementById("cdx").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_cdx.png)";
+		   getWord("陈独秀（1879年10月9日-1942年5月27日），原名陈庆同 ，陈乾生，字仲甫，号实庵，安徽怀宁人 ，新文化运动的倡导者、发起者和主要旗手，“五四运动的总司令”，中国共产党的主要创始人之一和党早期主要领导人。1920年，在上海建立中国共产党发起组，进行建党活动。1921年7月，在上海举行的中国共产党第一次全国代表大会上，被选为中央局书记。1925年领导五卅运动。在第一次国内革命战争后期，犯了严重的右倾投降主义路线错误，使革命遭到失败。");
+		};
+		
+		
+		document.getElementById("dbw").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_dbw.png)";
+		   getWord("董必武（1886年-1975年4月2日），原名董贤琮，又名董用威，号壁伍，湖北省黄安（今红安）县人   ，中国共产党的模范的领导者，是中国共产党的创始人之一，中华人民共和国的缔造者之一，杰出的无产阶级革命家、马克思主义的政治家和法学家，是中国共产党第一代领导集体的成员和国家的重要领导人 。");
+		};
+		
+		
+		document.getElementById("lsq").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_lsq.png)";
+		   getWord("刘少奇（1898年11月24日-1969年11月12日），生于湖南省宁乡县，伟大的马克思主义者，伟大的无产阶级革命家、政治家、理论家，党和国家主要领导人之一，中华人民共和国开国元勋，是以毛泽东同志为核心的党的第一代中央领导集体的重要成员。 ");
+		};
+		
+		document.getElementById("cyn").onclick = function() {
+			//单击后切换背景且显示人物简介
+		   toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+		   if (toTop.className == "goTop") {
+		   	toTop.style.animationPlayState = "running";
+		   }
+		   toTop.style.backgroundImage = "url(img/bg_cyn.png)";
+		   getWord("陈延年（1898年—1927年），又名遐延，安徽省怀宁县在城乡（今属安庆市）人。革命烈士。陈独秀长子。 中共早期领导人之一，为中国解放革命事业做出过巨大贡献   。1915年，陈延年考入上海法语学校专攻法文，1917年又考入震旦大学攻读法科。1919年12月下旬，赴法国勤工俭学。1921年，摒弃原先信仰的无政府主义，转而信仰马克思主义。");
+		};
+
+       document.getElementById("rbs").onclick = function() {
+       	//单击后切换背景且显示人物简介
+          toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+          if (toTop.className == "goTop") {
+          	toTop.style.animationPlayState = "running";
+          }
+          toTop.style.backgroundImage = "url(img/bg_rbs.png)";
+          getWord("任弼时（1904年4月30日—1950年10月27日，Ren Bishi），原名任培国，湖南汨罗人，是伟大的马克思主义者，杰出的无产阶级革命家、政治家、组织家，中国共产党和中国人民解放军的卓越领导人，是以毛泽东同志为核心的中国共产党第一代中央领导集体的重要成员。");
+       };
+	   
+	   document.getElementById("ldz").onclick = function() {
+	   	//单击后切换背景且显示人物简介
+	      toTop.className = toTop.className == "goTop" ? "goTop2" : "goTop";
+	      if (toTop.className == "goTop") {
+	      	toTop.style.animationPlayState = "running";
+	      }
+	      toTop.style.backgroundImage = "url(img/bg_ldz.png)";
+	      getWord("李大钊（1889年10月29日-1927年4月28日），字守常，河北乐亭人。1907年考入天津北洋法政专门学校   ，1913年毕业后东渡日本，入东京早稻田大学政治本科学习   ，是中国共产主义运动的先驱，伟大的马克思主义者，杰出的无产阶级革命家，中国共产党的主要创始人之一。");
+	   };
+		
+	</script>
+</html>

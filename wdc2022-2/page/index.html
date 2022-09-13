@@ -1,0 +1,1632 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>喜迎二十大,奋进新征程</title>
+
+    <!-- CSS FILES -->
+    <!--        <link rel="preconnect" href="https://fonts.googleapis.com">-->
+
+    <!--        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+
+    <!--        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">-->
+    <style>
+         #jiantou {
+             z-index: 99;
+            position: relative;
+            margin: 50px auto 0 auto;
+            width: 200px;
+            height: 32px;
+        }
+         .bio #jiantou span {
+            color: #e8e4d2;
+        }
+         .projects #jiantou span {
+             color: #e26961;
+         }
+         .find-me #jiantou span {
+             color: #231f20;
+         }
+         #jiantou span:nth-child(1) {
+            position: absolute;
+            left: -164px;
+            top: 33px;
+            animation: simple1 1s linear infinite;
+        }
+
+         #jiantou span:nth-child(2) {
+            position: absolute;
+            right: -148px;
+            top: 33px;
+            animation: simple3 1s linear infinite;
+        }
+
+        @keyframes simple3 {
+            50% {
+                transform: translateX(10px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateX(10px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes simple1 {
+            50% {
+                transform: translateX(-10px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateX(-10px);
+                opacity: 0;
+            }
+        }
+
+        body.frontpage {
+            overflow: hidden;
+        }
+
+        @media (min-width: 800px) {
+            .typing-demo {
+                font-family: SimSun;
+                width: 22ch;
+                animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 3px solid;
+                font-family: monospace;
+                font-size: 70px;
+                font-weight: bold;
+                color: #cc3232;
+            }
+
+            @keyframes typing {
+                from {
+                    width: 0
+                }
+            }
+
+            @keyframes blink {
+                50% {
+                    border-color: transparent
+                }
+            }
+            #myText {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                z-index: 1002;
+
+            }
+
+            #loader-wrapper {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1000;
+            }
+
+            .loaded #loader-wrapper .loader-section.section-left {
+                -webkit-transform: translateX(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateX(-100%); /* IE 9 */
+                transform: translateX(-100%); /* Firefox 16+, IE 10+, Opera */
+
+                -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+            }
+
+            .loaded #loader-wrapper .loader-section.section-right {
+                -webkit-transform: translateX(100%); /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateX(100%); /* IE 9 */
+                transform: translateX(100%); /* Firefox 16+, IE 10+, Opera */
+
+                -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+            }
+
+            .loaded #loader {
+                opacity: 0;
+
+                -webkit-transition: all 0.3s ease-out; /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                transition: all 0.3s ease-out; /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+
+            }
+
+            .loaded #loader-wrapper {
+                visibility: hidden;
+
+                -webkit-transform: translateY(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateY(-100%); /* IE 9 */
+                transform: translateY(-100%); /* Firefox 16+, IE 10+, Opera */
+
+                -webkit-transition: all 0.3s 1s ease-out; /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                transition: all 0.3s 1s ease-out; /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+            }
+
+            #loader {
+                display: block;
+                position: relative;
+                left: 50%;
+                top: 50%;
+                width: 150px;
+                height: 150px;
+                margin: -75px 0 0 -75px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                border-top-color: #fff;
+                -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+                animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+                z-index: 1001;
+            }
+
+            #loader:before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                border-top-color: #ab4964;
+
+                -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+                animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+            }
+
+            #loader:after {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                border-top-color: #25E2F7;
+
+                -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+                animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+            }
+
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+                    -ms-transform: rotate(0deg); /* IE 9 */
+                    transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+                }
+                100% {
+                    -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+                    -ms-transform: rotate(360deg); /* IE 9 */
+                    transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+                }
+            }
+            @keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+                    -ms-transform: rotate(0deg); /* IE 9 */
+                    transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+                }
+                100% {
+                    -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+                    -ms-transform: rotate(360deg); /* IE 9 */
+                    transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+                }
+            }
+
+            #loader-wrapper .loader-section {
+                position: fixed;
+                top: 0;
+                width: 50%;
+                height: 100%;
+                background: #222;
+                z-index: 1000;
+                /*opacity: 0.1;*/
+            }
+
+            #loader-wrapper .loader-section.section-left {
+                left: 0;
+            }
+
+            #loader-wrapper .loader-section.section-right {
+                right: 0;
+            }
+
+            /* Loaded styles */
+            .loaded #loader-wrapper .loader-section.section-left {
+                -webkit-transform: translateX(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateX(-100%); /* IE 9 */
+                transform: translateX(-100%); /* Firefox 16+, IE 10+, Opera */
+
+                -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+            }
+
+            .loaded #loader-wrapper .loader-section.section-right {
+                -webkit-transform: translateX(100%); /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateX(100%); /* IE 9 */
+                transform: translateX(100%); /* Firefox 16+, IE 10+, Opera */
+
+                -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+            }
+
+            .loaded #loader {
+                opacity: 0;
+                -webkit-transition: all 0.3s ease-out; /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                transition: all 0.3s ease-out; /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+
+            }
+
+            .loaded #loader-wrapper {
+                visibility: hidden;
+                -webkit-transform: translateY(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateY(-100%); /* IE 9 */
+                transform: translateY(-100%); /* Firefox 16+, IE 10+, Opera */
+
+                -webkit-transition: all 0.3s 1s ease-out; /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                transition: all 0.3s 1s ease-out; /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+            }
+
+
+        }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link href="css/aos.css" rel="stylesheet">
+
+    <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+
+    <link href="css/gsap123.css" rel="stylesheet">
+    <link href="css/time.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/book.css">
+    <!--    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>-->
+    <script src="./js/imgload.js"></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script> -->
+    <script src="js/gsapMy.js"></script>
+
+    <link rel="stylesheet" href="./css/swiper6.css">
+    <script src="./js/swiper6.js"></script>
+    <style>
+        .main_hello {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .main_hello h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #F1FAEE;
+            font-size: 4rem;
+        }
+
+        .main_hello .roller {
+            height: 4.125rem;
+            line-height: 4rem;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #1D3557;
+        }
+
+
+        .main_hello #spare-time {
+            font-size: 1rem;
+            font-style: italic;
+            letter-spacing: 1rem;
+            margin-top: 0;
+            color: #A8DADC;
+
+        }
+
+        .main_hello .roller #rolltext {
+            position: absolute;
+            top: 0;
+            animation: slide 5s infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                top: 0;
+            }
+            25% {
+                top: -4rem;
+            }
+            50% {
+                top: -8rem;
+            }
+            72.5% {
+                top: -12.25rem;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .main_hello h1 {
+                text-align: center;
+                text-transform: uppercase;
+                color: #F1FAEE;
+                font-size: 2.125rem;
+            }
+
+            .main_hello .roller {
+                height: 2.6rem;
+                line-height: 2.125rem;
+            }
+
+            .main_hello #spare-time {
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+            }
+
+            .main_hello .roller #rolltext {
+                animation: slide-mob 5s infinite;
+            }
+
+            @keyframes slide-mob {
+                0% {
+                    top: 0;
+                }
+                25% {
+                    top: -2.125rem;
+                }
+                50% {
+                    top: -4.25rem;
+                }
+                72.5% {
+                    top: -6.375rem;
+                }
+            }
+        }
+    </style>
+    <link href="./second/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="second/js/myVue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!--
+
+TemplateMo 567 Nomad Force
+
+https://templatemo.com/tm-567-nomad-force
+
+-->
+</head>
+
+<body class="frontpage">
+<div id="loader-wrapper">
+    <div id="myText">
+        <div style="position:absolute;left:50%;top:30%;transform: translateX(-50%)">
+            <div class="typing-demo">
+                喜迎二十大,奋进新征程
+            </div>
+        </div>
+    </div>
+    <div id="loader">
+    </div>
+    <div class="loader-section section-left"
+         style="background-image: url('./images/first/111.jpg');background-size: 200% 100%"></div>
+    <div class="loader-section section-right"
+         style="background-image: url('./images/first/111.jpg');background-size: 200% 100%;background-position: right"></div>
+</div>
+<main>
+
+    <section class="hero" id="hero">
+        <div class="heroText">
+            <h1 style="font-family: SimSun;font-weight: 1200;font-size: 90px" class="text-white mt-5 mb-lg-4"
+                data-aos="zoom-in" data-aos-delay="3000">
+                <span style="color: #cc3232" class="hahaha">喜迎二十大,奋进新征程</span>
+            </h1>
+            <p class="text-secondary-white-color" data-aos="fade-up" data-aos-delay="3000">
+                <strong class="custom-underline" style="font-size: 40px">永远跟党走</strong>
+            </p>
+        </div>
+        <div class="videoWrapper">
+            <video id="video" muted="" class="custom-video" poster="">
+                <source src="videos/Trim.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!--                <script>-->
+        <!--                    let video = document.getElementById('video')-->
+        <!--                    video.playbackRate = 2-->
+        <!--                </script>-->
+        <!--                <div class="overlay"></div>-->
+    </section>
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <!--                    <a class="navbar-brand" href="index.html">-->
+            <!--                        <strong>Nomad Force</strong>-->
+            <!--                    </a>-->
+            <div style="background-color: #cc3232">
+                <img src="images/first/logo.png" style="height: 44px">
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#hero">顶部</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">二十大简介</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">“党”相关</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">聚焦二十大</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">理论学习</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#app">奋进新征程</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="section__slider">
+        <div class="container__center">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__block">
+                            <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+                                <a target="_blank" href="http://cpc.people.com.cn/GB/64162/64168/64553/4427940.html">
+                                    <img src="images/meeting/1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide__block__text">
+                                <h3 data-swiper-parallax-x="-60%" class="main__title">中国共产党第一次全国代表大会</h3>
+                                <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                    <span> • 1921年7月23日—闭幕时间待考 上海→南湖</span>
+                                </h3>
+                                <p data-swiper-parallax-x="-40%" class="paragraphe">
+                                    １９２０年夏至１９２１年春，随着马克思主义在中国的广泛传播，中国工人运动的蓬勃兴起，作为两者结合产物的中国共产党早期组织，在上海、北京、武汉、长沙、济南、广州以及赴日、旅欧留学生中相继成立，建党条件基本成熟<a
+                                        href="http://cpc.people.com.cn/GB/64162/64168/64553/4427940.html"
+                                        target="_blank">...更多</a></p>
+                                <a data-swiper-parallax-x="-30%" class="link" target="_blank"
+                                   href="./second/timeLinePage/index.html">历次大会概览</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__block">
+                            <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+                                <a target="_blank" href="http://cpc.people.com.cn/GB/64162/64168/64554/4428161.html">
+                                    <img src="images/meeting/2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide__block__text">
+                                <h2 data-swiper-parallax-x="-60%" class="main__title">中国共产党第二次全国代表大会
+
+                                </h2>
+                                <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                    <span>• 1922年7月16日至23日 上海</span>
+                                </h3>
+                                <p data-swiper-parallax-x="-40%" class="paragraphe">
+                                    １９２２年７月１６日至２３日，中国共产党第二次全国代表大会在上海南成都路辅德里625号召开。出席会议的代表共１２名（有一名代表姓名不详），代表全国１９５名党员。这些代表是：陈独秀、张国焘、李达、杨明斋、罗章龙、<a
+                                        href="http://cpc.people.com.cn/GB/64162/64168/64554/4428161.html"
+                                        target="_blank">...更多</a></p>
+                                <a data-swiper-parallax-x="-30%" style="z-index: 5;" class="link"
+                                   target="_blank"
+                                   href="./second/timeLinePage/index.html">历次大会概览</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__block">
+                            <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+                                <a target="_blank" href="http://cpc.people.com.cn/GB/64162/64168/64555/4428209.html">
+                                    <img src="images/meeting/3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide__block__text">
+                                <h2 data-swiper-parallax-x="-60%" class="main__title">中国共产党第三次全国代表大会
+
+                                </h2>
+                                <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                    <span>• 1923年6月12日至20日 广州</span>
+                                </h3>
+                                <p data-swiper-parallax-x="-40%" class="paragraphe">
+                                    １９２３年６月１２日至２０日，中国共产党第三次全国代表大会在广州东山恤孤院３１号（现恤孤院路３号）召开。陈独秀、李大钊、毛泽东、蔡和森、陈潭秋等来自全国各地及莫斯科的代表近４０人出席大会，他们代表了全国４２０名党员。<a
+                                        href="http://cpc.people.com.cn/GB/64162/64168/64554/4428161.html"
+                                        target="_blank">...更多</a></p>
+                                <a data-swiper-parallax-x="-30%" class="link" target="_blank"
+                                   href="./second/timeLinePage/index.html">历次大会概览</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__block">
+                            <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+                                <a target="_blank" href="http://cpc.people.com.cn/GB/64162/64168/64556/4428254.html">
+                                    <img src="images/meeting/4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide__block__text">
+                                <h2 data-swiper-parallax-x="-60%" class="main__title">中国共产党第四次全国代表大会
+                                </h2>
+                                <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                    <span> • 1925年1月11日至22日 上海</span>
+                                </h3>
+                                <p data-swiper-parallax-x="-40%" class="paragraphe">
+                                    为了总结国共合作一年来的经验，加强对革命运动的领导，回答党所面临的许多新问题，1925年1月11日至22日，中国共产党第四次全国代表大会在上海召开。出席大会的有陈独秀、蔡和森、瞿秋白、周恩来、等20人，代表着全国994名党员。<a
+                                        href="http://cpc.people.com.cn/GB/64162/64168/64556/4428254.html"
+                                        target="_blank">...更多</a></p>
+                                <a data-swiper-parallax-x="-30%" class="link" target="_blank"
+                                   href="./second/timeLinePage/index.html">历次大会概览</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__block">
+                            <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+                                <a target="_blank" href="http://cpc.people.com.cn/GB/64162/64168/64557/4428291.html">
+                                    <img src="images/meeting/5.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide__block__text">
+                                <h2 data-swiper-parallax-x="-60%" class="main__title">中国共产党第五次全国代表大会
+                                </h2>
+                                <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                    <span> • 1927年4月27日至5月9日 武汉</span>
+                                </h3>
+                                <p data-swiper-parallax-x="-40%" class="paragraphe">
+                                    1927年4月27日至5月9日，中国共产党第五次全国代表大会在武汉召开。出席大会的代表有：陈独秀、蔡和森、瞿秋白、毛泽东、任弼时、刘少奇、邓中夏、陈延年、彭湃、方志敏、恽代英等82人，代表着57967名党员。<a
+                                        href="http://cpc.people.com.cn/GB/64162/64168/64557/4428291.html"
+                                        target="_blank">...更多</a></p>
+                                <a data-swiper-parallax-x="-30%" class="link" target="_blank"
+                                   href="./second/timeLinePage/index.html">历次大会概览</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__block">
+                            <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+                                <a target="_blank" href="http://cpc.people.com.cn/GB/64162/64168/64558/4428360.html">
+                                    <img src="images/meeting/6.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide__block__text">
+                                <h2 data-swiper-parallax-x="-60%" class="main__title">中国共产党第六次全国代表大会
+                                </h2>
+                                <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                    <span> • 1928年6月18日至7月11日　苏联 莫斯科</span>
+                                </h3>
+                                <p data-swiper-parallax-x="-40%" class="paragraphe">
+                                    1928年6月18日至7月11日，中国共产党第六次全国代表大会在莫斯科近郊兹维尼果罗德镇“银色别墅”秘密召开。出席大会的代表共142人，大会通过了关于政治、军事、组织、苏维埃政权、农民、土地、妇女、青年团等问题的决议。<a
+                                        href="http://cpc.people.com.cn/GB/64162/64168/64558/4428360.html"
+                                        target="_blank">...更多</a></p>
+                                <a data-swiper-parallax-x="-30%" class="link" target="_blank"
+                                   href="">历次大会概览</a>
+                            </div>
+                        </div>
+                    </div>
+                    http://cpc.people.com.cn/GB/64162/64168/index.html
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__block">
+                            <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+                                <a target="_blank" href="http://cpc.people.com.cn/GB/64162/64168/64559/4442093.html">
+                                    <img src="images/meeting/7.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide__block__text">
+                                <h2 data-swiper-parallax-x="-60%" class="main__title">中国共产党第七次全国代表大会
+                                </h2>
+                                <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                    <span> • 1945年4月23日至6月11日 延安 杨家岭</span>
+                                </h3>
+                                <p data-swiper-parallax-x="-40%" class="paragraphe">
+                                    1945年4月23日至6月11日，中国共产党第七次全国代表大会在延安召开。出席七大的代表共755名，其中正式代表547名，候补代表208名，代表全党121万党员，分为中直（包括军直系统）、西北、晋绥、晋察冀、晋冀鲁豫、山东、华中和大后方8个代表团。<a
+                                        href="http://cpc.people.com.cn/GB/64162/64168/64559/4442093.html"
+                                        target="_blank">...更多</a></p>
+                                <a data-swiper-parallax-x="-30%" class="link" target="_blank"
+                                   href="./second/timeLinePage/index.html">历次大会概览</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__block">
+                            <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+                                <a target="_blank"
+                                   href="http://cpc.people.com.cn/GB/64162/64168/64560/65452/4441997.html">
+                                    <img src="images/meeting/8.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide__block__text">
+                                <h2 data-swiper-parallax-x="-60%" class="main__title">中国共产党第八次全国代表大会
+                                </h2>
+                                <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                    <span> • 1956年9月15日至27日 北京</span>
+                                </h3>
+                                <p data-swiper-parallax-x="-40%" class="paragraphe">
+                                    　1956年9月15日至27日在北京举行。到会代表1021人，请假5人。列席代表107人，代表全国1073万名党员。毛泽东致开幕词，刘少奇作政治报告，邓小平作《关于修改党的章程的报告》，周恩来作《关于发展国民经济第二个五年计划的建议的报告》。<a
+                                        href="http://cpc.people.com.cn/GB/64162/64168/64560/65452/4441997.html"
+                                        target="_blank">...更多</a></p>
+                                <a data-swiper-parallax-x="-30%" class="link" target="_blank"
+                                   href="./second/timeLinePage/index.html">历次大会概览</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!--分页器。如果放置在swiper外面，需要自定义样式。-->
+            </div>
+        </div>
+        <div class="myhello"></div>
+    </section>
+    <script>
+        if (window.innerWidth < 1200) {
+            new Swiper(".swiper-container", {
+                direction: "horizontal",
+                slidesPerView: 1,
+                pagination: {
+                    type: 'progressbar',
+                    el: '.swiper-pagination',
+                },
+                paginationClickable: !0,
+                spaceBetween: 0,
+                autoplay: 2500,
+                loop: !0
+            })
+        } else {
+            new Swiper(".swiper-container", {
+                direction: "horizontal",
+                slidesPerView: 1,
+                parallax: !0,
+                pagination: {
+                    type: 'progressbar',
+                    el: '.swiper-pagination',
+                },
+                paginationClickable: !0,
+                spaceBetween: 0,
+                speed: 1500,
+                parallax: !0,
+                autoplay: 2500,
+                loop: !0
+            })
+        }
+    </script>
+    <section class="section-padding pb-0" style="padding-top: 50px" id="about">
+        <div style="background: url('images/first/000.jpg') center;background-size: cover">
+            <div class="container mb-5 pb-lg-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mb-3" data-aos="fade-up">中国共产党第二十次全国代表大会</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-3 mb-lg-5">
+                        <p class="me-4" data-aos="fade-up" data-aos-delay="300">2021年11月11日，
+                            <a rel="nofollow"
+                               href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%B1%8A%E4%B8%AD%E5%A4%AE%E5%A7%94%E5%91%98%E4%BC%9A%E7%AC%AC%E5%85%AD%E6%AC%A1%E5%85%A8%E4%BD%93%E4%BC%9A%E8%AE%AE/58424833"
+                               target="_blank"
+                               style="text-decoration: underline;color: #cc3232;">中国共产党第十九届中央委员会第六次全体会议</a>
+                            ，中国共产党第二十次全国代表大会于2022年下半年在北京召开。中国共产党第十九届中央委员会第六次全体会议认为，党的二十大是我们党进入全面建设社会主义现代化国家、
+                            向第二个百年奋斗目标进军新征程的重要时刻召开的一次十分重要的代表大会，是党和国家政治生活中的一件大事。
+                            <br><br>
+                            习近平总书记在认真审阅述职报告时强调：今年是进入全面建设社会主义现代化国家、向第二个百年奋斗目标进军新征程的重要一年，我们党将召开二十大。要全面贯彻党的十九大和十九届历次全会精神，
+                            增强“<a rel="nofollow"
+                                  href="https://baike.baidu.com/item/%E5%9B%9B%E4%B8%AA%E6%84%8F%E8%AF%86"
+                                  target="_blank" style="text-decoration: underline;color: #cc3232;">四个意识</a>
+                            ”、坚定“<a rel="nofollow"
+                                    href="https://baike.baidu.com/item/%E5%9B%9B%E4%B8%AA%E8%87%AA%E4%BF%A1"
+                                    target="_blank" style="text-decoration: underline;color: #cc3232;">四个自信</a>
+                            ”、做到“<a rel="nofollow"
+                                    href="https://baike.baidu.com/item/%E4%B8%A4%E4%B8%AA%E7%BB%B4%E6%8A%A4"
+                                    target="_blank" style="text-decoration: underline;color: #cc3232;">两个维护</a>
+                            ”，对“国之大者”领悟到位，始终在思想上政治上行动上同党中央保持高度一致。要弘扬伟大建党精神，
+                            以强烈的政治责任感和历史使命感履行职责，坚持问题导向，坚持底线思维，以钉钉子精神做好各项工作，坚定不移贯彻落实党中央方针政策和工作部署。
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
+                        <p data-aos="fade-up" data-aos-delay="500">
+                            要坚持稳中求进工作总基调，推动分管领域、分管部门完整、准确、全面贯彻新发展理念，加快构建新发展格局，推动高质量发展，做好保障和改善民生各项工作。
+                            要履行全面从严治党主体责任，执行中央八项规定及其实施细则精神，发扬自我革命精神，永葆清正廉洁的政治本色。
+                            要继续发扬历史主动精神，敢于斗争、善于斗争，乘势而上、砥砺前行，时刻以党和人民事业为重，走好全面建设社会主义现代化国家新的赶考之路，以实际行动迎接党的二十大胜利召开。
+                            <br/><br>
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="box-shadow: 2px 5px 15px rgba(0,0,0,0.4)">
+            <div class="row">
+                <div class="col-lg-3 col-12 p-0">
+                    <img src="images/people/xjp.jpg" class="img-fluid about-image">
+                </div>
+
+                <div class="col-lg-3 col-12"
+                     style="background-image: url(images/people/dh2.png); background-repeat: no-repeat;background-size: cover;">
+                    <div
+                            class="d-flex flex-column flex-wrap justify-content-center h-100 py-5 px-4 pt-lg-4 pb-lg-0">
+                        <h3 class="text-white mb-3" data-aos="fade-up"><a
+                                href="https://www.12371.cn/special/zggcdzl/" target="_blank"
+                                style="text-decoration: none;" class="text-white custom-link" data-aos="zoom-in"
+                                data-aos-delay="100">中国共产党</a></h3>
+                        <p class="text-secondary-white-color" data-aos="fade-up">
+                            中国共产党是中国工人阶级的先锋队，同时是中国人民和中华民族的先锋队，是中国特色社会主义事业的领导核心，代表中国先进生产力的发展要求，代表中国先进文化的前进方向，代表中国最广大人民的根本利益。
+                        </p>
+
+                        <div class="mt-3 custom-links">
+
+                            <a href="http://www.pzhuweb.cn/program/wdc2021_3_3/html/child.html"
+                               class="text-white custom-link" data-aos="zoom-in"
+                               data-aos-delay="100">回眸百年路</a><br>
+
+                            <!--                            <a href="#contact" class="text-white custom-link" data-aos="zoom-in"-->
+                            <!--                               data-aos-delay="300">Work with Us</a>-->
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12 p-0">
+                    <section id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner" style="height: 475px">
+                            <div class="carousel-item active">
+                                <img style="height: 475px" src="images/people/10.jpg" class="img-fluid team-image"
+                                     alt="">
+
+                                <div class="team-thumb" style="background-color: white">
+                                    <h4 class="mb-0">升旗仪式</h4>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img style="height: 475px" src="images/people/1.jpg" class="img-fluid team-image"
+                                     alt="">
+
+                                <div class="team-thumb" style="background-color: #cc3232">
+                                    <h4 class="text-white mb-0">全国人大</h4>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img style="height: 475px" src="images/people/002.jpg"
+                                     class="img-fluid team-image" alt="">
+
+                                <div class="team-thumb" style="background-color: white">
+                                    <h4 class="mb-0">以史为鉴，开创未来</h4>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img style="height: 475px" src="images/people/8.jpg" class="img-fluid team-image"
+                                     alt="">
+
+                                <div class="team-thumb" style="background-color: #cc3232">
+                                    <h4 class="text-white mb-0">共青团</h4>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img style="height: 475px" src="images/people/lb.jpg" class="img-fluid team-image"
+                                     alt="">
+
+                                <div class="team-thumb " style="background-color: white">
+                                    <h4 class="mb-0">入党仪式</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="portfolio">
+        <div style="display:flex;justify-content:center;width:100%;background-image: url(images/first/000.jpg);background-repeat: repeat-y;background-attachment: fixed">
+            <div class="row container">
+
+                <div class="col-12" align="center" style="margin-bottom: 30px;">
+                    <img src="images/people/nav.png" style="width: 100%;">
+                    <!-- <h2 class="mb-5 text-center" data-aos="fade-up" style="color: #cc3232">党徽、党旗</h2> -->
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="portfolio-thumb mb-5" data-aos="fade-right">
+                        <a href="images/people/dh3.png" class="image-popup">
+                            <img src="images/people/dh3.png" style="box-shadow: 10px 8px 20px -9px rgba(0,0,0,0.5)"
+                                 class="img-fluid portfolio-image" alt="">
+                        </a>
+
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title mb-0"><a target="_blank"
+                                                                href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E5%85%9A%E5%BE%BD/10794794?fromtitle=%E5%85%9A%E5%BE%BD&fromid=2656349">党徽</a>
+                            </h4>
+
+                            <p class="text-danger">中国共产党党徽为镰刀和锤头组成的图案</p>
+                            <!-- 入党誓词图片 -->
+                            <div style="display: inline-block; margin-top: 10px;">
+                                <img src="images/people/rdsc.png" style="width: 100%;">
+                            </div>
+                            <!-- <h4 class="portfolio-title mb-0"><a href="https://baike.baidu.com/item/%E5%85%9A%E6%97%97" target="_blank">入党誓词</a></h4> -->
+                        </div>
+
+
+                        <p style="color: red;">
+                            “我志愿加入中国共产党，拥护党的纲领，遵守党的章程，履行党员义务，执行党的决定，严守党的纪律，保守党的秘密，对党忠诚，积极工作，为共产主义奋斗终身，随时准备为党和人民牺牲一切，永不叛党。”
+                        </p>
+                    </div>
+                    <div class="portfolio-thumb" data-aos="fade-up">
+                        <div style="display: inline-block; margin-top: 10px;">
+                            <a href="http://cpc.people.com.cn/GB/67481/435238/index.html" target="_blank">
+                                <img src="images/meeting/nav1.jpg"
+                                     style="width: 100%;box-shadow: 10px 8px 20px -9px rgba(0,0,0,0.5)">
+                            </a>
+                        </div>
+                        <div class="containerBook" data-aos="fade-right">
+                            <div class="book">
+                                <div class="gap"></div>
+                                <div class="pages">
+                                    <div class="page"></div>
+                                    <div class="page"></div>
+                                    <div class="page"></div>
+                                    <div class="page"></div>
+                                    <div class="page"></div>
+                                    <div class="page"></div>
+                                </div>
+                                <div class="flips">
+                                    <div class="flip flip1">
+                                        <div class="flip flip2">
+                                            <div class="flip flip3">
+                                                <div class="flip flip4">
+                                                    <div class="flip flip5">
+                                                        <div class="flip flip6">
+                                                            <div class="flip flip7"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="portfolio-info">
+                        <p style="color: red;"> 中国共产党的党徽党旗是中国共产党的象征和标志。维护党徽党旗的尊严，就是维护党的尊严，是各级党组织和每名党员必须履行的政治责任。
+                        </p>
+                    </div>
+                    <div class="portfolio-info" data-aos="fade-up">
+                        <h4 class="portfolio-title mb-0"><a
+                                href="https://baike.baidu.com/item/%E5%85%9A%E6%97%97" target="_blank">党旗</a>
+                        </h4>
+                        <p class="" style="color: red;">中国共产党党旗为旗面缀有金黄色党徽图案的红旗</p>
+
+                        <a href="images/people/dq.png" class="image-popup">
+                            <img style="box-shadow: 10px 8px 20px -9px rgba(0,0,0,0.5)" src="images/people/dq.png"
+                                 class="img-fluid portfolio-image" alt="">
+                        </a>
+
+
+                    </div>
+
+                    <div class="portfolio-thumb" data-aos="fade-left">
+
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title mb-0"><a
+                                    href="http://cpc.people.com.cn/GB/67481/441992/441997/index.html"
+                                    target="_blank">党内新闻网</a></h4>
+
+                            <!-- <p class="text-info">点击了解</p> -->
+                        </div>
+                        <a href="http://cpc.people.com.cn/GB/67481/441992/441997/index.html" target="_blank">
+                            <img src="images/people/xw.jpg" class="img-fluid portfolio-image" alt="">
+                        </a>
+
+
+                        <div class="portfolio-info" data-aos="fade-up">
+                            <h4 class="portfolio-title mb-0"><a href="https://news.cctv.com/"
+                                                                target="_blank">实时新闻</a></h4>
+
+                            <!-- <p class="text-info">点击了解</p> -->
+                        </div>
+                        <a href="http://pic.people.com.cn/n1/2022/0409/c426981-32394958.html">
+                            <img src="images/meeting/dao.jpg" class="img-fluid portfolio-image" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="helloWO">
+            <div style="width: 100%;" style="overflow: hidden">
+                <div data-aos="fade-up">
+                    <div style="display: inline-block; margin-top: 10px;width: 100%">
+                        <a href="http://cpc.people.com.cn/GB/64162/414940/index.html" target="_blank">
+                            <center><img src="images/meeting/nav.jpg" style=""></center>
+                        </a>
+                    </div>
+                    <div data-aos="fade-left" class="clear w980 jiegou clearfix">
+                        <div class="fl">
+                            <ul>
+                                <li>　　<a href="#" target="_blank">委员</a><br>　
+                                    <a href="#" target="_blank">候补委员</a>
+                                </li>
+                                <li class="t02">　　
+                                    　<a href="#" target="_blank">委员</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fr">
+                            <ul>
+                                <li class="t01"><a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608803.html"
+                                                   target="_blank">习近平</a></li>
+                                <li class="t02">
+                                    <strong>委员：</strong><br/>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608803.html"
+                                       target="_blank">习近平</a>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608804.html"
+                                       target="_blank">李克强</a>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608805.html"
+                                       target="_blank">栗战书</a>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608807.html"
+                                       target="_blank">汪洋</a>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608808.html"
+                                       target="_blank">王沪宁</a>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608809.html"
+                                       target="_blank">赵乐际</a>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608810.html"
+                                       target="_blank">韩正</a>
+                                </li>
+                                <li class="t03">
+                                    <ul>
+                                        <li class="t03_lt"><strong>委员：</strong>
+                                            <i>（按姓氏笔画为序</i><br/>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608811.html"
+                                               target="_blank">丁薛祥</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608803.html"
+                                               target="_blank">习近平</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608812.html"
+                                               target="_blank">王晨</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608808.html"
+                                               target="_blank">王沪宁</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608813.html"
+                                               target="_blank">刘鹤</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608814.html"
+                                               target="_blank">许其亮</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608815.html"
+                                               target="_blank">孙春兰（女）</a>
+                                            <br>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608816.html"
+                                               target="_blank">李希</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608817.html"
+                                               target="_blank">李强</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608804.html"
+                                               target="_blank">李克强</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608818.html"
+                                               target="_blank">李鸿忠</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608819.html"
+                                               target="_blank">杨洁篪</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608821.html"
+                                               target="_blank">杨晓渡</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608807.html"
+                                               target="_blank">汪洋</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608822.html"
+                                               target="_blank">张又侠</a>
+                                            <br>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608823.html"
+                                               target="_blank">陈希</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608824.html"
+                                               target="_blank">陈全国</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608825.html"
+                                               target="_blank">陈敏尔</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608809.html"
+                                               target="_blank">赵乐际</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608827.html"
+                                               target="_blank">胡春华</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608805.html"
+                                               target="_blank">栗战书</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608828.html"
+                                               target="_blank">郭声琨</a>
+                                            <br>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608829.html"
+                                               target="_blank">黄坤明</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608810.html"
+                                               target="_blank">韩正</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608831.html"
+                                               target="_blank">蔡奇</a>
+                                        </li>
+                                        <li class="t03_rt">
+                                            <strong>书记：</strong><br/>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608808.html"
+                                               target="_blank">王沪宁</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608811.html"
+                                               target="_blank">丁薛祥</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608821.html"
+                                               target="_blank">杨晓渡</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608823.html"
+                                               target="_blank">陈希</a>
+                                            <br>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608828.html"
+                                               target="_blank">郭声琨</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608829.html"
+                                               target="_blank">黄坤明</a>
+                                            <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608832.html"
+                                               target="_blank">尤权</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="t04">
+                                    <strong>主席：</strong>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608803.html"
+                                       target="_blank">习近平</a><br>
+                                    <strong>副主席：</strong>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608814.html"
+                                       target="_blank">许其亮</a>
+                                    <a href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608814.html"
+                                       target="_blank">张又侠</a>
+                                    <br>
+                                    <strong>委员：</strong>魏凤和 李作成 苗华 张升民
+                                </li>
+                                <li class="t05">
+                                    <strong>书记：</strong><a
+                                        href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608809.html"
+                                        target="_blank">赵乐际</a><br>
+                                    <strong>副书记：</strong><a
+                                        href="http://cpc.people.com.cn/n1/2017/1025/c414940-29608821.html"
+                                        target="_blank">杨晓渡</a>张升民 刘金国 杨晓超 徐令义
+                                    肖培 喻红秋（女） 傅奎<br>
+                                    <strong>常务委员会委员：</strong><i>（按姓氏笔画为序）</i><br>
+                                    王鸿津 卢希（女） 白少康 刘金国 杨晓超 杨晓渡 肖培 张升民 张春生 陈超英
+                                    <br><a href="#" target="_blank">赵乐际</a>
+                                    侯凯 姜信治 骆源 徐令义 凌激 崔鹏 喻红秋（女） 傅奎
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news section-padding" id="news"
+             style="background-image: url(images/first/000.jpg);background-repeat: repeat-y;background-attachment: fixed">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-5 text-center" data-aos="fade-up" style="color: #cc3232">聚焦二十大</h2>
+                </div>
+
+                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                    <div class="news-thumb" data-aos="fade-up">
+                        <a target="_blank" href="page1.html" class="news-image-hover news-image-hover-warning">
+                            <img src="images/news/bg1.jpg"
+                                 class="img-fluid large-news-image news-image" alt="">
+                        </a>
+
+                        <div class="news-category text-white" style="background-color: #cc3232">实事</div>
+
+                        <div class="news-text-info">
+                            <h5 class="news-title">
+                                <a href="page1.html" class="news-title-link">日前，党中央印发通知，对代表选举工作作出全面部署。做好二十大代表选举工作，
+                                    是各级党组织的一项重大政治任务。</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                        <div class="news-top w-100">
+
+                            <a href="../subpage/subpage1/index.html" target="_blank"
+                               class="news-image-hover news-image-hover-primary">
+                                <img src="images/news/bgg.jpg"
+                                     class="img-fluid news-image" alt="">
+                            </a>
+
+                            <div class="news-category text-white" style="background-color: #cc3232">十九大</div>
+                        </div>
+
+                        <div class="news-bottom w-100">
+                            <div class="news-text-info">
+                                <h5 class="news-title">
+                                    <a href="../subpage/subpage1/index.html" class="news-title-link" target="_blank"> 党的十九届六中全会决定，
+                                        党的二十大于2022年下半年在北京召开。</a>
+                                </h5>
+
+                                <div class="d-flex flex-wrap">
+											<span class="text-muted me-2">
+<!--												<i class="bi-geo-alt-fill me-1 mb-2 mb-lg-0"></i>-->
+                                                    学习贯彻党的十九届六中全会精神
+											</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                        <div class="news-top w-100" data-aos="fade-up">
+
+                            <a href="other/index.html" class="news-image-hover news-image-hover-success" target="_blank">
+                                <img src="images/news/1.jpg"
+                                     class="img-fluid news-image" alt="">
+                            </a>
+
+                            <div class="news-category text-white" style="background-color: #cc3232">新时代</div>
+                        </div>
+
+                        <div class="news-bottom w-100">
+                            <div class="news-text-info">
+                                <h5 class="news-title">
+                                    <a href="other/index.html" class="news-title-link" target="_blank">奋进新征程，建功新时代。党的十八大以来，中国特色社会主义进入新时代。</a>
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="app" style="margin-top: 100px">
+
+            <div class="cardList">
+                <!-- 左按钮 -->
+                <button class="cardList__btn btn btn--left">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                </button>
+
+                <!-- 图片展示 -->
+                <div class="cards__wrapper">
+                    <div class="card current--card">
+                        <div class="card__image">
+                            <img style="object-fit: cover;object-position: center" src="images/movie/zc.jpg">
+                        </div>
+                    </div>
+
+                    <div class="card next--card">
+                        <div class="card__image">
+                            <img style="object-fit: cover;object-position: center" src="images/movie/111.jpg"/>
+                        </div>
+                    </div>
+
+                    <div class="card previous--card">
+                        <a href="#">
+                            <div class="card__image">
+                                <img style="object-fit: cover;object-position: center" src="images/movie/lun.jpg">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 右按钮 -->
+                <button class="cardList__btn btn btn--right">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <!-- 对应的信息 -->
+            <div class="infoList">
+                <div class="info__wrapper">
+                    <div class="info current--info">
+                        <!--                        <h1 class="text name">Breakfast</h1>-->
+                        <!--                        <h4 class="text location">SLC, UT</h4>-->
+                        <!--                        <p class="text description">Classy meal for two</p>-->
+                    </div>
+
+                    <div class="info next--info">
+                        <!--                        <h1 class="text name">Pancake</h1>-->
+                        <!--                        <h4 class="text location">Hungary</h4>-->
+                        <!--                        <p class="text description">Delicious pancake breakfast</p>-->
+                    </div>
+
+                    <div class="info previous--info">
+                        <!--                        <h1 class="text name">Spaghetti</h1>-->
+                        <!--                        <h4 class="text location">Patra, Greece</h4>-->
+                        <!--                        <p class="text description">Spaghetti with meat sauce</p>-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 对应的背景 -->
+            <div class="app__bg">
+                <div class="app__bg__image current--image">
+                    <img style="object-fit: cover;object-position: center;width: 100%" src="images/news/bg4.jpg"
+                         alt=""/>
+                </div>
+                <div class="app__bg__image next--image">
+                    <img style="object-fit: cover;object-position: center" src="images/news/bg4.jpg"
+                         alt=""/>
+                </div>
+                <div class="app__bg__image previous--image">
+                    <img style="object-fit: cover;object-position: center" src="images/news/bg4.jpg"
+                         alt=""/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 绘制按钮 -->
+        <svg class="icons" style="display: none;">
+            <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                <polyline points='328 112 184 256 328 400'
+                          style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px'/>
+            </symbol>
+            <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                <polyline points='184 112 328 256 184 400'
+                          style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px'/>
+            </symbol>
+        </svg>
+
+    </section>
+    <script>
+        const {
+            gsap,
+            imagesLoaded
+        } = window;
+
+        const buttons = {
+            prev: document.querySelector(".btn--left"),
+            next: document.querySelector(".btn--right"),
+        };
+        const cardsContainerEl = document.querySelector(".cards__wrapper");
+        const appBgContainerEl = document.querySelector(".app__bg");
+
+        const cardInfosContainerEl = document.querySelector(".info__wrapper");
+
+        buttons.next.addEventListener("click", () => swapCards("right"));
+
+        buttons.prev.addEventListener("click", () => swapCards("left"));
+
+        function swapCards(direction) {
+            const currentCardEl = cardsContainerEl.querySelector(".current--card");
+            const previousCardEl = cardsContainerEl.querySelector(".previous--card");
+            const nextCardEl = cardsContainerEl.querySelector(".next--card");
+
+            const currentBgImageEl = appBgContainerEl.querySelector(".current--image");
+            const previousBgImageEl = appBgContainerEl.querySelector(".previous--image");
+            const nextBgImageEl = appBgContainerEl.querySelector(".next--image");
+
+            changeInfo(direction);
+            swapCardsClass();
+
+            removeCardEvents(currentCardEl);
+
+            function swapCardsClass() {
+                currentCardEl.classList.remove("current--card");
+                previousCardEl.classList.remove("previous--card");
+                nextCardEl.classList.remove("next--card");
+
+                currentBgImageEl.classList.remove("current--image");
+                previousBgImageEl.classList.remove("previous--image");
+                nextBgImageEl.classList.remove("next--image");
+
+                currentCardEl.style.zIndex = "50";
+                currentBgImageEl.style.zIndex = "-2";
+
+                if (direction === "right") {
+                    previousCardEl.style.zIndex = "20";
+                    nextCardEl.style.zIndex = "30";
+
+                    nextBgImageEl.style.zIndex = "-1";
+
+                    currentCardEl.classList.add("previous--card");
+                    previousCardEl.classList.add("next--card");
+                    nextCardEl.classList.add("current--card");
+
+                    currentBgImageEl.classList.add("previous--image");
+                    previousBgImageEl.classList.add("next--image");
+                    nextBgImageEl.classList.add("current--image");
+                } else if (direction === "left") {
+                    previousCardEl.style.zIndex = "30";
+                    nextCardEl.style.zIndex = "20";
+
+                    previousBgImageEl.style.zIndex = "-1";
+
+                    currentCardEl.classList.add("next--card");
+                    previousCardEl.classList.add("current--card");
+                    nextCardEl.classList.add("previous--card");
+
+                    currentBgImageEl.classList.add("next--image");
+                    previousBgImageEl.classList.add("current--image");
+                    nextBgImageEl.classList.add("previous--image");
+                }
+            }
+
+            console.clear();
+        }
+
+        function changeInfo(direction) {
+            let currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+            let previousInfoEl = cardInfosContainerEl.querySelector(".previous--info");
+            let nextInfoEl = cardInfosContainerEl.querySelector(".next--info");
+
+            gsap.timeline()
+                .to([buttons.prev, buttons.next], {
+                    duration: 0.2,
+                    opacity: 0.5,
+                    pointerEvents: "none",
+                })
+                .to(
+                    currentInfoEl.querySelectorAll(".text"), {
+                        duration: 0.4,
+                        stagger: 0.1,
+                        translateY: "-120px",
+                        opacity: 0,
+                    },
+                    "-="
+                )
+                .call(() => {
+                    swapInfosClass(direction);
+                })
+                .call(() => initCardEvents())
+                .fromTo(
+                    direction === "right" ?
+                        nextInfoEl.querySelectorAll(".text") :
+                        previousInfoEl.querySelectorAll(".text"), {
+                        opacity: 0,
+                        translateY: "40px",
+                    }, {
+                        duration: 0.4,
+                        stagger: 0.1,
+                        translateY: "0px",
+                        opacity: 1,
+                    }
+                )
+                .to([buttons.prev, buttons.next], {
+                    duration: 0.2,
+                    opacity: 1,
+                    pointerEvents: "all",
+                });
+
+            function swapInfosClass() {
+                currentInfoEl.classList.remove("current--info");
+                previousInfoEl.classList.remove("previous--info");
+                nextInfoEl.classList.remove("next--info");
+
+                if (direction === "right") {
+                    currentInfoEl.classList.add("previous--info");
+                    nextInfoEl.classList.add("current--info");
+                    previousInfoEl.classList.add("next--info");
+                } else if (direction === "left") {
+                    currentInfoEl.classList.add("next--info");
+                    nextInfoEl.classList.add("previous--info");
+                    previousInfoEl.classList.add("current--info");
+                }
+            }
+        }
+
+        function updateCard(e) {
+            const card = e.currentTarget;
+            const box = card.getBoundingClientRect();
+            const centerPosition = {
+                x: box.left + box.width / 2,
+                y: box.top + box.height / 2,
+            };
+            let angle = Math.atan2(e.pageX - centerPosition.x, 0) * (35 / Math.PI);
+            gsap.set(card, {
+                "--current-card-rotation-offset": `${angle}deg`,
+            });
+            const currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+            gsap.set(currentInfoEl, {
+                rotateY: `${angle}deg`,
+            });
+        }
+
+        function resetCardTransforms(e) {
+            const card = e.currentTarget;
+            const currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+            gsap.set(card, {
+                "--current-card-rotation-offset": 0,
+            });
+            gsap.set(currentInfoEl, {
+                rotateY: 0,
+            });
+        }
+
+        function initCardEvents() {
+            const currentCardEl = cardsContainerEl.querySelector(".current--card");
+            currentCardEl.addEventListener("pointermove", updateCard);
+            currentCardEl.addEventListener("pointerout", (e) => {
+                resetCardTransforms(e);
+            });
+        }
+
+        initCardEvents();
+
+        function removeCardEvents(card) {
+            card.removeEventListener("pointermove", updateCard);
+        }
+
+        function init() {
+
+            let tl = gsap.timeline();
+
+            tl.to(cardsContainerEl.children, {
+                delay: 0.15,
+                duration: 0.5,
+                stagger: {
+                    ease: "power4.inOut",
+                    from: "right",
+                    amount: 0.1,
+                },
+                "--card-translateY-offset": "0%",
+            })
+                .to(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
+                    delay: 0.5,
+                    duration: 0.4,
+                    stagger: 0.1,
+                    opacity: 1,
+                    translateY: 0,
+                })
+                .to(
+                    [buttons.prev, buttons.next], {
+                        duration: 0.4,
+                        opacity: 1,
+                        pointerEvents: "all",
+                    },
+                    "-=0.4"
+                );
+        }
+
+        const waitForImages = () => {
+            const images = [...document.querySelectorAll("img")];
+            const totalImages = images.length;
+            let loadedImages = 0;
+            // const loaderEl = document.querySelector(".loader span");
+
+            gsap.set(cardsContainerEl.children, {
+                "--card-translateY-offset": "100vh",
+            });
+            gsap.set(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
+                translateY: "40px",
+                opacity: 0,
+            });
+            gsap.set([buttons.prev, buttons.next], {
+                pointerEvents: "none",
+                opacity: "0",
+            });
+
+            images.forEach((image) => {
+                imagesLoaded(image, (instance) => {
+                    if (instance.isComplete) {
+                        init()
+                    }
+                });
+            });
+        };
+
+        waitForImages();
+    </script>
+    <div id="app">
+        <div :class="['bg', bg]">
+            <header>
+                <div id="mynav">
+                    <ul>
+                        <li><a class="link-bio" href="#bio" @click="change('a')">红心向党</a></li>
+                        <li><a class="link-projects" href="#projects" @click="change('b')">建功新时代</a></li>
+                        <li><a class="link-find-me" href="#findme" @click="change('c')">经典歌曲</a></li>
+                    </ul>
+                </div>
+                <div class="transition transition-bio"></div>
+                <div class="transition transition-projects"></div>
+                <div class="transition transition-find-me"></div>
+                <h1>{{show}}</h1>
+            </header>
+            <div class="dots dots1"></div>
+            <div class="dots dots2"></div>
+            <main>
+                   <div id="jiantou">
+                       <span> <<< </span>
+                       <span> >>> </span>
+                   </div>
+                <transition name="slide-fade" mode="out-in">
+                    <p v-if="bg==='bio'" align="center" style="color: #e8e4d2" key="bio"><a href="./second/page3/index.html" target="_blank">我们的梦，中国梦﹔我们的心，中国心。<br>让我们为了中国梦而努力，而奋斗。</a>
+                    </p>
+                    <p v-if="bg==='projects'" align="center" style="color: black" key="projects">
+                        <a target="_blank" href="./second/dist/index.html">奋进新征程，只有众志成城才能无往不胜；<br>建功新时代，只有万众一心才能谱就华章。</a>
+                    </p>
+                    <p v-if="bg==='find-me'" align="center" style="color: white" key="find-me">
+                        <a href="./second/music/index.html" target="_blank">一首首镌刻时代印记的经典歌曲，在红色歌曲中<br>感悟中国共产党人的初心与使命。</a>
+                    </p>
+                </transition>
+            </main>
+        </div>
+    </div>
+    <div style="width: 100%;background-color: #cc3232">
+        <div class="main_hello">
+            <h1>预祝党的二十大胜利召开
+                <div class="roller">
+    <span id="rolltext">攀枝花学院<br/>
+    数学与计算机学院<br/>
+    <span id="spare-time">软件工程一班团支部</span><br/>
+    </span>
+                </div>
+            </h1>
+        </div>
+    </div>
+</main>
+
+<!-- JAVASCRIPT FILES -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<script src="js/scrollspy.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="second/js/script.js"></script>
+<script>
+    // Page Loader
+    setTimeout(function () {
+        let body = document.getElementsByTagName('body')[0]
+        body.className = 'loaded'
+        let video = document.getElementById('video')
+        video.playbackRate = 1.7
+        video.play()
+        console.clear()
+    }, 2000);
+</script>
+</body>
+</html>

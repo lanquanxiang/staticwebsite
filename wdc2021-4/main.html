@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="./css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/font_2544111_5hlxyltvp5l/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font_2544111_tekk45k49dn/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font_2544111_uq2yfgeavzd/iconfont.css"/>
+		<style>
+			.dang{
+				font-size: 28px;
+			}
+			.tip{
+				font-size: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="nav">
+				<a href="">首页</a>
+				<a href="people.html">人物</a>
+				<a href="things.html">历程</a>
+				<a href="test.html">推荐</a>
+			</div>
+			<div class="top_pics">
+				<img src="images/scorll.jpg" class="active"/>
+				<img src="images/srcoll1.jpg" />
+				<img src="images/scroll2.jpg" />				
+				<img src="images/sco4.jpg" />
+				<img src="images/scroll5.jpg" />
+			</div>
+			<div class="icons">
+				<i class="iconfont icon-dangwu dang hLight"></i>
+				<i class="iconfont icon-dangwu dang"></i>
+				<i class="iconfont icon-dangwu dang"></i>
+				<i class="iconfont icon-dangwu dang"></i>
+				<i class="iconfont icon-dangwu dang"></i>
+			</div>
+		</div>
+		<div class="nav_list main">
+			<div class="Tlist">		
+				<!-- <img src="./images/倒计时.jpg" /> -->
+				<!-- 倒计时盒子 -->
+				<div class="timebox tb_before">
+					<div class="font">
+						<p>距离</p>
+						<p class="year">建党100周年</p>
+						<p>还有：</p>
+					</div>			
+					<span id="daybox">00</span> 天					
+					<span id="hourbox">00</span> 时					
+					<span id="minbox">00</span> 分					
+					<span id="secbox">00</span> 秒				
+				</div>
+				<!-- 正计时盒子 -->
+				<div class="timebox tb_after">
+					<div class="font">
+						<p>距离</p>
+						<p class="year">建党100周年</p>
+						<p>已有：</p>
+					</div>			
+					<span id="daybox1">00</span> 天					
+					<span id="hourbox1">00</span> 时					
+					<span id="minbox1">00</span> 分					
+					<span id="secbox1">00</span> 秒	
+				</div>
+				
+			</div>
+			<div class="list list1">
+				<!-- 人物 -->
+				<a href="people.html">
+				<span class="mask">
+						<p>数百年风流人物</p>
+						一起回顾建党百年以来的英雄人物，让榜样的力量激励我们，为青春之中国，努力奋斗！
+					
+				</span>
+				<img src="images/bg1.png" >
+				</a>
+			</div>
+			<div class="list list2">
+				<!-- 历程 -->
+				<a href="things.html">
+					<span class="mask">
+						<p>党史历程</p>
+						以党的近100年来的发展历程为顺序，以党的重大事件为线索，回顾党的伟大历程和辉煌成就,带您重温中国共产党传奇的建党历程！ 
+					</span>
+					<img src="images/bg2.1.png" >
+				</a>
+				
+			</div>
+			<div class="list">
+				<!-- 推荐 -->
+				<a href="test.html">
+					<span class="mask">
+						<p>推荐你看</p>
+						此处精选了10本以中国共产党的革命斗争史为题材的优秀长篇小说，带你以不一样的视角去走进，去感受中国共产党的伟大革命史！
+					</span>
+					<img src="images/bg3.png" />
+				</a>
+				
+			</div>
+		</div>
+		<div class="nav_list main">
+			<div class="new_list">
+				<p>我校学习党史略展：
+					<span class="more">点击了解更多>> </span>
+				</p>
+				<a href="http://dsxx.pzhu.cn/info/1022/1781.htm">
+					<i class="iconfont icon-dangjian tip"></i>
+					【感悟建党路】红船启航 巍巍巨轮破浪前行
+				</a>
+				<a href="http://dsxx.pzhu.cn/info/1022/1771.htm">
+					<i class="iconfont icon-dangjian tip"></i>
+					【感悟建党路】学党史感悟百年路 强自律做时代新人
+				</a>
+				<a href="http://dsxx.pzhu.cn/info/1022/1631.htm">
+					<i class="iconfont icon-dangjian tip"></i>
+					【学党史 强自律】党史学习展风采 青马学子勇担当
+				</a>
+				<a href="http://dsxx.pzhu.cn/info/1003/1151.htm">
+					<i class="iconfont icon-dangjian tip"></i>
+					&nbsp;中国共产党为什么“能”
+				</a>				
+				<a href="http://sjtzb.pzhgd.com/home.php/ActivityIndex/intoGl?id=192&status=0">
+					<i class="iconfont icon-dangjian tip"></i>
+					《学党史 、 识三线  、跟党走》
+				</a>
+				
+			</div>
+			<div class="new_pic">
+				<img src="images/news.jpg" class="big"/>
+				<img src="images/newpic.jpg" >
+			</div>
+		</div>
+		
+		<footer>
+			版权所有@ 攀枝花学院2018级软件工程一班
+		</footer>
+		
+		
+		<script type="text/javascript">
+			//新闻图片
+			const news = document.querySelectorAll('.new_pic img')
+			let n=1;
+			setInterval(function (){
+				if(n===2) n=0;
+				news.forEach( function (it){
+					it.classList.remove('big');
+				})
+				news[n++].classList.add('big');
+			},3000)
+			// console.log()
+			
+			// 导航栏
+			const nav = document.querySelector('.nav');
+			const bg = document.querySelector('.top_pics')
+
+			window.onscroll = function () {
+			 const scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+			  
+			  if(scrolltop > 720){
+				nav.style.backgroundColor = '#000000'
+			  }else{
+				nav.style.backgroundColor = ' rgba(0,0,0,0.4) '
+			  }
+			  
+			}
+			
+			
+			// 查看更多
+			const more = document.querySelector('.more');
+			more.onclick = function (){
+				window.location.href = 'http://dsxx.pzhu.cn/';
+			}
+			
+			//轮播图↓
+			const pics = document.querySelectorAll('.top_pics img');
+			const sicon = document.querySelectorAll('.dang');
+			let num = 1;
+			setInterval(function () {
+				if( num === 5 ) num = 0;
+				pics.forEach(function(item){
+					item.classList.remove('active');
+				})
+				sicon.forEach(function(item){
+					item.classList.remove('hLight');
+				})
+				pics[num].classList.add('active');
+				sicon[num++].classList.add('hLight');
+			},3000)
+			
+			
+			
+			// 轮播图↑
+			
+			//穿墙效果↓
+			const divs = document.querySelectorAll('.list');
+			const masks = document.querySelectorAll('.mask');
+			
+			divs.forEach( function (item, index) {
+				item.onmouseover = handler;
+				item.onmouseout = handler;
+				
+				function handler (e){
+					// 原点
+					const originX = item.offsetWidth / 2;
+					const originY = item.offsetHeight / 2;
+					//光标的坐标
+					const mouseX = e.offsetX - originX;
+					const mouseY = e.offsetY - originY;
+					
+					const deg = Math.atan2( mouseY , mouseX ) * 180 / Math.PI;
+					
+					const dirc = Math.round( (deg + 180 ) /90 ) % 4;
+					
+					if( e.type === 'mouseover'){
+						masks[index].style.transition = 'none';
+					}
+					
+					let top = 0;
+					let left = 0;
+					
+					switch (dirc) {
+						case 0: left = '-100%'; break; //左边
+						case 1: top = '-100%'; break; //上边
+						case 2: left = '100%'; break; //右边  
+						case 3: top = '100%'; break; //下边				
+					}
+					
+					masks[index].style.left = left;
+					masks[index].style.top = top;
+					
+					if( e.type === 'mouseover'){
+						setTimeout( function () {
+							masks[index].style.transition = 'all 1s linear';
+							masks[index].style.left = 0;
+							masks[index].style.top = 0;
+						},10)
+					}
+				}				
+			})
+			// 穿墙效果↑
+			
+			
+			
+			// 倒计时
+			const beforebox = document.querySelector('.tb_before');
+			const afterbox = document.querySelector('.tb_after');
+			let target = new Date('2021-7-1 00:00:00');
+			
+			let timeID = setInterval(function(){
+				let current = new Date();
+				let btw =Math.ceil( ( target.getTime() - current.getTime() ) /1000 ); 
+				let day = Math.floor( btw / (60 * 60 *24))
+				let hour = Math.floor( btw % (60 * 60 *24) / (60 * 60))
+				let minute = Math.floor( btw % (60 * 60 ) / 60 )
+				let second = btw % 60
+				
+				if(day < 10 ) day = '0'+day
+				if(hour < 10 ) hour = '0'+hour
+				if(minute < 10 ) minute = '0'+minute
+				if(second < 10 ) second = '0'+second
+				
+				daybox.innerHTML = day;
+				hourbox.innerHTML = hour;
+				minbox.innerHTML = minute;
+				secbox.innerHTML = second;
+				
+				//时间到了就关闭倒计时的定时器,然后调用正计时的函数
+				if(day == 0 && hour == 0 && minute == 0 && second == 0){
+					clearInterval(timeID);
+					beforebox.style.display = 'none';
+					dayAfter();
+					afterbox.style.display = 'block';
+				}
+			},1000)
+			
+			function dayAfter (){
+				let target1 = new Date('2021-7-1 00:00:00');
+				console.log(target1)
+				setInterval( function(){
+					let current1 = new Date();
+					// 获取时间差
+					let btw1 = Math.ceil( ( current1.getTime() - target1.getTime() ) /1000 ); 
+					let day1 = Math.floor( btw1 / (60 * 60 *24))
+					let hour1 = Math.floor( btw1 % (60 * 60 *24) / (60 * 60))
+					let minute1 = Math.floor( btw1 % (60 * 60 ) / 60 )
+					let second1 = btw1 % 60
+					
+					if(day1 < 10 ) day1 = '0'+day1
+					if(hour1 < 10 ) hour1 = '0'+hour1
+					if(minute1 < 10 ) minute1 = '0'+minute1
+					if(second1 < 10 ) second1 = '0'+second1
+					
+					daybox1.innerHTML = day1;
+					hourbox1.innerHTML = hour1;
+					minbox1.innerHTML = minute1;
+					secbox1.innerHTML = second1;
+										
+				},1000)
+			}
+			// 正计时函数 ↑
+			
+			
+		</script>
+	</body>
+</html>

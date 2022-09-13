@@ -1,0 +1,78 @@
+<!doctype html>
+<html >
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="关键词">
+  <meta name="Description" content="描述">
+  <title>百度换肤</title>
+  <link rel="stylesheet" type="text/css" href="css/f.css"/>
+	<style>
+	body{
+		background:url('images/bg0.jpg');
+		background-repeat:no-repeat;
+		background-position:center top;
+		background-size:100% auto:
+	}
+	</style>
+ </head>
+ <body>
+		<a class="btn" href="javascript:">换肤</a>
+		<div class="bg">
+			<div class="top">
+				 <div class="top-con">
+						<div class="nav">
+						<ul>
+							 <li class="first">推荐</li>
+							 <li class="click">明星</li>
+							 <li class="click">风景</li>
+							 <li class="click">明星</li>
+							 <li class="click">简约</li>
+							 <li class="click">炫彩</li>
+							 <li class="click">花草集</li>
+							 <li class="click">小清新</li>
+							 <li class="click">台湾特辑</li>
+							 <li class="click">自定义</li>
+							 <li class="click">最近使用</li>
+						</ul>
+						</div>
+						<div class="up"><img src="images/sq.png"/></div>
+				</div>
+			</div>
+			<div class="bg-pic">
+				<div class="big-pic">
+					<ul>
+						<li class="big" date="bg0.jpg"><img src="images/0.jpg"/></li>
+						<li date="bg1.jpg"><img src="images/1.jpg"/></li>
+						<li date="bg2.jpg"><img src="images/2.jpg"/></li>
+						<li date="bg3.jpg"><img src="images/3.jpg"/></li>
+						<li date="bg4.jpg"><img src="images/4.jpg"/></li>
+						<li date="bg5.jpg"><img src="images/5.jpg"/></li>
+						<li class="big" date="bg6.jpg"><img src="images/6.jpg"/></li>
+						<li date="bg7.jpg"><img src="images/7.jpg"/></li>
+						<li date="bg8.jpg"><img src="images/8.jpg"/></li>
+						<li class="last" date="bg9.jpg"><img src="images/9.jpg"/></li>
+						<li class="last" date="bg10.jpg"><img src="images/10.jpg"/></li>
+						<li class="last" date="bg11.jpg"><img src="images/11.jpg"/></li>
+					</ul>
+				</div>
+				<div class="show"><img src="images/yl.png"/></div>
+			</div>
+			<div class="body-pic"><img src="images/content.png"></div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script>
+		$('a.btn').click(function(){
+			$('.bg').slideDown();
+		});
+		$('.up').click(function(){
+			$('.bg').slideUp();
+		});
+		$('	.bg .bg-pic .big-pic ul li').hover(function(){
+			var bigPic= $(this).attr('date');
+			var sPic= $(this).find('img').attr('src');
+			$('body').css('background-image',"url('images/"+bigPic+"')");
+			$('.show').css('background-image',"url('"+sPic+"')");
+		});
+		</script>
+ </body>
+</html>

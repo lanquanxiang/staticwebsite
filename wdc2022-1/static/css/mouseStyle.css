@@ -1,0 +1,111 @@
+.img {
+	width: 20px;
+	height: 20px;
+	opacity: 1;
+	position: absolute;
+	z-index: 100000;
+	transition: 2s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+.left,
+.right {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	position: absolute;
+}
+
+.right {
+	right: 0;
+}
+
+.under {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	transform: rotate(45deg);
+}
+
+.text {
+	background-image: -webkit-linear-gradient(left, blue, #ff0800 10%, #ff2600 20%, #ff00ff 30%, #ff0000 40%, #00FFFF 50%, #CCCCFF 60%, #CC00CC 70%, #CC00FF 80%, #66FFFF 90%, blue 100%);
+	-webkit-text-fill-color: transparent;
+	/* 将字体设置成透明色 */
+	-webkit-background-clip: text;
+	/* 裁剪背景图，使文字作为裁剪区域向外裁剪 */
+	-webkit-background-size: 200% 100%;
+	-webkit-animation: masked-animation 4s linear infinite;
+	width: 50px;
+	font-size: 25px;
+	line-height: 1;
+	position: absolute;
+	top: -1em;
+	left: -15px;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+@keyframes masked-animation {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -100% 0;
+	}
+}
+
+#loading {
+	position: fixed;
+	margin-top: 30px;
+	margin-left: 50px;
+	background: url(../img/1.png) no-repeat;
+	background-size: cover;
+	border-width: 4px;
+	width: 60px;
+	height: 60px;
+	border-style: solid;
+	border-color: #ccc #eee red blue;
+	border-radius: 100px;
+	-webkit-animation: "loading"3s infinite linear;
+	z-index: 999999999999999999999999999999;
+}
+
+#loading:hover {
+	cursor: url('../img/mouse.png'), auto;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24), 0 5px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+@-webkit-keyframes "loading" {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+#audio1 {
+	display: none;
+}
+
+.return-to-top {
+	position: fixed;
+	display: inline-block;
+	z-index: 999;
+	right: 5px;
+	bottom: 0px;
+}
+
+.f1css{
+	width: 150px;
+}
+
+.show{
+	display: none;
+}

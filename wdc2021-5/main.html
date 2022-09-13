@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/index.css">
+		<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+		<link href="css/playground.css" media="all" rel="stylesheet" type="text/css" />
+		<style>
+			#banner {
+				height: 500px;
+				width: 1400px;
+			
+				margin: 0 auto;
+			}
+
+			#bl,
+			#br {
+				height: 400px;
+				float: left;
+			}
+
+			#br {
+				width: 750px;
+				float: left;
+				border: 1px solid #999999;
+			}
+
+			#main {
+				height: 700px;
+				width: 1400px;
+				border: 1px solid #000000;
+				margin: 0 auto;
+				margin-top:10px;
+				border:5px solid darkgray;
+				border-top:8px solid firebrick;
+			}
+
+			#ml {
+				width: 550px;
+				height: 300px;
+				float: left;
+				margin-left: 50px;
+				margin-top:10px;
+				
+			}
+
+			#mr {
+				width: 700px;
+				height: 300px;
+				float: left;
+				margin-top:20px;
+				text-align:center;
+			}
+
+			.k {
+				width: 250px;
+				height: 300px;
+				margin-top: 10px;
+				margin-left: 15px;
+				float: left;
+			}
+
+			#rw {
+				float: left;
+				position: absolute;
+				overflow: hidden;
+				width: 250px;
+				height: 300px;
+				margin-left: 30px;
+			}
+
+			#zt {
+				width: 1400px;
+				height: 90px;
+				float:left;
+			}
+			#z{
+				width:200px;
+				height:50px;
+				float:left;
+				margin-left:60px;
+				text-align:center;
+				font-size:30px;
+				font-weight:bold;
+				color:black;
+			}
+			a{
+				text-decoration: none;
+				color:black;
+			}
+			a:hover{
+				font-size:40px;
+			}
+				@-webkit-keyframes bigAssButtonPulse {
+			  from { background-color: #749a02; -webkit-box-shadow: 0 0 25px #333; }
+			  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 50px #91bd09; }
+			  to { background-color: #749a02; -webkit-box-shadow: 0 0 25px #333; }
+			}
+			
+			@-webkit-keyframes greenPulse {
+			  from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+			  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+			  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+			}
+			
+			@-webkit-keyframes bluePulse {
+			  from { background-color: #007d9a; -webkit-box-shadow: 0 0 9px #333; }
+			  50% { background-color: #2daebf; -webkit-box-shadow: 0 0 18px #2daebf; }
+			  to { background-color: #007d9a; -webkit-box-shadow: 0 0 9px #333; }
+			}
+			
+			@-webkit-keyframes redPulse {
+			  from { background-color: #bc330d; -webkit-box-shadow: 0 0 9px #333; }
+			  50% { background-color: #e33100; -webkit-box-shadow: 0 0 18px #e33100; }
+			  to { background-color: #bc330d; -webkit-box-shadow: 0 0 9px #333; }
+			}
+			
+			@-webkit-keyframes magentaPulse {
+			  from { background-color: #630030; -webkit-box-shadow: 0 0 9px #333; }
+			  50% { background-color: #a9014b; -webkit-box-shadow: 0 0 18px #a9014b; }
+			  to { background-color: #630030; -webkit-box-shadow: 0 0 9px #333; }
+			}
+			
+			@-webkit-keyframes orangePulse {
+			  from { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+			  50% { background-color: #ff5c00; -webkit-box-shadow: 0 0 18px #ff5c00; }
+			  to { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+			}
+			
+			@-webkit-keyframes orangellowPulse {
+			  from { background-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
+			  50% { background-color: #ffb515; -webkit-box-shadow: 0 0 18px #ffb515; }
+			  to { background-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
+			}
+			
+			a.button {
+				-webkit-animation-duration: 2s;
+				-webkit-animation-iteration-count: infinite; 
+			}
+			
+			.green.button { -webkit-animation-name: greenPulse; -webkit-animation-duration: 3s; }
+			.blue.button { -webkit-animation-name: bluePulse; -webkit-animation-duration: 4s; }
+			.red.button { -webkit-animation-name: redPulse; -webkit-animation-duration: 1s; }
+			.magenta.button { -webkit-animation-name: magentaPulse; -webkit-animation-duration: 2s; }
+			.orange.button { -webkit-animation-name: orangePulse; -webkit-animation-duration: 3s; }
+			.orangellow.button { -webkit-animation-name: orangellowPulse; -webkit-animation-duration: 5s; }
+			
+			.wall-of-buttons { width: 100%; height: 180px; text-align: center; }
+			.wall-of-buttons a.button { display: inline-block; margin: 0 10px 9px 0; } 
+			
+			#top,
+			#banner,
+			#footer {
+				width: 1400px;
+				margin: 0 auto;
+			}
+			
+			#top {
+				height: 160px;
+				width: 1400px;
+				margin: 0 auto;
+			}
+			 
+			#tt{
+				width: 1400px;
+				height:90px;
+				float:left;
+			}
+			
+			.logo{
+				width:154px;
+				height:90px;
+				float: left;
+				margin-left:100px;
+			}	
+			.lt{
+				width:379px;
+				height:76px;
+				margin-top:10px;
+				float:left;
+			}
+			
+			.dhl {
+				height: 70px;
+				width: 1400px;
+				float: left;
+				text-align: center;
+				background-image: linear-gradient(#BD0119,white);
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a>span {
+				height: 68px;
+				line-height: 68px;
+				margin-left: 10px;
+				margin-right: 10px;
+				font-size: 20px;
+				color: black;
+			}
+			
+			a:hover {
+				font-weight: bold;
+			}
+			#bb{
+							margin-top: 18px;
+						}
+		#top {
+			height: 160px;
+			width: 1400px;
+			margin: 0 auto;
+		}
+ 
+		#tt{
+			width: 1400px;
+			height:90px;
+			float:left;
+		}
+		
+		.logo{
+			width:154px;
+			height:90px;
+			float: left;
+			margin-left:100px;
+		}	
+		.lt{
+			width:379px;
+			height:76px;
+			margin-top:10px;
+			float:left;
+		}
+		#ttr{
+			width:290px;
+			height:90px;
+			float:left;
+			margin-left:470px;
+		}
+		
+		.ssk{
+			width:200px;
+			height:25px;
+			margin-top:20px;
+		}
+		
+		.ss{
+			color:white;
+			background-color: darkred;
+			cursor: pointer;
+		}
+
+		.dhl {
+			height: 70px;
+			width: 1400px;
+			float: left;
+			text-align: center;
+			background-image: linear-gradient(#BD0119,white);
+			border-radius:10px ;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a>span {
+			height: 68px;
+			line-height: 68px;
+			margin-left: 10px;
+			margin-right: 10px;
+			font-size: 20px;
+			color: black;
+		}
+
+		a:hover {
+			font-weight: bold;
+		}
+
+		#banner {
+			height: 400px;
+		}
+
+		#bl,
+		#br {
+			height: 400px;
+			float:left;
+		}
+
+		#bl {
+			width:250px;
+			height:400px;
+			float: left;
+			background-color: rgb(174 159 159 / 10%);
+		}
+		
+		#bl>ul>li>a{
+			color: #666;
+			font-size:17px;
+			margin-left:20px;
+			line-height: 70px;
+		}
+		#bl>ul{
+			list-style: none;
+		}
+		
+	
+		#br {
+			width: 750px;
+			float: left;
+		}
+		#hh{
+			height:400px;
+			width:394px;
+			float: left;
+		}
+		.a1{
+			color: white;
+		
+		}
+		.a2{
+			color: red;
+		}
+		#rin{
+			position: absolute;
+			width: 300px;
+			height: 285px;
+			float: left;
+			margin-left:55px;
+			margin-top:50px;
+		}
+		td{
+			width: 150px;
+			height: 50px;
+		}
+	
+	
+		.rw{
+			width:880px;
+			height:398px;
+			border:1px solid #d9e0ee;
+			border-top:3px #BD0119 solid;
+			margin-left:20px;
+		}
+		.rw h3{
+			font-weight:normal;
+			font-size:30px;
+			float:left;
+			margin-left:20px;
+			height:81px;
+			line-height: 81px;
+			color:#BD0118;
+		}
+		#gs{
+			height:81px;
+			width:252px;
+			float:left;
+			font-size:30px;
+			border-left: 2px solid #D9E0EE;
+			border-bottom:2px solid #D9E0EE; 
+			margin-left:20px;
+		}
+		#gs1{
+			height: 263px;
+			width:846px;
+			margin-top:20px;
+			margin-left:20px;
+			float:left;
+		}
+		#gs1>img{
+			float:left;
+		}
+		.jj{
+			width:450px;
+			height:250px;
+			float:left;
+			margin-left:30px;
+			margin-top:10px;
+			font-size:17px;
+			text-indent:2em;
+			font-weight:lighter;
+		}
+
+		#footer {
+			height:150px;
+			width:1400px;
+			text-align: center;
+			border-top: 3px white solid;
+			float:left;
+			margin-top:5px;
+			margin-left: 60px;
+		}
+		.box{
+			
+			overflow: hidden;
+			width: 750px;
+			height: 150px;
+			display: inline-block;
+			background: green;
+			position: relative;
+		}
+		.box-ul-li1{
+			float: left;
+			background-color: white;
+		}
+		.box-ul-li2{
+			float: left;
+			background-color: white;
+		}
+		.box-ul-li3{
+			float: left;
+			background-color: white;
+		}
+		.box-ul-li1,.box-ul-li2,.box-ul-li3..box-ul-li4..box-ul-li5{
+			width: 500px;
+			height: 400px;
+			position: relative;
+		}
+		.box-ul{
+			position: absolute;
+			width: 99999px;
+			height: 400px;
+			list-style: none;
+			background: red;
+			
+		}
+		.button-box{
+			top: 50%;
+			position: relative;
+			width: 752px;
+			height: 45px;
+			z-index: 1;
+		}
+		.left-button{
+			color: white;
+			left: 0px;
+			position: absolute;
+			font-size: 15px;
+			border-style: none;
+			width: 20px;
+			height: 20px;
+			background: rgba(0,1,1,0.1);
+			
+		}
+		.right-button{
+			color: white;
+			position: absolute;
+			right: 0px;
+			font-size: 15px;
+			border-style: none;
+			width: 20px;
+			height: 20px;
+			background: rgba(0,0,0,0.1);
+		}
+		.box-ul-img{
+			width: 250px;
+			height: 150px;
+		}
+		#xm{
+			color: black;
+			text-align: center;
+			float:left;
+			width: 1400px;
+			height: 70px;
+			margin-top:30px;
+			margin-left: 60px;
+			}
+		#xxm{
+			display: inline-block;
+			text-decoration: none;
+			color:gray;
+			font-size: 20px;
+			cursor: pointer;
+			}
+			#bb{
+				margin-top: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="top">
+			<div id="tt">
+				<img src="images/others/dang.png" class="logo">
+				<img src="images/others/t.png" class="lt">
+			</div>
+			<div class="dhl">
+				<div id="bb">
+			<a href="main.html" class="large orange button">首页</a>
+			<a href="首页/基本信息.html" class="large green button">基本信息</a>
+		    <a href="首页/指导思想.html" class="large magenta button">指导思想</a>
+		    <a href="首页/伟大领袖.html" class="large red button">伟大领袖</a>
+		    <a href="首页/伟大历程.html" class="large magenta button">革命历程</a>
+		    <a href="首页/重要会议.html" class="large orangellow button">重要会议</a>
+		    <div style="text-align:center;clear:both">
+				<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+				<script src="/follow.js" type="text/javascript"></script>
+			</div>
+			</div>
+			
+			</div>
+		</div>
+		
+	<div id="banner">
+			<div id="bl"><pre style="font-size: 30px; color:darkred; line-height:1.5"> 七月南湖觅曙光，
+ 改天换地百花芳。
+ 鼎新革故镰锤劲，
+ 继往开来号角扬。
+ 兴伟业，九州昌。
+ 攻坚克险赖贤良。
+ 和谐喜庆黎民富，
+ 百姓高歌祖国强。
+      ----李明阳
+				</pre>
+			</div>
+			<div id="br">
+				  <div class="content">
+        <ul id="carousel"></ul>
+        <ul id="btn"></ul>
+        <div id="focus">
+            <div id="left">&lt;</div>
+            <div id="right">&gt;</div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+
+			</div>
+		
+		</div>
+		<div id="main">
+			<div id="ml">
+				<img src="images/story/红色小故事.png" alt="">
+			</div>
+			<div id="mr">
+			<img src="images/story/动态.gif" alt=""></div>
+			<div id="r">
+				<div class="k"><a href="foot/潘冬子.html"><img src="images/story/潘冬子.jpg" id="rw"></a></div>
+				<div class="k"><a href="foot/王二小.html"><img src="images/story/王二小.jpeg" id="rw"></a></div>
+				<div class="k"><a href="foot/王璞.html"><img src="images/story/王璞.jpeg" id="rw"></a></div>
+				<div class="k"><a href="foot/雨来.html"><img src="images/story/雨来.jpg" id="rw"></a></div>
+				<div class="k"><a href="foot/海娃.html"><img src="images/story/鸡毛信.png" id="rw"></a></div>
+			</div>
+			<div id="zt">
+			<div id="z"><a href="foot/潘冬子.html">潘冬子</a></div>
+			<div id="z"><a href="foot/王二小.html">王二小</a></div>
+			<div id="z"><a href="foot/王璞.html">王璞</a></div>
+			<div id="z"><a href="foot/雨来.html">雨来</a></div>
+			<div id="z"><a href="foot/海娃.html">海娃</a></div>
+			</div>
+		</div>
+		<div id="m">
+			<center>
+		<a href="foot/推1.html"><img src="images/foot/推荐.png" width="300px" /></a>
+		<a href="foot/推2.html"><img src="images/foot/推荐2.png" width="300px"/></a>
+		<a href="foot/推3.html"><img src="images/foot/推荐3.png" width="300px"/></a>
+		</center>
+		</div>
+		<div id="xm">
+			<hr />
+			<p id="xxm" class="large blue button">关于我们&nbsp;&nbsp;&nbsp;&nbsp;技术指导&nbsp;&nbsp;&nbsp;&nbsp;联系电话</p><br />
+			
+		</div>
+	</body>
+</html>

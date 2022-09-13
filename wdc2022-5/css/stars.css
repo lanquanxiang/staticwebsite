@@ -1,0 +1,77 @@
+body {
+        background: radial-gradient(220% 105% at top center, #fef1a0 10%, #f6eca7 40%, #F9EB90 65%, #ffff00);
+        background-attachment: fixed;
+      
+}
+
+@keyframes rotate{
+        0%{
+            transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+        }
+        100%{
+            transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+        }
+}
+#stars{
+        transform: perspective(500px);
+        transform-style: preserve-3d;
+        position: fixed;
+        perspective-origin: 50% 100%;
+        left: 50%;
+        animation: rotate 66s infinite linear;
+        bottom: 0;
+        z-index: -99;
+}
+
+/* .star{
+        width:  3px;
+        height: 3px;
+        background: #ff0000;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        backface-visibility: hidden;
+} */
+.star{
+        width:0;
+        height:0;
+        position:fixed;
+        border-top:2.2112px solid red;
+        border-left:3.0432px solid transparent;
+        border-right:3.0432px solid transparent;
+
+    }
+    .star::before{
+        position:absolute;
+        width:0;
+        height:0;
+        content: '';
+        display: block;
+        border-top:2.2112px solid red;
+        border-left:3.0432px solid transparent;
+        border-right:3.0432px solid transparent;
+        top:-2.2112px;
+        left:-3.0432px;
+        transform:rotate(72deg);
+        transform-origin:3.0432px 0.9888px; 
+
+    }
+    .star::after{
+        border-width:0; 
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-top-color:red;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top:2.2112px solid red;
+        border-left:3.0432px solid transparent;
+        border-right:3.0432px solid transparent;
+        border-style: solid;   
+        position:absolute;
+        top:-2.2112px;
+        left:-3.0432px;
+        transform:rotate(-72deg);
+        transform-origin:3.0432px 0.9888px; 
+    }

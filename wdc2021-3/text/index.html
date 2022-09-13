@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery左右滑动切换特效</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="bodyCon08"><!--列表-->
+	<div class="students">
+		
+		  <div id="four_flash">
+			<div class="flashBg">
+				<ul class="mobile">
+					<li>
+						<img src="img/t1.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t2.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t3.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t4.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t5.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t6.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="but_left"><img src="img/qianxleft.png" /></div>
+			<div class="but_right"><img src="img/qianxr.png" /></div>
+		  </div>
+		  
+	</div>
+</div>
+
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+//学员
+var _index5=0;
+$("#four_flash .but_right img").click(function(){
+	_index5++;
+	var len=$(".flashBg ul.mobile li").length;
+	if(_index5+5>len){
+		$("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
+	}
+	$("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*326},1000);
+	});
+
+	
+$("#four_flash .but_left img").click(function(){
+	if(_index5==0){
+		$("ul.mobile").prepend($("ul.mobile").html());
+		$("ul.mobile").css("left","-1380px");
+		_index5=6
+	}
+	_index5--;
+	$("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*326},1000);
+	});
+</script>	
+
+</body>
+</html>

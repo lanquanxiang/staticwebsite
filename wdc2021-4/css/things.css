@@ -1,0 +1,299 @@
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+body {
+	background-color: #F8F4ED;
+}
+li {
+	list-style: none;
+}
+.clearfix {
+	*zoom: 1;
+}
+.slider-bar {
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    margin-left: 610px;
+    width: 45px;
+    height: 100px;
+	border-radius: 5px;
+    background-color: #fff;
+	cursor: pointer;
+}
+.slider-bar span {
+    display: block;
+    position: absolute;
+	width: 45px;
+	top: 0;
+	text-align: center;
+    bottom: 0;
+}
+.navt{
+	position: relative;
+	top: 0;
+	left: 0;
+	background-color: #C3131B;
+	height: 60px;
+	width: 100%;
+	font-size: 22px;
+	text-align: center;				
+	line-height: 60px;
+	margin-bottom: 10px;
+	font-family: "楷体";
+}
+/* .navt img {
+	width: 60px;
+	height: 60px;
+	vertical-align: top;
+} */
+.navt a{
+	display: inline-block;
+	margin-top: 0;
+	width: 280px;
+	/* border-radius: 30px; */
+	
+	color: #fff;
+}
+.navt a:hover {
+	background-color: #8B0000;
+	
+}
+.mian {
+	margin-top: 20px;
+}
+.mian .title1 {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	margin-top: 20px;
+	background-image: url(../image/title1-bg.png);
+	background-repeat: no-repeat;
+	border-bottom: 2px solid #C3131B;
+	color: #494949;
+}
+.mian .title1 span {
+	width: 300px;
+	height: 60px;
+	line-height: 70px;
+	margin-top: 20px;
+	font-size: 23px;
+	font-family: "楷体";
+	margin-left: 100px;
+}
+.time-image {
+	position: relative;
+	margin-top: 20px;
+	background-image: url(../image/thingbg2.png);
+	height: 450px;
+	overflow: hidden;
+	box-shadow: 0px 0px 20px 0px #e6dfdf;
+
+}
+.po {
+	position: absolute;
+	z-index: 8;
+}
+/* 设计每一个小的框框 */
+.ouline {
+	width: 136px;
+	height: 195px;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 0px 0px 20px 0px #e6dfdf;
+}
+.smcolor {
+	width: 136px;
+	height: 169px;
+	border-radius: 5px;
+	background-color: #F5F5F0;
+}
+.time-image .smimg {
+	width: 136px;
+	height: 130px;
+	/* background-color: pink; */
+}
+.time-image .smimg img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.time-image .po .smcolor .htop{
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	margin-top: 20px;
+	color: #000;
+}
+.time-image .po .smcolor .hbottom {
+	display: block;
+	height: 20px;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #000000;
+}
+.time-image .po .smcolor .htop:hover,
+.time-image .po .smcolor .hbottom:hover {
+	color: #C3131B;
+}
+.time-image .embottom {
+	margin-top: 18px;
+	font-style: normal;
+	color: #C3131B;
+	font-size: 28px;
+	transition: all .5;
+}
+.time-image .emtop {
+	font-style: normal;
+	color: #C3131B;
+	font-size: 28px;
+	transition: all .5;
+}
+.ouline:hover {
+	transform: translateY(-3px);
+}
+.teone {
+	top: 25px;
+	left: 182px;
+}
+.tetwo {
+	top: 195px;
+	left: 263px;
+}
+.tethree {
+	top: 25px;
+	left: 353px;
+}
+.tefour {
+	top: 195px;
+	left: 439px;
+}
+.tefive {
+	top: 25px;
+	left: 521px;
+}
+.tesix {
+	top: 195px;
+	left: 608px;
+}
+.teseven {
+	top: 25px;
+	left: 692px;
+}
+.teeight {
+	top: 195px;
+	left: 773px;
+}
+.tenine {
+	top: 25px;
+	left: 865px;
+}
+.teten {
+	top: 195px;
+	left: 958px;
+}
+.vid{
+	width: 100%;
+	height: 338px;
+	margin-top: 5px;
+}
+
+.intro{
+	float: left;
+	margin-left: 50px;
+	margin-top: 15px;
+	padding: 0 5px;
+	width: 500px;
+	height: 300px;
+	font-size: 16px;
+	line-height: 30px;
+	border-radius: 10px;
+	background-color: #fff;
+}
+.intro .intromore {
+	width: 500px;
+	height: 250px;
+	/* background-color: pink; */
+	line-height: 50px;
+}
+.ex-thing .title1 {
+	margin: 50px 0;
+}
+.ex-thing .thing li {
+	height: 200px;
+	margin-bottom: 8px;
+	background-color: #fff;
+	border-radius: 15px;
+	border: 2px solid #C3131B;
+}
+.ex-thing .thing .th-img,
+.ex-thing .thing .article {
+	float: left;
+	color: #494949;
+}
+.ex-thing .thing .th-img {
+	width: 300px;
+	height: 100%;
+	padding: 5px;
+	cursor: pointer;
+}
+.ex-thing .thing .th-img img {
+	width: 100%;
+	height: 100%;
+}
+.ex-thing .thing .article {
+	width: 840px;
+	height: 100%;
+	margin-left: 32px;
+	line-height: 30px;
+	padding: 5px;
+}
+.ex-thing .thing .article a{
+	display: block;
+	margin-bottom: 5px;
+	color: #000;
+	font-weight: 700;
+}
+.ex-thing .thing .article .red {
+	display: inline-block;
+	font-weight: 400;
+	color: #C3131B;
+}
+.bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, .3);
+	z-index: 4;
+}
+.bigpic {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 700px;
+	height: 500px;
+	z-index: 9999;
+	transform: translate(-50%, -50%);
+
+}
+.bigpic img {
+	width: 100%;
+	height: 100%;
+	
+}
+.footer {
+	font-size: 18px;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	z-index: 2;
+}

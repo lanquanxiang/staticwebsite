@@ -1,0 +1,343 @@
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.w {
+				width: 1258px;
+				height: 1300px;
+				margin: 0 auto;
+			}
+			.nav {
+				width: 1000%;
+				height: 60px;
+				text-align: center;
+				padding-left: 527px;
+				background-color: #fff;
+			}
+			.nav img {
+				width: 60px;
+				height: 60px;
+				margin-left: 100px;
+				vertical-align: top;
+			}
+			.nav a {
+				display: inline-block;
+				float: left;
+				width: 200px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				text-decoration: none;
+				color: #494949;
+			}
+			.nav a:hover {
+				color: #A07C4C;
+			}
+			.bg {
+				position: relative;
+				width: 100%;
+				height: 900px;
+				background-image: url(../image/bg.png);
+			}
+			.bg p {
+				height: 80px;
+				line-height: 80px;
+				color: #fff;
+				/* margin-top: 20px; */
+				margin-left: 280px;
+				font-size: 16px;
+			}
+			.bg .bgleft {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 300px;
+				height: 900px;
+				/* opacity: .3; */
+			}
+			.bg .bgleft img {
+				width: 100%;
+				height: 100%;
+			}
+			.bg .introduce {
+				position: absolute;
+				left: 280px;
+				top:190px;
+				width: 620px;
+				height: 555px;
+				overflow: hidden;
+				/* background-color: #000000; */
+			}
+			.books {
+				position: absolute;
+				top: 190px;
+				left: 1100px;
+				width: 448px;
+				height: 546px;
+				overflow: hidden;
+			}
+			.bg .introduce .introul {
+				position: absolute;
+				left: 0;
+				width: 3500px;
+				height: 300px;
+				margin: 0;
+			}
+			.bg .introul li {
+				list-style: none;
+				float: left;
+				width: 615px;
+				height: 550px;
+				margin-left: 5px;
+				/* border: 1px solid #000000; */
+				color: #fff;
+			}
+			.bg .introul li img {
+				display: inline-block;
+				width: 50px;
+				height: 45px;
+				vertical-align: bottom
+			}
+			.bg .introul li .booktitle {
+				width: 100%;
+				height: 50px;
+				/* background-color: pink; */
+			}
+			.bg .introul .bookintro {
+				width: 600px;
+				height: 200px;
+				margin-top: 25px;
+				line-height: 30px;
+				font-size: 16px;
+				/* background-color: pink; */
+			}
+			.bg .introul .bookmore {
+				width: 600px;
+				height: 200px;
+				margin-top: 20px;
+				/* background-color: pink; */
+			}
+			.bg .introul .bookmore ul {
+				width: 600px;
+				height: 200px;
+			}
+			.bg .introul .bookmore ul li {
+				float: left;
+				list-style: none;
+				width: 290px;
+				height: 30px;
+				line-height: 30px;
+				border: none;
+			}
+			.bg .introul li p {
+				display: inline-block;
+				/* width: 100px; */
+				height: 40px;
+				line-height: 35px;
+				margin-left: 1px;
+				font-size: 23px;
+				font-weight: 700;
+			}
+			.books .bookul{
+				position: absolute;
+				top: 0;
+				width: 200px;
+				height: 2000px;
+				margin: 0;
+			}
+			.books .bookul li {
+				list-style: none;
+				width: 446px; 
+				height: 544px;
+				/* border: 1px solid #000; */
+			}
+			.books .bookul img {
+				display: block;
+				width: 420px;
+				height: 544px;
+				margin: 0 auto;
+			}
+			.arrow-l,
+			.arrow-r {
+				text-decoration: none;
+				display: inline-block;
+				position: absolute;
+				width: 40px;
+				height: 22px;
+				
+			}
+			.arrow-l {
+				left: 1300px;
+				top: 120px;
+			}
+			
+			.arrow-r {
+				left: 1300px;
+				top: 770px;
+			}
+			/* 详细内容部分开始 */
+			.detail {
+				position: relative;
+				width: 100%;
+				height: 1525px;
+				background-image: url(../image/bg2.png);
+			}
+			.detail .horse {
+				position: relative;
+				width: 100%;
+				height: 150px;
+			}
+			.detail .horse img {
+				position: absolute;
+				top: -180px;
+				left: 200px;
+				z-index: 2;
+			}
+			.center .firtitle {
+				width: 100%;
+				height: 50px;
+				text-align: center;
+			}
+			.center .firtitle img {
+				display: inline-block;
+				width: 50px;
+				height: 45px;
+				vertical-align: bottom
+			}
+			.center .firtitle em {
+				height: 50px;
+				width: 80px;
+				font-size: 26px;
+				line-height: 50px;
+				font-style: normal;
+				color: #474747;
+			}
+			.center .detailbook {
+				width: 100%;
+				height: 600px;
+				margin-top: 40px;
+				/* background-color: pink; */
+			}
+			.center .detailbook .firstbook,
+			.center .detailbook .secondbook {
+				position: relative;
+				width: 100%;
+				height: 300px;
+				/* background-color: purple; */
+			}
+			.center .detailbook .firstbook .books1,
+			.center .detailbook .secondbook .books2 {
+				position: relative;
+				width: 100%;
+				height: 230px;
+				/* background-color: #8B0000; */
+			}
+			.center .detailbook .firstbook .books1 ul,
+			.center .detailbook .secondbook .books2 ul {
+				position: absolute;
+				width: 100%;
+				height: 230px;
+				padding: 0 40px;
+			}
+			.center .detailbook .firstbook .books1 li,
+			.center .detailbook .secondbook .books2 li {
+				list-style: none;
+				float: left;
+				width: 180px;
+				height: 225px;
+				margin-left: 40px;
+				overflow: hidden;
+				/* border: 1px solid #000; */
+			}
+			.center .detailbook .firstbook .books1 .chengbig,
+			.center .detailbook .secondbook .books2 .chengbig{
+				width: 600px;
+				height: 225px;
+				background-image: url(../image/bg2.png);
+			}
+			.center .detailbook .firstbook .books1 .chengbig a,
+			.center .detailbook .secondbook .books2 .chengbig a{
+				display: inline-block;
+				float: left;
+				width: 180px;
+				height: 225px;
+			}
+			.center .detailbook .firstbook .books1 .jieshao,
+			.center .detailbook .secondbook .books2 .jieshao{
+				float: left;
+				width: 400px;
+				margin: 10px;
+				height: 225px;
+				font-size: 10px;
+			}
+			.center .detailbook .firstbook .books1 .jieshao p,
+			.center .detailbook .secondbook .books2 .jieshao p{
+				margin-bottom: 30px;
+			}
+			.change {
+				position: relative;
+				transform: scale(2);
+				z-index: 3;
+			}
+			.center .detailbook .count {
+				width: 100%;
+				height: 70px;
+				background-image: url(../image/bg3.png);
+			}
+			.center .detailbook a {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+			.center .detailbook li img {
+				width: 100%;
+				height: 100%;
+			}
+			.center .sectitle {
+				margin-top: 76px;
+			}
+			.center .peopledetail {
+				width: 100%;
+				height: 422px;
+				margin-top: 20px;
+				/* border: 1px solid #fff; */
+			}
+			.center .peopledetail ul {
+				width: 100%;
+				height: 422px;
+				padding-left: 82px;
+			}
+			.center .peopledetail li {
+				list-style: none;
+				float: left;
+				padding: 5px;
+				margin-right: 20px;
+				width: 80px;
+				height: 420px;
+				background-image: url(../image/bg4.png);
+			}
+			.center .peopledetail li a {
+				display: block;
+				width: 70px;
+				margin-top: 10px;
+				margin-left: 5px;
+				padding-top: 20px;
+				text-align: center;
+				height: 400px;
+				background-color: #fff;
+				text-decoration: none;
+				color: #494949;
+				font-size: 18px;
+			}
+			.footer {
+				width: 100%;
+				height: 60px;
+				padding-top: 10px;
+				background-color: #C3131B;
+				text-align: center;
+				color: #fff;
+				line-height: 60px;
+				font-family: "楷体";
+				font-size: 18px;
+			}
+			

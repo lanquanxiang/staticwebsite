@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>经典歌曲</title>
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+ <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+ <link rel="shortcut icon" href="../img.png" type="image/x-icon">
+ <link rel="stylesheet" href="./style.css">
+<link rel=stylesheet href="./music.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+ <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+ <a href="../../index.html#app" class="menu">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="4" y1="8" x2="40" y2="8" />
+  <line x1="0" y1="16" x2="40" y2="16" />
+</svg>
+ </a>
+ <div class="wrapper">
+  <div class="separator"></div>
+<!--  <div class="separator-text">Tours</div>-->
+<!--  <div class="ticket">-->
+<!--   <h1>-->
+<!--    我的生命热衷于党,我的信仰光芒万丈-->
+<!--   </h1>-->
+<!--  </div>-->
+ </div>
+ <nav>
+  <a href="#" class="main-nav prev" data-nav="previous">
+   <div class="slider prev">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+   </div>
+  </a>
+  <a href="#" class="main-nav next" data-nav="next">
+   <div class="slider next">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+   </div>
+  </a></a>
+ </nav>
+</div>
+<div id="app-cover">
+ <!--    <div id="bg-artwork"></div>-->
+<!-- <div id="bg-layer"></div>-->
+ <div id="player">
+  <div id="player-track">
+   <div id="album-name"></div>
+   <div id="track-name"></div>
+   <div id="track-time">
+    <div id="current-time"></div>
+    <div id="track-length"></div>
+   </div>
+   <div id="s-area">
+    <div id="ins-time"></div>
+    <div id="s-hover"></div>
+    <div id="seek-bar"></div>
+   </div>
+  </div>
+  <div id="player-content">
+   <div id="album-art">
+    <img src="./img/1/mei.jpg"
+         class="active" id="_1">
+    <img src="./img/1/zou.jpg" id="_2">
+    <img src="./img/1/shan.jpg" id="_3">
+    <img src="./img/1/xin.jpg" id="_4">
+    <img src="./img/1/wo.jpg" id="_5">
+    <div id="buffer-box">Buffering ...</div>
+   </div>
+   <div id="player-controls">
+    <div class="control">
+<!--     <div class="button" id="play-previous">-->
+<!--      <i class="fas fa-backward"></i>-->
+<!--     </div>-->
+    </div>
+    <div class="control">
+     <div class="button" id="play-pause-button">
+      <i class="fas fa-play"></i>
+     </div>
+    </div>
+    <!--<div class="control">
+     <div class="button" id="play-next">
+      <i class="fas fa-forward"></i>
+     </div>
+    </div>-->
+   </div>
+  </div>
+ </div>
+</div>
+<!-- partial -->
+<script src="./js/nyjquery.js"></script>
+<script src="./js/script.js"></script>
+<script src='./js/tween.js'></script>
+<script src='./js/imgloaded.js'></script>
+<script src='./js/pixi.min.js'></script>
+<script src='./js/pixi-filters.min.js'></script>
+<script src='./js/rgbKineticSlider.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+body, ul, li, img, div {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: -webkit-linear-gradient(rgb(248,248,248),rgb(255,255,255));
+	background-repeat: no-repeat;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+}
+
+li:hover{
+	cursor: pointer;
+}
+
+.imgh {
+	opacity: 0.9;
+}
+
+.imgh:hover {
+	opacity: 1;
+	cursor: pointer;
+	
+}
+
+#head {
+	height: 150px;
+	width: 1600px;
+	margin: 0 auto;
+}
+
+#head li:hover {
+	background-color: #6b5757;
+	color: white;
+}
+
+.head_menu {
+	float: right;
+	margin-top: 98px;
+	margin-right: 157px;
+	font-size: 14px;
+}
+
+.head_logo {
+	margin-left: 173px;
+	margin-top: 33px;
+	height: 98px;
+	width: 240px;
+	display: inline-block;
+}
+
+.head_logo:hover {
+	cursor: pointer;	
+}
+
+.head_menu li {
+	padding: 8px;
+}
+
+.head_menu li:last-child {
+	background-color: #6b5757;
+	color: white;
+}
+
+#head_img {
+	height: 566px;
+	width: 1600px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+#head_img li {
+	font-family: "黑体";
+	font-size: 14px;
+	padding-top: 8px;
+	padding-left: 28px;
+}
+
+#head_img li:hover {
+	
+	color: #6b5757;
+}
+
+.head_word_img {
+	position: relative;
+	top: 20px;
+	left: 16px;
+}
+
+#ibrief_introduction {
+	height: 674px;
+	width: 1600px;
+	margin: 0 auto;
+}
+
+.introduction_photo {
+	float: left;
+	width: 260px;
+	margin-left: 314px;
+	margin-bottom: 40px;
+	margin-top: 24px;
+}
+
+.introduction_word{
+	float: right;
+	height: 436px;
+	font-size: 14px;
+	margin-bottom: 40px;
+	font-family: "楷体";
+	width: 730px;
+	margin-right: 280px;
+	margin-top: 24px;
+}
+
+.introduction_word_bgimg {
+	float: right;
+}
+
+.introduction_footer {
+	float: left;
+	height: 108px;
+	width: 1004px;
+	font-size: 14px;
+	font-family: "楷体";
+	text-align: center;
+	margin-left: 314px;
+	position: relative;
+	
+}
+
+.introduction_footer img {
+	position: absolute;
+	z-index: 999;
+	left: 50%;
+	margin-left: -183px;
+}
+
+.ohr {
+	height: 1px;
+	background-color: #707070;
+}
+
+#content_one{
+	height: 674px;
+	width: 1600px;
+	margin: 0 auto;
+	background-image: url(../img/content1/content1_bg.png);
+	background-size: 100% 100%;
+}
+
+#content_one div:first-child{
+	height: 342px;
+	margin-bottom: 80px ;
+	
+}
+
+#content_one div:first-child img:nth-child(1) {
+	float: left;
+	height: 342px;
+	margin-left:314px ;
+}
+
+#content_one div:first-child img:nth-child(2){
+	float: right;
+	margin-right: 280px;
+}
+
+#content_one div:nth-child(2) img {
+	float: left;
+	margin-left: 2px;
+}
+
+#content_one div:nth-child(2) img:first-child {
+	margin-left: 314px;
+}
+
+#content_two{
+	height: 674px;
+	width: 1600px;
+	margin: 0 auto;
+	margin-bottom: 150px ;
+	background-image:url(../img/content1/content1_bg.png);
+	background-size: 1600px 928px;
+}
+
+#content_two>div {
+	width: 996px;
+	margin: 0 auto ;
+	margin-bottom: 80px;
+}
+
+#content_two div:first-child {
+	position: relative;
+	width: 123px;
+	left: 400px;
+	top: 240px;
+	font-family: papyrus ;
+	font-size: 20px;
+}
+
+#content_two div:first-child span:first-child {
+	font-size: 30px;
+}
+
+.content2_ico2 {
+	margin-left: 104px;;
+}
+
+#content_two div:nth-child(3)>img {
+	float: left;
+	
+}
+
+#content_two div:nth-child(3)>div {
+	float: left;
+	margin-left: 30px;
+	text-align: right;
+	font-size: 20px;
+	padding-top: 35px ;
+	font-family: 楷体;
+	
+}
+.content2_ico1 {
+	margin-top: 40px;
+}
+
+#tail {
+	background-image: url(../img/tail/bg.png);
+	width: 1600px;
+	position: relative;
+	height: 674px;
+	margin: 0 auto;
+}
+#tail p {
+	font-family: "palace script mt";
+	line-height: 20px;
+	height: 200px;
+	width: 240px;
+	text-align: right;
+	font-size: 20px;
+}
+#tail p:before {
+	content: url(../img/tail/伞.png);
+}
+
+#tail img {
+	position: absolute;
+	left: 500px;
+	top: 50px;
+}
+
+#tail div:last-child {
+	position: absolute;
+	left: 900px;
+	top: 160px;
+}
+
+.left_cont {
+	float: left ;
+}
+
+.right_cont {
+	float: right;
+}
+ 
+#footer {
+	width: 1600px;
+	font-family: 楷体;
+	height: 124px;
+	margin: 0 auto;
+}
+
+#footer p {
+	float: right;
+	font-size: 18px;
+	line-height: 25px;
+	display: inline-block;
+	margin-right: 40px;
+}
+
+#footer img {
+	margin-left: 400px;
+	margin-top: 40px;
+}
+
+#footer img:hover {
+	cursor: pointer;
+}
+
+#footer a {
+	color: #6b5757;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: #000;
+}
+

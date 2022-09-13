@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link type="text/css" rel="stylesheet"  href="css/XuanZhuanMuMastyle.css"/>
+<!-- <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> -->
+<script type="text/javascript" src="js/banner.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+			
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link href="css/MousePic.css" />
+
+
+<script type="text/javascript">
+		/*自定义的鼠标点击效果*/
+		/* 鼠标特效 */ 
+		var a_idx = 0; 
+		jQuery(document).ready(function($) { 
+		    $("body").click(function(e) { 
+		        var a = new Array("抗击肺炎","富强","民主","文明","和谐","万众一心","自由","平等","公正","法治","武汉加油","爱国","敬业","诚信","友善","中国加油"); 
+		        var $i = $("<span></span>").text(a[a_idx]); 
+		        a_idx = (a_idx + 1) % a.length; 
+		        var x = e.pageX, 
+		        y = e.pageY; 
+		        $i.css({ 
+		            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+		            "top": y - 20, 
+		            "left": x , 
+		            "position": "absolute", 
+		            "font-weight": "bold", 
+		            "color": "rgb(119,136,153)" 
+		        }); 
+		        $("body").append($i); 
+		        $i.animate({ 
+		            "top": y - 180, 
+		            "opacity": 0 
+		        }, 
+		        1500, 
+		        function() { 
+		            $i.remove(); 
+		        }); 
+		    }); 
+		}); 
+		
+	
+		</script>
+		
+	
+	<script>
+		$(document).ready(function(){
+		  autoPlayYouTubeModal();
+		});
+		function autoPlayYouTubeModal(){
+		  var trigger = $("body").find('[data-toggle="modal"]');
+		  trigger.click(function() {
+		    var theModal = $(this).data( "target" ),
+		    videoSRC = $(this).attr( "data-theVideo" ), 
+		    videoSRCauto = videoSRC+"?autoplay=1" ;
+		    $(theModal+' iframe').attr('src', videoSRCauto);
+		    $(theModal+' button.close').click(function () {
+		        $(theModal+' iframe').attr('src', videoSRC);
+		    });   
+		  });
+		}
+	</script>
+	
+	
+
+		
+</head>
+
+<body>
+<div class="top">
+  <a href="index.html"><img src="images/Top.png" background-size: 100% 100%/></a>
+      </div> 
+    </div>
+<div class="clear"></div>
+<div class="nav">
+  <ul>
+    <li><a href="index.html">网站首页</a></li>
+    <!-- 下拉菜单,菜单更新从这里复制-------------------------------------------------------------- -->
+    <li ><a href="shijianzhou.html">疫情时间线</a></li>
+    	 
+    <li><a href="piclist.html" class="MoreNav">更多内容</a> 
+    
+    					<ul >
+    						<li ><a href="JuanZhu.html">捐助</a></li>
+    						<li ><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+    						<li ><a href="zhiyingxiong.html">致英雄</a></li>
+    						<li ><a href="防疫小知识.html">防护小知识</a></li>
+    
+    					</ul>
+    </li>
+    <!-- 以上是下拉菜单，加线方便复制 -->
+	<li><a href="list.html">新闻动态</a></li>
+    <li><a href="contact.html">联系我们</a></li>
+  </ul>
+</div>
+<div class="clear"></div>
+<div class="banner">
+	<div class="b-list"> </div>
+  <div class="b-img">
+ <a href="#" style="background:url(images/Roll2.jpg)  center  no-repeat ; background-size: 101% 101%;"></a>
+          <a href="#" style="background:url(images/Roll5.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+		    <a href="#" style="background:url(images/Roll4.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+    	    <a href="#" style="background:url(images/ZhiJing.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+			 <a href="#" style="background:url(images/Roll6.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+<a href="#" style="background:url(images/Roll7.jpg)  center  no-repeat ; background-size: 100% 100%;"></a>   
+  </div>
+  
+</div>
+<div class="clear"></div>
+<div class="bodyBox">
+  <div class="main">
+    <div class="mLeft"><!-- 侧边栏 -->
+      <div class="titbox">
+        <p class="ccsl">更多内容</p>
+      </div>
+      <ul class="typename">
+        <li><a href="JuanZhu.html">捐助</a></li>
+                <li><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+                <li><a href="piclist.html">致英雄</a></li>
+                <li><a href="piclist.html">防护小知识</a></li>
+        <!--        <li><a href="piclist.html">金宇骨质瓷小头礼盒</a></li>
+                <li><a href="piclist.html">骨质瓷产品散件</a></li> -->
+      </ul>
+      <div class="titbox">
+        <p class="ccsl">联系我们</p>
+      </div>
+      <div class="lxwm">
+        <div class="con">联系人：陈健<br />
+电    话：18183267596<br />
+Q     Q：915617494<br />
+地    址：四川省攀枝花市东区机场路10号</div>
+      </div>
+    </div>
+    <div class="mRight" style="text-align: center;background-color:#FFFAF4 ;">
+      <div class="brandnav">
+        <div>
+          <p class="ccsl">更多内容</p>
+          <div class="con">位置：首页>更多内容>防护小知识</div>
+        </div>
+      </div>
+
+	
+	<body>
+		
+		  <div class="columns" >
+			  <h1 s>冠状病毒的防疫小知识 <img src="images/fangyi.png"class="biaotu" width="50px" /></h1>
+		  </div>
+		 <div class="columns1">
+			 <div class="container">
+				 <div class="section">
+					 <h2 >洗手</h2>
+					 <div class="label">
+					 	流水湿手，涂抹洗手液 掌心对掌心相互揉搓，双手交叉沿指缝相互揉搓。
+					 	弯曲各手指关节，使关节在另一手掌心揉搓，
+					 	大拇指在对侧手掌中揉搓，清洗手腕，双手交换进行。
+					 </div>
+					 <div class="xishou">
+						 <img src="images/xishou1.png" />
+						 <img src="images/xishou2.png" />
+						 <img src="images/xishou3.png" />
+						 <img src="images/xishou4.png" />
+					 </div>
+				 </div>
+				 
+				 <div class="btn-play-1">
+					 <a  href="#" class="btn btn-default" 
+					  data-toggle="modal" data-target="#myModal"> 
+						<span class="bytonicon biconnowPlay" >
+						</span> 
+						<font style="vertical-align: inherit;"> Watch the video</font></a>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<video src="file/1.北京协和医院七步洗手法.mp4" height="500" controls preload="metadata"></video>
+					 </div>
+						</div>
+				  </div>
+				 </div>
+			 </div>
+		 </div>
+		 
+		 
+		 
+		 <div class="columns2 ">
+		 	<div class="container">
+		 		<div class="section">
+		 			<h2 class="heading">
+		 				个人调节
+		 			</h2>
+		 			<div class="label">
+		 				我们面对新冠肺炎疫情时，难免会心情烦躁，但要注意调节心理状态，不要暴饮暴食，
+		 				保持正常的睡眠时间，不要熬夜，保持理性，长时间低头容易导致颈椎病
+		 			</div>
+					<div class="xishou">
+							<img src="images/geren1.png"  />
+							<img src="images/geren2.png" />
+							<img src="images/geren3.png" />
+							
+					</div>
+		 		</div>
+		 		
+				
+		 	</div>
+		 </div>
+		 <div class="columns3 ">
+		 	<div class="container">
+		 		<div class="section">
+		 			<h2 class="heading">
+		 				出行
+		 			</h2>
+		 			<div class="label">
+		 				当我们出行是要注意，不要到人员密集的地方，保持距离，佩戴好口罩，
+		 				乘坐飞机要按指定的路线前往，触碰电梯按键等使用纸巾，消毒公共区域的们把手。
+		 			</div>
+					<div class="xishou">
+							<img src="images/chuxing1.png"  />
+							<img src="images/chuxing2.png" />
+							<img src="images/chuxing3.png" />
+							<img src="images/chuxing4.png" />
+					</div>
+		 		</div>
+		 		
+				
+				
+		 	</div>
+		 </div>
+	</body>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+   </div> 
+    <div class="clear" ></div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+  <div class="main">
+      <div class="footer1">
+        <div class="con"> 攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+      <div class="footer2">
+        <img src="images/Bottom.jpg" height="230" width="122"/>
+      </div>
+      <div class="footer3">
+        <div>
+          <img src="images/Code.png" width="125" height="125" />
+          <p class="ccsl">扫一扫  加入群聊</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="bottom">
+  <div class="main">
+    <!-- <p class="ccsl"></p> -->
+  </div>
+</div>
+</body>
+</html>
+<style>
+
+	.JuanZhuTextBox{
+		margin-top: 3%;
+		
+	}
+	.JuanZhuTextBox>p{
+		text-align: center;
+		color: rgb(230,0,0);
+		font-style: normal;
+		font-family: KaiTi;
+		font-size: 28px;
+		/* 字体间距 */
+		text-indent: 28px;
+	}
+	h2{
+		margin-top: 10px;
+		margin-bottom: 15px;
+		font-size: 36px;
+		line-height: 50px;
+		font-weight: 400;
+	}
+	
+	
+	.columns{
+		vertical-align: middle;
+		text-align: center;
+	}
+	.biaotu{
+		max-width: 100%;
+		vertical-align: middle;
+		border: 0;
+		width: 75px;
+	}
+	.columns1{
+		height: auto;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		background-color: #79bac1;
+		padding-bottom: 0px;
+		width: 100%;
+	}
+	.label{
+		font-size: 24px;
+		font-weight: 300;
+		display: block;
+		color: #fff;
+		white-space: normal;
+	}
+	.columns2{
+		height: auto;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		background-color: #1a2c5b;
+		padding-bottom: 0px;
+	}
+	.columns3{
+		height: auto;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		background-color: #6c5b7b;
+		padding-bottom: 0px;
+	}
+	.container{
+		width: 100%;
+		max-width: 1200px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 16px 20px 80px;
+	}
+	a{
+		color: inherit;
+		text-decoration: none;
+	}
+	.btn-play-1{
+		letter-spacing: 2.15px;
+	}
+	@font-face {font-family: "bytonicon";
+	  src: url('iconfont.eot?t=1566539277649'); /* IE9 */
+	  src: url('iconfont.eot?t=1566539277649#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+	  url('iconfont.woff?t=1566539277649') format('woff'),
+	  url('iconfont.ttf?t=1566539277649') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+	  url('iconfont.svg?t=1566539277649#bytonicon') format('svg'); /* iOS 4.1- */
+	}
+	.biconnowPlay:before{
+		content: "\e627";
+	}
+	.btn-play-1{
+		z-index: 10;
+		padding: 0 20px;
+		color: #fff !important;
+	}
+	.btn-play-1 a{
+		display: inline-block;
+		padding: 6px 0;
+		border: 1px solid #fff;
+		font-size: 12px;
+		width: 180px;
+		
+		border-color: #fff !important;
+	}
+	.btn-play-1>a:-webkit-any-link{
+		cursor: pointer;
+	}
+	a .bytonicon{
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.bytonicon{
+		font-family: "bytonicon" !important;
+		font-size: 16px;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+	}
+	.xishou{
+		display: block;
+	}
+	
+	.xishou>img{
+		display: inline-block;
+		color: gold;
+		text-decoration: none;
+		margin: 4px 20px;
+		color: #F5F5F5;
+		width: 100px;
+	}
+	.heading{
+		font-family: Muli,sans-serif;
+		font-size: 52px;
+		font-weight: 900;
+		text-align: left;
+		color: #fff;
+	}
+	.section{
+		height: auto;
+		margin-right: 20px;
+		margin-bottom: 80px;
+		margin-left: 20px;
+	}
+</style>
+	<!-- 使得左边悬浮 -->
+		<script>  
+		function setNavbar() {
+			
+		    if ($(document).scrollTop() >700) {
+		
+		        $('.mLeft').css({"top":"0","position":"fixed"});
+		    } else {
+		        $('.mLeft').css({"top":"0","position":"static"});
+		    }
+		}                   
+		$(document).ready(function(){
+		    setNavbar();
+		    $(window).scroll(function() {
+		      setNavbar();
+		    });      
+		});
+		</script>  
+		
+		<!-- 返回顶部 ------------------------------------------------------------------------------------------------------>
+		<link href="https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/GoTop.js"></script>
+		<script>
+			new GoTop({
+				hide:true,//当页面不滚动时 是否隐藏 默认false
+				url:'img/3.png',//图片路径 默认我们提供base64的图片
+				state:'',//出现的位置 默认是 下方 提供 center bottom参数
+				height:'50px',//高 默认40px
+				width:'50px',//宽 默认40px
+				scrollTop:500,//滚到什么位置出现 px
+				time:500,//返回顶部多长时间 ms 默认500ms
+				aimation:'animated bounceInDown',//出场动画 默认show（没有出场动画） 这个可以自定义
+				toTop:'',//滚到顶部触发事件
+				toShow:'',//出场时触发事件
+				toHide:function(){
+					$('h1').html('');
+					setTimeout(function(){
+						$('h1').html('');
+					},1000)
+				},//隐藏触发事件
+				go:""//点击返回顶部触发事件
+			});
+		</script>

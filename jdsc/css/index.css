@@ -1,0 +1,256 @@
+.jd{
+	height: 480px;
+	position: relative;
+}
+.jd-inner{
+	height: 480px;
+	position: relative;
+	z-index: 999;       /*只有定位的盒子才有z-index*/
+}
+.ad{
+	height: 480px;
+	background: url(../images/bg.png) no-repeat top center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;           /*一定要写 position转换为行内块，根据内容多少定宽度*/
+}
+.ad a{
+	display: block;
+	height: 100%;
+}
+.jd-clo1{
+	width: 190px;
+	height: 465px;
+	float: left;
+	padding-top: 15px;
+	background-color: #6E6568;
+}
+.jd-clo1 li{
+	padding-left: 10px;
+	height: 28px;
+	line-height: 28px;
+}
+.jd-clo1 li:hover{
+	background-color: #999395;
+}
+.jd-clo1 li a{
+	font-size: 14px;
+	color: #fff;
+}
+.jd-clo1 li a:hover{
+	color: #F10215;
+}
+.jd-clo1 li span{
+	color: #626262;
+	font-size: 13px;
+	color: #fff;
+}
+.jd-clo2{
+	width: 790px;
+	height: 480px;
+	float: left;
+	margin-left: 10px;
+}
+.jd-clo2-hd{
+	height: 340px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.jd-clo2-bd div{
+	width: 390px;
+	height: 190px;
+	float: left;
+}
+.jd-clo2-bd div img{
+	width: 100%;
+}
+.jd-clo2-bd .fristPic{
+	margin-right: 10px;
+}
+.arr-l ,.arr-r{
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	width: 30px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.3);
+	font-family: "icomoon";
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+	font-size: 25px;
+	
+}
+.arr-r:hover{
+	background: rgba(0, 0, 0, 0.5);
+}
+.arr-l:hover{
+	background: rgba(0, 0, 0, 0.5);
+}
+.arr-l{
+	left: 0;
+	padding-left: 5px;
+}
+.arr-r{
+	right: 0;
+	padding-right: 5px;
+}
+
+.jd-clo2-hd ol{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -90px;
+	width: 180px;
+	height: 20px;
+	background: rgba(255, 255,255, 0.3);
+	border-radius: 10px;
+}
+.jd-clo2-hd ol li{
+	width: 12px;
+	height: 12px;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	float: left;
+	margin: 4px 5px;
+	cursor: pointer;
+}
+.jd-clo2-hd .current{
+	background-color: #F10215;
+}
+.jd-clo3{
+	width: 190px;
+	height: 480px;
+	float: right;
+}
+.jd-clo3 a{
+	font-size: 12px;
+	color: #747474;
+}
+.user{
+	height: 95px;
+	padding: 20px 15px 0;
+}
+.user-info{
+	height: 40px;
+	padding-left: 54px ;
+	font-size: 12px;
+	color: #747474;
+	line-height: 22px;
+	position: relative;
+}
+.user-info a{
+	font-size: 12px;
+	color: #747474;
+}
+.user-info a:hover{
+	color: #F10215;
+}
+.info-img{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.info-img img{
+	width: 100%;
+	height: auto;
+}
+.user-profit{
+	margin-top: 14px;
+}
+.user-profit a{
+	width: 70px;
+	height: 20px;
+	border: 2px solid #F10215;
+	display: inline-block;
+	font-size: 12px;
+	color: #F10215;
+	line-height: 20px;
+	text-align: center;
+	margin-right: 3px;
+	border-radius: 10px;
+}
+.user-profit a:hover{
+	color: #FFFFFF;
+	background-color: #F10215;
+}
+.news{
+	height: 153px;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 5px 15px 0;
+}
+.tab-hd{
+	border-bottom: 1px solid #CCCCCC;
+	padding: 3px 0;
+	position: relative;
+}
+.tab-hd a{
+	margin: 0 4px;
+}
+.news .more{
+	position: absolute;
+	right: 0;
+	top: 8px;	
+}
+.line{
+	width: 28px;
+	height: 2px;
+	background-color: #F10215;
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	
+}
+.chuxiao{
+	border-right: 1px solid #CCCCCC;
+	padding-right: 10px;
+}
+.tab-db{
+	margin-top: 10px;
+}
+.tab-db li{
+	height: 23px;
+	line-height: 23px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.jd-service  {
+	height: 209px;
+	/* background-color: skyblue; */
+	width: 190px;
+	overflow: hidden;
+}
+.jd-service  ul {
+	width: 195px;
+}
+.jd-service li {
+	width: 47px;
+	height: 69px;
+	/* background-color: purple; */
+	float: left;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.jd-service li a {
+	width: 100%;
+	height: 100%;  /* 根据父亲 */
+	/* height: auto; 针对于自己的高度和宽度 */
+	display: block;
+}
+.jd-service  i {
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin: 15px auto 8px;
+	background: url(../images/sprite_fs@1x.png) no-repeat;
+}
+.jd-service  p {
+	text-align: center;
+}

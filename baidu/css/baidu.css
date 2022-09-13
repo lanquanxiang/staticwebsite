@@ -1,0 +1,215 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+.nav {
+	height: 24px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 19px 0 5px;
+	padding: 0 96px 0 0;
+}
+.nav ul {
+	float: left;
+}
+.nav li {
+	float: left;
+	margin-left: 20px;
+}
+.nav a {
+	color: #333;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 24px;
+}
+.nav a:hover {
+	color: #00c;
+}
+li .set,
+li .register,
+li .more {
+	font-weight: 400;
+}
+.more {
+	color: #fff;
+	text-align: center;
+	width: 66px;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 19px;
+	background-color: #3385ff;
+	font-size: 13px;
+	cursor: default;
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+.more:hover {
+	color: black;
+	background-color: rgb(249,249,249);
+}
+.hidden {
+	display: none;
+	height: 1000px;
+	width: 90px;
+	background-color: rgb(249,249,249);
+	position: fixed;
+	right: 0;
+	z-index: -1;
+	
+}
+.hidden>div {
+	margin-top: 55px;
+}
+.hidden a {
+	width: 66px;
+	height: 76px;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+	display: block;
+	border-bottom: #f0f0f0 1px solid;
+	color: #666;
+	font-size: 12px;
+	text-decoration: none;
+	font-family: arial;
+}
+.hidden a:nth-child(1) {
+	border-top: #f0f0f0 1px solid;
+}
+.hidden a:nth-child(7) {
+	margin-top: 10px;
+	border-top: #f0f0f0 1px solid;
+	border: 0;
+	text-decoration: underline;
+}
+.hidden a:hover {
+	text-decoration: underline;
+}
+.hidden span {
+	background: url(../img/bdbri_icons_194ae06.png) no-repeat;
+	background-size: cover;
+	width: 36px;
+	height: 36px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+.hidden a:nth-child(2) span {
+	background-position: -75px 0;
+}
+.hidden a:nth-child(3) span {
+	background-position: -112px 0;
+}
+.hidden a:nth-child(4) span {
+	background-position: -36px 0;
+}
+.hidden a:nth-child(5) span {
+	background-position: -148px 0;
+}
+.hidden a:nth-child(6) span {
+	background-position: -185px 0;
+}
+/*搜索部分*/
+.search {
+	position: absolute;
+	top: 12%;
+	left: calc(50% - 320px);
+	height: 190px;
+	text-align: center;
+}
+.s-logo {
+	width: 270px;
+	height: 139px;
+	background-size: 100%;
+	cursor: pointer;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+.camera {
+	width: 18px;
+	height: 16px;
+	background: url(../img/camera_new_5606e8f.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 167px;
+	right: 115px;
+	z-index: 1;
+}
+.camera:hover {
+	background-position: 0 -20px;
+}
+.s-baidu {
+	width: 538px;
+	height: 34px;
+	border: 1px solid #b6b6b6;
+	padding: 0;
+	float: left;
+	padding: 0 0 0 10px;
+}
+.s-anniu {
+	width: 98px;
+	height: 36px;
+	background-color: #3385ff;
+	border: 1px solid #2d78f4;
+	color: #fff;
+	float: left;
+	cursor: pointer;
+}
+.s-anniu:hover {
+	background-color: #317ef3;
+	border: 1px solid #2868c8;
+	box-shadow: 1px 1px 1px #ccc;
+}
+.img {
+	width: 60px;
+	height: 60px;
+	background: url(../img/zbios_efde696.png) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	left: calc(50% - 30px);
+	bottom: 140px;
+	text-align: center;
+}
+.img span {
+	position: relative;
+	bottom: -60px;
+	font-size: 12px;
+	font-weight: 700;
+}
+.bottom {
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	left: calc(50% - 275px);
+}
+.bottom a {
+	    color: #999;
+	    font-size: 12px;
+	    text-decoration: underline;
+}
+.one a {
+	margin-right: 20px;
+}
+.two a {
+	margin-left: 10px;
+}
+.two i {
+	width: 14px;
+	height: 17px;
+	overflow: hidden;
+	display: inline-block;
+	font-style: normal;
+	background-image: url(../img/icons.png);
+}
+.two>i:nth-child(4) {
+	    background-position: -600px -96px;
+}
+.two>i:nth-child(6) {
+	background-position: -623px -96px;
+}

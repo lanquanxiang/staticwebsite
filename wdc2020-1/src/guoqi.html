@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+ <meta charset="utf-8">
+  <title>中国标准国旗</title>
+ </head>
+ <body>
+	 <center><canvas id="canvas" width="600" height="400"></canvas></center>
+  
+  <script>
+  /** 
+    使用HTML5绘制标准五星红旗 
+  */
+var canvas = document.getElementById("canvas");
+  var context = canvas.getContext('2d');
+  var width=canvas.width;
+  var height=width*2/3;
+  var w=width/30;//小网格的宽
+  context.fillStyle="white";
+  context.fillRect(0,0,width,height);
+  var maxR = 0.15, minR = 0.05;//
+  var maxX = 0.25, maxY = 0.25;//大五星的位置
+  var minX = [0.50, 0.60, 0.60, 0.50];
+  var minY = [0.10, 0.20, 0.35, 0.45];
+  var i=0;  
+  var ox = height * maxX, oy = height * maxY;
+  // 画大☆ 
+  //
+   function drawFrame(){
+		   var  sx,theta;
+		   // create5star(context,ox,oy,height * maxR,"#ff0",0);
+		   if(i==0){
+			   context.shadowBlur = 0;
+			   context.shadowOffsetX = 0;
+			   context.shadowOffsetY = 0;
+			   context.shadowColor = "white";
+			   createfill(context,0);
+		   }
+		   // for(i=0;i<=n;i++){
+			  
+			    if(i<=6){//绘制五角星
+					create5star(i+"",context,ox,oy,height * maxR,"#ff0",0);
+				}
+				// alert(i);
+				if(i>6&&i<=12){
+					sx = minX[0] * height, sy = minY[0] * height;
+					theta = Math.atan((oy - sy)/(ox - sx));
+					create5star(i-6+"",context,sx, sy, height * minR, "#ff0",-Math.PI/2+theta);
+				}
+				if(i>12&&i<=18){
+					sx = minX[1] * height, sy = minY[1] * height;
+					theta = Math.atan((oy - sy)/(ox - sx));
+					create5star(i-12+"",context,sx, sy, height * minR, "#ff0",-Math.PI/2+theta);
+				}
+				if(i>18&&i<=24){
+					sx = minX[2] * height, sy = minY[2] * height;
+					theta = Math.atan((oy - sy)/(ox - sx));
+					create5star(i-18+"",context,sx, sy, height * minR, "#ff0",-Math.PI/2+theta);
+				}
+				if(i>24&&i<=30){
+					sx = minX[3] * height, sy = minY[3] * height;
+					theta = Math.atan((oy - sy)/(ox - sx));
+					create5star(i-24+"",context,sx, sy, height * minR, "#ff0",-Math.PI/2+theta);
+					
+				}
+				if(i==31)createTxt();
+		   // } 
+		   if(i!=0&&i!=31)setTimeout(drawFrame,1000);
+		   else setTimeout(drawFrame,5000);
+           if(i==32){
+			   context.clearRect(0, 0, canvas.width, canvas.height);
+			   i= 0;
+		   } 
+		   else i+= 1;
+		   
+      }
+	setTimeout(drawFrame,1000);
+ // 画小★
+  // for (var idx = 0; idx < 4; idx++) {
+  //   var  sx = minX[idx] * height, sy = minY[idx] * height;
+  //   var  theta = Math.atan((oy - sy)/(ox - sx));
+  //   create5star(context,sx, sy, height * minR, "#ff0",-Math.PI/2+theta,idx);
+  //  }
+  // //辅助线
+  // context.moveTo(0,height/2)
+  // context.lineTo(width,height/2);
+  // context.stroke();
+  // context.moveTo(width/2,0);
+  // context.lineTo(width/2,height);
+  // context.stroke();
+  // //画网格，竖线
+  //  for(var j=0;j< 15;j++){
+  //     context.moveTo(j*w,0);
+  //     context.lineTo(j*w,height/2);
+  //     context.stroke();
+  //  }
+  //  //画网格，横线
+  //   for(var j=0;j< 10;j++){
+  //     context.moveTo(0,j*w);
+  //     context.lineTo(width/2,j*w);
+  //     context.stroke();
+  //  }
+  //   //画大圆
+  //   context.beginPath();
+  //   context.arc(ox,oy,maxR*height,0,Math.PI*2,false);
+  //   context.closePath();
+  //   context.stroke();
+  //   // 画小圆
+  //   for (var idx = 0; idx < 4; idx++) {
+  //    context.beginPath();
+  //    var  sx = minX[idx] * height, sy = minY[idx] * height;
+  //    context.arc(sx, sy, height * minR,0,Math.PI*2,false);
+  //    context.closePath();
+  //    context.stroke();
+  //   }  
+  //   //大圆中心与小圆中心连接线
+  //   for (var idx = 0; idx < 4; idx++) {
+  //    context.moveTo(ox,oy);
+  //    var  sx = minX[idx] * height, sy = minY[idx] * height;
+  //    context.lineTo(sx, sy);
+  //    context.stroke();
+  //   }  
+   //绘制五角星
+  /**
+   * 创建一个五角星形状. 该五角星的中心坐标为(sx,sy),中心到顶点的距离为radius,rotate=0时一个顶点在对称轴上
+   * rotate:绕对称轴旋转rotate弧度
+   */
+  function create5star(num,context,sx,sy,radius,color,rotato){
+	// alert(num);
+	context.save();
+    context.translate(sx,sy);//移动坐标原点
+    context.rotate(Math.PI+rotato);//旋转
+    context.beginPath();//创建路径  
+	var dig = Math.PI/5*4 ;
+	if(num!=0){
+		// alert(num);
+		var x = Math.sin((num-1)*dig);
+		var y= Math.cos((num-1)*dig);
+	}else{
+		var x=0;
+		var y=1;
+	}
+		context.moveTo(x*radius,y*radius);
+		// for(var i = 0;i<5;i++){//画五角星的五条边
+		 x = Math.sin(num*dig);
+		 y = Math.cos(num*dig);
+		 context.lineTo(x*radius,y*radius);
+		 context.closePath();
+	   // } 
+	   // 
+	   context.stroke();
+   if(num==6){
+	   context.beginPath();
+	   context.strokeStyle=color;
+	   context.fillStyle=color;
+	   context.moveTo(0,radius);
+	  for(var i = 0;i<16;i++){//画五角星的五条边
+	    x = Math.sin(i*dig);
+	    y = Math.cos(i*dig);
+		context.lineTo(x*radius,y*radius);
+	  }
+	   context.stroke();
+	   context.closePath();
+		context.fill();
+   }
+   context.restore();
+
+  }
+  function createfill(context,n){
+	  context.save();
+	  if(n==4){ 
+		  context.beginPath();
+		  context.moveTo(0,0);
+		  context.lineTo(0,height);
+		  context.lineTo(width,height);
+		  context.lineTo(width,0);
+		  context.fillStyle="red";
+		  context.lineTo(width,0);
+		  context.fill();
+		  return;
+	  }
+	  else if(n==0){
+		context.beginPath();
+		context.moveTo(0,0);
+		context.lineTo(0,height);
+		context.closePath();
+		context.stroke(); 
+	  }else if(n==1){
+	  context.beginPath();
+	  context.moveTo(0,height);
+	  context.lineTo(width,height);
+	  context.closePath();
+	  context.stroke(); 
+	  }else if(n==2){
+		  context.beginPath();
+		  context.moveTo(width,height);
+		  context.lineTo(width,0);
+		  context.closePath();
+		  context.stroke(); 
+	  }else if(n==3){
+		  context.beginPath();
+		  context.moveTo(width,0);
+		  context.lineTo(0,0);
+		  context.closePath();
+		  context.stroke(); 
+	  }
+	  setTimeout(function(){
+		  createfill(context,n+1);
+	  },1000);
+  }
+  function createTxt(){
+	  var canvas = document.getElementById('canvas');
+	  var ctx = canvas.getContext('2d');
+	  ctx.fillStyle = "yellow";
+	  ctx.font = "25px '楷体'";
+	  ctx.textAlign = "center";
+	  //shadowBlur:模式级数
+	  ctx.shadowBlur = 4;
+	  ctx.shadowOffsetX = 4;
+	  ctx.shadowOffsetY = 4;
+	  ctx.shadowColor = "black";
+	  //fillText("要添加的文字",x0坐标，y0坐标)
+	  //ctx.strokeText("携手抗疫、共克时艰，推动构建人类命运共同体!",50,100);
+	  ctx.fillText("携手抗疫、共克时艰，推动构建人类命运共同体!",width*1/2,height*2/3);
+	  ctx.fillText("世界抗疫加油！",width*1/2,height*3/4);
+  }
+</script>
+</body>
+</html>

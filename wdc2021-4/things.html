@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>建党历程</title>
+		<link rel="stylesheet" type="text/css" href="css/maincs.css"/>
+		<link rel="stylesheet" type="text/css" href="css/things.css"/>
+		<script type="text/javascript">
+			window.onload=function() {
+				var imgs=document.querySelectorAll(".imgs");
+				var bg=document.querySelector(".bg");
+				var bigpic=document.querySelector(".bigpic");
+				var pointpic=document.querySelector(".pointpic");
+
+			console.log('"'+imgs[0].src+'"');
+			for(var i=0;i<imgs.length;i++) {
+				imgs[i].addEventListener('mouseenter', function() {
+					bg.style.display="block";
+					bigpic.style.display="block";
+					pointpic.src=this.src;
+				})
+				imgs[i].addEventListener('mouseleave', function() {
+					bg.style.display="none";
+					bigpic.style.display="none";
+					pointpic.src=this.src;
+				})
+			}
+			//导航栏事件
+			var sliderbar=document.querySelector(".slider-bar");
+			var timeImg=document.querySelector(".time-image");
+			var exThing=document.querySelector(".ex-thing");
+			var goBack=document.querySelector(".goBack");
+			//拿到侧边栏要变成固定定位的值
+			var timeImgTop=timeImg.offsetTop;
+			//拿到侧边栏的固定定位的值
+			var sliderbarTop=sliderbar.offsetTop-timeImgTop;
+			var exThingTop=exThing.offsetTop;
+			//页面滚动事件
+			document.addEventListener('scroll',function() {
+				if(window.pageYOffset>=timeImgTop) {
+					sliderbar.style.position="fixed";
+					sliderbar.style.top=sliderbarTop + 'px';
+				}else {
+					sliderbar.style.position="absolute";
+					sliderbar.style.top=300 + 'px';
+				}
+				if(window.pageYOffset>=exThingTop) {
+					goBack.innerHTML="返<br>回<br>顶<br>部";
+				}else {
+					goBack.innerHTML="欢<br>迎<br>访<br>问";
+				}
+			})
+			 // 3. 当我们点击了返回顶部模块，就让窗口滚动的页面的最上方
+			        goBack.addEventListener('click', function() {
+			            // 里面的x和y 不跟单位的 直接写数字即可
+			            // window.scroll(0, 0);
+			            // 因为是窗口滚动 所以对象是window
+			            animate(window, 0);
+			        });
+			        // 动画函数
+			        function animate(obj, target, callback) {
+			            // console.log(callback);  callback = function() {}  调用的时候 callback()
+			
+			            // 先清除以前的定时器，只保留当前的一个定时器执行
+			            clearInterval(obj.timer);
+			            obj.timer = setInterval(function() {
+			                // 步长值写到定时器的里面
+			                // 把我们步长值改为整数 不要出现小数的问题
+			                // var step = Math.ceil((target - obj.offsetLeft) / 10);
+			                var step = (target - window.pageYOffset) / 10;
+			                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+			                if (window.pageYOffset == target) {
+			                    // 停止动画 本质是停止定时器
+			                    clearInterval(obj.timer);
+			                    // 回调函数写到定时器结束里面
+			                    // if (callback) {
+			                    //     // 调用函数
+			                    //     callback();
+			                    // }
+			                    callback && callback();
+			                }
+			                // 把每次加1 这个步长值改为一个慢慢变小的值  步长公式：(目标值 - 现在的位置) / 10
+			                // obj.style.left = window.pageYOffset + step + 'px';
+			                window.scroll(0, window.pageYOffset + step);
+			            }, 15);
+			        }
+					
+					
+			}
+		</script>
+	</head>
+	<body>
+		<div class="slider-bar">
+			<span class="goBack">欢<br>迎<br>访<br>问</span>
+		</div>
+		<div class="navt">
+			<!-- <img src="images/logo.jpg" > -->
+			<a href="main.html" target="_blank">首页</a>
+			<a href="#">建党历程</a>
+			<a href="people.html" target="_blank">人物介绍</a>
+			<a href="test.html" target="_blank">好书推荐</a>
+		</div>
+		<div class="mian clearfix">
+			<!-- <div class="banner">
+				<img src="images/logo.jpg" />
+			</div> -->
+			
+			<div class="title1">
+				<span>事件历程</span>
+			</div>
+			<div class="time-image">
+		<!-- 1921 -->
+				<div class="teone po ouline">
+					<div class="smcolor">
+						<div class="smimg">
+							<img src="images/things-images/1921.png" >
+						</div>
+						<a class="htop" href="#textone">1921中国共产党成立</a>
+					</div>
+					
+					<em class="embottom">●</em>
+				</div>
+				<!-- 1949 -->
+				<div class="tetwo po ouline">
+					<em class="emtop">●</em>
+					<div class="smcolor">
+						<a class="hbottom" href="#texttwo">1949新中国成立</a>
+						<div class="smimg">
+							<img src="images/things-images/1949-1.png" >
+						</div>
+						
+					</div>
+				</div>
+				<!-- 1950 -->
+				<div class="tethree po ouline">
+					<div class="smcolor">
+						<div class="smimg">
+							<img src="images/things-images/1950-2.jpg" >
+						</div>
+						<a class="htop" href="#textthree">1950抗美元朝</a>
+					</div>
+					
+					<em class="embottom">●</em>
+				</div>
+				<!-- 1964 -->
+				<div class="tefour po ouline">
+					<em class="emtop">●</em>
+					<div class="smcolor">
+						<a class="hbottom" href="#textfour">1964原子弹爆炸成功</a>
+						<div class="smimg">
+							<img src="images/things-images/1964.jpg" >
+						</div>
+					</div>
+				</div>
+				<!-- 1978 -->
+				<div class="tefive po ouline">
+					<div class="smcolor">
+						<div class="smimg">
+							<img src="images/things-images/1978-3.png" >
+						</div>
+						<a class="htop" href="#textfive">1978中国改革开发</a>
+					</div>
+					
+					<em class="embottom">●</em>
+				</div>
+				<!-- 1997 -->
+				<div class="tesix po ouline">
+					<em class="emtop">●</em>
+					<div class="smcolor">
+						<a class="hbottom" href="#textsix">1997香港回归</a>
+						<div class="smimg">
+							<img src="images/things-images/1997.jpg" >
+						</div>
+					</div>
+				</div>
+				<!-- 1999 -->
+				<div class="teseven po ouline">
+					<div class="smcolor">
+						<div class="smimg">
+							<img src="images/things-images/1999.jpg" >
+						</div>
+						<a class="htop" href="#textseven">1999澳门回归</a>
+					</div>
+					
+					<em class="embottom">●</em>
+				</div>
+				<!-- 2008 -->
+				<div class="teeight po ouline">
+					<em class="emtop">●</em>
+					<div class="smcolor">
+						<a class="hbottom" href="#texteight">2008北京奥运会</a>
+						<div class="smimg">
+							<img src="images/things-images/2008-1.jpg" >
+						</div>
+					</div>
+				</div>
+				<!-- 2021.2 -->
+				<div class="tenine po ouline">
+					<div class="smcolor">
+						<div class="smimg">
+							<img src="images/things-images/2021-2.png" >
+						</div>
+						<a class="htop" href="#textnine">21年2月脱贫战胜利</a>
+					</div>
+					
+					<em class="embottom">●</em>
+				</div>
+				<!-- 2021.7 -->
+				<div class="teten po ouline">
+					<em class="emtop">●</em>
+					<div class="smcolor">
+						<a class="hbottom" href="#textten">21年7月建党100周年</a>
+						<div class="smimg">
+							<img src="images/things-images/2021-7.png" >
+						</div>
+					</div>
+				</div>
+			</div>
+				
+			<!-- 事件详细解释开始 -->
+			<div class="ex-thing clearfix">
+				<div class="title1">
+					<span>事件介绍</span>
+				</div>
+				<div class="thing clearfix">
+					<ul>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/1921-1.jpg" title="1921中国共产党成立" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="textone">1921中国共产党成立</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;1920年初，李大钊和陈独秀等人开始酝酿建党的问题。在共产国际代表的帮助下，上海、北京、武汉、广州、长沙、济南等地的先进知识分子，建立了党的早期组织。在法国和日本留学的青年学生，也成立了党的早期组织。
+								1921年7月23日，中国共产党第一次全国代表大会在上海举行。在会议进行过程中，突然有法租界巡捕闯进了会场，会议被迫中断。于是，最后一天的会议，便转到了浙江嘉兴南湖的一艘游船上举行。经过讨论，大会通过了中国共产党的第一个纲领和决议，并选举产生党的领导机构——<a href="https://baike.sogou.com/v99889072.htm?fromTitle=%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E4%B8%AD%E5%A4%AE%E5%B1%80" class="red" target="_blank">中央局</a>。党的一大宣告了中国共产党的正式成立。
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/1949.jpg" title="1949新中国成立" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="texttwo">1949新中国成立</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;中国共产党领导全国各族人民，推翻了压在人民头上的帝国主义、封建主义和官僚资本主义三座大山，取得新民主主义革命的胜利并建立了中华人民共和国，
+								从此，中国结束了一百多年来被侵略被奴役的屈辱历史，真正成为了独立自主的国家，中国人民从此站起来了，成为国家的主人。1949年10月9日在政协全国委员会第一次会议上，通过了由许广平代马叙伦（中国民主促进会主席）提出的以10月1日为
+								<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E5%BA%86%E8%8A%82/1041892?fromtitle=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E5%BA%86%E6%97%A5&fromid=3571282" class="red" target="_blank">中华人民共和国国庆日</a>的建议。
+								12月2日，中央人民政府委员会第四次会议采纳了这一建议，并作出正式决定。
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/1950-3.jpg" title="1950抗美援朝" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="textthree">1950抗美援朝</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;决策形成后，毛泽东和周恩来曾研究过以什么名义出兵的问题，并初步拟定了“支援军”的名义。黄炎培认为支援军，就是派出去的，容易让国际认为中国对美国宣战。因此改为中国人民志愿军，并使用了完全不同的番号，
+								表示不是中国跟美国宣战，是人民志愿支援朝鲜。<br>
+								<a href="https://baike.sogou.com/v6898295.htm" class="red" target="_blank">抗美援朝战争第一次战役</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://baike.sogou.com/v6898329.htm" class="red" target="_blank">抗美援朝战争第二次战役</a>
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/1964-2.jpg" title="1964原子弹爆炸成功" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="textfour">1964原子弹爆炸成功</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;在国家经济最困难的时候，远在新疆罗布泊的核试验基地更是雪上加霜。罗布泊本来植物就很稀少，可以吃的如榆树叶子沙枣树籽，甚至骆驼草，几乎都被他们拿来充饥了。
+								科研人员每天就餐后走出食堂都说还没吃饱，但一回到研究室就立刻开展工作。在一无图纸二无资料的情况下，科研人员用计算尺、算盘进行理论计算工作。饥饿难耐的时候，有的人拿酱油冲一杯汤，有的人冲一杯糖水。“加餐后”立刻又埋头科研工作。<br>	
+								主要任务：<a href="https://www.huohuolife.com/sh/2105.html" class="red" target="_blank">邓稼先</a>
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/1978.jpg" title="1978中国改革开放" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="textfive">1978中国改革开放</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;1978年5月11日，<a href="https://baike.sogou.com/v98835.htm" class="red" target="_blank">《光明日报》</a>头版发表特约评论员文章<a href="https://baike.sogou.com/v6526716.htm" class="red" target="_blank">《实践是检验真理的唯一标准》</a>，在全国范围内引发了一场关于真理标准问题的大讨论。在邓小平等老一辈无产阶级革命家的领导和支持下，
+								依靠理论界、新闻界和从事实际工作同志的紧密配合，这场讨论终于冲破“两个凡是”的束缚，为党的十一届三中全会重新确立马克思主义的思想路线作了理论和舆论上的准备，在党和国家的历史进程中产生了重大而深远的影响。
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/1997-1.jpg" title="1997香港回归" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="textsix">1997香港回归</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;香港回归（Hong Kong reunification）指1997年7月1日中华人民共和国政府对中国香港恢复行使主权的历史事件。
+								1982年9月26日，<a href="https://baike.sogou.com/v44194.htm" class="red" target="_blank">英国首相撒切尔夫人</a>访华，中英首次揭开了香港前途谈判之幕。
+								双方在经过首次谈判后，声明表示将会通过外交途径对香港前途的解决方法进行商谈。第二阶段的谈判是1983年7月12及13日两天，地点在北京。
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/1999-1.jpg"  title="1999澳门回归" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="textseven">1999澳门回归</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;自<a href="https://baike.sogou.com/v57218054.htm" class="red" target="_blank">1971年联合国大会2758号决议</a>，中华人民共和国取得联合国合法席位后，便开始为香港与澳门的主权问题采取外交行动。时任国务院总理<a href="https://baike.baidu.com/item/%E5%91%A8%E6%81%A9%E6%9D%A5" class="red" target="_blank">周恩来</a>对此非常关注，
+								中国驻联合国代表黄华亦于1972年3月为此致函联合国非殖民地化委员会申明中国政府的立场：“香港和澳门是被<a href="https://baike.baidu.com/item/%E8%8B%B1%E5%9B%BD/144602" class="red" target="_blank">英国</a>、<a href="https://baike.baidu.com/item/%E8%91%A1%E8%90%84%E7%89%99/144714" class="red" target="_blank">葡萄牙</a>占领的中国领土,
+								同年11月8日，联合国大会通过了决议案，将香港和澳门于殖民地名单剔除，此举为中国和平解决香港与澳门的主权问题制造了有利的背景条件
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/2008.jpg" title="2008北京奥运会" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="texteight">2008北京奥运会</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;第29届夏季奥林匹克运动会（Games of the XXIX Olympiad），于2008年8月8日至24日在中国首都北京举行。本届<a href="https://baike.sogou.com/v64046.htm" class="red" target="_blank">奥运会</a>是中国首次举办的夏季奥运会，并以51枚金牌居金牌榜首位，是奥运历史上首个登上金牌榜首的亚洲国家。<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;该<a href="https://baike.sogou.com/v439837.htm" class="red" target="_blank">奥运会主办城市</a>是北京，上海、天津、沈阳、青岛等为协办城市，香港承办马术项目。
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/2021-22.png" title="2021年2月脱贫攻坚战" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="textnine">2021年2月脱贫攻坚战</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;经过全党全国各族人民共同努力，在迎来中国共产党成立一百周年的重要时刻，我国脱贫攻坚战取得了全面胜利，现行标准下9899万农村贫困人口全部脱贫，832个贫困县全部摘帽，12.8万个贫困村全部出列，区域性整体贫困得到解决，完成了消除绝对贫困的艰巨任务，创造了又一个彪炳史册的人间奇迹！这是中国人民的伟大光荣，是中国共产党的伟大光荣，是中华民族的伟大光荣！
+							</div>
+						</li>
+						<li>
+							<div class="th-img">
+								<img src="images/things-images/2021.jpg" title="2021年7月建党100周年" class="imgs">
+							</div>
+							<div class="article">
+								<h4 id="textten">2021年7月建党100周年</h4>
+								&nbsp;&nbsp;&nbsp;&nbsp;100年来，中国共产党由小到大，由弱变强，领导中国人民冲破重重难关，夺取了革命斗争和经济建设的一个又一个胜利。
+								长久以来，中国共产党始终坚持以<a href="https://baike.sogou.com/v841066.htm?fromTitle=%E9%A9%AC%E5%85%8B%E6%80%9D%E5%88%97%E5%AE%81%E4%B8%BB%E4%B9%89" class="red" target="_blank">马克思列宁主义</a>、<a href="https://baike.sogou.com/v397191.htm?fromTitle=%E6%AF%9B%E6%B3%BD%E4%B8%9C%E6%80%9D%E6%83%B3" class="red" target="_blank">毛泽东思想</a>、中国特色社会主义理论体系为指导，领导全国人民改革开放，奋斗进取，全面推进中国特色社会主义现代化建设，可以说，中国共产党的历史，就是不断从胜利走向胜利的历史。
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 事件详细解释结束 -->
+					
+		</div>
+		<div class="footer">版权所有@ 攀枝花学院2018级软件工程一班</div>	
+		<!-- 大图展示布局开始 -->
+		<div class="bg">	
+		</div>
+		<div class="bigpic">
+			<img src="images/things-images/1921-1.jpg" class="pointpic">
+		</div>
+		<!-- 大图展示布局结束 -->
+		
+	</body>
+</html>

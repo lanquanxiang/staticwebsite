@@ -1,0 +1,68 @@
+.time {
+	padding: 45px 0;
+	min-height: 720px;
+	background: url(../img/line04.gif) repeat-y 187px 0;
+	overflow: hidden;
+	position: relative;
+	z-index: 100;
+}
+
+.time .history-data {
+	overflow: hidden;
+}
+
+.time .history-data h2 {
+	height: 59px;
+	font-size: 25px;
+	font-family: 微软雅黑;
+	font-weight: normal;
+	padding-left: 45px;
+	margin-bottom: 74px;
+	background: url(../img/icon06.gif) 158px 0px no-repeat rgb(255, 255, 255);
+}
+
+.time .history-data li {
+	display: none;
+	background: url(../img/icon07.gif) no-repeat 180px 0;
+	padding-bottom: 50px;
+	zoom: 1;
+}
+
+.time .history-data li h3 {
+	float: left;
+	width: 168px;
+	text-align: right;
+	padding-right: 19px;
+	color: #c3c3c3;
+	font: normal 18px/16px Arial;
+}
+
+.time .history-data li span {
+	display: block;
+	color: #d0d0d0;
+	font-size: 12px;
+}
+
+.time .history-data ul li .text1 {
+	float: left;
+	padding-left: 41px;
+	margin-top: -5px;
+	font-family: "楷体";
+	font-size: 18px;
+	color: #F7F7F7;
+}
+
+.time .theFirst{
+	background-image: url(../img/background2.jpg);
+	background-size: 1349px 600px;
+}
+.time .theSecond{
+	background-image: url(../img/background.jpg);
+	background-size: 1349px 400px;
+}
+.time .theLast{
+	background-image: url(../img/background1.jpg);
+	background-size: 1349px 433px;
+	
+	
+}

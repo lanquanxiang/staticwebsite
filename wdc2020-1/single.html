@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Single</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Around Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+	<style type="text/css">
+		input[type=range] {
+			-webkit-appearance: none;
+		    width: 415px;
+			display: inline-block;
+			background: -webkit-linear-gradient(#61bd12, #ddd) no-repeat,#ddd ;
+			padding: 0;
+			margin:0;
+			background-size: 0% 100%;/*设置左右宽度比例*/
+		    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+		}
+		input[type=range]::-webkit-slider-thumb {
+		   -webkit-appearance: none;
+			 height: 25px;
+			width: 25px;
+			margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+			background: #ffffff;
+			border-radius: 50%; /*外观设置为圆形*/
+			border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+			box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+		}
+		input[type=range]::-webkit-slider-runnable-track{
+			height: 15px;
+			border-radius: 10px;
+			 box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+		}
+		input[type=range]:focus{
+			outline: none;
+		}
+		input[type=range]::-moz-range-track {
+			height: 15px;
+			border-radius: 10px; /*将轨道设为圆角的*/
+			box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+		}
+		
+		input[type=range]::-moz-range-thumb {
+			appearance: none;
+			height: 18px;
+			width: 18px;
+			margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+			background: #ffffff; 
+			border-radius: 50%; /*外观设置为圆形*/
+			border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+			box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+		}
+		
+		input[type=range]::-moz-range-progress {
+			background: linear-gradient(#059CFA, #059CFA) no-repeat;
+			height: 13px;	 
+			border-radius: 10px;
+		}
+		
+		input[type=range]::-ms-track {
+			height: 18px;
+			border-radius: 10px;
+			box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+			border-color: transparent; /*去除原有边框*/
+			color: transparent; /*去除轨道内的竖线*/
+		}
+		
+		input[type=range]::-ms-thumb {
+			border: solid 0.125em rgba(205, 224, 230, 0.5);
+			height: 18px;
+			width: 18px;
+			border-radius: 50%;
+			background: #ffffff;
+			margin-top: -5px;
+			box-shadow: 0 .125em .125em #3b4547;
+		}
+		
+		input[type=range]::-ms-fill-lower {
+			/*进度条已填充的部分*/
+			height: 15px;
+			border-radius: 10px;
+			background: #61bd12;
+		}
+		
+		input[type=range]::-ms-fill-upper {
+			/*进度条未填充的部分*/
+			height: 15px;
+			border-radius: 10px;
+			background: #ffffff;
+		}
+		
+		input[type=range]:focus::-ms-fill-lower {
+			background: #61bd12;
+		}
+		
+		input[type=range]:focus::-ms-fill-upper {
+			background: #ffffff;
+		}
+		#con{
+			border: none;
+			outline: none;
+			color: #A8A8A8;
+			background: none;
+			font-size: 1em;
+			margin: .6em 0;
+			-webkit-appearance: none;
+		}
+		#con:hover{
+			color:#2DCB74;
+			transition: .5s all;
+			-webkit-transition: .5s all;
+			-moz-transition: .5s all;
+			-o-transition: .5s all;
+			-ms-transition: .5s all;
+		}
+		.button{
+			border: none;
+			outline: none;
+			color: #A8A8A8;
+			background: none;
+			font-size: 1em;
+			margin: .6em 0;
+			-webkit-appearance: none;
+		}
+		.button:hover{
+			color:#2DCB74;
+			transition: .5s all;
+			-webkit-transition: .5s all;
+			-moz-transition: .5s all;
+			-o-transition: .5s all;
+			-ms-transition: .5s all;
+		}
+		table{
+			text-align: center;
+			display: none;
+		}
+		td{
+			width: 280px;
+		}
+	</style>
+<!--//end-animate-->
+</head>
+<body onload="init()">
+	<!-- header -->
+	<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-info">
+					<div class="top-header-left wow fadeInLeft animated" data-wow-delay=".5s">
+						<p>世界抗疫加油!</p>
+					</div>
+					<!-- <div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div> -->
+				</div>
+			</div>
+		</div>
+		<div class="bottom-header">
+			<div class="container">
+				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+					<h1><a href="index.html"><img src="images/logo.png" alt="" /></a></h1>
+				</div>
+				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html" class="active">主页</a></li>
+								<li><a href="about.html">关于</a></li>
+								<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相集<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a class="hvr-bounce-to-bottom" href="gallery1.html">万众一心</a></li>
+										<li><a class="hvr-bounce-to-bottom" href="gallery2.html">全球战疫</a></li>          
+									</ul>
+								</li>		
+								<li><a href="blog.html">感人故事</a></li>
+								<li><a href="contact.html">抗疫信息</a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+		
+		<!-- blog -->
+		<div class="blog">
+				<!-- container -->
+				<div class="container">
+					<div class="col-md-8 blog-top-left-grid">
+						<div class="left-blog left-single">
+							<div class="blog-left">
+								<div class="single-left-left wow fadeInUp animated" " data-wow-delay=".5s">
+									<!-- <img src="images/8.jpg" alt="" /> -->
+									<div id="vido">
+										<p id="pp2">来源:<a href="https://www.thepaper.cn/">澎湃新闻</a> &nbsp;&nbsp;2020-05-19 20:22 &nbsp;&nbsp; <a id="pinlun" href="#">评论(3)</a></p>
+										<video id="video" src="http://cloudvideo.thepaper.cn/video/a81f485d051940589c4292f29ef31895/hd/c3f19b27-6446-4dcd-9202-3f935e32b6b9-0f9e4fef-6451-94c1-070e-368b66bee58b.mp4" autoplay="autoplay" width="700px" height="460px"></video>
+										播放进度：<input id="rag" type="range" min="0" max="100" value="0" />
+										<span id="note"></span>
+										<button id="con" onclick="ab(true)">暂停</button>
+										<div class="blog-left-bottom wow fadeInUp animated" id="pp" data-wow-delay=".5s">
+											<P>
+												日前，武汉全市开展全员核酸筛查。澎湃新闻专访湖北省卫健委副主任、金银潭医院院长张定宇，他表示：全民检测后仍不排除有新增病例发现。 .
+											</P>
+										</div>
+									</div>
+									<script type="text/javascript">
+										var video=document.getElementById("video");
+										var range=document.querySelector("#rag");
+										var note=document.getElementById("note");
+										var but=document.getElementById("con");
+										var flage=false,fl=true;
+										function init(){
+											var str=window.location.search;
+											if(str.indexOf('index')!=-1){
+												var pos_start=str.indexOf('index')+6;
+												change_video(str.substring(pos_start)*1);
+											}
+											note.innerHTML=getFormatTime(0)+"/"+getFormatTime(video.duration);
+											loadMusic();
+										}
+										function ab(fla){
+											if(!fla)flage=true;
+											if(flage){
+												video.play();
+												but.innerHTML="暂停";
+												flage=false;
+											}else{
+												video.pause();
+												but.innerHTML="播放";
+												flage=true;
+											}
+										}
+										function getFormatTime(time){
+											var h=parseInt(time/3600),
+												m=parseInt(time%3600/60),
+												s=parseInt(time%60);
+											h=h<10?"0"+h:h;
+											m=m<10?"0"+m:m;
+											s=s<10?"0"+s:s;
+											return h+":"+m+":"+s;
+										}
+										range.onchange=function(){
+											video.currentTime=video.duration*(document.querySelector("#rag").value/range.max);
+											fl=true;
+											
+										}
+										range.oninput=function(event){
+											var val=event.target.value;
+											note.innerHTML=getFormatTime(video.duration*(val/range.max))+"/"+getFormatTime(video.duration);
+											document.querySelector("#rag").style.cssText="background-size: "+val+"% 100%;";
+										}
+										range.onmouseover=function(envent){
+											fl=false;
+										}
+										range.onmouseout=function(){
+											fl=true;
+										}
+										video.ontimeupdate=function(){
+											var currTime=video.currentTime;
+											var duration=video.duration;
+											if(fl){
+												document.querySelector("#rag").value=currTime/duration*100;
+												note.innerHTML=getFormatTime(currTime)+"/"+getFormatTime(duration);
+												document.querySelector("#rag").style.cssText="background-size: "+currTime/duration*100+"% 100%;";
+											}
+										}
+										video.onended=function(){
+											video.pause();
+											but.innerHTML="播放";
+											flage=true;
+										}
+									</script>
+										<script src="js/my.js" type="text/javascript" charset="utf-8"></script>
+										<script type="text/javascript">
+											var musicArray=new Array(),musicIndex=0,lyric,musicCount=0,playFlag=1,fl2=true;
+											function loadMusic(){
+												var musicXml=getXmlDoc("src/music.xml");
+												var musics=musicXml.getElementsByTagName("name");
+												for(var i=0;i<musics.length;i++){
+													musicArray.push(musics[i].childNodes[0].nodeValue);
+												}
+												musicCount=musicArray.length;
+												var audio=document.getElementById("audio");
+												// alert(musicArray[musicIndex]);
+												showMassage();
+												var musiclist=document.getElementById("list");
+												audio.setAttribute("src","src/"+musicArray[musicIndex]+".mp3");
+												for(var i=0;i<musicArray.length;i++){
+													// musiclist.options[i]=new Option(musicArray[i]+".mp3");
+													musiclist.innerHTML+="<li><a href='#' onclick='clickMusic("+i+")'>"+musicArray[i]+"</a></li>";
+												}
+												// musiclist.selectedIndex=musicIndex;
+												audio.addEventListener("ended",nextMusic,true);
+												audio.addEventListener("timeupdate",function(){updataTime();},true);
+												audio.addEventListener("durationchange",function(){updataTime();},true);
+												audio.pause();
+											}
+											function getFormatTime2(time){
+												var m=parseInt(time%3600/60),
+													s=parseInt(time%60);
+												m=m<10?"0"+m:m;
+												s=s<10?"0"+s:s;
+												return m+":"+s;
+											}
+											function MusicLrc(){
+												var lrc=getTextDoc("src/"+musicArray[musicIndex]+".lrc");
+												lyric=parseLyric(lrc);
+												
+											}
+											function updataTime(){
+												var audio=document.getElementById("audio");
+												var lyricContainer = document.getElementById('lyricContainer');
+												var ct=audio.currentTime;
+												var dt=audio.duration;
+												var time_text=document.getElementById("time");
+												var range=document.getElementById("rag2");
+												if(fl2){
+													range.value=ct/dt*100;
+													time_text.innerHTML=getFormatTime2(ct)+"/"+getFormatTime2(dt);
+													document.querySelector("#rag2").style.cssText="background-size: "+ct/dt*100+"% 100%;";
+												}
+												MusicLrc();
+												var msgs=[];
+												 for (var i = 0, l = lyric.length; i < l; i++) {
+												        if (ct /*当前播放的时间*/ > lyric[i][0]) {
+												            //显示到页面
+															if(msgs.length>=5){
+															    msgs.pop();
+															}
+												            lyricContainer.innerHTML="<h2>"+lyric[i][1]+"</h2>"+msgs.join("<br/>");
+															msgs.unshift(lyric[i][1]);
+												        }
+												    }
+											}
+											function showMassage(){
+												var curmusic=document.getElementById("cur_music");
+												var musicname=document.getElementById("music_name");
+												curmusic.innerHTML=(musicIndex+1)+"/"+musicCount;
+												musicname.innerHTML=musicArray[musicIndex]+".mp3";
+												
+											}
+											function playMusic(){
+												var audio=document.getElementById("audio");
+												var btn=document.getElementById("con2");
+												if(playFlag){
+													audio.pause();
+													btn.innerHTML="播放";
+													playFlag=0;
+												}else{
+													audio.play();
+													btn.innerHTML="暂停";
+													playFlag=1;
+												}
+											}
+											function nextMusic(){
+												var audio=document.getElementById("audio");
+												var musiclist=document.getElementById("list");
+												var btn=document.getElementById("con2");
+												var playStyle=document.getElementsByName("playStyle");
+												if(playStyle[0].checked){
+													musicIndex++;
+												}else if(playStyle[1].checked){
+													if(audio.currentTime!=audio.duration){
+														musicIndex++;
+													}
+												}else if(playStyle[2].checked){
+													musicIndex=Math.floor(Math.random()*musicCount);
+												}
+												if(musicIndex>=musicCount){
+													musicIndex=0;
+												}
+												musiclist.selectedIndex=musicIndex;
+												audio.src="src/"+musicArray[musicIndex]+".mp3";
+												showMassage();
+												if(playFlag==0){
+													btn.innerHTML="暂停";
+													playFlag=1;
+												}
+											}
+											function lastMusic(){
+												var audio=document.getElementById("audio");
+												var musiclist=document.getElementById("list");
+												var btn=document.getElementById("con2");
+												var playStyle=document.getElementsByName("playStyle");
+												if(playStyle[0].checked){
+													musicIndex--;
+												}else if(playStyle[1].checked){
+													if(audio.currentTime!=audio.duration){
+														musicIndex--;
+													}
+												}else if(playStyle[2].checked){
+													musicIndex=Math.floor(Math.random()*musicCount);
+												}
+												if(musicIndex<=0){
+													musicIndex=musicCount-1;
+												}
+												musiclist.selectedIndex=musicIndex;
+												audio.src="src/"+musicArray[musicIndex]+".mp3";
+												showMassage();
+												if(playFlag==0){
+													btn.innerHTML="暂停";
+													playFlag=1;
+												}
+											}
+											function clickMusic(index){
+												var audio=document.getElementById("audio");
+												var musiclist=document.getElementById("list");
+												var btn=document.getElementById("con2");
+												$("#vido").css({"display":"none"});
+												$("#tab").css({"display":"table"});
+												if(!flage)ab(true);
+												musicIndex=index;
+												// musiclist.selectedIndex=musicIndex;
+												audio.src="src/"+musicArray[musicIndex]+".mp3";
+												showMassage();
+												if(playFlag==0){
+													btn.innerHTML="暂停";
+													playFlag=1;
+												}
+											}
+											
+										</script>
+								<!-- 	</head> -->
+									<!-- <body onload="loadMusic()"> -->
+										<table width="670px" id="tab">
+											<tr>
+												<td colspan="3">
+													<audio src="" id="audio" autoplay="autoplay">
+														当前浏览器不支持audio
+													</audio>
+												</td>
+											</tr>
+											<tr>
+												<td align="left">正在播放：<span id="cur_music" >0/0</span></td>
+												<td colspan="2"><span id="music_name">音乐名字</span></td>
+											</tr>
+											<tr height="150px">
+												<td colspan="3">
+													<div id="lyricContainer"></div>
+												</td>
+											</tr>
+										<!-- 	<tr>
+												<td><button type="button" onclick="lastMusic()">上一首</button></td>
+												<td><button type="button" id="btn" onclick="playMusic()">暂停</button></td>
+												<td><button type="button" onclick="nextMusic()">下一首</button></td>
+											</tr> -->
+											<tr>
+												<td><input type="radio" name="playStyle" checked="checked"/>列表循环</td>
+												<td>
+													<button type="button" class="button" onclick="lastMusic()">上一首</button>
+													<input type="radio" name="playStyle"/>单曲循环
+													<button type="button" class="button" onclick="nextMusic()">下一首</button>
+												</td>
+												<td><input type="radio" name="playStyle"/>随机播放</td>
+											</tr>
+											<tr>
+												<td colspan="3">
+													播放进度：<input id="rag2" type="range" min="0" max="100" value="0"/>
+													<span id="time"></span>
+													<button id="con2" class="button" onclick="playMusic()">暂停</button>
+												</td>
+											</tr>
+											<!-- <tr>
+												<td colspan="3">
+												</td>
+											</tr> -->
+										</table>
+										<script type="text/javascript">
+											var range2=document.getElementById("rag2");
+											// range2.addEventListener("onchange",);
+											// range2.addEventListener("oninput",);
+											// range2.addEventListener("onmousemove",);
+											// range2.addEventListener("onmouseout",);
+											range2.onchange=function(){
+												var audio=document.getElementById("audio");
+												audio.currentTime=audio.duration*(range2.value/range2.max);
+												fl2=true;
+											}
+											range2.oninput=function (event){
+												var val=event.target.value;
+												time.innerHTML=getFormatTime2(audio.duration*(val/range2.max))+"/"+getFormatTime2(audio.duration);
+												document.querySelector("#rag2").style.cssText="background-size: "+val+"% 100%;";
+											}
+											range2.onmouseover=function(){
+												fl2=false;
+											}
+											range2.onmouseout=function(){
+												fl2=true;
+											}
+										</script>
+								</div>
+							</div>
+							<div id="reps" class="response wow fadeInUp animated" data-wow-delay=".5s">
+								<h3>评论</h3>
+								<!-- <div class="media response-info"> -->
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/t4.jpeg" alt="">
+										</a>
+										<h5><a href="#">澎湃网友uaURFj </a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>实事求是的态度</p>
+										<ul>
+											<li>May 20, 2020</li>
+											<li><a href="single.html">Reply</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+								<!-- </div> -->
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/t5.jpeg" alt="">
+										</a>
+										<h5><a href="#">房间外面有座山峰-广东梅州 </a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>愿所有人都能健康平安！长命百岁！注意防护，保重身体！</p>
+										<ul>
+											<li>May 20, 2020</li>
+											<li><a href="single.html">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/t6.jpeg" alt="">
+										</a>
+										<h5><a href="#">狗爸爸鼠仔仔</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>不放松，需谨慎！百姓大部分都明白！</p>
+										<ul>
+											<li>May 19, 2020</li>
+											<li><a href="single.html">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							
+							<div class="opinion">
+								<h2 class="wow fadeInUp animated" data-wow-delay=".5s">留言板</h2>
+								<form/>
+									<input class="wow fadeInLeft animated" id="nam" data-wow-delay=".5s"  type="text" placeholder="姓名"/>
+									<input class="wow fadeInRight animated" id="yox" data-wow-delay=".5s" type="text" placeholder="邮箱" required="">
+									<textarea id="lyq" class="wow fadeInLeft animated" data-wow-delay=".5s" placeholder="留言区" required=""></textarea>
+									<input class="wow fadeInRight animated" data-wow-delay=".5s" type="button" onclick="fun()" value="提交">
+								</form>
+							</div>
+							<script type="text/javascript">
+								
+								var masge=document.getElementById("lyq");
+								var text=document.getElementById("reps");
+								var yox=document.getElementById("yox");
+								var month=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+								var reg=new RegExp(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/);
+								var times=3;
+								function fun(){
+									var nam=document.getElementById("nam");
+									
+									if(nam.value==""){
+										alert("姓名不能为空");
+										return;
+									}
+									if(!reg.test(yox.value)){
+										alert("您输入的邮箱有误。");
+										yox.value="";
+										return;
+									}
+									// if(yox.value==""){
+									// 	alert("邮箱必须填");
+									// 	return;
+									// }
+									var data=new Date();
+									var y=data.getFullYear();
+									var m=data.getMonth();
+									var d=data.getDate();
+									times++;
+									document.getElementById("pinlun").innerHTML="评论("+times+")";
+									var mun=Math.floor(Math.random()*3+4);
+									text.innerHTML+='<div class="media response-info"><div class="media-left response-text-left"><a href="#"><img class="media-object" src="images/t'+mun+'.jpeg" alt=""/></a><h5><a href="#">'+nam.value+'</a></h5></div><div class="media-body response-text-right"><p>'+ masge.value+'</p><ul><li>'+month[m]+' '+d+', '+y+'</li><li><a href="single.html">Reply</a></li></ul></div><div class="clearfix"></div></div>';
+								}
+							</script>
+						</div>
+					</div>
+					<div class="col-md-4 blog-top-right-grid">
+						<div class="Categories wow fadeInUp animated" data-wow-delay=".5s">
+							<h3>新闻</h3>
+							<ul>
+								<li><a href="#" onclick="change_video(1)">独家专访张定宇：全民检测后不排除有新增病例</a></li>
+								<li><a href="#" onclick="change_video(2)">摄影记疫｜每一幅阴沉的画面，都是对晴朗的渴望</a></li>
+								<li><a href="#" onclick="change_video(3)">上海新增一确诊病例，已隔离4名密接者</a></li>
+								<li><a href="#" onclick="change_video(4)">武汉社区工作者百天未休，520请假领证</a></li>
+								<li><a href="#" onclick="change_video(5)">视频｜以真实致敬生命！《人间世》特别节目21日开播</a></li>
+								<li><a href="#" onclick="change_video(6)">高校复课迎首批学子，志愿者送餐到寝室楼</a></li>
+							</ul>
+							<script type="text/javascript">
+								function change_video(num){
+									document.getElementById("audio").pause();
+									$("#vido").css({"display":"block"});
+									$("#tab").css({"display":"none"});
+									// if(playFlag==1){
+									// 	$("#con2").html("播放");
+									// 	playFlag==0;
+									// }
+									ab(false);
+									if(num==1){
+										document.getElementById("video").setAttribute("src",'http://cloudvideo.thepaper.cn/video/a81f485d051940589c4292f29ef31895/hd/c3f19b27-6446-4dcd-9202-3f935e32b6b9-0f9e4fef-6451-94c1-070e-368b66bee58b.mp4');
+										$("#pp2").html("<p>来源:<a href='https://www.thepaper.cn/'>澎湃新闻</a> &nbsp;&nbsp;2020-05-19 20:22 &nbsp;&nbsp; <a id='pinlun'href='#'>评论(3)</a></p>");
+										$("#pp>p").html("日前，武汉全市开展全员核酸筛查。澎湃新闻专访湖北省卫健委副主任、金银潭医院院长张定宇，他表示：全民检测后仍不排除有新增病例发现。");
+									}else if(num==2){
+										document.getElementById("video").setAttribute("src",'http://cloudvideo.thepaper.cn/video/f607a9163c8643979f837e21ec693a6a/hd/b25e10db-a7fe-42e5-8379-c37107ab7b38-155cf744-7896-0ded-034c-f143ace4ca39.mp4');
+										$("#pp2").html("<p>来源:<a href='https://www.thepaper.cn/'>澎湃新闻</a> &nbsp;&nbsp;2020-05-20 10:15 &nbsp;&nbsp; <a id='pinlun'href='#'>评论(3)</a></p>");
+										$("#pp>p").html("摄影记者许海峰在周末假期外出相机扫街，感受所遭遇的每一个瞬间与气氛。过去的两个多月，人们被疫情伴随的不祥气息所裹挟，而他拍下每一张阴沉的照片，都是对晴朗的渴望。");
+									}else if(num==3){
+										document.getElementById("video").setAttribute("src",'http://cloudvideo.thepaper.cn/video/f81958b89fb44ddd8f49fc9d4e2bd15d/hd/33a08747-c195-40cc-bb52-3591b533eaeb-298f2312-b119-d215-6eea-a4173bd6484e.mp4');
+										$("#pp2").html("<p>来源:<a href='https://www.thepaper.cn/'>澎湃新闻</a> &nbsp;&nbsp;2020-05-20 15:48 &nbsp;&nbsp; <a id='pinlun'href='#'>评论(3)</a></p>");
+										$("#pp>p").html("2020年5月20日14时，上海召开第80场新冠肺炎疫情防控新闻发布会，郑锦介绍，上海新增一确诊病例，现已追踪到在本市的4名密切接触者，均已落实集中隔离观察。");
+									}else if(num==4){
+										document.getElementById("video").setAttribute("src",'http://cloudvideo.thepaper.cn/video/54540947d4d94db99b186e33faa18bfa/hd/a6574bbb-af9b-42cd-958d-6f5385030f16-469141e2-c3ec-0050-865b-1fe34fe38d04.mp4');
+										$("#pp2").html("<p>来源:<a href='https://www.thepaper.cn/'>澎湃新闻</a> &nbsp;&nbsp;2020-05-20 14:45 &nbsp;&nbsp; <a id='pinlun'href='#'>评论(3)</a></p>");
+										$("#pp>p").html("5月20日，湖北武汉。在武昌区民政局婚姻登记处，新人排队等待领取结婚证。其中一名女子戴着头纱，其称自己是社区工作者，工作了100多天没休息，特意请假来领证。");
+									}else if(num==5){
+										document.getElementById("video").setAttribute("src",'http://cloudvideo.thepaper.cn/video/bc74e8ec42a245bf985a05f4fea8348c/hd/382c643e-c60e-459a-888f-5dc0d4c0ea53-1506b792-5f8f-dbe2-5164-079d5f6db21b.mp4');
+										$("#pp2").html("<p>来源:<a href='https://www.kankanews.com/'>看看新闻</a> &nbsp;&nbsp;2020-05-20 09:36 &nbsp;&nbsp; <a id='pinlun'href='#'>评论(3)</a></p>");
+										$("#pp>p").html("看看新闻Knews客户端5月20日消息，公元759年十月，杜甫携弱妻幼子从甘肃天水出发，在绝壁穷谷中，在寒霜深雪里，在倾覆的时局之下，艰难跋涉，历时两个多月，终于抵达沃野千里的成都。穷途之中，诗人还写下《发秦州》《发同谷》两组共二十四首前无古人的纪行诗。");
+									}else{
+										document.getElementById("video").setAttribute("src",'http://cloudvideo.thepaper.cn/video/8ffa676218cc4606aecbd802f6880c35/hd/93d10a29-3302-4310-8642-cd178033f309-a2956f88-8387-4659-adaa-e308515687a5.mp4');
+										$("#pp2").html("<p>来源:<a href='https://www.thepaper.cn/'>澎湃新闻</a> &nbsp;&nbsp;2020-05-19 17:44 &nbsp;&nbsp; <a id='pinlun'href='#'>评论(3)</a></p>");
+										$("#pp>p").html("5月14日，河南焦作。河南理工大学首批学子复学报到。该校后勤集团党委开展服务活动，每天有党员志愿者送餐到寝室楼，方便学生就餐，并将持续到报到结束。");
+									}
+								}
+							</script>
+						</div>
+						<div class="Categories wow fadeInUp animated" data-wow-delay=".5s">
+							<h3>音乐</h3>
+							<ul class="marked-list offs1" id="list">
+								<!-- <select id="list" size="12" onchange="clickMusic()" style="width: 450px;"></select> -->
+								<!-- <li><a href="#">JC - 说散就散</a></li>
+								<li><a href="#">于文文-体面</a></li>
+								<li><a href="#">邓丽欣-电灯胆</a></li>
+								<li><a href="#">薛之谦 - 演员</a> </li>
+								<li><a href="#">那英 - 默</a></li>    
+								<li><a href="#">蔡健雅 - 停格</a></li>
+								<li><a href="#">迪玛希 - 一个忧伤者的求救</a></li>
+								<li><a href="#">李玉刚 - 刚好遇见你</a> </li>
+								<li><a href="#">谭晶 - 九儿</a></li>
+								<li><a href="#">李健 - 贝加尔湖畔(Live)</a></li>     -->                     
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- //container -->
+		</div>
+		<!-- //blog -->
+		
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-nav wow fadeInLeft animated" data-wow-delay=".5s">
+					<h4>导航</h4>
+					<ul>
+						<li><a href="about.html">关于</a></li>
+						<li><a href="gallery1.html">相集</a></li>
+						<li><a href="blog.html">感人故事</a></li>
+						<li><a href="contact.html">抗疫信息</a></li>
+					</ul>
+				</div>
+				<div class="col-md-5 footer-nav wow fadeInUp animated" data-wow-delay=".5s">
+					<h4>更多信息</h4>
+					<p>了解更多疫情实时信息，您可以订阅我们</p>
+					<form>
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="请在这里填写您的邮箱" required="">
+						<input type="submit" value="订阅">
+					</form>
+				</div>
+				<div class="col-md-4 footer-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<h4>最新新闻</h4>
+					<div class="news-grids">
+						<div class="news-grid">
+							<h6>19/05/2020 : <a href="single.html?index=1">独家专访张定宇：全民检测后不排除有新增病例</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=2">摄影记疫｜每一幅阴沉的画面，都是对晴朗的渴望</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=3">上海新增一确诊病例，已隔离4名密接者</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=4">武汉社区工作者百天未休，520请假领证</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=5">视频｜以真实致敬生命！《人间世》特别节目21日开播</a></h6>
+							<h6>19/05/2020 : <a href="single.html?index=6">高校复课迎首批学子，志愿者送餐到寝室楼</a></h6>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+</body>	
+</html>

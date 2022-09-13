@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<style type="text/css">
+	.abc {
+		position: absolute;
+		left: 100px;
+		top: 240px;
+	}
+
+	.check-box {
+		height: 30px;
+		line-height: 30px;
+		cursor: pointer;
+		margin-right: 15px;
+		border: 1px solid #D2D2D2;
+		border-radius: 5px;
+		float: left;
+	}
+
+	.check-box .word {
+		font-size: 16px;
+		background-color: #D2D2D2;
+		color: white;
+		padding: 0 10px;
+		border-right: 1px solid #D2D2D2;
+		float: left;
+	}
+
+	.check-box span {
+		color: #FFFFFF;
+		width: 30px;
+		width: 30px;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		float: left;
+	}
+
+	.check-box span font {
+		display: none;
+	}
+
+	.check-box input {
+		display: none;
+	}
+
+	.check-box:hover .word {
+		background-color: #C2C2C2;
+	}
+
+	.check-box:hover span font {
+		display: block;
+		color: #C2C2C2;
+	}
+
+	.checked-box .word,
+	.checked-box:hover .word {
+		background-color: #5FB878;
+		color: #FFFFFF;
+	}
+
+	.checked-box span {
+		color: #5FB878;
+		display: block;
+	}
+
+	.checked-box span font,
+	.checked-box:hover span font {
+		display: block;
+		color: #5FB878;
+	}
+
+	.ac {
+		position: absolute;
+		left: 80px;
+		top: 280px;
+	}
+
+	.switch-box {
+		width: 80px;
+		height: 30px;
+		border-radius: 20px;
+		font-size: 14px;
+		position: relative;
+		border: 1px solid #D2D2D2;
+		background-color: #FFFFFF;
+		float: left;
+	}
+
+	.switch-box input {
+		opacity: 0;
+		width: 80px;
+		height: 30px;
+		cursor: pointer;
+	}
+
+	.switch-box label {
+		width: 80px;
+		height: 30px;
+		transition: all .5s ease;
+		border-radius: 20px;
+		position: absolute;
+		background-color: #FFFFFF;
+		cursor: pointer;
+		border-radius: 15px;
+		left: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	.switch-box label::before {
+		content: '';
+	}
+
+	.switch-box label::after {
+		content: 'Off';
+		color: #666666;
+		position: absolute;
+		left: 45px;
+		top: 0;
+		line-height: 30px;
+	}
+
+	.switch-box label span {
+		width: 20px;
+		height: 20px;
+		transition: all .5s ease;
+		border-radius: 20px;
+		background-color: #D2D2D2;
+		position: absolute;
+		left: 10px;
+		top: 5px;
+	}
+
+	.switch-box input:checked+label {
+		background-color: #5FB878;
+	}
+
+	.switch-box input:checked+label::before {
+		content: "On";
+		color: #FFFFFF;
+		position: absolute;
+		left: 10px;
+		top: 1px;
+		line-height: 30px;
+	}
+
+	.switch-box input:checked+label::after {
+		content: "";
+	}
+
+	.switch-box input:checked+label span {
+		position: absolute;
+		left: 50px;
+		background-color: #FFFFFF;
+	}
+
+	.ab {
+		position: absolute;
+		left: -60px;
+		width: 1100px;
+	}
+</style>
+
+<body>
+	<fieldset style="width: 500px; height: 600px;">
+		<legend>赋值和取值</legend>
+		输入框<input id="a" type="text" placeholder="请输入标题" /><br /><br /><br />
+		密码框<input id="b" type="password" placeholder="请输入密码" /><br /><br /><br />
+		选择框<select id="c">
+			<option value="1">请选择</option>
+			<option value="2">写作</option>
+			<option value="3">阅读</option>
+			<option value="4">游戏</option>
+			<option value="5">音乐</option>
+			<option value="6">旅行</option>
+		</select><br /><br /><br />
+		<p>复选框</p>
+		<div class="abc">
+			<div class="check-box" onclick="checkChange(this)">
+				<div class="word">写作</div>
+				<span>
+					<font>√</font>
+				</span>
+				<input type="checkbox" value="写作" />
+			</div>
+			<div class="check-box" onclick="checkChange(this)">
+				<div class="word">阅读</div>
+				<span>
+					<font>√</font>
+				</span>
+				<input type="checkbox" value="阅读" />
+			</div>
+			<div class="check-box" onclick="checkChange(this)">
+				<div class="word">发呆</div>
+				<span>
+					<font>√</font>
+				</span>
+				<input type="checkbox" value="发呆" />
+			</div><br /><br /><br />
+		</div>
+		<p>开关</p>
+		<div class="ac">
+			<div class="switch-box">
+				<input type="checkbox" id="check_switch" value="1" />
+				<label for="check_switch">
+					<span></span>
+				</label><br><br><br>
+			</div><br><br><br>
+			<div class="ab">
+				单选框 <input id="d" type="radio" name="gender" value="1" checked="checked" />男 <input id="e" type="radio"
+					name="gender" value="2" />女<br /><br /><br />
+				文本域<textarea id="f"></textarea><br /><br /><br />
+				<input id="button1" name="input1" type="button" value="赋值" />
+				<input id="button1" name="input2" type="button" value="取值" />
+				<input id="button1" name="input3" type="button" value="立即提交" />
+			</div>
+	</fieldset>
+	<script>
+		function checkChange(obj) {
+			// 获取选择框的选取状态并修改状态
+			var ipt = obj.getElementsByTagName("input")[0];
+			var check = ipt.checked;
+			if (check) {
+				ipt.checked = false;
+			} else {
+				ipt.checked = true;
+			}
+			// 修改样式
+			if (check) {
+				obj.className = "check-box";
+			} else {
+				obj.className = "check-box checked-box";
+			}
+		}
+
+		var button = document.querySelectorAll('#button1');
+		var a = document.querySelector('#a');
+		var b = document.querySelector('#b');
+		var c = document.querySelector('#c');
+		var checkbox = document.querySelectorAll('.check-box');
+		var switchbox = document.querySelector('#check_switch');
+		var d = document.querySelector('#d');
+		var e = document.querySelector('#e');
+		var f = document.querySelector('#f');
+		button[0].addEventListener('click', function () {
+			a.value = '贤心';
+			b.value = '123456';
+			c.options[2].selected = true;
+			checkChange(checkbox[0]);
+			switchbox.checked = true;
+			d.checked = false;
+			e.checked = true;
+			f.value = '我爱layui';
+		})
+		button[1].addEventListener('click', function () {
+			alert('{' + "\"username\"" + ':' + "\"" + a.value + "\"" + ',' + "\"password\""
+				+ ':' + "\"" + b.value + "\"" + ',' + "\"interest\"" + ':' + "\"1\""
+				+ ',' + "\"like[write]\"" + ':' + "\"on\""
+				+ ',' + "\"close\"" + ':' + "\"on\"" + ',' +
+				"\"sex\"" + ':' + "\"女\"" + ',' + "\"desc\"" + ':' +
+				"\"" + f.value + "\"" + '}');
+		})
+		button[2].addEventListener('click', function () {
+			var len = a.value.length;
+			if (len <= 5) {
+				alert("标题至少得5个字符啊");
+			} else {
+				alert('{' + "\"username\"" + ':' + "\"" + a.value + "\"" + ',' + "\"password\""
+					+ ':' + "\"" + b.value + "\"" + ',' + "\"interest\"" + ':' + "\"1\""
+					+ ',' + "\"like[write]\"" + ':' + "\"on\""
+					+ ',' + "\"close\"" + ':' + "\"on\"" + ',' +
+					"\"sex\"" + ':' + "\"女\"" + ',' + "\"desc\"" + ':' +
+					"\"" + f.value + "\"" + '}');
+			}
+		})
+	</script>
+</body>
+
+</html>

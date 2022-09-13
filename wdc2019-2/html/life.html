@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--禁止选中页面中的内容-->
+<html ondragstart="return false">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>建国大事件</title>
+		<link rel="stylesheet" type="text/css" href="../css/life.css" />
+	</head>
+
+	<body>
+		<div id="per">
+			<p> 点击拖拽可移动查看</p>
+			<h1>建国大事件</h1>
+			<div id="wrap">
+				<img src="../img/life/timg.jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (1).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (2).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (3).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (4).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (5).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (6).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (7).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (8).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (9).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (10).jpg" width="200px" height="150px" />
+				<img src="../img/life/timg (11).jpg" width="200px" height="150px" />
+			</div>
+			<script type="text/javascript">
+				//自动划分度数
+				var oImg = document.getElementsByTagName("img");
+				var deg = 360 / 12;
+				//				for(var ;;){
+				//					
+				//				}下面遍历
+				var oWrap = document.getElementById("wrap");
+
+				window.onload = function() {
+					Array.prototype.forEach.call(oImg, function(el, index) {
+						//					console.log(el,index);
+						el.style.transform = "rotateY(" + index * deg + "deg) translateZ(450px)";
+						el.style.transaction = "1s " + (12 - index) * 0.1 + "s";
+					});
+					//拖拽 鼠标事件 鼠标按下 移动松开
+					//clientX clientY 鼠标的值
+					var nowX, nowY, lastX, lastY, minusX, minusY;
+					var rotateX = -20,
+						rotateY = 0;
+					document.onmousedown = function(eve) {
+						//					console.log("aa");
+						lastX = eve.clientX;
+						lastY = eve.clientY;
+						this.onmousemove = function(eve) {
+							//						console.log("bbb");
+							nowX = eve.clientX;
+							nowY = eve.clientY;
+							//计算差值
+							minusX = nowX - lastX;
+							minusY = nowY - lastY;
+							//求出旋转度数后赋值给样式
+							rotateY = rotateY + minusX * 0.2; //x的差是改变Y
+							rotateX = rotateX + minusY * 0.2;
+							oWrap.style.transform = "rotateY(" + rotateY + "deg) rotateX(" + rotateX + "deg)";
+
+							lastX = nowX;
+							lastY = nowY;
+						}
+						this.onmouseup = function(eve) {
+							//						console.log("ccccc");
+							this.onmousemove = null; //清空移动事件
+						}
+					}
+				}
+			</script>
+		</div>
+	</body>
+
+</html>

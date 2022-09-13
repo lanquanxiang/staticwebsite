@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .box{
+            width: 1366px;
+            height: 670px;
+            background: url(img/article_bg.jpg) no-repeat;
+            background-size: 1366px 670px;
+        }
+
+        .title{
+            text-align: center;
+        }
+
+        .box .title{
+            font-family: cursive;
+            font-size: 40px;
+            color: rgb(204, 50, 12);
+        }
+        
+        .box .one,.two,.three{
+            float: left;
+            width: 452px;
+            height: 610px;
+            background: url(img/line.png) no-repeat right;
+            overflow: auto;
+        }
+
+        .little_title{                                                        
+            font-family: cursive;
+            font-size: 28px;
+            color: black;
+        }
+
+        .box .article_title{
+            text-align: center;
+            font-size: 30px;
+        }
+        .con{
+            font-family: "楷体";
+        }
+
+        .con img{
+            position: absolute;
+            top: 40px;
+            left: 350px;
+        }
+        .con p{
+            font-size: 20px;
+            text-indent: 2em;
+        }
+
+        .back{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .back:hover{
+            cursor: pointer;
+        }
+
+        .two img{
+            position: absolute;
+            bottom: 0px;
+            left: 530px;
+        }
+
+        section{
+            display: none;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <audio src="audio/article_bg.mp3" autoplay></audio>
+    <div class="box">
+        <div class="title">
+            <span>Wonderful articles</span>
+        </div>
+        
+        <div class="one">
+            <span class="little_title">About literature</span>
+            <div class="con">
+                <div class="article_title">樱花落海洋</div>
+                <img src="img/h.png" width="130px">
+                <section id="one">
+                    <p>三月的春光乍现，由路旁的花开和淡淡花香拉开序幕。重庆的春天是短暂的，还没好好感受粉红花海带来的悸动，就被一场突如其来的雨打湿了所有的梦想。樱花由此落入海洋。</p>
+                    <p>雨滴穿过十万米高空，而后准确无误地落在某片花瓣上，粉红小瓣随之一颤。透明水珠在花瓣上顺着春风吹的方向徐徐摇摆，像小孩缓缓进入梦乡。熟睡的小水珠脸颊绽放出诱人的粉红，让人忍不住轻轻抚摸。</p>
+                    <p>又一滴雨落下，樱花花瓣瘦弱的身骨怎能承受如此之重? 下一秒，便径直坠下，连着在半空中表演了几个身姿卓越的舞蹈。他们说樱花飘落的速度是每秒五厘米，那么一片樱花经过多长时间才能落入它最想停留的那片海洋呢?</p>
+                    <p>樱花落海洋，樱花落海洋。樱花是带着欣喜，乘春风飘去最后的归宿的那片海洋。还是迫于敌不过现实，带着不甘，一步步走到生命尽头的那片蓝</p>
+                    <p>我们每个人都有一片属于自已的樱花。年少时都天真幻想自已的花在枝头盛开，永不凋谢。无论如何，生命中终将会有一场大雨，能使樱花飘落，落入海洋。也能用滴滴水珠滋润淡淡粉红的小瓣。</p>
+                    <p>而这一切，只与樱花的主人有关。</p>
+                </section>
+            </div>
+        </div>
+        <div class="two">
+                <span class="little_title">About poem</span>
+                <div class="con">
+                        <div class="article_title">摇摇晃晃的人间</div>
+                        <section id="two">
+                            <p>交谈，仿佛夜色，仿佛隐匿着雷虽然患有声的花朵</p>
+                            <p>我们背对河流，影子出水，香气找到来原站在彼此的背后</p>
+                            <p>来不及相爱，雨落了下来</p>
+                            <p>你感叹人世的时候，我心里升起黄昏选好树枝，一起倒挂</p>
+                            <p>我们有千万里的距离，千万愁，一喜它们相互抵消时，谁都流泪</p>
+                            <p>你渐渐老迈的身体，如井</p>
+                            <p>纵然我是月，也有无法打捞的素白</p>
+                            <p>从五月开始，到化为灰烬</p>
+                            <p>我们都面临彼此的危险，仿佛香味</p>
+                        </section>
+                </div>
+                <img src="img/house.png" width="530px">
+        </div>
+        <div class="three">
+                <span class="little_title">About reader</span>
+                <div class="con">
+                    <div class="article_title">朗读者</div>
+                    <section id="three">
+                        <p>愿你有好运气，如果没有，希望你学会慈悲。愿你被很多人爱，如果没有，希望你学会宽容。——刘瑜《愿你慢慢长大》</p>
+                        <p>Love once begun  will never end.Thelovers may die for love,  in China the dead in love may revive.</p>
+                        <p>情不知所起，一往而深，生者可以死，死可以生。——《牡丹亭》许渊冲译</p>
+                        <p>生命并不是你活了多少日子，而是你记住了多少日子。你要使你过的每一天都值得记忆。</p>        
+                    </section>
+                </div>
+        </div>
+        <a class="back" href="index.html">
+            <img src="img/back.png" width="200px" id="back">
+        </a>
+    </div>
+</body>
+</html>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $("section#one").slideDown(4000);
+    $("section#two").fadeIn(4000);
+    $("section#three").fadeIn(4000);
+</script>

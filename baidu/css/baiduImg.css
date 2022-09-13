@@ -1,0 +1,200 @@
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, b, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body{
+	padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    background: url(../img/timg.jpg) no-repeat;
+    background-position-x: -460px  ;
+}
+.head{
+	position: relative;
+    top: 0;
+    width:100%;
+    height: 32px;
+    margin: 0 auto;
+    background: rgba(15,25,50,0.3);
+}
+.head>div{
+	color: #fff;
+    display: inline-block;
+    zoom: 1
+}
+.head a{
+	float: left;
+	display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    font: 700 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 0 0 22px
+}
+.nav{
+	margin-right: 20px;
+ 	position: absolute;
+    color: #fff;
+    right: 335px;
+    top: 0;
+    z-index: 2000;
+    text-align: right;
+    white-space: nowrap;
+    height: 32px;
+    margin-top: 4px;
+}
+.userinfo{
+	position: absolute;
+    color: #fff;
+    right: 20px;
+    top: 0;
+    z-index: 2000;
+    text-align: right;
+    white-space: nowrap;
+    height: 32px;
+    margin-top: 4px;
+}
+.nav span{
+	position: absolute;
+   	color: #fff;
+	font-size: 10px;
+	right: -15px;
+    top: 2px;
+}
+.search{
+	width: 100%;
+}
+.image{
+		margin: 0 auto;
+		position: relative;
+    display: block;
+    width: 244px;
+    height: 100%;
+    min-height: 181px;
+    text-decoration: none;
+    margin-right: 0;
+    float: none;
+    margin: 0 auto;
+    cursor: default;
+}
+.image img{
+	position: absolute;
+    bottom: -100px;
+    border: 0;
+    display: block;
+    width: 244px;
+    height: 105px;
+    left: 50px;
+}
+.search-word{
+	margin: 0 auto;
+	position: relative;
+	left: 50%;
+	margin-left:-298px;
+	top: 120px;
+	width: 596px;
+	height: 46px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.1);
+    overflow: hidden;
+}
+.search-word .inpt{
+	margin: 0 auto;
+	width: 446px;
+	position: absolute;
+	font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    font: 14px arial;
+    outline: 0;
+    background: 0 0;
+    border: 0;
+    padding: 13px 18px;
+    color: #fff;
+}
+.search-word .subimt{
+	position: absolute;
+	top: 50px;
+}
+.search-word .zhaoxiang{
+	z-index: 1;
+    position: absolute;
+    right: 87px;
+    top: 43%;
+    margin-top: -8px;
+    height: 26px;
+    width: 26px;
+    background: url(../img/imgzx.png);
+}
+.shuxian{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(255,255,255,.3);
+    background: none\9;
+    width: 2px;
+    height: 24px;
+    right: 62px;
+}
+.fangdajin{
+	 position: absolute;
+    top: 1px;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    width: 20px;
+    height: 20px;
+    right: 24px;
+    background: url(../img/search.png) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.boder{
+	width: 1280;
+	height: 360px;
+}
+.footer{
+	position: relative;
+    margin: 0 50px;
+    padding: 30px 0;
+}
+.footer .jingmei{
+	font-size: 22px;
+}
+.imgtab {
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.imgtab-btn{
+	display: inline-block;
+    width: 40px;
+    padding-bottom: 10px;
+    margin-left: 38px;
+    text-align: center;
+    font-size: 16px;
+    color: #d4d4d4;
+    text-decoration: none;
+}
+.imgtab a:hover{
+	border-bottom: 1px solid #000000;
+	color: #000000;
+}
+.imgmore{
+	width: 1280px;
+	margin: 0 auto;
+	padding-left: 50px;
+	overflow: hidden;
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/contact.css"/>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/banner.js"></script>
+</head>
+
+<script type="text/javascript">
+		/*自定义的鼠标点击效果*/
+		/* 鼠标特效 */ 
+		var a_idx = 0; 
+		jQuery(document).ready(function($) { 
+		    $("body").click(function(e) { 
+		        var a = new Array("抗击肺炎","富强","民主","文明","和谐","万众一心","自由","平等","公正","法治","武汉加油","爱国","敬业","诚信","友善","中国加油"); 
+		        var $i = $("<span></span>").text(a[a_idx]); 
+		        a_idx = (a_idx + 1) % a.length; 
+		        var x = e.pageX, 
+		        y = e.pageY; 
+		        $i.css({ 
+		            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+		            "top": y - 20, 
+		            "left": x , 
+		            "position": "absolute", 
+		            "font-weight": "bold", 
+		            "color": "rgb(119,136,153)" ,
+					
+		        }); 
+		        $("body").append($i); 
+		        $i.animate({ 
+		            "top": y - 180, 
+		            "opacity": 0 
+		        }, 
+		        1500, 
+		        function() { 
+		            $i.remove(); 
+		        }); 
+		    }); 
+		}); 
+	
+
+		</script>
+
+<body>
+<div class="top">
+  <a href="index.html"><img src="images/Top.png" background-size: 100% 100%/></a>
+      </div> 
+    </div>
+  <div class="clear"></div>
+  <div class="nav">
+    <ul>
+     <li><a href="index.html">网站首页</a></li>
+      <!-- 下拉菜单,菜单更新从这里复制-------------------------------------------------------------- -->
+      <li ><a href="shijianzhou.html">疫情时间线</a></li>
+      	 
+      <li><a href="piclist.html" class="MoreNav">更多内容</a> 
+      
+      					<ul >
+      						<li ><a href="JuanZhu.html">捐助</a></li>
+      						<li ><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+      						<li ><a href="zhiyingxiong.html">致英雄</a></li>
+      						<li ><a href="防疫小知识.html">防护小知识</a></li>
+      
+      					</ul>
+      </li>
+      <!-- 以上是下拉菜单，加线方便复制 -->
+         <li><a href="list.html">新闻动态</a></li>
+         <li><a href="contact.html">联系我们</a></li>
+       </ul>
+     </div>
+     <div class="clear"></div>
+     <div class="banner">
+       <div class="b-img">
+ <a href="#" style="background:url(images/Roll2.jpg)  center  no-repeat ; background-size: 101% 101%;"></a>
+          <a href="#" style="background:url(images/Roll5.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+		    <a href="#" style="background:url(images/Roll4.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+    	    <a href="#" style="background:url(images/ZhiJing.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+			 <a href="#" style="background:url(images/Roll6.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+<a href="#" style="background:url(images/Roll7.jpg)  center  no-repeat ; background-size: 100% 100%;"></a>  
+       </div>
+       <div class="b-list"> </div>
+     </div>
+     <div class="clear"></div>
+     
+       <div class="main">
+         <!-- <div class="mLeft">     --------------模块发生冲突
+           <div class="titbox">
+             <p class="ccsl">更多内容</p>
+        </div>
+        <ul class="typename">
+          <li><a href="JuanZhu.html">捐助</a></li>
+                  <li><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+                  <li><a href="zhiyingxiong.html">致英雄</a></li>
+                  <li><a href="防疫小知识.html">防护小知识</a></li>
+       
+        </ul>
+      <div class="titbox">
+        <p class="ccsl">关于我们</p>
+      </div>
+      <div class="lxwm">
+        <div class="con">攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+    </div> -->
+	
+	<div class="brandnav">
+	  <div>
+	    <p class="ccsl"></p>
+	    <div class="con"></div>
+	  </div>
+	</div>
+   <!-- <div class="mRight"> -->
+      <div class="clear"></div>
+       <!-- </div> -->
+      </div>
+	  
+	  
+	 
+	  
+	  <div class="parallax">
+	    <section class="list-item">
+	      <div class="item-image">
+	        <img src="images/f.png" alt="item-image-1">
+	      </div>
+	      <div class="item-text">
+	        <div class="item-title">「小组成员」</div>
+	        <div class="item-desc">陈健、陈江、罗芯汭、谢海滨</div>
+	      </div>
+	    </section>
+	  
+	    <section class="list-item">
+	      <div class="item-image">
+	        <img src="images/a.png" alt="item-image-2">
+	      </div>
+	      <div class="item-text">
+	        <div class="item-title">「陈健」</div>
+	        <div class="item-desc">愿早日战胜疫情，再看不了生离死别的故事，中国加油!祝愿国人平安顺遂!<br>
+			QQ:915617494
+			
+			</div>
+	      </div>
+	    </section>
+	  
+	    <section class="list-item">
+	      <div class="item-image">
+	        <img src="images/c.jpg" alt="item-image-3">
+	      </div>
+	      <div class="item-text">
+	        <div class="item-title">「陈江」</div>
+	        <div class="item-desc">生活很难，众生皆苦 ，最近的新闻看的很难过，愿早日战胜疫情，祖国越来越好。</div><br>
+			QQ:1921077260
+	      </div>
+	    </section>
+	  
+	    <section class="list-item">
+	      <div class="item-image">
+	        <img src="images/d.jpg" alt="item-image-4">
+	      </div>
+	      <div class="item-text">
+	        <div class="item-title">「罗芯汭」</div>
+	        <div class="item-desc">没有人生来就是英雄，总有人用平凡成就伟大，致敬迎难而上的白衣天使，我们一起加油！。</div><br>
+			QQ:1498383423
+	      </div>
+	    </section>
+	  
+	    <section class="list-item">
+	      <div class="item-image">
+	        <img src="./images/e.jpg" alt="item-image-5">
+	      </div>
+	      <div class="item-text">
+	        <div class="item-title">「谢海滨」</div>
+	        <div class="item-desc">没有一个寒冬不会过去，也没有一个暖春不会到来。疫情阻碍了出门的脚步，却也给了大家弯道超车的机会。享梦游人一起攻克艰难，成就更好的自己！</div><br>
+			QQ:1812921361
+	      </div>
+	    </section>
+	  
+	    <!-- <section class="list-item">
+	      <div class="item-image">
+	        <img src="./images/6.jpg" alt="item-image-6">
+	      </div>
+	      <div class="item-text">
+	        <div class="item-title">「CLANNAD」</div>
+	        <div class="item-desc">我也很没用，但是两个人一起的话，就会变得很坚强。</div>
+	      </div>
+	    </section> -->
+	
+	 	
+	 </div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+     <!-- <div class="detail">
+          <div class="con">
+          
+电    话1：18183267596 &nbsp;&nbsp; (陈&nbsp;&nbsp;健)<br />
+电    话2：18582663251&nbsp;&nbsp; (谢海滨)<br />
+电    话3：15281221091&nbsp;&nbsp; (罗芯汭)<br />
+电    话4：19180347164&nbsp;&nbsp; (陈&nbsp;&nbsp;江)<br />
+Q     Q群：1078107017<br />
+地    址：四川省攀枝花市东区机场路10号</div>
+      </div>
+    </div> -->
+	
+	
+		
+	
+	
+	
+	
+   
+<div class="clear"></div>
+<div class="footer">
+    <div class="main">
+      <div class="footer1">
+        <div class="con"> 攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+      <div class="footer2">
+        <img src="images/Bottom.jpg" height="230" width="122"/>
+      </div>
+      <div class="footer3">
+        <div>
+          <img src="images/Code.png" width="125" height="125" />
+          <p class="ccsl">扫一扫  加入群聊</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="bottom">
+  <div class="main">
+
+  </div>
+</div>
+</body>
+</html>
+<!-- 使得左边悬浮 -->
+		<script>  
+		function setNavbar() {
+			
+		    if ($(document).scrollTop() >700) {
+		
+		        $('.mLeft').css({"top":"0","position":"fixed"});
+		    } else {
+		        $('.mLeft').css({"top":"0","position":"static"});
+		    }
+		}                   
+		$(document).ready(function(){
+		    setNavbar();
+		    $(window).scroll(function() {
+		      setNavbar();
+		    });      
+		});
+		</script>  
+		
+		<!-- 返回顶部 ------------------------------------------------------------------------------------------------------>
+		<link href="https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/GoTop.js"></script>
+		<script>
+			new GoTop({
+				hide:true,//当页面不滚动时 是否隐藏 默认false
+				url:'img/3.png',//图片路径 默认我们提供base64的图片
+				state:'',//出现的位置 默认是 下方 提供 center bottom参数
+				height:'50px',//高 默认40px
+				width:'50px',//宽 默认40px
+				scrollTop:500,//滚到什么位置出现 px
+				time:500,//返回顶部多长时间 ms 默认500ms
+				aimation:'animated bounceInDown',//出场动画 默认show（没有出场动画） 这个可以自定义
+				toTop:'',//滚到顶部触发事件
+				toShow:'',//出场时触发事件
+				toHide:function(){
+					$('h1').html('');
+					setTimeout(function(){
+						$('h1').html('');
+					},1000)
+				},//隐藏触发事件
+				go:""//点击返回顶部触发事件
+			});
+		</script>
+		

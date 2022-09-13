@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/banner.js"></script>
+</head>
+<script type="text/javascript">
+		/*自定义的鼠标点击效果*/
+		/* 鼠标特效 */ 
+		var a_idx = 0; 
+		jQuery(document).ready(function($) { 
+		    $("body").click(function(e) { 
+		        var a = new Array("抗击肺炎","富强","民主","文明","和谐","万众一心","自由","平等","公正","法治","武汉加油","爱国","敬业","诚信","友善","中国加油"); 
+		        var $i = $("<span></span>").text(a[a_idx]); 
+		        a_idx = (a_idx + 1) % a.length; 
+		        var x = e.pageX, 
+		        y = e.pageY; 
+		        $i.css({ 
+		            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+		            "top": y - 20, 
+		            "left": x , 
+		            "position": "absolute", 
+		            "font-weight": "bold", 
+		            "color": "rgb(119,136,153)" 
+		        }); 
+		        $("body").append($i); 
+		        $i.animate({ 
+		            "top": y - 180, 
+		            "opacity": 0 
+		        }, 
+		        1500, 
+		        function() { 
+		            $i.remove(); 
+		        }); 
+		    }); 
+		}); 
+		
+	
+		</script>
+
+<body>
+
+ <div class="top">
+   <a href="index.html"><img src="images/Top.png" background-size: 100% 100%/></a>
+       </div> 
+     </div>
+<div class="clear"></div>
+<div class="nav">
+  <ul>
+   <li><a href="index.html">网站首页</a></li>
+    <!-- 下拉菜单,菜单更新从这里复制-------------------------------------------------------------- -->
+    <li ><a href="shijianzhou.html">疫情时间线</a></li>
+    	 
+    <li><a href="piclist.html" class="MoreNav">更多内容</a> 
+    
+    					<ul >
+    						<li ><a href="JuanZhu.html">捐助</a></li>
+    						<li ><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+    						<li ><a href="zhiyingxiong.html">致英雄</a></li>
+    						<li ><a href="防疫小知识.html">防护小知识</a></li>
+    
+    					</ul>
+    </li>
+    <!-- 以上是下拉菜单，加线方便复制 -->
+       <li><a href="list.html">新闻动态</a></li>
+       <li><a href="contact.html">联系我们</a></li>
+     </ul>
+   </div>
+   <div class="clear"></div>
+   <div class="banner">
+     <div class="b-img">
+ <a href="#" style="background:url(images/Roll2.jpg)  center  no-repeat ; background-size: 101% 101%;"></a>
+          <a href="#" style="background:url(images/Roll5.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+		    <a href="#" style="background:url(images/Roll4.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+    	    <a href="#" style="background:url(images/ZhiJing.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+			 <a href="#" style="background:url(images/Roll6.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+<a href="#" style="background:url(images/Roll7.jpg)  center  no-repeat ; background-size: 100% 100%;"></a>  
+     </div>
+     <div class="b-list"> </div>
+   </div>
+   <div class="clear"></div>
+   <div class="bodyBox">
+     <div class="main">
+       <div class="mLeft">
+         <div class="titbox">
+           <p class="ccsl">更多内容</p>
+      </div>
+      <ul class="typename">
+		<li><a href="JuanZhu.html">捐助</a></li>
+		        <li><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+		        <li><a href="zhiyingxiong.html">致英雄</a></li>
+		        <li><a href="防疫小知识.html">防护小知识</a></li>
+      </ul>
+      <div class="titbox">
+        <p class="ccsl">联系我们</p>
+      </div>
+      <div class="lxwm">
+        <div class="con">攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+    </div>
+    <div class="mRight">
+      <div class="brandnav">
+        <div>
+          <p class="ccsl">新闻动态</p>
+          <div class="con">位置：首页>新闻动态</div>
+        </div>
+      </div>
+      <div class="detail">
+        <div>
+          <h1>重磅！2020中国抗疫记</h1>
+          <div class="proimg"><img src="images/huanghelou.png" width="500px" /></div>
+          <div class="con">
+             <p style="text-indent:2em">   
+			 2020，岁在庚子，一场新冠肺炎疫情突袭荆楚大地，蔓延波及全国。在以习近平同志为核心的党中央坚强领导下，
+			 14亿中国人民众志成城、团结一心，打响疫情防控的人民战争、总体战、阻击战。
+			 4月8日，武汉“解封”；4月30日，北京突发公共卫生事件调至二级响应；5月2日，湖北突发公共卫生事件调至二级响应；
+			 5月21日，推迟两个多月的全国两会将隆重开幕……几个令人振奋的时间节点，辉映我们一起走过的艰辛历程。
+			一个“挺”字，让人百感交集。回望疫情暴发之初，迅速上升的数字令人揪心，正常生产生活骤然“停摆”。在“风暴眼”武汉，大量患者涌向医院，惶恐与焦虑中，不少家庭永失至爱亲朋……
+			再苦再难，也要挺过去。在病毒肆虐的至暗时刻，我们从未放弃希望。
+			“障百川而东之，回狂澜于既倒。”面对来势汹汹的新冠肺炎疫情，党中央沉着应对、果断决策。
+			习近平总书记亲自指挥、亲自部署，主持召开一系列重要会议，发表一系列重要讲话，作出一系列重要指示。
+			特别是对湖北省、武汉市疫情防控工作，总书记十分关心，对突出问题、关键节点提出明确具体要求。
+			总书记还先后赴北京、武汉、浙江、陕西等地考察调研，就疫情防控和经济社会发展等及时作出部署。高瞻远瞩的战略决策，坚如磐石的意志信念，
+			一心为民的真挚情怀，为全党全军全国各族人民坚定信心、抗击疫情立起了主心骨。
+			 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+    <div class="main">
+      <div class="footer1">
+        <div class="con"> 攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+      <div class="footer2">
+        <img src="images/Bottom.jpg" height="230" width="122"/>
+      </div>
+      <div class="footer3">
+        <div>
+          <img src="images/Code.png" width="125" height="125" />
+          <p class="ccsl">扫一扫  加入群聊</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="bottom">
+  <div class="main">
+
+  </div>
+</div>
+</body>
+</html>
+<!-- 使得左边悬浮 -->
+		<script>  
+		function setNavbar() {
+			
+		    if ($(document).scrollTop() >700) {
+		
+		        $('.mLeft').css({"top":"0","position":"fixed"});
+		    } else {
+		        $('.mLeft').css({"top":"0","position":"static"});
+		    }
+		}                   
+		$(document).ready(function(){
+		    setNavbar();
+		    $(window).scroll(function() {
+		      setNavbar();
+		    });      
+		});
+		</script>  
+		
+		<!-- 返回顶部 ------------------------------------------------------------------------------------------------------>
+		<link href="https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/GoTop.js"></script>
+		<script>
+			new GoTop({
+				hide:true,//当页面不滚动时 是否隐藏 默认false
+				url:'img/3.png',//图片路径 默认我们提供base64的图片
+				state:'',//出现的位置 默认是 下方 提供 center bottom参数
+				height:'50px',//高 默认40px
+				width:'50px',//宽 默认40px
+				scrollTop:500,//滚到什么位置出现 px
+				time:500,//返回顶部多长时间 ms 默认500ms
+				aimation:'animated bounceInDown',//出场动画 默认show（没有出场动画） 这个可以自定义
+				toTop:'',//滚到顶部触发事件
+				toShow:'',//出场时触发事件
+				toHide:function(){
+					$('h1').html('');
+					setTimeout(function(){
+						$('h1').html('');
+					},1000)
+				},//隐藏触发事件
+				go:""//点击返回顶部触发事件
+			});
+		</script>

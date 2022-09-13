@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+body {
+	background-image: url(../img/TIM图片20190218222413.gif);
+	background-size: 100% 100%;
+}
+
+#per {
+	perspective: 800px;
+	/*height: 1500x;*/
+	/*perspective: 1000px;*/
+	/*场景景深，3D盒子的深*/
+	border: 5px solid red;
+	
+}
+#per p{
+	font-size: 25px ;
+	text-align: center;
+	color: royalblue;
+}
+#per h1{
+	text-align: center;
+	color: greenyellow;
+	
+}
+#wrap {
+	/*position: relative;*/
+	width: 280px;
+	height: 200px;
+	/*border: 2px solid coral;*/
+	margin: 200px auto;
+	
+	transform-style: preserve-3d;
+	/*3D场景*/
+	transform: rotateY(0deg) rotateX(-20deg);
+	/*控制旋转*/
+}
+
+#wrap img {
+	position: absolute;
+	transition: 2s;
+	/*时间过渡*/
+}

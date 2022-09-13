@@ -1,0 +1,85 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4 {
+	margin: 0px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+	color: #3c3c3c;
+}
+
+i {
+	font-style: normal;
+}
+
+input,
+button {
+	margin: 0px;
+	padding: 0px;
+}
+
+button {
+	outline: none;
+}
+
+body {
+	font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+	color: #3C3C3C;
+	background-color: #f4f4f4;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.layer {
+	width: 1190px;
+	margin: 0px auto;
+}
+
+.c4 {
+	color: #f40;
+}
+
+.c5 {
+	color: #f50;
+}
+
+.mr7{
+	margin-right: 7px;
+}
+.mr5{
+	margin-right: 5px;
+}
+.mt10 {
+	margin-top: 10px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}

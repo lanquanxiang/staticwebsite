@@ -1,0 +1,60 @@
+.selectMusic::before {
+	content: url(../img/select.png);
+}
+
+p {
+	margin-left: 30px;
+	font-family: "微软雅黑";
+}
+
+p:hover {
+	cursor: pointer;
+}
+
+.selectMusic {
+	color: gray;
+	font-size: 18px;
+	left: -20px;
+	position: relative;
+}
+
+#name {
+	color: black;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+
+table {
+	background-color: rgb(217, 219, 214);
+	font-size: 18px;
+	border-style: inset;
+	border-color: rgb(217, 219, 214);
+	border-collapse: collapse;
+	background-image: url(../img/background.jpg);
+	background-size: cover;
+	
+}
+select{
+	color: black;
+	font-family: "宋体";
+	font-size: 18px;
+	width: 400px;
+	background-color:  rgba(217, 219, 214, 0);
+}
+select:hover{
+	cursor: pointer;
+}
+
+option:hover{
+	background: #808080;
+}
+
+.selected{
+	cursor: pointer;
+	width: 133px;
+}
+
+td>div{
+	padding-top: 8px;
+	font-family: "微软雅黑";
+}

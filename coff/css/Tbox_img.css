@@ -1,0 +1,73 @@
+			.A:hover{
+				transition: 1s;
+				transform: scale(1.2) rotate(10deg);				
+			}
+			.A:hover .TBox_img{
+				opacity: 0.5;
+				transform: scale(1.2) 
+			}
+			.A:hover .TBox_span{
+				transition: 1s;
+				opacity: 1;
+				text-shadow: 0 0 3px white;
+			}
+			
+
+
+			.B:hover{
+				transition: 1s;
+				transform: scale(1.2) rotate(10deg);				
+			}
+			.B:hover .TBox_img{
+				opacity: 0.5;
+				transform: scale(1.2) 
+			}
+			.B:hover .TBox_span{
+				transition: 1s;
+				opacity: 1;
+				text-shadow: 0 0 3px white;
+			}
+			
+
+			.B:hover{
+				transition: 1s;
+				transform: scale(1.2) rotate(10deg);				
+			}
+			.B:hover .TBox_img{
+				opacity: 0.5;
+				transform: scale(1.2) 
+			}
+			.B:hover .TBox_span{
+				transition: 1s;
+				opacity: 1;
+				text-shadow: 0 0 3px white;
+			}
+			
+
+			.C:hover{
+				transition: 1s;
+				transform: scale(1.2) rotate(10deg);				
+			}
+			.C:hover .TBox_img{
+				opacity: 0.5;
+				transform: scale(1.2) 
+			}
+			.C:hover .TBox_span{
+				transition: 1s;
+				opacity: 1;
+				text-shadow: 0 0 3px white;
+			}
+			
+			.D:hover{
+				transition: 1s;
+				transform: scale(1.2) rotate(10deg);				
+			}
+			.D:hover .TBox_img{
+				opacity: 0.5;
+				transform: scale(1.2) 
+			}
+			.D:hover .TBox_span{
+				transition: 1s;
+				opacity: 1;
+				text-shadow: 0 0 3px white;
+			}

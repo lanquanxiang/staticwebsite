@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>转角咖啡</title>
+		<link rel="stylesheet" href="css/Roate.css" />
+		<link rel="stylesheet" href="css/TBox_ABCD.css" />
+		<link rel="stylesheet" href="css/Tbox_img.css"/>
+		<link rel="stylesheet" href="css/Css万花筒.css" />
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				overflow: hidden;
+				font-family: "楷体";
+				font-size: 14px;
+			}
+			
+			#header {
+				width: 100%;
+				height: 100px;
+				background-color: white;
+			}
+			
+			#headerMian {
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+				background: #17130e;;
+			}
+			
+			#logo {
+				float: left;
+				width: 400px;
+				height: 200px;
+				margin-top: -55px;
+				margin-left: 3px;
+				overflow: hidden;
+			}
+			
+			#logo img {
+				width: 400px;
+				height: 220px;
+			}
+			
+			#nav {
+				float: right;
+				list-style-type: none;
+				margin-right: 24px;
+				margin-top: 50px;
+				font-size: 30px;
+				cursor: pointer;
+			}
+			#headerText{
+				width: 330px;height: 50px;
+				background: red;
+				position: absolute;
+				right: 30px;top: 7px;
+			}
+			
+			#nav .List {
+				float: left;
+				position: relative;
+				margin-top: 15px;
+				overflow: hidden;
+			}
+			
+			.text,.text1 {
+				margin-left: 30px;
+				color:white;
+			}
+			
+			.List .text {
+				color: white;
+				cursor: pointer;
+				position: absolute;
+				width: 0%;
+				transition: 1s;
+			}
+			
+			.List:hover .text {
+				width: 100%;
+				text-shadow:0 0 12px gold;
+				color: gold;
+			}
+			#img {
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				background-image: url(img/coff3.png);
+				background-size: cover;
+				margin-top: -3px;
+				left: 50%;
+				top: 100px;
+				margin-left: -10px;
+				transition: 0.5s;
+			}
+			#contest {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				position: absolute;
+			}
+			
+			#contest .secondUl {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				transition: 1s; 
+			}
+			#contest .seconLi {
+				height: 600px;
+				background-size: cover;
+				background-position: center;
+				display: flex;
+				overflow: hidden;
+				border-top: 3px solid #e9d87a;	
+				border-bottom: 3px solid #e9d87a;
+			   
+			}
+			#contest .seconLi:nth-of-type(1) {
+				background-image: url(img/img-2.jpg);
+				background-size: cover;
+				background-position: center;
+				
+			}
+			#contest .seconLi:nth-of-type(2) {
+				background: url(img/coff-7.jpg);
+				background-size: cover;
+				background-position: center;
+			}
+			#contest .seconLi:nth-of-type(3) {
+				background: url(img/img-6.jpg);
+				background-size: cover;
+				background-position: center;
+			}
+			
+			.Box1 {
+				width: 1300px;
+				height: 520px;
+				margin: auto;
+				display: flex;
+				position: relative;
+				overflow: hidden;
+				transform-style: preserve-3d;
+			}
+			
+			#Box1_first{
+				width:900px;height:500px;
+				position: absolute;
+				top: 65px; 
+				right: -100px;
+				overflow: hidden;
+			}
+			#Box1_A{
+				width: 300px;height: 200px;
+			
+				position: absolute;
+				left: 0;
+				transition: 2s;
+				
+			}
+			#Box1_B{
+				width: 300px;height: 200px;
+			
+				position: absolute;
+				right: 0;
+				transition: 2s;
+			}
+			#Box1_C{
+				width: 600px;height: 100px;
+				position: absolute;
+				bottom: 0;
+				left: 50%;margin-left: -200px;
+				transition: 2s;
+			}
+			
+			.A_span{
+				position: absolute;
+				font-family: "楷体";
+				font-size: 50px;
+				color: white;
+				right: 0px;
+			}
+			.A_span:nth-of-type(1){top: 55px;}
+			.A_span:nth-of-type(2){top: 95px;
+			}
+			.B_span{
+				position: absolute;
+				font-family:"微软雅黑";
+				font-size: 90px;
+				color: white;
+				left: 0px;
+				top: -7px;
+			}
+			.C_span{
+				position: absolute;
+				font-family:"微软雅黑";
+				font-size: 50px;
+				color: white;
+				left: 56px;
+				top: -57px;
+			}
+			.TBox_one{
+				width: 300px;height: 420px;
+				position: absolute;
+				top: 45px;left: 65px;
+				transition: 2s;
+				left: -300px;
+				transform: scale(0);
+				
+			}
+			#One_A{
+				width: 280px;height: 50px;
+				
+				position: absolute;
+				top: 60px;left:0px;right: 0px;
+				color: #Baa882;
+				font-family:'楷体';
+				font-size: 50px;
+				text-align: center;
+				text-shadow: 3px 3px 1px white;
+				margin: auto;
+			}
+			.TBox_one .One_ul{
+				list-style-type: none;
+				position: absolute;
+				top: 130px;left: 0px;right: 0px;
+				margin: auto;
+				color: white;
+				font-family: "楷体";
+				font-size: 30px;
+			}
+		
+			
+			.TBox_one .one_li{
+				margin-left: -50px;
+				line-height: 50px;
+				text-align: center ;
+				
+			}
+		    .one_li:hover {
+				cursor: pointer;
+				text-shadow: 0 0 3px white;
+			}
+			
+			
+			.TBox_A,.TBox_B,.TBox_C,.TBox_D{
+				width: 850px;height: 500px;
+				position: absolute;
+				top: 25px;
+				right: 60px;
+				transition: 1s;
+			
+			}
+			.TBox_A{
+				transform: rotateY(0deg);
+				background: #0000FF;
+				background-color: rgba(0,0,0,0.5);
+				transform: translate(-1300px,0);
+				transition: 2.5s;	
+			}
+			.TBox_B{
+				transform: rotateY(0deg);
+				background: #0000FF;
+				background-color: rgba(0,0,0,0.5);
+				transform: translate(1300px,0);	
+				transition: 2s;
+			}
+			.TBox_C{
+				transform: rotateY(0deg);
+				background: #0000FF;
+				background-color: rgba(0,0,0,0.5);
+				transform: translate(0px,1300px);	
+				transition: 1.5s;
+			}
+			.TBox_D{
+				transform: rotateY(0deg);
+				background: #0000FF;
+				background-color: rgba(0,0,0,0.5);
+				transform: translate(0,-1300px);
+				transition: 1s;	
+			}
+			
+			
+			.TBox_A .A{
+				width:375px;height: 200px;
+				position: absolute;
+				border: 10px solid #4e4132;
+				cursor: pointer;
+				overflow: hidden;
+			}
+			
+			.TBox_B{
+				transform: rotateY(90deg);
+				background: #0000FF;
+				background-color: rgba(0,0,0,0.5);
+			}
+			.TBox_B .B{
+				width:375px;height: 200px;
+				position: absolute;
+				border: 10px solid #4e4132;
+				cursor: pointer;
+				overflow: hidden;
+			}
+			.TBox_C{
+				background: #0000FF;
+				background-color: rgba(0,0,0,0.5);
+				transform: rotateY(90deg) ;
+			}
+			.TBox_C .C{
+				width:375px;height: 200px;
+				position: absolute;
+				border: 10px solid #4e4132;
+				cursor: pointer;
+				overflow: hidden;
+			}
+			.TBox_D{
+				background: #0000FF;
+				background-color: rgba(0,0,0,0.5);
+				transform: rotateY(90deg) ;
+			}
+			.TBox_D .D{
+				width:375px;height: 200px;
+				position: absolute;
+				border: 10px solid #4e4132;
+				cursor: pointer;
+				overflow: hidden;	
+			}
+			.TBox_img{
+				width: 375px;height: 250px;	
+			}
+			.TBox_span{
+				position: absolute;
+				color: white;
+				font-family: '楷体';
+				font-size: 20px;
+				text-align: center;
+				top: 50%;left: 0;right: 0;
+				margin: auto;
+				opacity: 0;
+			}
+			
+			#imgBox{
+				position: absolute;
+				width: 500px;height:500px;
+				background: red;
+				right:0px;top:0px;
+				transform: scale(0);
+				transition: 2s;
+				background-color: rgba(0,0,0,0.5);
+				border: 10px solid #482523;
+				
+			}
+			#imgBox_one{
+				width: 500px;height: 90px;
+				position: absolute;
+				text-align: center;
+				color: gold;
+				font-size: 45px;
+				line-height: 80px;
+				font-family:'楷体';
+				text-shadow: 2px -2px 2px white;
+				background: url(img/coff-11.jpg);
+				background-position: center;
+				background-size: cover;
+				border-bottom: 10px solid #482523;
+			}
+			#imgBox_two{
+				width: 500px;height: 400px;
+				background: blueviolet;
+				position: absolute;
+				top: 100px;
+				
+			}
+			#imgBox_A{
+				background: #000000;
+				width: 500px;
+				height: 400px;
+				position: relative;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="header">
+			<div id="headerMian">
+				<div id="logo">
+					<img src="img/logo1.jpg" />
+				</div>
+				<ul id="nav">
+					<li class="List">
+						<div class="text">网站首页</div>
+						<div class="text1">网站首页</div>
+					</li>
+					<li class="List">
+						<div class="text">咖啡相册</div>
+						<div class="text1">咖啡相册</div>
+					</li>
+					<li class="List">
+						<div class="text">招牌产品</div>
+						<div class="text1">招牌产品</div>
+					</li>
+				</ul>
+				<!--<div id='headerText'>
+				</div>-->
+			</div>
+
+		</div>
+		<div id="contest">
+			<ul class="secondUl">
+				<li class="seconLi">
+					<div class="Box1">
+						<div id="Box1_first">
+							<div id="Box1_A">
+								<p class="A_span">那温馨</p>
+								<p class="A_span">那难忘</p>
+							</div>
+							<div id="Box1_B">
+								<p class="B_span">的回忆</p>
+							</div>
+							<div id="Box1_C">
+								<p class="C_span">C O F F E E MAN</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="seconLi">
+					<div class="Box1">
+						<div class="smallBox">
+							<img class="img img1" src="img/i-0.jpg" />
+							<img class="img img2" src="img/i-1.jpg" />
+							<img class="img img3" src="img/i-2.jpg"/>
+							<img class="img img4" src="img/i-3.jpg" />
+							<img class="img img5" src="img/i-4.jpg" />
+							<img class="img img6" src="img/i-5.jpg"/>
+						</div>
+					
+					<div id="imgBox">
+						<div id="imgBox_one">相册展示栏</div>
+						<div id="imgBox_two">
+							<div id="imgBox_A">
+								<ul id="imgBox_ul">
+									<li class="imgBox_list">
+									<img class="imgA" src="img/i-0.jpg" />
+									</li>
+									<li class="imgBox_list">
+										<img class="imgB" src="img/i-0.jpg" />
+									</li>
+									<li class="imgBox_list">
+										<img class="imgC" src="img/i-0.jpg" />
+									</li>
+									<li class="imgBox_list">
+										<img class="imgD" src="img/i-0.jpg" />
+									</li>
+							    </ul>
+							   
+								<ul id="imgBox_ul_B">
+									<li class="imgBox_list_B">
+									<img class="imgA" src="img/i-1.jpg" />
+									</li>
+									<li class="imgBox_list_B">
+										<img class="imgB" src="img/i-1.jpg" />
+									</li>
+									<li class="imgBox_list_B">
+										<img class="imgC" src="img/i-1.jpg" />
+									</li>
+									<li class="imgBox_list_B">
+										<img class="imgD" src="img/i-1.jpg" />
+									</li>
+								</ul>
+								
+								
+								<ul id="imgBox_ul_C">
+									<li class="imgBox_list_C">
+									<img class="imgA" src="img/i-2.jpg" />
+									</li>
+									<li class="imgBox_list_C">
+										<img class="imgB" src="img/i-2.jpg" />
+									</li>
+									<li class="imgBox_list_C">
+										<img class="imgC" src="img/i-2.jpg" />
+									</li>
+									<li class="imgBox_list_C">
+										<img class="imgD" src="img/i-2.jpg" />
+									</li>
+								</ul>
+								
+							
+								<ul id="imgBox_ul_D">
+									<li class="imgBox_list_D">
+									<img class="imgA" src="img/i-3.jpg" />
+									</li>
+									<li class="imgBox_list_D">
+										<img class="imgB" src="img/i-3.jpg" />
+									</li>
+									<li class="imgBox_list_D">
+										<img class="imgC" src="img/i-3.jpg" />
+									</li>
+									<li class="imgBox_list_D">
+										<img class="imgD" src="img/i-3.jpg" />
+									</li>
+								</ul>
+								
+								<ul id="imgBox_ul_E">
+									<li class="imgBox_list_E">
+									<img class="imgA" src="img/i-4.jpg" />
+									</li>
+									<li class="imgBox_list_E">
+										<img class="imgB" src="img/i-4.jpg" />
+									</li>
+									<li class="imgBox_list_E">
+										<img class="imgC" src="img/i-4.jpg" />
+									</li>
+									<li class="imgBox_list_E">
+										<img class="imgD" src="img/i-4.jpg" />
+									</li>
+								</ul>
+								
+								
+								<ul id="imgBox_ul_F">
+									<li class="imgBox_list_F">
+									<img class="imgA" src="img/i-5.jpg" />
+									</li>
+									<li class="imgBox_list_F">
+										<img class="imgB" src="img/i-5.jpg" />
+									</li>
+									<li class="imgBox_list_F">
+										<img class="imgC" src="img/i-5.jpg" />
+									</li>
+									<li class="imgBox_list_F">
+										<img class="imgD" src="img/i-5.jpg" />
+									</li>
+								</ul>
+								
+								<div id="imgBox_conset">
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</li>
+				<li class="seconLi">
+					<div class="Box1">
+						<div class="TBox_one">
+						<div id="One_A">招牌咖啡</div>
+							<ul class="One_ul">
+								<li class="one_li">卡布奇洛</li>
+								<li class="one_li">拿铁</li>
+								<li class="one_li">黑糖玛奇朵</li>
+								<li class="one_li">焦糖</li>
+							</ul>
+						</div>
+						<div class="TBox_A">
+							<div class="A">
+								<img class="TBox_img" src="img/timg.jpg"/>
+								<p class="TBox_span">走的最慢的人，只要他不丧失目标，也比漫无目的徘徊的人走得快。</p>
+							</div>
+							<div class="A">
+								<img class="TBox_img" src="img/k3.jpg"/>
+								<p class="TBox_span">不管你去往何方，不管将来迎接你的是什么，请你带着阳光般的心情启程。</p>
+							</div>
+							<div class="A">
+								<img class="TBox_img" src="img/k1.jpg"/>
+								<p class="TBox_span">补救一个错误，与时间无任何的关系，主动寻求一个新的开始永不为迟。</p>
+							</div>
+							<div class="A">
+								<img class="TBox_img" src="img/k4.jpg"/>
+								<p class="TBox_span">人生中最艰难的两场考验：等待时机到来的耐心，和面对一切际遇的勇气。</p>
+							</div>
+						</div>
+						<div class="TBox_B">
+							<div class="B">
+								<img class="TBox_img" src="img/n1.jpg"/>
+								<p class="TBox_span">不要质疑你的付出，这些都会一种累积一种沉淀，它们会默默铺路，只为让你成为更优秀的人。</p>
+							</div>
+							<div class="B">
+								<img class="TBox_img" src="img/n2.jpg"/>
+								<p class="TBox_span">活着一天，就是有福气，就该珍惜。当我哭泣我没有鞋子穿的时辰，我发觉有人却没有脚。</p>
+							</div>
+							<div class="B">
+								<img class="TBox_img" src="img/n6.jpg"/>
+								<p class="TBox_span">凡事顺其自然，遇事处于泰然，得意之时淡然，失意之时坦然，艰辛曲折必然，历尽沧桑悟然。</p></div>
+							<div class="B">
+								<img class="TBox_img" src="img/n7.jpg"/>
+								<p class="TBox_span">人生是一次旅程，有上坡也有下坡。我不在乎自己的终点是坡顶还是谷底，只在乎沿路的风景美丽而富有生机！</p></div>
+						</div>
+						<div class="TBox_C">
+							<div class="C">
+							<img class="TBox_img" src="img/m2.jpg"/>
+								<p class="TBox_span">痛不痛只有自己知道，变没变只有自己才懂。不要问我过得好不好，死不了就还好</p>
+							</div>
+							<div class="C">
+								<img class="TBox_img" src="img/m3.jpg"/>
+								<p class="TBox_span">所有的不甘，都是因为还心存梦想，在你放弃之前，好好拼一把，只怕心老，不怕路长</p>
+							</div>
+							<div class="C">
+								<img class="TBox_img" src="img/m4.jpg"/>
+								<p class="TBox_span">每个成功者，都要穿越不为人知的黑暗。强者不是没眼泪，只是能含着眼泪向前跑</p>
+							</div>
+							<div class="C">
+								<img class="TBox_img" src="img/m5.jpg"/>
+								<p class="TBox_span">.实力的来源不是胜利。唯有奋斗才能增强实力。当你历经苦难而不气馁，那就是实力</p>
+							</div>
+						</div>
+						<div class="TBox_D">
+							<div class="D">
+								<img class="TBox_img" src="img/j1.jpg"/>
+								<p class="TBox_span">人的一生，可以有所作为的时机只有一次，那就是现在</p>
+							</div>
+							<div class="D">
+								<img class="TBox_img" src="img/j2.jpg"/>
+								<p class="TBox_span">生活就像海洋，只有意志将强的人才能到达彼岸</p>
+							</div>
+							<div class="D">
+								<img class="TBox_img" src="img/j3.jpg"/>
+								<p class="TBox_span">有智者立长志，无志者长立志</p>
+							</div>
+							<div class="D">
+								<img class="TBox_img" src="img/j4.jpg"/>
+								<p class="TBox_span">学习是苦根上长出来的甜果</p>
+							</div>
+						</div>
+						
+						
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="img"></div>
+		<audio src='img/July - My Soul.mp3' autoplay="autoplay" loop="loop"></audio>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			var onav = document.getElementById('nav');
+			var oList = onav.getElementsByTagName('li');
+			var img = document.getElementById('img');
+			var osecoundLi = document.getElementsByClassName('seconLi');
+			var list = document.getElementsByClassName('secondUl')[0];
+			var oBox_one =document.getElementById('Box1_A');
+			var oBox_two =document.getElementById('Box1_B');
+			var oBox_three =document.getElementById('Box1_C');
+			var oli =document.getElementsByClassName('one_li');
+			var oTbox_A =document.getElementsByClassName('TBox_A')[0];
+			var oTbox_B =document.getElementsByClassName('TBox_B')[0];
+			var oTbox_C =document.getElementsByClassName('TBox_C')[0];
+			var oTbox_D =document.getElementsByClassName('TBox_D')[0];
+			var osmallBox=document.getElementsByClassName('smallBox')[0];
+			var oimgs=osmallBox.getElementsByTagName('img');
+			var oimgBox_A =document.getElementById('imgBox_ul');
+			var olist_A =document.getElementsByClassName('imgBox_list');
+			var olist_B =document.getElementsByClassName('imgBox_list_B');
+			var olist_C =document.getElementsByClassName('imgBox_list_C');
+			var olist_D =document.getElementsByClassName('imgBox_list_D');
+			var olist_E =document.getElementsByClassName('imgBox_list_E');
+			var olist_F =document.getElementsByClassName('imgBox_list_F');
+			var oimgBox=document.getElementById('imgBox');
+			var oimg_conset =document.getElementById('imgBox_conset')
+			var oTbox_one =document.getElementsByClassName('TBox_one')[0]; 
+			
+			fun1();
+			fun2();
+            moveText()
+         	
+            
+			function fun1() {//主要功能函数
+				for(var i = 0; i < oList.length; i++) {
+					oList[i].index = i;
+					oList[i].onclick = function() {
+						moveText();//淡入字体
+						Box(this.index)//轮换屏幕
+						arrow(this.index)//图标移动
+						BoxFirst()//淡出字体
+						imgs(this.index);
+						Tbox_one(this.index)//第三屏幕的切换
+						fun2(this.index);//第三幕的图片
+					}
+				}
+			}
+			function Tbox_one(index){
+				if(index==2){
+					oTbox_one.style.left='0px';
+					oTbox_one.style.transform='scale(1)'
+				}else{
+					oTbox_one.style.left='-300px';
+					oTbox_one.style.transform='scale(0)'
+				}
+				
+				
+			}
+			
+			
+			function imgs(index1){//第二屏的图片切入
+				if(index1==1){
+            			oimg_conset.style.transform='scale(1.2)';
+            		}
+            	for(var i=0;i<oimgs.length;i++){
+            		oimgs[i].index =i
+            		oimgs[i].onclick =function(){
+           				oimg_conset.style.transform='scale(0)';
+            			 imgBox(this.index);
+            		}
+            	}
+             if(index1==1){
+             	oimgBox.style.transform='scale(1)';
+             }else{
+             	oimgBox.style.transform='scale(0)'
+             }
+            	
+          }
+		   function imgBox(index){
+
+				var js=[
+						{name:'left', value:'0px'},
+						{name:'top' , value:'0px'},
+						{name:'top', value:' 0px'},
+						{name:'left', value:'0px'}
+				]
+				var jo=[
+						{name:'left', value:'500px'},
+						{name:'top' , value:'400px'},
+						{name:'top', value:' -400px'},
+						{name:'left', value:'-500px'}
+				]
+				
+				if(index==0){
+					for(var i=0;i<olist_A.length;i++){
+						olist_A[i].style[js[i].name]=js[i].value;
+					}
+					for(var i=0;i<olist_B.length;i++){
+						olist_B[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_C.length;i++){
+						olist_C[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_D.length;i++){
+						olist_D[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_E.length;i++){
+						olist_E[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_F.length;i++){
+						olist_F[i].style[jo[i].name]=jo[i].value;
+					}
+				}
+				if(index==1){
+					for(var i=0;i<olist_B.length;i++){
+						olist_B[i].style[js[i].name]=js[i].value;
+					}
+					for(var i=0;i<olist_A.length;i++){
+						olist_A[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_C.length;i++){
+						olist_C[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_D.length;i++){
+						olist_D[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_E.length;i++){
+						olist_E[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_F.length;i++){
+						olist_F[i].style[jo[i].name]=jo[i].value;
+					}
+					
+				}
+				if(index==2){
+					for(var i=0;i<olist_C.length;i++){
+						olist_C[i].style[js[i].name]=js[i].value;
+					}
+					for(var i=0;i<olist_B.length;i++){
+						olist_B[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_A.length;i++){
+						olist_A[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_D.length;i++){
+						olist_D[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_E.length;i++){
+						olist_E[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_F.length;i++){
+						olist_F[i].style[jo[i].name]=jo[i].value;
+					}
+				}
+				if(index==3){
+					for(var i=0;i<olist_D.length;i++){
+						olist_D[i].style[js[i].name]=js[i].value;
+					}
+					for(var i=0;i<olist_B.length;i++){
+						olist_B[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_C.length;i++){
+						olist_C[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_A.length;i++){
+						olist_A[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_E.length;i++){
+						olist_E[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_F.length;i++){
+						olist_F[i].style[jo[i].name]=jo[i].value;
+					}
+				}
+				if(index==4){
+					for(var i=0;i<olist_E.length;i++){
+						olist_E[i].style[js[i].name]=js[i].value;
+					}
+					for(var i=0;i<olist_B.length;i++){
+						olist_B[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_C.length;i++){
+						olist_C[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_D.length;i++){
+						olist_D[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_A.length;i++){
+						olist_A[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_F.length;i++){
+						olist_F[i].style[jo[i].name]=jo[i].value;
+					}
+				}
+				if(index==5){
+					for(var i=0;i<olist_F.length;i++){
+						olist_F[i].style[js[i].name]=js[i].value;
+					}
+					for(var i=0;i<olist_B.length;i++){
+						olist_B[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_C.length;i++){
+						olist_C[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_D.length;i++){
+						olist_D[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_E.length;i++){
+						olist_E[i].style[jo[i].name]=jo[i].value;
+					}
+					for(var i=0;i<olist_A.length;i++){
+						olist_A[i].style[jo[i].name]=jo[i].value;
+					}
+				}	
+			}
+			
+			function arrow(index) {//图标的移动
+				img.style.left = (oList[index].offsetLeft + oList[index].offsetWidth / 2 + 15) + 'px';
+			}
+			function Box(index) { //屏幕切换
+				var num = -index * osecoundLi[index].offsetHeight;
+				list.style.transform = 'translateY(' + num + 'px)';
+			}
+			function BoxFirst(){//淡入淡出字体
+				$("#Box1_A").fadeIn(1000,function(){});
+				oBox_one.style.transform ='translateX(150px)';	
+				$("#Box1_B").fadeIn(1000,function(){});
+				oBox_two.style.transform ='translateX(-150px)';	
+				$("#Box1_C").fadeIn(1000,function(){});
+				oBox_three.style.transform ='translateY(-200px)';	
+				
+			}
+			function moveText(){ //出场字体
+				$('#Box1_C').fadeOut(0,function(){});
+				$('#Box1_A').fadeOut(0,function(){});
+				$('#Box1_B').fadeOut(0,function(){});
+				oBox_one.style.transform ='translateX(-150px)';
+				oBox_two.style.transform ='translateX(150px)';
+				oBox_three.style.transform ='translateY(100px)';
+			}
+			
+			
+			function fun2(index){ 
+				for(var i=0;i<oli.length;i++){
+					oli[i].index =i;
+					oli[i].onclick =function(){
+						rotate(this.index);
+					}
+				}
+				if(index==2){
+					oTbox_A.style.transform='translate(0,0)'
+					oTbox_B.style.transform='translate(0,0)'
+					oTbox_C.style.transform='translate(0,0)'
+					oTbox_D.style.transform='translate(0,0)'
+					
+					oTbox_B.style.transform='rotateY(90deg)'
+					oTbox_C.style.transform='rotateY(90deg)'
+					oTbox_D.style.transform='rotateY(90deg)'
+					
+				}else{
+					oTbox_A.style.transform='translate(-1300px,0)'
+					oTbox_B.style.transform='translate(0,-1300px)'
+					oTbox_C.style.transform='translate(1300px,0)'
+					oTbox_D.style.transform='translate(0,1300px)'
+					
+					oTbox_B.style.transform='rotateY(0deg)'
+					oTbox_C.style.transform='rotateY(0deg)'
+					oTbox_D.style.transform='rotateY(0deg)'
+					
+				}
+			
+			}
+			function rotate(index){//旋转切屏
+				if(index==0){
+					oTbox_A.style.transform ='rotateY(0deg)'
+					oTbox_B.style.transform ='rotateY(90deg)'
+					oTbox_C.style.transform ='rotateY(90deg)'
+					oTbox_D.style.transform ='rotateY(90deg)'
+				}
+				if(index==1){
+					oTbox_A.style.transform ='rotateY(90deg)'
+					oTbox_B.style.transform ='rotateY(0deg)'
+					oTbox_C.style.transform ='rotateY(90deg)'
+					oTbox_D.style.transform ='rotateY(90deg)'
+				}
+				if(index==2){
+					oTbox_A.style.transform ='rotateY(90deg)'
+					oTbox_B.style.transform ='rotateY(90deg)'
+					oTbox_C.style.transform ='rotateY(0deg)'
+					oTbox_D.style.transform ='rotateY(90deg)'
+				}
+				if(index==3){
+					oTbox_A.style.transform ='rotateY(90deg)'
+					oTbox_B.style.transform ='rotateY(90deg)'
+					oTbox_C.style.transform ='rotateY(90deg)'
+					oTbox_D.style.transform ='rotateY(0deg)'
+				} 
+			}
+			
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>

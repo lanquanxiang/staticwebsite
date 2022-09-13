@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>原生JS扫雷</title>
+		<link rel="stylesheet" type="text/css" href="saoLei.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="btn" id="btn"></div>
+			<div class="box" id="box"></div>
+			<div class="flagBox" id="flagBox">
+				当前剩余雷数：
+				<span id='score'>10</span>
+			</div>
+		</div>
+		<div class="alterBox" id="alterBox">
+			<div class="alterImg" id="alterImg">
+				<div class="close" id="close"></div>
+			</div>
+		</div>
+        <script type="text/javascript">
+    var startBtn = document.getElementById('btn');
+    var box = document.getElementById('box');
+    var flagBox = document.getElementById('flagBox');
+    var alterBox = document.getElementById('alterBox');
+    var alterImg = document.getElementById('alterImg');
+    var close = document.getElementById('close');
+    var score = document.getElementById('score');
+    var minesNum;
+    var minesOver;
+    var block;
+    var mineMap=[];
+    var startGameBool=true;
+
+bindEvent();
+function bindEvent(){ 
+	startBtn.onclick = function(){ 
+		if(startGameBool){
+			box.style.display='block';//显示区域
+		flagBox.style.display='block';
+		init();
+		startGameBool=false;
+		}	
+	}
+	box.oncontextmenu=function(){
+		return false;
+	}
+	box.onmousedown = function(e){ 
+		var event = e.target;
+		if(e.which ==1){ 
+			leftClick(event);
+		}else if(e.which == 3){ 
+			rightClick(event);
+		}
+	}
+	close.onclick=function(){
+		alterBox.style.display='none';
+		flagBox.style.display='none';
+		box.style.display='none';
+		box.innerHTML='';
+		startGameBool=true;
+	}
+}
+function init(){  
+	minesNum = 10;
+    minesOver = 10;
+    score.innerHTML=minesOver;
+    for(var i = 0;i<10;i++){
+    	for(var j = 0;j<10;j++){
+    		var con=document.createElement('div');
+    		con.classList.add('block');//div取名字
+    		con.setAttribute('id',i+'-'+j);//div取序号
+    		box.appendChild(con);
+    		mineMap.push({mine:0});
+    	}
+    }
+    block = document.getElementsByClassName('block');
+    while(minesNum){
+    var mineIndex = Math.floor(Math.random()*100);
+    if(mineMap[mineIndex].mine===0){
+    	mineMap[mineIndex].mine=1;
+    	block[mineIndex].classList.add('isLei');
+    	minesNum--;
+    }
+    
+    }
+}
+function leftClick(dom){ 
+	if(dom.classList.contains('flag')){
+		return;
+	}
+	var isLei=document.getElementsByClassName('isLei');
+	if(dom&& dom.classList.contains('isLei')){
+		console.log('gameOver');
+		for(var i=0;i<isLei.length;i++){
+			isLei[i].classList.add('show');
+		}
+		setTimeout(function(){
+			alterBox.style.display='block';
+			alterImg.style.backgroundImage='url("img/failed.jpg")';
+		},800)
+	}else{
+		var n=0;
+		var posArr=dom&&dom.getAttribute('id').split('-');
+		var posX=posArr&&+posArr[0];
+		var posY=posArr&&+posArr[1];
+		dom&&dom.classList.add('num');
+		for(var i=posX-1;i<=posX+1;i++){
+			for(var j=posY-1;j<=posY+1;j++){
+				var aroundox=document.getElementById(i+'-'+j);
+				if(aroundox&&aroundox.classList.contains('isLei')){
+					n++;
+				}
+			}
+		}
+		dom&&(dom.innerHTML=n);
+		if(n==0){
+			for(var i=posX-1;i<=posX+1;i++){
+			for(var j=posY-1;j<=posY+1;j++){
+				var nearBox=document.getElementById(i+'-'+j);
+				if(nearBox&&nearBox.length!=0){
+					if(!nearBox.classList.contains('check')){
+						nearBox.classList.add('check');
+						leftClick(nearBox);
+					}
+				}
+			}
+			} 
+		}
+	}
+}
+function rightClick(dom){
+	if(dom.classList.contains('num')){
+		return;
+	}
+	dom.classList.toggle('flag');
+	if(dom.classList.contains('isLei')&&dom.classList.contains('flag')){
+	minesOver--;}
+	if(dom.classList.contains('isLei')&&!dom.classList.contains('flag')){
+	minesOver++;}
+	
+	score.innerHTML=minesOver;
+	if(minesOver==0){
+		alterBox.style.display='block';
+		alterImg.style.backgroundImage='url("img/success.jpg")';
+	}
+}
+        </script>
+	</body>
+</html>

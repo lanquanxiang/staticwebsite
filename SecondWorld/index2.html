@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网页制作大赛</title>
+    <link rel="stylesheet" href="css/home_page.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="index.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'Alex Brush';
+            src: url('AlexBrush-Regular.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="audio/bg.flac" autoplay loop id="bg"></audio>
+    <div id="home_page">
+        <div class="nav">
+            <div class="title" style="color: black;">Second world</div>
+            <div class="box" id="0">home</div>
+            <div class="box" id="1">article</div>
+            <div class="box" id="2">music</div>
+            <div class="box" id="3">food</div>
+            <div class="icon">
+                <img src="img/qq.jpg" width="25px" id="contact_qq">
+                <div class="qq">
+                    <img src="img/qq.png" width="150px">
+                </div>
+            </div>
+            <div class="icon">
+                <img src="img/wx.jpg" width="25px" id="wechat">
+                <div class="wechat">
+                    <img src="img/wechat.png" width="150px">
+                </div>
+            </div>
+            <!-- <div class="icon">
+                <img src="img/wb.jpg" width="25px">
+            </div> -->
+            <div class="icon">
+                <img src="img/tel.jpg" width="20px" id="tel">
+                <div class="tel">
+                    <img src="img/tel.png" width="400px">
+                </div>
+            </div>
+            <div class="welcome">Welcome to the second world!</div>
+        </div>
+
+        <ul class="sub">
+            <li id="article">
+                <div class="one">
+                    <span class="little_title">About literature</span>
+                    <div class="con">
+                        <div class="article_title">樱花落海洋</div>
+                        <section id="one">
+                            <p>三月的春光乍现，由路旁的花开和淡淡花香拉开序幕。重庆的春天是短暂的，还没好好感受粉红花海带来的悸动，就被一场突如其来的雨打湿了所有的梦想。樱花由此落入海洋。</p>
+                            <p>雨滴穿过十万米高空，而后准确无误地落在某片花瓣上，粉红小瓣随之一颤。透明水珠在花瓣上顺着春风吹的方向徐徐摇摆，像小孩缓缓进入梦乡。熟睡的小水珠脸颊绽放出诱人的粉红，让人忍不住轻轻抚摸。</p>
+                            <p>又一滴雨落下，樱花花瓣瘦弱的身骨怎能承受如此之重? 下一秒，便径直坠下，连着在半空中表演了几个身姿卓越的舞蹈。他们说樱花飘落的速度是每秒五厘米，那么一片樱花经过多长时间才能落入它最想停留的那片海洋呢?</p>
+                            <p>我们每个人都有一片属于自已的樱花。年少时都天真幻想自已的花在枝头盛开，永不凋谢。无论如何，生命中终将会有一场大雨，能使樱花飘落，落入海洋。也能用滴滴水珠滋润淡淡粉红的小瓣。</p>
+                            <p>而这一切，只与樱花的主人有关。</p>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="two">
+                    <span class="little_title">About poem</span>
+                    <div class="con">
+                        <div class="article_title">摇摇晃晃的人间</div>
+                        <section id="two">
+                            <p>交谈，仿佛夜色，仿佛隐匿着雷虽然患有声的花朵</p>
+                            <p>我们背对河流，影子出水，香气找到来原站在彼此的背后</p>
+                            <p>来不及相爱，雨落了下来</p>
+                            <p>你感叹人世的时候，我心里升起黄昏选好树枝，一起倒挂</p>
+                            <p>我们有千万里的距离，千万愁，一喜它们相互抵消时，谁都流泪</p>
+                            <p>你渐渐老迈的身体，如井</p>
+                            <p>纵然我是月，也有无法打捞的素白</p>
+                            <p>从五月开始，到化为灰烬</p>
+                            <p>我们都面临彼此的危险，仿佛香味</p>
+                        </section>
+                    </div>
+                    <img src="img/house.png" width="530px">
+                    <img src="img/book.gif" id="book">
+                </div>
+
+                <div class="three">
+                    <span class="little_title">About reader</span>
+                    <div class="con">
+                        <div class="article_title">朗读者</div>
+                        <section id="three">
+                            <p>愿你有好运气，如果没有，希望你学会慈悲。愿你被很多人爱，如果没有，希望你学会宽容。——刘瑜《愿你慢慢长大》</p>
+                            <p>Love once begun will never end.Thelovers may die for love, in China the dead in love may revive.</p>
+                            <p>情不知所起，一往而深，生者可以死，死可以生。——《牡丹亭》许渊冲译</p>
+                            <p>生命并不是你活了多少日子，而是你记住了多少日子。你要使你过的每一天都值得记忆。</p>
+                        </section>
+                    </div>
+                </div>
+                <!-- 柳条 -->
+                <!-- <img src="img/lt.jpg" id="lt"> -->
+            </li>
+
+            <li id="musics">
+                <div class="box">
+                    <div class="search">
+                        <input type="text" name="wd" id="music_text" placeholder="搜索你最喜欢的歌手..." style="border-radius: 30px; width: 200px; height: 25px;border:1px solid black;" />
+                        <img src="img/search.png" width="30px" id="music_qq" >
+                    </div>
+                    <div class="songs">
+                        <div class="song">
+                            <span id="xun">寻</span>
+                        </div>
+
+                        <div class="song">
+                            <span id="pfzl">平凡之路</span>
+                        </div>
+
+                        <div class="song">
+                            <span id="sh">山海</span>
+                        </div>
+
+                        <div class="song">
+                            <span id="qt">齐天</span>
+                        </div>
+
+                        <div class="song">
+                            <span id="sjg">双节棍</span>
+                        </div>
+
+                        <div class="song">
+                            <span id="zs">智商250</span>
+                        </div>
+
+                        <div class="song">
+                            <span id="hz">孩子</span>
+                        </div>
+                    </div>
+
+                    <div class="sup">
+                        <marquee behavior="alternate" direction="right" scrollamount="6" scrolldelay="30" style="font-weight: 700;">世界上最好的花花</marquee>
+                        <marquee direction="right" scrollamount="5" scrolldelay="25" id="ma2">齐天</marquee>
+                        <marquee direction="right" scrollamount="7" scrolldelay="20" id="ma3">烟火里的尘埃</marquee>
+                        <marquee direction="right" scrollamount="4" scrolldelay="22" id="ma4">春</marquee>
+                        <marquee direction="right" scrollamoun t="8" scrolldelay="25" id="ma5">智商520</marquee>
+                    </div>
+                    <div class="pic">
+                        <img src="img/hcy/1.jpg" id="image" height="400px" style="border-radius:30px;" width="600px">
+                    </div>
+                </div>
+            </li>
+
+            <li id="food">
+                <div class="search">
+                    <input type="text" name="wd" id="food_text" placeholder="搜索你最喜欢的食物...">
+                    <img src="img/search.png" width="30px" id="food_qq">
+                </div>
+
+                <div class="caixi">
+                    <div class="food">川菜</div>
+                    <div class="chuan">
+                        <ul>
+                            <div class="cai">
+                                <li>水煮牛肉</li>
+                                <li>酸菜鱼</li>
+                                <li>鱼香肉丝</li>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="food">粤菜</div>
+                    <div class="yue">
+                        <ul>
+                            <div class="cai">
+                                <li>叉烧肉</li>
+                                <li>水晶虾饺</li>
+                                <li>烧麦</li>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="food">鲁菜</div>
+                    <div class="lu">
+                        <ul>
+                            <div class="cai">
+                                <li>醋溜白菜</li>
+                                <li>拔丝苹果</li>
+                                <li>四喜丸子</li>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="food">苏菜</div>
+                    <div class="su">
+                        <ul>
+                            <div class="cai">
+                                <li>盐水鸭</li>
+                                <li>阳春面</li>
+                                <li>清炖狮子头</li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <span>食谱推荐</span> -->
+                <br>
+                <div class="next_page">
+                    <span>土豆烘煎蛋制作步骤</span>
+                    <br>
+                    <div class="con">
+                        ①土豆去皮洗净切片，放在清水中片刻，很短的时间，所以水中就没有放盐，洋葱、红椒洗净切小丁
+                        <br>
+                        <br> ②土豆片焯水至七分熟捞出，平铺在烤盘中
+                        <br>
+                        <br> ③平底锅中放入一大勺蒜香橄榄油，中火炒香洋葱，放入红椒翻炒片刻，放少许的盐拌匀后关火
+                        <br>
+                        <br> ④鸡蛋打散在大碗中，放入炒好的洋葱，拌匀待用。土豆片在烤盘中先铺上一层，倒入一半的蔬菜蛋液
+                        <br>
+                        <br> ⑤再铺上余下的土豆片，余下的蔬菜蛋液倒入，烤箱180度预热，烤盘放入烤箱中层，烤10~15分钟。
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://api.asilu.com/cdn/jquery.js,jquery.backstretch.min.js" type="text/javascript"></script>
+<script>
+    $(".welcome").fadeIn(2000);
+    var arry = document.getElementsByClassName("box");
+    for (var i = 0; i < arry.length; i++) {
+        arry[i].addEventListener("click", fun, true);
+    }
+
+    /* home_page */
+    //轮播图
+    $("#home_page").backstretch([ 
+        'img/chun.jpg',
+        'img/bg2.jpg',
+        'img/fss.jpg',
+        'img/qiu.jpg'
+    ], {
+        fade: 1000, // 动画时长
+        duration: 2000 // 切换延时
+    });
+
+    // 文章淡入
+    $(".con").fadeIn(4000);
+
+    /* food */
+    var food = document.getElementsByClassName("food");
+    for (var i = 0; i < food.length; i++) {
+        food[i].addEventListener("mouseover", m_over, true);
+        food[i].addEventListener("mouseout", m_out, true);
+        food[i].addEventListener("click", m_click, true);
+    }
+
+    // var cai = document.getElementsByClassName("cai");
+    // for (var i = 0; i < cai.length; i++) {
+    //     cai[i].addEventListener("mouseover", m_over_cai, true);
+    //     cai[i].addEventListener("mouseout", m_out, true);
+    //     // cai[i].addEventListener("click", m_click, true);
+    // }
+
+    // 跳转到美食天下
+    document.getElementById("food_qq").addEventListener("click",delicious_food,true);
+    
+    /* music */
+    /* var span = document.getElementsByTagName("span"); */
+    var span = $("#musics span");
+    for (var i = 0; i < span.length; i++) {
+        span[i].addEventListener("click", fun1, true);
+        span[i].addEventListener("click", dm, true);
+        span[i].addEventListener("click", origin, true);
+    }
+    document.getElementById("music_qq").addEventListener("click", baidu_music, true);
+    // setInterval(article_change, 10000);
+    // contact
+    //.nav .icon .qq
+    document.getElementById("contact_qq").addEventListener("click",show_contact,true);
+    document.getElementById("wechat").addEventListener("click",show_contact,true);
+    document.getElementById("tel").addEventListener("click",show_contact,true); 
+</script>

@@ -1,0 +1,240 @@
+.top {
+  /* position: fixed;
+  width: 30px;
+  height: 100px;
+  right: -30px;
+  z-index: 999;
+  top: 50%;
+  font-size: 20px;
+  text-align: center;
+  border: 5px solid red; */
+
+  transition: all 0.5s;
+  position: fixed;
+  line-height: 46px;
+  text-align: center;
+  width: 46px;
+  right: 0;
+  z-index: 1;
+  bottom: 60px;
+  height: 46px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  font-size: 22px;
+  color: #999;
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to right, #c70d14, rgb(221, 106, 11) 70%);
+  z-index: 1;
+}
+
+.nav .navText {
+  position: absolute;
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: -10px;
+  padding-left: 30px;
+  font-weight: bold;
+  font-family: STXinwei;
+}
+
+.nav ul {
+  width: 500px;
+  height: 80px;
+  float: right;
+  text-align: center;
+  line-height: 80px;
+}
+
+.nav ul > li {
+  list-style: none;
+  width: 100px;
+  height: 60px;
+  float: right;
+  font-size: 20px;
+  font-family: "pingfang SC", "helvetica neue", arial, "hiragino sans gb",
+    "microsoft yahei ui", "microsoft yahei", "simsun", sans-serif;
+  margin-right: 20px;
+}
+
+.nav ul > li a {
+  text-decoration: none;
+  color: #b60d13;
+  font-weight: bold;
+}
+
+.nav ul > li:hover a {
+  color: white;
+}
+
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+em,
+i {
+  font-style: normal;
+}
+
+.xinxi_solution_main {
+  width: 100%;
+  background-color: #b60d13;
+  background: url("../image/2.jpg") no-repeat;
+  background-size: cover;
+}
+.xinxi_solution_bg {
+  background-size: 100% 400px;
+  max-width: 1920px;
+  width: 990px;
+  margin: 80px 280px;
+  background-color: #f7f7f7;
+}
+.xinxi_solution_main ul {
+  overflow: hidden;
+  height: 400px;
+}
+.xinxi_solution_main .main_mobile {
+  max-width: 1080px;
+  min-width: 1080px;
+}
+
+.xinxi_solution_main ul li {
+  background: linear-gradient(to top, #f5efd7, white 70%);
+  height: 400px;
+  float: left;
+  width: 70px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.xinxi_solution_main ul li:nth-child(2) {
+  background: url("../image/2.jpg") no-repeat;
+  background-size: cover;
+}
+.xinxi_solution_main ul li:nth-child(3) {
+  background: url("../image/2.jpg") no-repeat;
+  background-size: cover;
+}
+.xinxi_solution_main ul li:nth-child(4) {
+  background: url("../image/2.jpg") no-repeat;
+  background-size: cover;
+}
+.xinxi_solution_main ul li:nth-child(5) {
+  background: url("../image/2.jpg") no-repeat;
+  background-size: cover;
+}
+.xinxi_solution_main ul li:nth-child(6) {
+  background: url("../image/2.jpg") no-repeat;
+  background-size: cover;
+}
+.xinxi_solution_main ul li .left_top {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+.xinxi_solution_main ul li .left_top img {
+  width: 30px;
+  margin-top: 40px;
+}
+.xinxi_solution_main ul li i {
+  font-size: 24px;
+  color: #fff;
+}
+.xinxi_solution_main .left_top {
+  font-size: 30px;
+  color: #fff;
+}
+.xinxi_solution_main ul li .left {
+  float: left;
+  width: 70px;
+  background: #000;
+  opacity: 0.5;
+  height: 400px;
+}
+.xinxi_solution_main ul li .right {
+  float: left;
+  width: 680px;
+  position: relative;
+  height: 400px;
+  color: #b60d13;
+  line-height: 30px;
+}
+
+.xinxi_solution_main ul li .right .jianjie {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  font-size: 20px;
+}
+
+.xinxi_solution_main .right dl {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+}
+.xinxi_solution_main .right dd {
+  color: #fff;
+  font-size: 26px;
+  border-radius: 5px;
+  width: 280px;
+  height: 75px;
+  margin-bottom: 45px;
+  background: #000;
+  opacity: 0.5;
+}
+.xinxi_solution_main .right dl a {
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  height: 40px;
+  width: 280px;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  background-size: 100% 100%;
+  background-color: rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.xinxi_solution_main .right dl a.yichu {
+  float: left;
+  margin-right: 20px;
+}
+.xinxi_solution_main ul li.on {
+  width: 780px;
+}
+.xinxi_solution_main ul li.two {
+  background: url("../image/建团百年logo2.jpg") no-repeat;
+}
+.xinxi_solution_main ul li.thr {
+  background: url("../image/1.jpg") no-repeat;
+}
+.xinxi_solution_main ul li.four {
+  background: url("../image/1.jpg") no-repeat;
+}
+.xinxi_solution_main ul li.five {
+  background: url("../image/1.jpg") no-repeat;
+}
+.xinxi_solution_main ul li.six {
+  background: url("../image/1.jpg") no-repeat;
+}

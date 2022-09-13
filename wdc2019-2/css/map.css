@@ -1,0 +1,134 @@
+.titleH {
+	width: 100%;
+	height: 70px;
+	margin-top: 15px;
+	/*background: -webkit-linear-gradient(left, #FF7256, #FFEC8B);*/
+	/* Safari 5.1 - 6.0 */
+	/*background: -o-linear-gradient(right, #FF7256, #FFEC8B);*/
+	/* Opera 11.1 - 12.0 */
+	/*background: -moz-linear-gradient(right, #FF7256, #FFEC8B);*/
+	/* Firefox 3.6 - 15 */
+	/*background: linear-gradient(to right, #FF7256, #FFEC8B);*/
+	/* 标准的语法 */
+	/*background: #FF7256;*/
+}
+
+.titleH p {
+	text-align: center;
+	font-family: "华文行楷";
+	font-size: 35px;
+	font-weight: 400px;
+	line-height: 70px;
+}
+
+.bigmap {
+	width: 100%;
+	height: 730px;
+	/*background-color: #FF7256;*/
+	/*background-color: #FF0000;*/
+}
+
+.bigmap .map {
+	width: 989px;
+	height: 700px;
+	margin: 0 auto;
+	margin-top: 0;
+	position: relative;
+	background: url(../img/map3.png) no-repeat 0 0;
+	/*background-size: 989px 700px;*/
+	box-shadow: 10px 10px 20px #CD2990;
+	/*background-color:#FF7256  ;*/
+}
+
+.bigmap .map .mp {
+	position: absolute;
+	cursor: pointer;
+	background: url(../img/fi1.png) no-repeat 4px 20px;
+	width: 24px;
+	height: 63px;
+	-webkit-transition: all .2s ease-out;
+	-moz-transition: all .2s ease-out;
+	-ms-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+
+.bigmap .map .mp1 {
+	left: 446px;
+	top: 474px;
+}
+
+.diaplayy .tree {
+	height: 100px;
+	width: 330px;
+	margin: 9px;
+}
+
+.mp .mito {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	font-size: 12px;
+	color: #666666;
+}
+
+.tree .sang {
+	position: absolute;
+	left: 235px;
+	bottom: 0px;
+	background: url(../img/vf2.png) no-repeat 0 0;
+	width: 14px;
+	height: 8px;
+}
+
+.boou img {
+	width: 86px;
+	height: 62px;
+	float: left;
+}
+
+.bigmap .map .mp .diaplayy {
+	position: absolute;
+	display: none;
+	width: 347px;
+	height: 85px;
+	left: -230px;
+	top: -78px;
+	background: url(../img/vf1.png) no-repeat 0 top;
+	z-index: 10;
+}
+
+.bigmap .map .mp2 {
+	left: 575px;
+	top: 316px;
+}
+
+.bigmap .map .mp3 {
+	left: 450px;
+	top: 400px;
+}
+
+.bigmap .map .mp4 {
+	left: 456px;
+	top: 460px;
+}
+
+.bigmap .map .mp5 {
+	left: 560px;
+	top: 310px;
+}
+
+.bigmap .map .mp6 {
+	left: 735px;
+	top: 391px;
+}
+
+.bigmap .map .mp7 {
+	left: 761px;
+	top: 450px;
+}
+
+.bigmap .map .mp8 {
+	left: 575px;
+	top: 330px;
+}

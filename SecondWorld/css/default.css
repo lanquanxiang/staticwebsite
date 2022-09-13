@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+    width: 1366px;
+    height: 70px;
+    float: left;
+    background-color: antiquewhite;
+    opacity: 0.7;
+    float: left;
+}
+
+/* 样式表中声明该字体 */
+.nav .title {
+    color: white;
+    font-family: "Alex Brush";
+    font-size: 40px;
+    line-height: 70px;
+    margin-left: 100px;
+}
+
+.nav .title::first-letter {
+    font-size: 150%;
+}
+
+.nav div {
+    display: inline-block;
+}
+
+.box {
+    width: 120px;
+    height: 70px;
+    line-height: 70px;
+    font-family: cursive;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 30px;
+    color: rgb(235, 120, 26);
+}
+
+.box:hover {
+    color: orangered;
+}
+
+.welcome {
+    font-family: "Alex Brush";
+    font-size: 55px;
+    display: none;
+    position: relative;
+    top: 100px;
+    left: 30%;
+}
+
+img {
+    opacity: 0.9;
+}
+
+.icon {
+    line-height: 70px;
+    float: right;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.sub {
+    width: 1366px;
+    height: 600px;
+    overflow: hidden;
+    /* border: 3px solid red; */
+}

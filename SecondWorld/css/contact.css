@@ -1,0 +1,41 @@
+#contact .contact_box{
+    width: 1366px;
+    height: 60px;
+    background-color: red;
+    border: 1px solid red;
+    display: none;
+}
+
+#contact .contact_box img{
+    z-index: 100;
+}
+
+.nav .icon .qq{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+
+
+.nav .icon .wechat{
+    position: absolute;
+    top: 20px;
+    right: 140px;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+
+.nav .icon .tel{
+    position: absolute;
+    top: 20px;
+    right: 440px;
+    width: 100px;
+    height: 100px;
+    display: none;
+}

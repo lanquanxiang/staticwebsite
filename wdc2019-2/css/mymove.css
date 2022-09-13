@@ -1,0 +1,69 @@
+.mymove {
+	width: 1250px;
+	height: 218px;
+	margin-top: 20px;
+	margin-left: 50px;
+	border: 1px solid red;
+	line-height: 218px;
+	/**/
+	overflow: hidden;
+}
+
+.mymove ul {
+	width: 100%;
+	display: flex;
+}
+
+.mymove:hover>ul{
+	animation-play-state: paused;
+	cursor: pointer;
+	
+}
+
+.mymove ul li {
+	margin-left: 20px;
+	/* */
+	/*width: 100%;*/
+	list-style: none;
+	/*1.设置的名称*/
+	animation-name: move;
+	/*2.设置动画的耗时*/
+	animation-duration: 7s;
+	/*3.市场无限循环*/
+	animation-iteration-count: infinite;
+	/*4.设置时间函数*/
+	animation-timing-function: linear;
+}
+
+@keyframes move {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-1250px);
+	}
+}
+
+.mymove ul li {
+	list-style: none;
+	float: left;
+	margin-left: 8px;
+	/*position: relative;*/
+}
+
+.mymove ul #move {
+	width: 250px;
+	height: 218px;
+	position: relative;
+	/*left: -250px;*/
+	float: left;
+}
+
+.mymove ul #con {
+	position: absolute;
+	/*left: -250px;*/
+	/*left: 250px;*/
+	margin-left: -250px;
+	float: left;
+	z-index: 100;
+}

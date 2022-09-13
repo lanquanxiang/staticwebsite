@@ -1,0 +1,296 @@
+body {
+  background-image: url("../image/2.jpg");
+}
+.nav {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to right, #c70d14, rgb(221, 106, 11) 70%);
+  z-index: 1;
+}
+
+.nav .navText {
+  position: absolute;
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: -10px;
+  padding-left: 30px;
+  font-weight: bold;
+  font-family: STXinwei;
+}
+
+.nav ul {
+  width: 500px;
+  height: 80px;
+  float: right;
+  text-align: center;
+  line-height: 80px;
+}
+
+.nav ul > li {
+  list-style: none;
+  width: 100px;
+  height: 60px;
+  float: right;
+  font-size: 20px;
+  font-family: "pingfang SC", "helvetica neue", arial, "hiragino sans gb",
+    "microsoft yahei ui", "microsoft yahei", "simsun", sans-serif;
+  margin-right: 20px;
+}
+
+.nav ul > li a {
+  text-decoration: none;
+  color: #b60d13;
+  font-weight: bold;
+}
+
+.nav ul > li:hover a {
+  color: white;
+}
+
+/* 人物图片 */
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+body {
+  min-width: 1240px;
+  max-width: 2500px;
+  margin: 0 auto;
+  background-image: url(../image/2.jpg);
+  background-repeat: no-repeat;
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 0.6rem;
+  background-color: rgba(100, 100, 100, 0.4);
+}
+
+.site {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 800px;
+}
+
+.wrapper h3 {
+  position: absolute;
+  left: 4rem;
+  top: 4rem;
+  z-index: 1000;
+  padding: 0 1rem;
+  background-color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #222;
+  border-radius: 1.4rem;
+}
+
+.wrapper .container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.horizontal .container {
+  width: 18rem;
+  height: 21rem;
+}
+
+.vertical .container {
+  width: 37rem;
+  height: 14rem;
+}
+
+.container .cards-list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  border-radius: 0.3125rem;
+  transition: 330ms;
+}
+
+.demo4 .cards-list {
+  transition: 440ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.horizontal .cards-list {
+  width: 100%;
+}
+
+.horizontal .img {
+  height: 11rem;
+}
+
+.vertical .cards-list {
+  display: flex;
+  height: 100%;
+}
+
+.vertical .img,
+.vertical .main-con {
+  height: 100%;
+}
+
+.vertical .img {
+  width: 18rem;
+}
+
+.vertical .main-con {
+  width: 19rem;
+}
+
+.img > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.main-con {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.main-con .name {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #424242;
+}
+
+.main-con .content {
+  padding-top: 1rem;
+  height: 4.5rem;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: justify;
+  line-height: 1.4rem;
+}
+
+.main-con .label {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 1rem 0;
+}
+
+.btn-direct {
+  position: absolute;
+  top: 50%;
+  z-index: 100000;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-direct.btn-left {
+  left: 6rem;
+}
+
+.btn-direct.btn-right {
+  right: 1rem;
+}
+
+.btn-direct > span {
+  position: absolute;
+  left: calc(50% - 0.6rem);
+  top: calc(50% - 0.6rem);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-top: 0.2rem solid #fff;
+  border-left: 0.2rem solid #fff;
+}
+
+.horizontal .shift-left {
+  transform: translateX(25%) rotate(-45deg);
+}
+
+.horizontal .shift-right {
+  transform: translateX(-25%) rotate(135deg);
+}
+
+.vertical .shift-left {
+  transform: translateY(25%) rotate(45deg);
+}
+
+.vertical .shift-right {
+  transform: translateY(-25%) rotate(-135deg);
+}
+
+.demo7 .container {
+  width: 18rem;
+  height: 24rem;
+  overflow: hidden;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.navigation .dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.5rem;
+  border: 0.125rem solid #fff;
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.navigation .dot.active {
+  background-color: transparent;
+}
+
+.demo1-tip {
+  position: absolute;
+  left: 12rem;
+  top: 8rem;
+  color: #fff;
+  line-height: 1;
+}
+.demo1-tip .active-index {
+  color: lightgoldenrodyellow;
+  font-size: 1.5rem;
+  font-weight: 600;
+  vertical-align: middle;
+}

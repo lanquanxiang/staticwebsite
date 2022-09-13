@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Around Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>	
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<style type="text/css">
+	.iframe{
+		padding: 0;
+		margin: 0;
+	}
+	#list2{
+		display: inline-block;
+		position: absolute;
+		width: 500px;
+		left: 50%;
+		margin-left:-250px ;
+	}
+	#list2 ul{
+		position: relative;
+		left: auto;
+		display:none;
+	}
+	#list2:hover ul{
+		display: block;
+	}
+	#list2 li{
+		display: inline-block;
+	}
+	#list2 button{
+		border: none;
+		outline: none;
+		color: #A8A8A8;
+		background: none;
+		font-size: 1em;
+		margin: .6em 0;
+		-webkit-appearance: none;
+	}
+	#list2 button:hover{
+		color:#2DCB74;
+		transition: .5s all;
+		-webkit-transition: .5s all;
+		-moz-transition: .5s all;
+		-o-transition: .5s all;
+		-ms-transition: .5s all;
+	}
+	a:hover {
+		color:#4499EE;
+		text-decoration:none; /*CSS下划线效果：无下划线*/
+	}
+</style>
+<!--//end-animate-->
+</head>
+
+<body onload="fun(1)">
+	<!-- header -->
+	<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-info">
+					<div class="top-header-left wow fadeInLeft animated" data-wow-delay=".5s">
+						<p>世界抗疫加油!</p>
+					</div>
+					<!-- <div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div> -->
+				</div>
+			</div>
+		</div>
+		<div class="bottom-header">
+			<div class="container">
+				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+					<h1><a href="index.html"><img src="images/logo.png" alt="" /></a></h1>
+				</div>
+				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html" class="active">主页</a></li>
+								<li><a href="about.html">关于</a></li>
+								<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相集<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a class="hvr-bounce-to-bottom" href="gallery1.html">万众一心</a></li>
+										<li><a class="hvr-bounce-to-bottom" href="gallery2.html">全球战疫</a></li>          
+									</ul>
+								</li>	
+								<li><a href="blog.html">感人故事</a></li>
+								<li><a href="contact.html" style="color: #2DCB74 !important;">抗疫信息</a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header-->
+	
+	<!-- contact -->
+	<div class="contact" >
+		<div class="container">
+			<div class="contact-heading" id="head1">
+					<a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1"><h2 class="wow fadeInDown animated" data-wow-delay=".5s">世界疫情</h2></a>
+					<p class="wow fadeInUp animated" data-wow-delay=".5s">Real time information of world epidemic situation</p>
+			</div>
+			<div id="list2" class="wow fadeInDown animated" data-wow-delay=".5s">
+				<ul>
+					<li><button onclick="fun(0)">显示全部</button></li>
+					<li><button onclick="fun(1)">实时疫情</button></li>
+					<li><button onclick="fun(2)">复工复学</button></li>
+					<li><button onclick="fun(3)">聚焦疫情</button></li>
+					<li><button onclick="fun(4)">周边疫情</button></li>
+				</ul><br>
+			</div>
+			<div class="map wow fadeInUp animated" id="head2" data-wow-delay=".5s">
+				<h4>百度实时疫情 :</h4>
+				<iframe src="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1" frameborder="0" style="border:0;height: 1000px;" allowfullscreen></iframe>
+			</div>
+			<div class="frame" style="display: none;">
+				<div class="contact-heading">
+					<a href="https://news.sina.cn/project/fy2020/resume.d.html?wm=3049_0032"><h2 class="wow fadeInDown animated" data-wow-delay=".5s">复工复学</h2></a>
+					<p class="wow fadeInUp animated" data-wow-delay=".5s">Real time information of resumption</p>
+				</div>
+				<div class="map wow fadeInUp animated" data-wow-delay=".5s">
+				<h4> 权威“三复”信息汇总:</h4>
+				<iframe src="#" frameborder="0" style="border:0;height: 500px;" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="frame" style="display: none;">
+				<div class="contact-heading">
+						<a href="https://news.sina.cn/zt_d/feiyan1231?wm=3049_0032"><h2 class="wow fadeInDown animated" data-wow-delay=".5s">聚焦疫情</h2></a>
+						<p class="wow fadeInUp animated" data-wow-delay=".5s">Focus on epidemic situation</p>
+					</div>
+				<div class="map wow fadeInUp animated" data-wow-delay=".5s">
+					<h4> 相关疫情报道:</h4>
+					<iframe src="#" frameborder="0" style="border:0;height: 500px;" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="frame" style="display: none;">
+					<div class="contact-heading">
+						<a href="https://news.sina.cn/project/fy2020/community_outbreak.d.html?wm=3049_0032"><h2 class="wow fadeInDown animated" data-wow-delay=".5s">周边疫情</h2></a>
+						<p class="wow fadeInUp animated" data-wow-delay=".5s">Surrounding epidemic</p>
+					</div>
+				<div class="map wow fadeInUp animated" data-wow-delay=".5s">
+					<h4> 周边疫情报道:</h4>
+					<iframe src="#" frameborder="0" style="border:0;height: 500px;" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="contact-tupian">
+				<h2 class="wow fadeInDown animated" data-wow-delay=".5s">疫情图片展示</h2>
+				<p class="wow fadeInUp animated" data-wow-delay=".5s">Picture display of epidemic situation</p>
+			</div>
+			<div class="map wow fadeInUp animated" data-wow-delay=".5s">
+				<h4>相关图片 :</h4>
+				<a href="blog.html?index=101"><img src="images/21.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=103"><img src="images/23.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=201"><img src="images/24.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=203"><img src="images/26.jpg" style="width: 300px;height: 300px;"/></a>
+				<img src="images/E.jpg" style="width: 300px;height: 300px;"/>
+				<a href="blog.html?index=501"><img src="images/33.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=202"><img src="images/25.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=301"><img src="images/27.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=302"><img src="images/28.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=303"><img src="images/29.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=401"><img src="images/30.jpg" style="width: 300px;height: 300px;"/></a>
+				<a href="blog.html?index=502"><img src="images/34.jpg" style="width: 300px;height: 300px;"/></a>
+			</div>
+			<script type="text/javascript">
+				function fun(index){
+					var frame=document.getElementsByClassName("frame");
+					var firstFrame=document.getElementsByTagName("iframe");
+					if(index==0){
+						firstFrame[0].src="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1";
+						firstFrame[1].src="https://news.sina.cn/project/fy2020/resume.d.html?wm=3049_0032";
+						firstFrame[2].src="https://news.sina.cn/zt_d/feiyan1231?wm=3049_0032";
+						firstFrame[3].src="https://news.sina.cn/project/fy2020/community_outbreak.d.html?wm=3049_0032";
+						$("#head1>a").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1");
+						$("#head1 h2").html("世界疫情");
+						$("#head1>p").html("Real time information of world epidemic situation");
+						$("#head2>h4").html("百度实时疫情 :");
+						firstFrame[0].style.height="500px";
+						frame[0].style.display="block";
+						frame[1].style.display="block";
+						frame[2].style.display="block";
+						
+					}else{
+							frame[0].style.display="none";
+							frame[1].style.display="none";
+							frame[2].style.display="none";
+							firstFrame[0].style.width="100%";
+							firstFrame[0].style.height="1000px";
+						if(index==1){
+							firstFrame[0].src="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1";
+							$("#head1 h2").html("世界疫情");
+							$("#head1>a").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1");
+							$("#head1>p").html("Real time information of world epidemic situation");
+							$("#head2>h4").html("百度实时疫情 :");
+							
+						}else if(index==2){
+							firstFrame[0].src="https://news.sina.cn/project/fy2020/resume.d.html?wm=3049_0032";
+							$("#head1 h2").html("复工复学");
+							$("#head1>a").attr("href","https://news.sina.cn/project/fy2020/resume.d.html?wm=3049_0032");
+							$("#head1>p").html("Real time information of resumption");
+							$("#head2>h4").html("权威“三复”信息汇总:");
+						}else if(index==3){
+							firstFrame[0].src="https://news.sina.cn/zt_d/feiyan1231?wm=3049_0032";
+							$("#head1 h2").html("聚焦疫情");
+							$("#head1>a").attr("href","https://news.sina.cn/zt_d/feiyan1231?wm=3049_0032");
+							$("#head1>p").html("Focus on epidemic situation");
+							$("#head2>h4").html("相关疫情报道:");
+						}else{
+							firstFrame[0].src="https://news.sina.cn/project/fy2020/community_outbreak.d.html?wm=3049_0032";
+							$("#head1 h2").html("周边疫情");
+							$("#head1>a").attr("href","https://news.sina.cn/project/fy2020/community_outbreak.d.html?wm=3049_0032");
+							$("#head1>p").html("Surrounding epidemic");
+							$("#head2>h4").html(" 周边疫情报道:");
+						}
+					}
+				}
+			</script>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-nav wow fadeInLeft animated" data-wow-delay=".5s">
+					<h4>导航</h4>
+					<ul>
+						<li><a href="contact.html">首页</a></li>
+						<li><a href="about.html">关于</a></li>
+						<li><a href="gallery1.html">相集</a></li>
+						<li><a href="blog.html">感人故事</a></li>
+					</ul>
+				</div>
+				<div class="col-md-5 footer-nav wow fadeInUp animated" data-wow-delay=".5s">
+					<h4>更多信息</h4>
+					<p>了解更多疫情实时信息，您可以订阅我们</p>
+					<form>
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="请在这里填写您的邮箱" required="">
+						<input type="submit" value="订阅">
+					</form>
+				</div>
+				<div class="col-md-4 footer-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<h4>最新新闻</h4>
+					<div class="news-grids">
+						<div class="news-grid">
+							<h6>19/05/2020 : <a href="single.html?index=1">独家专访张定宇：全民检测后不排除有新增病例</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=2">摄影记疫｜每一幅阴沉的画面，都是对晴朗的渴望</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=3">上海新增一确诊病例，已隔离4名密接者</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=4">武汉社区工作者百天未休，520请假领证</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=5">视频｜以真实致敬生命！《人间世》特别节目21日开播</a></h6>
+							<h6>19/05/2020 : <a href="single.html?index=6">高校复课迎首批学子，志愿者送餐到寝室楼</a></h6>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+</body>	
+</html>

@@ -1,0 +1,9 @@
+.main3-tpo-4-1 button{
+	background-color: greenyellow;
+	width: 50px;
+	color: white;
+	border: none;
+	box-shadow: -1px -2px -2px 0 #615959;
+	border-radius: 3px;
+	font-size: 23px;
+}

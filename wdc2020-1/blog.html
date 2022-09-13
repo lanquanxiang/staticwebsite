@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Around Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+	function inti(){
+		var str=window.location.search;
+		if(str.indexOf('index')!=-1){
+			var pos_start1=str.indexOf('index')+6;
+			var pos_start2=str.indexOf('index')+7;
+			var pos_start3=str.indexOf('index')+8;
+			var a=str.substring(pos_start1,pos_start2)*1;
+			var b=str.substring(pos_start2,pos_start3)*1;
+			var c=str.substring(pos_start3)*1;
+			fun(a,b,c);
+		}
+	}
+</script>	
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+</head>
+<body onload="inti()">
+	<!-- header -->
+	<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-info">
+					<div class="top-header-left wow fadeInLeft animated" data-wow-delay=".5s">
+						<p>世界抗疫加油!</p>
+					</div>
+					<!-- <div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div> -->
+				</div>
+			</div>
+		</div>
+		<div class="bottom-header">
+			<div class="container">
+				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+					<h1><a href="index.html"><img src="images/logo.png" alt="" /></a></h1>
+				</div>
+				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html" class="active">主页</a></li>
+								<li><a href="about.html">关于</a></li>
+								<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相集<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a class="hvr-bounce-to-bottom" href="gallery1.html">万众一心</a></li>
+										<li><a class="hvr-bounce-to-bottom" href="gallery2.html">全球战疫</a></li>          
+									</ul>
+								</li>		
+								<li><a href="blog.html" style="color: #2DCB74 !important;">感人故事</a></li>
+								<li><a href="contact.html">抗疫信息</a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header-->
+		
+		<!-- blog -->
+		<div class="blog">
+			<!-- container -->
+			<div class="container">
+				<div class="blog-heading">
+					<h2 class="wow fadeInDown animated" data-wow-delay=".5s">感恩世界，感谢有你。</h2>
+					<p class="wow fadeInUp animated" data-wow-delay=".5s" style="font-family: '楷体';">没有一个寒冬不会过去，也没有一个暖春不会到来。<br>疫情阻碍了出门的脚步，却也给了大家弯道超车的机会。<br>享梦游人一起攻克艰难，成就更好的自己。</p>
+				</div>
+				<div class="blog-top-grids">
+					<div class="col-md-8 blog-top-left-grid">
+						<iframe src="src\1.1.html" width="100%" height="1180px" frameborder="0" class="wow fadeInUp animated" scrolling="no"></iframe>
+						<iframe src="src\1.2.html" width="100%" height="1180px" frameborder="0" class="wow fadeInUp animated" scrolling="no"></iframe>
+						<iframe src="src\1.3.html" width="100%" height="1180px" frameborder="0" class="wow fadeInUp animated" scrolling="no"></iframe>
+						<nav>
+							<ul class="pagination wow fadeInUp animated" data-wow-delay=".5s">
+								<li>
+									<a href="#" onclick="fun(0,-1,0)" aria-label="Previous">
+										<span aria-hidden="true">«</span>
+									</a>
+								</li>
+								<li><a href="#" onclick="fun(1,0,0)">1</a></li>
+								<li><a href="#" onclick="fun(2,0,0)">2</a></li>
+								<li><a href="#" onclick="fun(3,0,0)">3</a></li>
+								<li><a href="#" onclick="fun(4,0,0)">4</a></li>
+								<li><a href="#" onclick="fun(5,0,0)">5</a></li>
+								<li>
+									<a href="#" onclick="fun(0,1,0)" aria-label="Next">
+										<span aria-hidden="true">»</span>
+									</a>
+								</li>
+								<script type="text/javascript">
+									var index=1;
+									var frame=document.getElementsByTagName("iframe");
+									function fun(nums,flage,i){
+										if(nums!=0)index=nums;
+										if(flage==-1){
+											if(index==1)index=5;
+											else index--;
+										}
+										else if(flage==1){
+											if(index==5)index=1;
+											else index++;
+										}
+										
+										frame[0].src="src\\"+index+".1.html";
+										frame[1].src="src\\"+index+".2.html";
+										frame[2].src="src\\"+index+".3.html";
+										if(i==0){
+											frame[0].style.display="block";
+											frame[1].style.display="block";
+											frame[2].style.display="block";
+										}else{
+											frame[0].style.display="none";
+											frame[1].style.display="none";
+											frame[2].style.display="none";
+											frame[i-1].style.display="block";
+										}
+									}
+								</script>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-4 blog-top-right-grid">
+						<div class="Categories wow fadeInUp animated" data-wow-delay=".5s">
+							<h3>新闻:</h3>
+							<ul>
+								<li><a href="single.html?index=1">独家专访张定宇：全民检测后不排除有新增病例</a></li>
+								<li><a href="single.html?index=2">摄影记疫｜每一幅阴沉的画面，都是对晴朗的渴望</a></li>
+								<li><a href="single.html?index=3">上海新增一确诊病例，已隔离4名密接者</a></li>
+								<li><a href="single.html?index=4">武汉社区工作者百天未休，520请假领证</a></li>
+								<li><a href="single.html?index=5">视频｜以真实致敬生命！《人间世》特别节目21日开播</a></li>
+								<li><a href="single.html?index=6">高校复课迎首批学子，志愿者送餐到寝室楼</a></li>
+							</ul>
+						</div>
+						<div class="Categories wow fadeInUp animated" data-wow-delay=".5s">
+							<h3>时间</h3>
+							<ul class="marked-list offs1">
+								<li><a href="#" onclick="fun(3,0,3)">2020年1月18日</a></li>
+								<li><a href="#" onclick="fun(1,0,3)">2020年1月25日</a></li>
+								<li><a href="#" onclick="fun(5,0,3)">2020年1月31日</a></li>
+								<li><a href="#" onclick="fun(4,0,1)">2020年2月1日</a> </li>
+								<li><a href="#" onclick="fun(1,0,1)">2020年2月4日</a></li>    
+								<li><a href="#" onclick="fun(4,0,2)">2020年2月6日</a></li>
+								<li><a href="#" onclick="fun(5,0,1)">2020年2月12日</a></li>
+								<li><a href="#" onclick="fun(3,0,1)">2020年2月19日</a></li>
+								<li><a href="#" onclick="fun(2,0,1)">2020年3月5日</a> </li>
+								<li><a href="#" onclick="fun(4,0,3)">2020年3月7日</a></li>
+								<li><a href="#" onclick="fun(3,0,2)">2020年3月8日</a></li> 
+								<li><a href="#" onclick="fun(1,0,2)">2020年3月10日</a></li>
+								<li><a href="#" onclick="fun(5,0,2)">2020年3月21日</a></li> 
+								<li><a href="#" onclick="fun(2,0,2)">2020年3月29日</a></li> 
+								<li><a href="#" onclick="fun(2,0,3)">2020年4月4日</a></li> 
+								
+							</ul>
+						</div>
+						<div class="comments">
+							<h3 class="wow fadeInUp animated" data-wow-delay=".5s">评论</h3>
+							<div class="comments-text wow fadeInUp animated" data-wow-delay=".5s">
+								<div class="col-md-3 comments-left">
+									<img src="images/t4.jpeg" alt="" />
+								</div>
+								<div class="col-md-9 comments-right">
+									<h5>愚人静悟</h5>
+									<a href="#">向抗击一线的解放军、警察、医务工作者致以最崇高的敬意·你们都是最可爱的人。</a> 
+									<p>Feb 16,2020 7:55:pm</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="comments-text wow fadeInUp animated" data-wow-delay=".5s">
+								<div class="col-md-3 comments-left">
+									<img src="images/t5.jpeg" alt="" />
+								</div>
+								<div class="col-md-9 comments-right">
+									<h5>消音M24</h5>
+									<a href="#">世上没有从天而降的英雄只有挺身而出的凡人</a> 
+									<p>Feb 18,2020 6:09:pm</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="comments-text wow fadeInUp animated" data-wow-delay=".5s">
+								<div class="col-md-3 comments-left">
+									<img src="images/t6.jpeg" alt="" />
+								</div>
+								<div class="col-md-9 comments-right">
+									<h5>贾串串</h5>
+									<a href="#">等疫情过去，我们一起去武汉看樱花，吃热干面！武汉加油，中国加油！！！</a> 
+									<p>Feb 02,2020 3:09:pm</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!-- //container -->
+		</div>
+	<!-- //blog -->
+	
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-nav wow fadeInLeft animated" data-wow-delay=".5s">
+					<h4>导航</h4>
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="about.html">关于</a></li>
+						<li><a href="gallery1.html">相集</a></li>
+						<li><a href="contact.html">抗疫信息</a></li>
+					</ul>
+				</div>
+				<div class="col-md-5 footer-nav wow fadeInUp animated" data-wow-delay=".5s">
+					<h4>更多信息</h4>
+					<p>了解更多疫情实时信息，您可以订阅我们</p>
+					<form>
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="请在这里填写您的邮箱" required="">
+						<input type="submit" value="订阅">
+					</form>
+				</div>
+				<div class="col-md-4 footer-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<h4>最新新闻</h4>
+					<div class="news-grids">
+						<div class="news-grid">
+							<h6>19/05/2020 : <a href="single.html?index=1">独家专访张定宇：全民检测后不排除有新增病例</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=2">摄影记疫｜每一幅阴沉的画面，都是对晴朗的渴望</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=3">上海新增一确诊病例，已隔离4名密接者</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=4">武汉社区工作者百天未休，520请假领证</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=5">视频｜以真实致敬生命！《人间世》特别节目21日开播</a></h6>
+							<h6>19/05/2020 : <a href="single.html?index=6">高校复课迎首批学子，志愿者送餐到寝室楼</a></h6>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+</body>	
+</html>

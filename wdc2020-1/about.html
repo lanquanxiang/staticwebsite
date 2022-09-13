@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Around Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.media.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<style type="text/css">
+	a:hover{
+		text-decoration:none; /*CSS下划线效果：无下划线*/
+	}
+	a:visited{
+		text-decoration:none; /*CSS下划线效果：无下划线*/
+	}
+	
+</style>
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+</head>
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-info">
+					<div class="top-header-left wow fadeInLeft animated" data-wow-delay=".5s">
+						<p>世界抗疫加油!</p>
+					</div>
+					<!-- <div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div> -->
+				</div>
+			</div>
+		</div>
+		<div class="bottom-header">
+			<div class="container">
+				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+					<h1><a href="index.html"><img src="images/logo.png" alt="" /></a></h1>
+				</div>
+				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html" class="active">主页</a></li>
+								<li><a href="about.html" style="color: #2DCB74 !important;">关于</a></li>
+								<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相集<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a class="hvr-bounce-to-bottom" href="gallery1.html">万众一心</a></li>
+										<li><a class="hvr-bounce-to-bottom" href="gallery2.html">全球战疫</a></li>          
+									</ul>
+								</li>	
+								<li><a href="blog.html">感人故事</a></li>
+								<li><a href="contact.html">抗疫信息</a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+	
+	<!-- about -->
+	<div class="about">
+		<div class="about-heading">
+			<div class="container">
+				<a href="https://www.baidu.com/s?wd=2019新型冠状病毒"><h2 class="wow fadeInDown animated" data-wow-delay=".5s">2019新型冠状病毒</h2></a>
+				<p class="wow fadeInUp animated" data-wow-delay=".5s">2019新型冠状病毒，2020年1月12日被世界卫生组织命名为2019-nCoV，2020年2月11日被国际病毒分类委员会命名为SARS-CoV-2</p>
+			</div>
+		</div>
+		<div class="about-top">
+			<div class="container">
+				<div class="about-bottom">
+					<div id="handout_wrap_inner">
+							<img class="wow fadeInUp animated" data-wow-delay=".5s" onclick="fun(1)" src="images/ab.jpg" alt="" />
+					</div>
+						<center onmouseout="fun(2)"><div id="view_pdf"  style="display: none;"></div></center>
+					<script type="text/javascript">
+						$('#view_pdf').media({
+							width:'1000px',
+							height:'800px',
+							autoplay:true,
+							src:"src/防疫手册.pdf"
+							})
+						function fun(target){
+							if(target==1){
+								$("#view_pdf").css("display","block");
+								$("#handout_wrap_inner").css("display","none");
+							}else{
+								$("#view_pdf").css("display","none");
+								$("#handout_wrap_inner").css("display","block");
+							}
+						}
+					</script>
+					<!-- <embed src="src/防疫手册.pdf" type="application/pdf" width="100%" height="200%"> -->
+					<p class="wow fadeInUp animated" data-wow-delay=".5s">冠状病毒是一个大型病毒家族，已知可引起感冒以及中东呼吸综合征（MERS）和严重急性呼吸综合征（SARS）等较严重疾病。新型冠状病毒是以前从未在人体中发现的冠状病毒新毒株。2019年12月以来，湖北省武汉市持续开展流感及相关疾病监测，发现多起病毒性肺炎病例，均诊断为病毒性肺炎/肺部感染。人感染了冠状病毒后常见体征有呼吸道症状、发热、咳嗽、气促和呼吸困难等。在较严重病例中，感染可导致肺炎、严重急性呼吸综合征、肾衰竭，甚至死亡。目前对于新型冠状病毒所致疾病没有特异治疗方法。但许多症状是可以处理的，因此需根据患者临床情况进行治疗。此外，对感染者的辅助护理可能非常有效。做好自我保护包括：保持基本的手部和呼吸道卫生，坚持安全饮食习惯，并尽可能避免与任何表现出有呼吸道疾病症状（如咳嗽和打喷嚏等）的人密切接触。</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- team -->
+		<div class="team">
+			<div class="container">
+				<div class="popular-heading team-heading">
+					<h3 class="wow fadeInUp animated" data-wow-delay=".5s">防疫名人</h3>
+					<p class="wow fadeInUp animated" data-wow-delay=".5s">没有从天而降的英雄，只有挺身而出的平凡人。向为抗击疫情作出贡献的人致敬！没有一个冬天不可逾越，没有一个春天不会来临。胜利指日可待，所有美好都会如约而至。</p>
+				</div>
+				<div class="team-grids">
+					<div class="col-md-4 team-grid wow fadeInLeft animated" id="t1" data-wow-delay=".5s">
+						<img src="images/t1.jpg" alt="" />
+						<h4>比尔盖茨</h4>
+						<p>2015 年，埃博拉爆发后，比尔盖茨在 TED 做过一次演讲。他认为，在未来几十年里，如果有什么东西可以杀掉上千万人，更可能是有高度传染性的病毒，而不是战争。</p>
+						<!-- <div class="social-icons team-icons">
+							<ul>
+								<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="twitter facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="twitter google" href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div> -->
+					</div>
+					<div class="col-md-4 team-grid wow fadeInUp animated" id="t2" data-wow-delay=".5s">
+						<img src="images/t2.jpg" alt="" />
+						<h4>钟南山</h4>
+						<p>17年前非典一役，敢医敢言让钟南山家喻户晓，也赢得了广泛的公众信任。即使年过八旬，也并不妨碍他走上抗击疫情的第一线。这一次，也没有例外。</p>
+						<!-- <div class="social-icons team-icons">
+							<ul>
+								<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="twitter facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="twitter google" href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div> -->
+					</div>
+					<div class="col-md-4 team-grid wow fadeInRight animated" id="t3" data-wow-delay=".5s">
+						<img src="images/t3.jpg" alt="" />
+						<h4>谭德塞</h4>
+						<p>谭德塞领导的世界卫生组织在承受外界压力下，承认并称赞中国抗击疫情的努力，为世界抗疫提供了宝贵经验。</p>
+						<!-- <div class="social-icons team-icons">
+							<ul>
+								<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="twitter facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="twitter google" href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div> -->
+					</div>
+					<div class="clearfix"> </div>
+					<script type="text/javascript">
+						var times=0;
+						function fun2(){
+							$("#t1>img").attr("src","images/t"+(times+1)+((times==6)?".png":".jpg"));
+							if(times==6){
+								$("#t1 h4").html("张继先");
+								$("#t1 p").html("中共党员，湖北省中西医结合医院呼吸内科主任。非典战役“三等功”、“湖北省卫生厅优秀共产党员” 等，忠诚医生责任，是湖北省疫情上报“第一人");
+							}else{
+								$("#t1 h4").html("比尔盖茨");
+								$("#t1 p").html("2015 年，埃博拉爆发后，比尔盖茨在 TED 做过一次演讲。他认为，在未来几十年里，如果有什么东西可以杀掉上千万人，更可能是有高度传染性的病毒，而不是战争。");
+							}
+							times=(times==6)?0:6;
+						}
+						// changeOpacity($("#t1>img")[0],0.1,1,230);
+						// changeOpacity($("#t2>img")[0],0.1,1,320);
+						// changeOpacity($("#t3>img")[0],0.1,1,340);
+						function fun3(){
+							$("#t2>img").attr("src","images/t"+(times+2)+".jpg");
+							if(times==6){
+								$("#t2 h4").html("李兰娟");
+								$("#t2 p").html("中共党员、感染病（传染病）学家。武汉肺炎爆发之初，李兰娟又顶着全国的压力，大胆建议：“武汉封城”，有效地防止了疫情大规模蔓延。");
+							}else{
+								$("#t2 h4").html("钟南山");
+								$("#t2 p").html("17年前非典一役，敢医敢言让钟南山家喻户晓，也赢得了广泛的公众信任。即使年过八旬，也并不妨碍他走上抗击疫情的第一线。这一次，也没有例外。");
+							}
+						}
+						function fun4(){
+							$("#t3>img").attr("src","images/t"+(times+3)+((times==6)?".png":".jpg"));
+							if(times==6){
+								$("#t3 h4").html("李文亮");
+								$("#t3 p").html("中共党员，曾任武汉市中心医院眼科医生。他是2019年12月最早预警武汉肺炎这场危险疫情的8名医生之一。率先在专业人员的范围内拉响警报。");
+							}else{
+								$("#t3 h4").html("谭德塞");
+								$("#t3 p").html("谭德塞领导的世界卫生组织在承受外界压力下，承认并称赞中国抗击疫情的努力，为世界抗疫提供了宝贵经验。");
+							}
+						}
+						setInterval(fun2,3000);
+						setInterval(fun3,3500);
+						setInterval(fun4,3800);
+						// function changeOpacity(image,change,op,time){
+						// 	if(op>1){
+						// 		change=-0.1;
+						// 	}else if(op<0.5){
+						// 		change=0.1;
+						// 	}
+						// 	op=op+change;
+						// 	image.style.opacity=op;
+						// 	setTimeout(function(){
+						// 		changeOpacity(image,change,op,time);
+						// 	},time);
+						// }
+					</script>
+				</div>
+			</div>
+		</div>
+		<!-- //team -->
+	</div>
+	<!-- //about -->
+	
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-nav wow fadeInLeft animated" data-wow-delay=".5s">
+					<h4>导航</h4>
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="gallery1.html">相集</a></li>
+						<li><a href="blog.html">感人故事</a></li>
+						<li><a href="contact.html">抗疫信息</a></li>
+					</ul>
+				</div>
+				<div class="col-md-5 footer-nav wow fadeInUp animated" data-wow-delay=".5s">
+					<h4>更多信息</h4>
+					<p>了解更多疫情实时信息，您可以订阅我们</p>
+					<form>
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="请在这里填写您的邮箱" required="">
+						<input type="submit" value="订阅">
+					</form>
+				</div>
+				<div class="col-md-4 footer-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<h4>最新新闻</h4>
+					<div class="news-grids">
+						<div class="news-grid">
+							<h6>19/05/2020 : <a href="single.html?index=1">独家专访张定宇：全民检测后不排除有新增病例</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=2">摄影记疫｜每一幅阴沉的画面，都是对晴朗的渴望</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=3">上海新增一确诊病例，已隔离4名密接者</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=4">武汉社区工作者百天未休，520请假领证</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=5">视频｜以真实致敬生命！《人间世》特别节目21日开播</a></h6>
+							<h6>19/05/2020 : <a href="single.html?index=6">高校复课迎首批学子，志愿者送餐到寝室楼</a></h6>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+</body>	
+</html>

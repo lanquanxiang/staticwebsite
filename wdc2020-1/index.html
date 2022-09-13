@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Around Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>	
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-info">
+					<div class="top-header-left wow fadeInLeft animated" data-wow-delay=".5s">
+						<p>世界抗疫加油!</p>
+					</div>
+					<!-- <div class="top-header-right wow fadeInRight animated" data-wow-delay=".5s">
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div> -->
+				</div>
+			</div>
+		</div>
+		<div class="bottom-header">
+			<div class="container">
+				<div class="logo wow fadeInDown animated" data-wow-delay=".5s">
+					<h1><a href="index.html"><img src="images/logo.png" alt="" /></a></h1>
+				</div>
+				<div class="top-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<nav class="navbar navbar-default">
+						<div class="container">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html" class="active" style="color: #2DCB74 !important;">主页</a></li>
+								<li><a href="about.html">关于</a></li>
+								<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相集<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a class="hvr-bounce-to-bottom" href="gallery1.html">万众一心</a></li>
+										<li><a class="hvr-bounce-to-bottom" href="gallery2.html">全球战疫</a></li>          
+									</ul>
+								</li>	
+								<li><a href="blog.html">感人故事</a></li>
+								<li><a href="contact.html">抗疫信息</a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header
+	<!-- banner -->
+	<div class="banner" id="ban1">
+			<div class="slider">
+				<script src="js/responsiveslides.min.js"></script>
+				<script>
+						// You can also use "$(window).load(function() {"
+						var imgs=12;
+						function fun2(){
+							document.getElementById("ban1").style.backgroundImage="url(images/"+imgs+".jpg)";
+							if(imgs!=20)imgs++;
+							else imgs=12;
+						}
+						$(function () {
+						// Slideshow 4
+							setInterval(fun2,4000);
+							$("#slider3").responsiveSlides({
+								auto: true,
+								pager: true,
+								nav: true,
+								speed: 500,
+								namespace: "callbacks",
+								before: function () {
+									$('.events').append("<li>before event fired.</li>");
+								},
+								after: function () {
+									$('.events').append("<li>after event fired.</li>");
+								},
+							 });
+						});
+				</script>
+				<div  id="top" class="callbacks_container-wrap">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="slider-info">
+								<h3 class="wow fadeInRight animated" data-wow-delay=".5s">风雨同舟，共克时艰</h3>
+								<p class="wow fadeInLeft animated" data-wow-delay=".5s">携手抗疫、共克时艰，推动构建人类命运共同体</p>
+								<div class="more-button wow fadeInRight animated" data-wow-delay=".5s">
+									<a href="single.html">了解更多</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="slider-info">
+								<h3>万众一心，战疫情</h3>
+								<p>坚决打赢疫情防控阻击战</p>
+								<div class="more-button">
+									<a href="single.html">了解更多</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="slider-info">
+								<h3>青山一道，同担风雨</h3>
+								<p> 山川异域，风月同天</p>
+								<div class="more-button">
+									<a href="single.html">了解更多</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+	<!-- //banner -->
+	<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<div class="container">
+			<div class="banner-bottom-grids">
+				<div class="col-md-6 banner-bottom-left wow fadeInLeft animated" data-wow-delay=".5s">
+					<div class="left-border">
+						<!-- <div class="left-border-info">
+							<p>Duis dapibus lacinia libero at aliquam</p>
+						</div> -->
+					</div>
+				</div>
+				<div class="col-md-6 banner-bottom-left banner-bottom-right wow fadeInRight animated" data-wow-delay=".5s">
+					<div class="left-border">
+						<!-- <div class="left-border-info right-border-info">
+							<p>Duis dapibus lacinia libero at a</p>
+						</div> -->
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner-bottom -->
+	<!-- information -->
+	<div class="information">
+		<div class="container">
+			<div class="information-heading">
+				<h3 class="wow fadeInDown animated" data-wow-delay=".5s">全球抗疫彰显人类命运共同体理念的世界意义</h3>
+				<p class="wow fadeInUp animated" data-wow-delay=".5s">在应对新冠肺炎疫情过程中，中国作为正在崛起的发展中国家，作为在国际社会中负责任的大国，作为人类命运共同体理念的提出者和倡导者，再次展现了作为与担当。</p>
+			</div>
+			
+			<div class="information-grids">
+				<div class="col-md-4 information-grid wow fadeInLeft animated" data-wow-delay=".5s">
+					<div class="information-info">
+						<div class="information-grid-img">
+							<img src="images/8.jpg" alt="" />
+						</div>
+						<div class="information-grid-info">
+							<h4>抗疫情 战春耕</h4>
+							<p>立春过后，成都市龙泉驿区农业农村局、各街镇一方面指导群众做好防疫工作，另一方面帮助村民们在个人防护措施到位的前提下积极投入到春耕生产中。</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 information-grid wow fadeInUp animated" data-wow-delay=".5s">
+					<div class="information-info">
+						<div class="information-grid-info">
+							<h4>测体温 发口罩</h4>
+							<p>立春过后，成都市龙泉驿区农业农村局、各街镇一方面指导群众做好防疫工作，另一方面帮助村民们在个人防护措施到位的前提下积极投入到春耕生产中。</p>
+						</div>
+						<div class="information-grid-img">
+							<img src="images/3.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 information-grid wow fadeInRight animated" data-wow-delay=".5s">
+					<div class="information-info">
+						<div class="information-grid-img">
+							<img src="images/7.jpg" alt="" />
+						</div>
+						<div class="information-grid-info">
+							<h4>同心战疫 挺身而出</h4>
+							<p>新冠肺炎疫情在全球持续蔓延。秉持人类命运共同体理念，中国挺身而出，驰援海外战疫。捐助抗疫医疗物资、派出医疗专家团队、分享中国抗疫经验、积极推动国际合作…中国用一系列行动为世界雪中送炭，和各国同心战疫。</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //information -->
+	
+	<!-- popular -->
+	<div class="popular">
+		<div class="container">
+			<div class="popular-heading information-heading">
+				<h3 class="wow fadeInDown animated" data-wow-delay=".5s">抗疫英雄</h3>
+				<p class="wow fadeInUp animated" data-wow-delay=".5s">　医护人员在抗击疫情中并不居功自傲，人们对医护人员的尊敬也应融入日常生活之中。正如世卫组织总干事谭德塞所说，不只是世界卫生日，平常每一天人们都应向医卫工作者致敬。</p>
+			</div>
+			<div class="popular-slide">
+				<script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						// Slideshow 4
+							$("#slider1").responsiveSlides({
+								auto: true,
+								pager: true,
+								nav: false,
+								speed: 500,
+								namespace: "callbacks",
+								before: function () {
+									$('.events').append("<li>before event fired.</li>");
+								},
+								after: function () {
+									$('.events').append("<li>after event fired.</li>");
+								}
+							 });				
+						});
+				</script>
+				<div  id="top" class="callbacks_container-wrap">
+					<ul class="rslides" id="slider1">
+						<li>
+							<div class="popular-slide-info wow bounceIn animated" data-wow-delay=".5s">
+								<h4>偶尔休息</h4>
+								<p>这是3月10日，在武昌方舱医院，两位青海医疗队队员在等待新冠肺炎治愈患者出舱时小憩。</p>
+							</div>
+						</li>
+						<li>
+							<div class="popular-slide-info popular-slide1">
+								<h4>抢救生命</h4>
+								<p>这是3月25日，在意大利罗马收治新冠肺炎患者的卡萨帕洛科临床研究所，医护人员在重症病房工作。</p>
+							</div>
+						</li>
+						<li>
+							<div class="popular-slide-info popular-slide2">
+								<h4>定时检查</h4>
+								<p>这是3月28日，在菲律宾奎松，医务人员为病人做检查。</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="popular-grids">
+				<div class="col-md-4 popular-grid wow fadeInLeft animated" data-wow-delay=".5s">
+					<h5>铭记英雄</h5>
+					<p>在与新冠病毒的战斗中，许多医护人员不幸被感染，甚至失去了生命。西班牙卫生部6日发布的数据显示，全国累计确诊病例135032例，其中有约19400名医护人员，医护人员占总感染人数的14.4%。另据西班牙电视六台统计，西班牙已有12名医护人员死亡。</p>
+				</div>
+				<div class="col-md-4 popular-grid wow fadeInUp animated" data-wow-delay=".5s">
+					<h5>爱护医生</h5>
+					<p>世界卫生组织总干事谭德塞6日在例行记者会上谈到了疫情中的这个世界卫生日，他向全球所有医卫工作者，特别是奋战在抗疫一线的医护人员致敬。他说：“全世界正在目睹医护人员的重要作用和他们（在抗疫过程中承担）的中心角色。”</p>
+				</div>
+				<div class="col-md-4 popular-grid wow fadeInRight animated" data-wow-delay=".5s">
+					<h5>他们也是普通人</h5>
+					<p>医生这个职业，重托了人们对生的渴望，对活着的期盼。他们既然选择了医学这条道路，身体上再难再苦也压不垮中国的医者。但是，让人心痛和无助的是患者和家属的冷言冷语，是大众的不理解。</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //popular -->
+	
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-nav wow fadeInLeft animated" data-wow-delay=".5s">
+					<h4>导航</h4>
+					<ul>
+						<li><a href="about.html">关于</a></li>
+						<li><a href="gallery1.html">相集</a></li>
+						<li><a href="blog.html">感人故事</a></li>
+						<li><a href="contact.html">抗疫信息</a></li>
+					</ul>
+				</div>
+				<div class="col-md-5 footer-nav wow fadeInUp animated" data-wow-delay=".5s">
+					<h4>更多信息</h4>
+					<p>了解更多疫情实时信息，您可以订阅我们</p>
+					<form>
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="请在这里填写您的邮箱" required="">
+						<input type="submit" value="订阅">
+					</form>
+				</div>
+				<div class="col-md-4 footer-nav wow fadeInRight animated" data-wow-delay=".5s">
+					<h4>最新新闻</h4>
+					<div class="news-grids">
+						<div class="news-grid">
+							<h6>19/05/2020 : <a href="single.html?index=1">独家专访张定宇：全民检测后不排除有新增病例</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=2">摄影记疫｜每一幅阴沉的画面，都是对晴朗的渴望</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=3">上海新增一确诊病例，已隔离4名密接者</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=4">武汉社区工作者百天未休，520请假领证</a></h6>
+							<h6>20/05/2020 : <a href="single.html?index=5">视频｜以真实致敬生命！《人间世》特别节目21日开播</a></h6>
+							<h6>19/05/2020 : <a href="single.html?index=6">高校复课迎首批学子，志愿者送餐到寝室楼</a></h6>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+</body>	
+</html>

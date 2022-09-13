@@ -1,0 +1,16 @@
+{
+  "id": "2544111",
+  "name": "网页设计",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15921411",
+      "name": "党员",
+      "font_class": "dangyuan",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    }
+  ]
+}

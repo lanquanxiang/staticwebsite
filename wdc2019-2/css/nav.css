@@ -1,0 +1,64 @@
+.header {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	/*left: 300px;*/
+	background-color: #fff1e4;
+	/*opacity: 0.8;*/
+	margin: 0 atuo;
+	z-index: 100;
+}
+
+.header .logo {
+	float: left;
+	width: 100px;
+	margin-left: 111px;
+}
+
+.header .logo img {
+	width: 100px;
+	height: 60px;
+}
+
+.header .nav {
+	float: right;
+}
+
+.header .nav li {
+	float: left;
+	/*box-shadow:0 0 10px red inset;*/
+	margin-left: 8px;
+	width:126px ;
+	height: 60px;
+	/*position: absolute;*/
+	
+}
+.header .nav li .littlebottom{
+	width: 126px;
+	height: 15px;
+	background-color: red;
+	margin-top: -10px;
+	display: none;
+	opacity: 0.6;
+}
+.header .nav li :hover{
+	background: linear-gradient(to right, red, yellow);
+	-webkit-background-clip: text;
+	color: transparent;
+	
+}
+.header .nav a {
+	line-height: 60px;
+	padding: 0 25px;
+	color: black;
+	font-size: 12px;
+	transition: all 0.5s;
+	font-family: "楷体";
+	font-size: 19px;
+	font-weight: 400;
+	display: inline-block;
+}
+
+.nav_over {
+	box-shadow: 0 0 10px red inset;
+}

@@ -1,0 +1,58 @@
+#musics {
+    display: none;
+    width: 1366px;
+    height: 600px;
+    background: url(../img/music_bg.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+#musics .box .search img {
+    position: absolute;
+    top: 97px;
+    left: 200px;
+}
+
+.songs {
+    position: relative;
+    top: -10px;
+    left: 30px;
+    width: 300px;
+    height: 625px;
+    text-align: center;
+}
+
+.song {
+    width: 300px;
+    height: 65px;
+    line-height: 65px;
+}
+
+.song span {
+    cursor: pointer;
+}
+
+.box span {
+    text-decoration: none;
+    font-family: "楷体";
+    font-size: 30px;
+    color: white;
+}
+
+#musics .search input[type=text]{
+    position: relative;
+    top: 10px;
+    left: 80px;
+}
+
+#musics .search img {
+    position: relative !important;
+    top: -49px !important;
+    left: 200px !important;
+}
+
+#music .sup marquee{
+    height: 20px;
+    line-height: 20px;
+}

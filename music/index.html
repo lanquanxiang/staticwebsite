@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/page.css" />
+		<style>
+			.img{
+				-webkit-animation: playmove 3s infinite linear;
+			}
+			@-webkit-keyframes playmove{
+				0%{
+					-webkit-transform: rotate(0deg);
+				}
+				100%{
+					-webkit-transform: rotate(360deg);
+				}
+			}
+			#pointer:hover{
+				cursor: pointer;
+			}
+
+			.pointer-play{
+				-webkit-animation: pointerpaly 1s 1 linear;
+			}
+			@-webkit-keyframes pointerpaly{
+				0%{
+					-webkit-transform-origin: 38% 0%; 
+					-webkit-transform: rotate(-30deg);
+				}
+				100%{
+					-webkit-transform-origin: 38% 0% ; 
+					-webkit-transform: rotate(0deg);
+				}
+			}
+			.pointer-pause{
+				-webkit-animation: pointerpause 1s 1 linear;
+				-webkit-transform-origin: 38% 0% ; 
+				-webkit-transform: rotate(-30deg);
+			}
+			@-webkit-keyframes pointerpause{
+				0%{
+					-webkit-transform-origin: 38% 0%; 
+					-webkit-transform: rotate(0deg);
+				}
+				100%{
+					-webkit-transform-origin: 38% 0% ; 
+					-webkit-transform: rotate(-30deg);
+				}
+			}
+		</style>
+		<style>
+			#lrc1,#lrc5{
+				opacity: 0.3;
+				font-size: 12px;
+				color: black;
+			}
+			#lrc2,#lrc4{
+				opacity: 0.6;
+				font-size: 15px;
+				color: black;
+			}
+			#lrc3{
+				opacity: 1;
+				font-size: 18px;
+				font-weight: bold;
+				color: red;
+			}
+			
+		</style>
+		<script type="text/javascript" src="js/getXmlDoc.js"></script>
+		<script type="text/javascript" src="js/my.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			var path = "http://www.pzhuweb.cn/data/music/";
+			musicArray = new Array(), musicIndex = 0, lrcline = 0, musicCount = 0, playFlag = 1;
+
+			function loadmusic() {
+				list = document.getElementById("list");
+				audio = document.getElementById("audio");
+
+				xmlDoc = getXmlDoc("GET", path+"src/musicname.xml");
+				musicXml = xmlDoc.getElementsByTagName("name");
+				for(i = 0; i < musicXml.length; i++) {
+					musicArray.push(musicXml[i].childNodes[0].nodeValue);
+				}
+				musicCount = musicArray.length;
+
+				audio.src = path+"src/" + musicArray[musicIndex] + ".mp3";
+				
+				lrcshowArray = new Array(document.getElementById("lrc1"),
+				document.getElementById("lrc2"),
+				document.getElementById("lrc3"),
+				document.getElementById("lrc4"),
+				document.getElementById("lrc5"));
+
+				for(i = 0; i < musicArray.length; i++) {
+					list.options[i] = new Option(musicArray[i]);
+				}
+				list.selectedIndex = musicIndex;
+				list.addEventListener('change', function() {
+					musicIndex = list.selectedIndex;
+					audio.src = path+"src/" + musicArray[musicIndex] + ".mp3";
+					audio.load();
+					if(playFlag == 0) {
+						playMusic();
+					}
+					showCurrentMusic();
+				}, true);
+				audio.addEventListener("pause",function(){
+					$("#img").removeClass("img");					
+					$("#pointer").removeClass("pointer-play");
+					$("#pointer").addClass("pointer-pause");
+					
+				},true);
+				audio.addEventListener("play",function(){
+					$("#img").addClass("img");					
+					$("#pointer").removeClass("pointer-pause");
+					$("#pointer").addClass("pointer-play");
+				},true);
+				audio.addEventListener("ended", nextMusic, true);
+				showCurrentMusic();
+				updatePlayhead(audio.currentTime, audio.duration);
+				audio.addEventListener('durationchange', function() {
+					updatePlayhead(audio.currentTime, audio.duration);					
+					loadLyric(musicIndex);
+				}, true);
+				audio.addEventListener('timeupdate', function() {
+					updatePlayhead(audio.currentTime, audio.duration);
+				}, true);
+				
+				
+
+			}
+
+			var timeArray = new Array(),
+				lrcArray = new Array();
+
+			function loadLyric(index) {
+				lrcline = 0;
+				try{
+					var lrcDoc = getTextDoc("GET", path+"lyric/" + musicArray[index] + ".lrc");
+					timeArray = lrcDoc.match(/\[(\d+)\:(\d+)\.(\d+)\]/g);
+					lrcArray = lrcDoc.match(/\].{1,}/g);
+					for(var i = 0; i < timeArray.length; i++) {
+						timeArray[i] = timeArray[i].replace(/\[/g, "");
+						timeArray[i] = timeArray[i].replace(/\.(\d+)\]/g, "");
+						lrcArray[i] = lrcArray[i].replace(/\]/g, "");
+					}
+					updateLrc(lrcline);	
+				}catch(e){
+					$("td>div").html("");
+					$("td>div").eq(2).html("没有歌词！");
+				}				
+			}
+
+			function updatePlayhead(ct, dt) {
+				document.getElementById("ctime").innerHTML = asTime(ct) + "/" + asTime(dt); //媒体的当前播放时间				
+				for(var i = 0; i < lrcArray.length; i++) {
+					if(asTime(ct) >= timeArray[i]) {						
+						lrcline = i;
+					} else if(asTime(ct) < timeArray[i]) {
+						lrcline= i-1;
+						break;
+					}
+				}
+				document.getElementById("range").value = Math.floor(audio.currentTime / audio.duration * 100) ;
+				updateLrc(lrcline);
+			}
+
+			function updateLrc(i){				
+				for (var k=0;k<5;k++,i++) {
+					if(lrcArray[i-2]==undefined){
+						lrcshowArray[k].innerHTML="";
+					}else{
+						lrcshowArray[k].innerHTML=lrcArray[i-2];						
+					}					
+				}	
+			}
+			
+			function showCurrentMusic() {
+				loadLyric(musicIndex);
+				var currentMusicName = document.getElementById("name");
+				var str = document.getElementById("audio").src;
+				str = str.substr(str.lastIndexOf('/') + 1);
+				str = decodeURI(str);
+				currentMusicName.innerHTML = str;
+				document.getElementById("num").innerHTML = musicIndex + 1 + "/" + musicCount;
+			}
+
+			function playMusic() {
+				var audio = document.getElementById("audio");
+				var img = document.getElementById("img");
+				var btn_play = document.getElementById("btn_play");
+				if(playFlag) {
+					audio.pause();
+					btn_play.innerHTML = "play";
+					playFlag = 0;
+				} else {
+					audio.play();
+					btn_play.innerHTML = "pause";
+					playFlag = 1;
+				}
+			}
+
+			function nextMusic() {
+				var audio = document.getElementById("audio");
+				var play_style = document.getElementsByName("playStyle");
+				if(play_style[0].checked) {
+					musicIndex++;
+				} else if(play_style[1].checked) {
+					if(audio.currentTime == audio.duration) {
+						musicIndex = musicIndex;
+					} else {
+						musicIndex++;
+					}
+				} else if(play_style[2].checked) {
+					musicIndex = Math.floor((Math.random() * musicCount));
+				}
+				if(musicIndex >= musicCount) {
+					musicIndex = 0;
+				}
+				list.selectedIndex = musicIndex;
+				audio.src = path+"src/" + musicArray[musicIndex] + ".mp3";
+				audio.load();
+				if(playFlag == 0) {
+					playMusic();
+				}				
+				showCurrentMusic();
+			}
+
+			function lastMusic() {
+				var audio = document.getElementById("audio");
+				var play_style = document.getElementsByName("playStyle");
+				if(play_style[0].checked) {
+					musicIndex--;
+				} else if(play_style[1].checked) {
+					if(audio.currentTime == audio.duration) {
+						musicIndex = musicIndex;
+					} else {
+						musicIndex--;
+					}
+				} else if(play_style[2].checked) {
+					musicIndex = Math.floor((Math.random() * musicCount));
+				}
+				if(musicIndex < 0) {
+					musicIndex = musicCount - 1;
+				}
+				list.selectedIndex = musicIndex;
+				audio.src = path+"src/" + musicArray[musicIndex] + ".mp3";
+				audio.load();
+				if(playFlag == 0) {
+					playMusic();
+				}
+				showCurrentMusic();
+			}
+
+			function clickMusic(i) {
+				audio = document.getElementById("audio");
+				musicIndex = i;
+				list.selectedIndex = i;
+				audio.src = path+"src/" + musicArray[musicIndex] + ".mp3";
+				audio.load();
+				if(playFlag == 0) {
+					playMusic();
+				}
+				showCurrentMusic();
+			}
+
+			function selectStyle(i) {
+				var play_style = document.getElementsByName("playStyle");
+				play_style[i].checked = "checked";
+			}
+			
+			function changeCurTime(){
+				audio.currentTime = document.getElementById("range").value/100 * audio.duration;
+			}
+		</script>
+	</head>
+
+	<body onload="loadmusic()">		
+		<table align="center">
+			<tr height="50px" valign="bottom" align="center">
+				<td colspan="3" width="400px">
+					<audio id="audio" controls="controls" autoplay="autoplay" type="audio/mp3">
+						你的浏览器不支持!
+					</audio>
+
+				</td>
+				<td rowspan="7" valign="bottom" width="400px">
+					<div id="con" style="position: relative;height: 400px;">
+						<img src="img/play.png" draggable="true" id="img" class="img" width="200px" style="position: absolute;left: 50%;margin-left: -100px; top: 50%;margin-top: -100px;"/><br />
+						<img src="img/pointer.png" onclick="playMusic()" id="pointer" class="pointer" height="200px" style="position: absolute; top: 0px;left: 50%;margin-left: -100px;"/>
+					</div>
+					
+				</td>
+			</tr>
+			<tr height="50px" valign="top" align="center">
+				<td><button onclick="lastMusic()">last</button></td>
+				<td><button id="btn_play" onclick="playMusic()">pause</button></td>
+				<td><button onclick="nextMusic()">next</button></td>
+			</tr>
+			<tr class="selected">
+				<td onclick="selectStyle(0)"><input type="radio" value="next" name="playStyle" checked="checked" />列表循环 </td>
+				<td onclick="selectStyle(1)"><input type="radio" value="one" name="playStyle" />单曲循环 </td>
+				<td onclick="selectStyle(2)"><input type="radio" value="rand" name="playStyle" />随机播放 </td>
+			</tr>
+			<tr>
+				<td colspan="3" style="text-align: center;">
+					播放进度：
+					<input type="range" id="range" onchange="changeCurTime()"/>
+					<span id="ctime"></span></h3>
+				</td>
+			</tr>
+			<tr>
+				<td>正在播放：<span id="num"></span></td>
+				<td colspan="2"><span id="name"></span></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<hr/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<select id="list" size="5"></select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" height="150px" align="center">
+					<div id="lrc1"></div>
+					<div id="lrc2"></div>
+					<div id="lrc3"></div>
+					<div id="lrc4"></div>
+					<div id="lrc5"></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

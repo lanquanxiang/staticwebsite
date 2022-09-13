@@ -1,0 +1,76 @@
+#article {
+    width: 1366px;
+    height: 600px;
+    display: none;
+    background: url(../img/article_bg.jpg) no-repeat center;
+    background-size: 1366px;
+    opacity: 0.85;
+}
+
+.little_title {
+    font-family: cursive;
+    font-size: 28px;
+    color: black;
+}
+
+#article .one,
+#article .two,
+#article .three {
+    float: left;
+    width: 452px;
+    height: 600px;
+    background: url(../img/line.jpg) no-repeat right;
+    opacity: 1;
+    /* display: none; */
+}
+
+.article_title {
+    font-family: "楷体";
+    text-align: center;
+    font-size: 30px;
+}
+
+.one p,
+.two p,
+.three p {
+    font-family: "楷体";
+    font-size: 20px;
+    text-indent: 2em;
+}
+
+.one .con img {
+    position: absolute;
+    top: 40px;
+    left: 350px;
+}
+
+#book{
+    position: relative;
+    bottom: 150px;
+    right: -700px;
+    border-radius: 30px;
+}
+
+.sup {
+    width: 1000px;
+    height: 180px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}
+
+.sup,.sub marquee {
+    color: rgb(235, 187, 223);
+    font-size: 25px;
+    font-family: "楷体";
+}
+
+.con{
+    display: none;
+}
+
+/* #lt{
+    position: absolute;
+    top: 100px;
+    right: 100px;
+} */

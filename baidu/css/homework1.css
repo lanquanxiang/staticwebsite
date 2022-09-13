@@ -1,0 +1,100 @@
+body {
+	background-image: url(../img/bd_logo1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.three {
+	color: cadetblue;
+}
+.class {
+	text-decoration: underline;
+	color: black;
+}
+#id {
+	color: #f0f;
+}
+div {
+	color: burlywood;
+}
+/*组合选择器*/
+.two>.borther {
+	font-size: 25px;
+}
+.two .borther {
+	color: #FF00FF;
+}
+.two+div {
+	text-decoration: overline;
+}
+/*属性选择器*/
+
+div[class] {
+	color: blueviolet;
+}
+div[class = "name"] {
+	color: #f00;
+}
+div[class$="3"] {
+	color: pink;
+}
+/*结构伪类选择器*/
+.dd>div:first-child {
+	color: royalblue;
+}
+.dd>div:last-child {
+	color: forestgreen;
+}
+.dd2>div:only-child {
+	color: coral;
+}
+/*链接伪类选择器*/
+a {
+	text-decoration: none;
+	
+}
+a:hover {
+	color: cornflowerblue;
+}
+a:active {
+	color: red;
+}
+a:visited {
+	color: darkgray;
+}
+.text1 {
+	font-size: 16px;
+	font-family: arial;
+	font-style: italic;
+	
+	text-align: left;
+	text-decoration: underline;
+	text-indent: 50px;
+}
+.bord {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	border-color: deepskyblue;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+}
+.floa {
+	border: 1px solid #000000;
+	text-align: center;
+	line-height: 200px;
+	width: 200px;
+	height: 200px;
+	float: right;
+}
+.posit {
+	border: 1px solid #000000;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	line-height: 200px;
+}

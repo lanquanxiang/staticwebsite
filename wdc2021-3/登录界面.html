@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<style type="text/css">
+	body {
+		background: url(img/src=http___pic.vjshi.com_2019-05-07_2598f82381af6baf1c80337669e70344_online_0c893be893a8b849564a4cfb2398bc9a.jpg_x-oss-process=style_resize_w_720&refer=http___pic.vjshi.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+
+	#login {
+		font-family: arial;
+		border: 0px solid #333333;
+		height: auto;
+		width: 30%;
+		margin: 0 auto;
+		margin-top: 200px;
+		text-align: center;
+		background: #00000060;
+		color: white;
+		font-size: 50px;
+		padding: 30px 60px;
+	}
+
+	#login #button {
+		color: #FFFFFF;
+		font-size: 20px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 180px;
+		height: 30px;
+		background-image: linear-gradient(to right, #d70014 0%, #497fba 100%);
+		border: 0px;
+		border-radius: 15px;
+	}
+
+	#login #form {
+		font-size: 20px;
+		height: 100px;
+		width: 50%;
+		margin-left: 17%;
+		margin-top: 5%;
+		position: relative;
+	}
+
+	#login #form #span {
+		width: 282px;
+		color: #FFFFFF;
+	}
+
+	#login #form #span #icon {
+		position: absolute;
+		top: 65px;
+		left: 265px;
+		width: 0px;
+		display: block;
+	}
+
+	#login #form #span #icon1 {
+		position: absolute;
+		top: 65px;
+		left: 265px;
+		width: 0px;
+		display: none;
+	}
+
+	#login #form #span input {
+		width: 200px;
+		padding: 5px;
+		margin: 10px;
+		border: 0px;
+		border-bottom: 2px solid #FFFFFF;
+		background: #FFFFFF00;
+		color: #FFFFFF90;
+	}
+</style>
+
+<body>
+	<div id="login">Login
+		<div id="form">
+			<div id="span">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" name="input1" value="username" />
+			</div>
+			<div id="span">
+				<i class="fa fa-key" aria-hidden="true"></i>
+				<input type="text" name="input2" value="password" />
+				<i id="icon" class="fa fa-eye-slash" aria-hidden="true"></i>
+				<i id="icon1" class="fa fa-eye" aria-hidden="true"></i>
+			</div>
+		</div>
+		<input id="button" type="submit" value="Login" />
+		<audio>
+			<source src="Mp3/小尾巴猫-天气の子-花火大会（视频原声）(超清).mp3" type="audio/mp3" />
+		</audio>
+	</div>
+	<script>
+		var audio = document.querySelector('audio');
+		window.onload = function () {
+			audio.play();
+		}
+		var text = document.querySelectorAll('input');
+		text[0].addEventListener('focus', function () {
+			if (this.value == 'username') {
+				this.value = '';
+			}
+		})
+		text[0].addEventListener('blur', function () {
+			if (this.value == '') {
+				this.value = 'username';
+			}
+		})
+
+		text[1].addEventListener('focus', function () {
+			if (this.value == 'password') {
+				this.value = '';
+				this.type = 'password';
+			}
+		})
+		text[1].addEventListener('blur', function () {
+			if (this.value == '') {
+				this.value = 'password';
+				this.type = 'text';
+			}
+		})
+		var button = document.querySelector('#button');
+		var closeeye = document.querySelector('#icon');
+		var openeye = document.querySelector('#icon1');
+		var flag = 0;
+		closeeye.addEventListener('click', function () {
+			if (flag == 0) {
+				text[1].type = 'text';
+				flag = 1;
+				openeye.style.display = 'block';
+				closeeye.style.display = 'none';
+			}
+		})
+		openeye.addEventListener('click', function () {
+			if (flag == 1) {
+				text[1].type = 'password';
+				flag = 0;
+				openeye.style.display = 'none';
+				closeeye.style.display = 'block';
+			}
+		})
+		button.addEventListener('click', function () {
+			if (text[0].value == "zhouzihan" && text[1].value == "871478648") {
+				alert('密码正确，欢迎进入党史页面');
+				window.location.href = "网页大赛.html";
+			} else {
+				alert('密码错误');
+			}
+
+		})
+	</script>
+</body>
+
+</html>

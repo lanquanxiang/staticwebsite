@@ -1,0 +1,111 @@
+
+
+
+.JuanZhuText1{
+	position: relative;
+	width: 700px;
+	height: 450px;
+	min-height: 450px;
+	min-width: 700px;
+	margin-left: 50%;
+	padding-top: 8%;
+}
+.JuanZhuText1>img{
+	margin: 15px 20px;
+}
+#JuanZhuText1id{
+	display: inline-block;
+	margin-top: 5%;
+	width: 500px;
+	
+}
+#JuanZhuText1{
+	font-style: normal;
+	font-family: KaiTi;
+	font-size: 26px;
+	/* 字体间距 */
+	text-indent: 40px;
+	首行缩进
+	text-indent: 2em;
+}
+.JZPic1{
+	position: relative;
+	margin-left: -12%;
+	margin-top: -38%;
+}
+
+
+
+.JuanZhuText2{
+	position: relative;
+	width: 700px;
+	height: 450px;
+	min-height: 450px;
+	min-width: 700px;
+	margin-left: -8%;
+	padding-top: 8%;
+}
+.JuanZhuText2>img{
+	margin: 15px 20px;
+}
+#JuanZhuText2id{
+	display: inline-block;
+	margin-top: 5%;
+	width: 600px;
+}
+#JuanZhuText2{
+	font-style: normal;
+	font-family: KaiTi;
+	font-size: 26px;
+	/* 字体间距 */
+	text-indent: 40px;
+	首行缩进
+	text-indent: 2em;
+}
+.JZPic2{
+	position: relative;
+	margin-left: 55%;
+	margin-top: -38%;
+}
+
+
+.JuanZhuText3{
+	position: relative;
+	width: 700px;
+	height: 450px;
+	min-height: 450px;
+	min-width: 700px;
+	margin-left: 50%;
+	padding-top: 8%;
+}
+.JuanZhuText3>img{
+	margin: 15px 20px;
+}
+#JuanZhuText3id{
+	display: inline-block;
+	margin-top: 5%;
+	width: 500px;
+	
+}
+#JuanZhuText3{
+	font-style: normal;
+	font-family: KaiTi;
+	font-size: 26px;
+	/* 字体间距 */
+	text-indent: 40px;
+	首行缩进
+	text-indent: 2em;
+}
+
+.JuanZhuBT{
+	position: relative;
+	background-color: #eb2112;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.JuanZhuBT>p{
+	text-align: center;
+	color: ;
+	
+}
+

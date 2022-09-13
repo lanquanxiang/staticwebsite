@@ -1,0 +1,113 @@
+body {
+    padding: 0;
+    margin: 0;
+    /*font-family: 'microsoft yahei', 'Helvetica', simhei, simsun, sans-serif;
+    background-color: #F7F7F7;*/
+}
+
+a {
+    text-decoration: none;
+}
+.shipingAll{
+	width:100%;
+	height: 600px;
+	background-image: url(../img/movebackground.png) ;
+	background-size: 100% 600px;
+	margin: 0 auto;
+}
+.player{
+    width: 720px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: url("../img/loading.gif") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+video{
+    height:100%;
+    margin: 0 auto;
+    display: none;
+}
+.controls {
+    width: 750px;
+    height: 46px;
+    position: absolute;
+    left: 0px;
+    bottom: -40px;
+    background-color: #000;
+}
+.controls > .switch{
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/stop.png);
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.controls > .expand{
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/all.jpg);
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.controls > .progress{
+    width: 430px;
+    height: 10px;
+    position: absolute;
+    left:40px;
+    bottom:15px;
+    background-color: #555;
+}
+.controls > .progress > .bar{
+    width:100%;
+    height:100%;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 999;
+}
+.controls > .progress > .loaded{
+    width:60%;
+    height:100%;
+    background-color: #999;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.controls > .progress > .elapse{
+    width:0%;
+    height:100%;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+.controls > .time{
+    height: 20px;
+    position: absolute;
+    /*left:490px;
+    top: 10px;*/
+   /*bottom: -20px;*/
+    color: white;
+    left: 500px;
+    top: -30px;
+    font-size: 14px;
+}
+

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/banner.js"></script>
+</head>
+<script type="text/javascript">
+		/*自定义的鼠标点击效果*/
+		/* 鼠标特效 */ 
+		var a_idx = 0; 
+		jQuery(document).ready(function($) { 
+		    $("body").click(function(e) { 
+		        var a = new Array("抗击肺炎","富强","民主","文明","和谐","万众一心","自由","平等","公正","法治","武汉加油","爱国","敬业","诚信","友善","中国加油"); 
+		        var $i = $("<span></span>").text(a[a_idx]); 
+		        a_idx = (a_idx + 1) % a.length; 
+		        var x = e.pageX, 
+		        y = e.pageY; 
+		        $i.css({ 
+		            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+		            "top": y - 20, 
+		            "left": x , 
+		            "position": "absolute", 
+		            "font-weight": "bold", 
+		            "color": "rgb(119,136,153)" 
+		        }); 
+		        $("body").append($i); 
+		        $i.animate({ 
+		            "top": y - 180, 
+		            "opacity": 0 
+		        }, 
+		        1500, 
+		        function() { 
+		            $i.remove(); 
+		        }); 
+		    }); 
+		}); 
+		
+	
+		</script>
+
+<body>
+
+ <div class="top">
+   <a href="index.html"><img src="images/Top.png" background-size: 100% 100%/></a>
+       </div> 
+     </div>
+<div class="clear"></div>
+<div class="nav">
+  <ul>
+   <li><a href="index.html">网站首页</a></li>
+    <!-- 下拉菜单,菜单更新从这里复制-------------------------------------------------------------- -->
+    <li ><a href="shijianzhou.html">疫情时间线</a></li>
+    	 
+    <li><a href="piclist.html" class="MoreNav">更多内容</a> 
+    
+    					<ul >
+    						<li ><a href="JuanZhu.html">捐助</a></li>
+    						<li ><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+    						<li ><a href="zhiyingxiong.html">致英雄</a></li>
+    						<li ><a href="防疫小知识.html">防护小知识</a></li>
+    
+    					</ul>
+    </li>
+    <!-- 以上是下拉菜单，加线方便复制 -->
+       <li><a href="list.html">新闻动态</a></li>
+       <li><a href="contact.html">联系我们</a></li>
+     </ul>
+   </div>
+   <div class="clear"></div>
+   <div class="banner">
+     <div class="b-img">
+ <a href="#" style="background:url(images/Roll2.jpg)  center  no-repeat ; background-size: 101% 101%;"></a>
+          <a href="#" style="background:url(images/Roll5.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+		    <a href="#" style="background:url(images/Roll4.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+    	    <a href="#" style="background:url(images/ZhiJing.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+			 <a href="#" style="background:url(images/Roll6.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+<a href="#" style="background:url(images/Roll7.jpg)  center  no-repeat ; background-size: 100% 100%;"></a>  
+     </div>
+     <div class="b-list"> </div>
+   </div>
+   <div class="clear"></div>
+   <div class="bodyBox">
+     <div class="main">
+       <div class="mLeft">
+         <div class="titbox">
+           <p class="ccsl">更多内容</p>
+      </div>
+      <ul class="typename">
+		<li><a href="JuanZhu.html">捐助</a></li>
+		        <li><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+		        <li><a href="zhiyingxiong.html">致英雄</a></li>
+		        <li><a href="防疫小知识.html">防护小知识</a></li>
+      </ul>
+      <div class="titbox">
+        <p class="ccsl">联系我们</p>
+      </div>
+      <div class="lxwm">
+        <div class="con">攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+    </div>
+    <div class="mRight">
+      <div class="brandnav">
+        <div>
+          <p class="ccsl">新闻动态</p>
+          <div class="con">位置：首页>新闻动态</div>
+        </div>
+      </div>
+      <div class="detail">
+        <div>
+          <h1>新冠病毒核酸检测为何要走出实验室？</h1>
+          <div class="proimg"><img src="images/hesuanjiance.png" width="500px" /></div>
+          <div class="con">
+             <p style="text-indent:2em"> <h3>走出实验室，满足人民需求</h3>  如今，疫情形势发生了变化——新冠肺炎病例偶发、防控走向常态化。据中国政府网报道，
+			 李克强总理指出：“我从许多渠道了解到，现在很多人愿意自己花钱尽快做一次核酸和抗体检测，希望‘落’个心里踏实。
+			 有了更多高效准确的检测仪器，就可以把它们广泛配备到医院、口岸等急需场所，扩大商业化应用。”
+			为完成常态化防控的要求，需要研发检测时间短且无需实验室的核酸快速检测设备。
+			“总理说的无需实验室的快速检测技术，我们又叫做POCT(即时检测)，也就是床旁检测。”
+			王贺说，这种检测非常快速，不需要太有经验的操作人员，对环境要求也不高，仪器体积不大，高度自动化，操作起来相对简便。
+			值得一提的是，除了核酸检测之外，抗体检测作为辅助检测手段，床旁化更有产业基础，例如一滴血出两条扛或者一条杠，进而判断体内是否产生抗体。
+			但这一检测依赖于对新冠病毒有效抗体的细致分析，
+			如果相关蛋白检测试剂能够做到“只认识好抗体”而不是“胡子眉毛一把抓”，才能给出准确的结果。
+			 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+    <div class="main">
+      <div class="footer1">
+        <div class="con"> 攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+      <div class="footer2">
+        <img src="images/Bottom.jpg" height="230" width="122"/>
+      </div>
+      <div class="footer3">
+        <div>
+          <img src="images/Code.png" width="125" height="125" />
+          <p class="ccsl">扫一扫  加入群聊</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="bottom">
+  <div class="main">
+
+  </div>
+</div>
+</body>
+</html>
+<!-- 使得左边悬浮 -->
+		<script>  
+		function setNavbar() {
+			
+		    if ($(document).scrollTop() >700) {
+		
+		        $('.mLeft').css({"top":"0","position":"fixed"});
+		    } else {
+		        $('.mLeft').css({"top":"0","position":"static"});
+		    }
+		}                   
+		$(document).ready(function(){
+		    setNavbar();
+		    $(window).scroll(function() {
+		      setNavbar();
+		    });      
+		});
+		</script>  
+		
+		<!-- 返回顶部 ------------------------------------------------------------------------------------------------------>
+		<link href="https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/GoTop.js"></script>
+		<script>
+			new GoTop({
+				hide:true,//当页面不滚动时 是否隐藏 默认false
+				url:'img/3.png',//图片路径 默认我们提供base64的图片
+				state:'',//出现的位置 默认是 下方 提供 center bottom参数
+				height:'50px',//高 默认40px
+				width:'50px',//宽 默认40px
+				scrollTop:500,//滚到什么位置出现 px
+				time:500,//返回顶部多长时间 ms 默认500ms
+				aimation:'animated bounceInDown',//出场动画 默认show（没有出场动画） 这个可以自定义
+				toTop:'',//滚到顶部触发事件
+				toShow:'',//出场时触发事件
+				toHide:function(){
+					$('h1').html('');
+					setTimeout(function(){
+						$('h1').html('');
+					},1000)
+				},//隐藏触发事件
+				go:""//点击返回顶部触发事件
+			});
+		</script>

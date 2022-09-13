@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+/*body{ padding:0; margin:0;  font:normal 12px/180% "宋体"; color:#000000;text-align:center; background:url(images/bg01.gif) top repeat-x #fff;}*/
+*{margin:0;padding:0;}
+.jiegou div{margin:0 auto;text-align:left;font:normal 12px/180% "宋体";}
+.jiegou li,.jiegou p{text-align:left;font:normal 12px/180% "宋体";}
+.jiegou a:link,.jiegou a:visited{color:#000000; text-decoration:none;}
+.jiegou a:hover{color:#000000; text-decoration:underline;}
+.jiegou img{ border:none;}
+.jiegou ol,.jiegou ul,.jiegou li{list-style:none;}
+.jiegou em,.jiegou i{ font-style:normal;}
+/*clear*/
+.clear{ clear:both;}
+.clearfix:after{display:block;clear:both;content:".";visibility:hidden; height:0;}
+/*other*/
+.jiegou h1,.jiegou h2,.jiegou h3,.jiegou ,.jiegou h5,.jiegou h6{ text-align:left;font:normal 12px/180% "宋体";}
+
+.w980{ width:980px;}
+.fl{ float:left;}
+.fr{ float:right;}
+
+
+.lujing{ margin:30px auto 10px;}
+.people_text{ background:#F8F8F8; border:#ECECEC 1px solid; padding:20px 100px; width:780px;}
+.people_text h2{ background:none; text-align:center; margin:30px auto; color:#000; font:bold 16px/180% "宋体";}
+.people_text .pic{ display:block; text-align:center; margin:20px auto 30px;}
+.people_text p{ line-height:200%; font-size:14px; margin:20px auto;}
+.jiegou{ background:url(../images/jiegou_bg.gif) no-repeat top left; margin:70px auto 40px;}
+.jiegou .fl{ width:270px;}
+.jiegou .fr{ width:632px;}
+.jiegou .fr ul {padding-left: 0}
+.jiegou .fl ul{ margin:140px auto auto 107px;}
+.jiegou .fl li{ font: bold 14px/180% "宋体"; color:#808080;}
+.jiegou .fl li.t02{ margin-top:310px; padding-left:25px;}
+.jiegou .fr ul strong{ font-size:14px;}
+.jiegou .fr ul li { line-height:190%;}
+.jiegou .fr ul li i{ color:#8E8E8E;}
+.jiegou .fr ul li a{ padding:0 6px 0 0;}
+.jiegou .fr ul .t01{ padding-left:130px; padding-top:8px; font-size:14px;}
+.jiegou .fr ul .t02{padding-left:148px;padding-top:46px; width:442px; height:70px;}
+.jiegou .fr ul .t03{ padding-left:60px; padding-top:65px; width:570px; height:115px;}
+.jiegou .fr ul .t03 .t03_lt{ width:340px; float:left;}
+.jiegou .fr ul .t03 .t03_rt{ width:128px; float:right; padding-top:76px; padding-right:0px;}
+.jiegou .fr ul .t04{ padding-left:50px; padding-top:130px;}
+.jiegou .fr ul .t05{padding-top:30px;}
+.line_jg{ border-top:#E3E3E3 1px solid; overflow:hidden;}
+
+@media screen and (max-width: 800px){
+    #helloWO {
+        width: 100%;
+        overflow-x: scroll;
+    }
+}
+
+

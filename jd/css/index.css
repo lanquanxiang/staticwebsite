@@ -1,0 +1,229 @@
+@charset "utf-8";
+.banner604{
+	position:relative;
+}
+.banner604 a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 604px;
+	background: url(../img/banner.jpg) no-repeat top center;
+}
+.main{
+	height: 465px;
+	position: relative;
+}
+.slider{
+	width: 730px;
+	height: 453px;
+	margin-left: 220px;
+	margin-top: 12px;
+	float: left;
+	position: relative;
+}
+.news{
+	width: 248px;
+	height: 451px;
+	border: 1px solid #E4E4E4;
+	float: right;
+	margin-top:12px ;
+}
+.slider .circle{
+	position: absolute;
+	bottom: 8px;
+	left: 50%;
+	margin-left:-66px ;
+}
+.slider img{
+	float: left;
+}
+.slider .circle li{
+	width: 18px;
+	height: 18px;
+	float: left;
+	text-align: center;
+	border-radius: 50%;
+	background-color:#3E3E3E ;
+	color: #FFFFFF;
+	line-height: 18PX;
+	margin: 2px;
+	cursor: pointer;
+}
+.slider .circle li.current{
+	background-color: #B61b1f;
+}
+.arrow-l,.arrow-r{
+	position: absolute;
+	width: 28px;
+	height: 62px;
+	background-color:rgba(0,0,0,.3);
+	top: 50%;
+	margin-top: -31px;
+}
+.arrow-l{
+	left: 0;
+	text-align: center;
+	line-height: 62px;
+	font-family:simsun;
+	font-size: 22px;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+.arrow-r{
+	right: 0;
+	text-align: center;
+	line-height: 62px;
+	font-family:simsun;
+	font-size: 22px;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+.arrow-l:hover,.arrow-r:hover{
+	background-color: rgba(0,0,0,0.4);
+}
+.news .jd-news{
+	height: 200px;
+	border-bottom: 1px dashed #E4E4E4;
+}
+.lifeservei{
+	height: 251px;
+}
+.news .dt{
+	height: 43px;
+	border-bottom: 1px dotted #e8E8E7;
+	line-height: 43px;
+}
+.news .dt h3{
+	float:left;
+	font:14px/43px "微软雅黑"
+	color:#666666;
+	padding-left: 15px;
+}
+.news .jd-news .dt a{
+	float: right;
+	font: 12px/43px simsun;
+	margin-right: 15px ;
+}
+.jd-news .dd ul{
+	padding: 8px 0 0 15px;
+}
+.jd-news .dd ul li{
+	line-height: 28px;
+}
+.jd-news .dd ul li span{
+	font-weight: 700;
+	margin-right:5px ;
+}
+.lifeservei li{
+	width: 62px;
+	height: 70px;
+	border: 1px solid #E4E4E4;
+	float: left;
+	margin: -1px 0 0 -1px;
+}
+.lifeservei ul{
+	width: 252px;
+}
+.lifeservei{
+	overflow: hidden;
+	width: 248px;
+}
+.lifeservei li a{
+	display: block;
+	height: 70px;
+	text-align: center;
+	padding-top: 44px;
+	position: relative;
+}
+.lifeservei i{
+	position: absolute;
+	top: 12px;
+	left: 18px;
+	width: 25px;
+	height: 25px;
+	background:url(../img/icon_lifeserv.png) no-repeat right top;
+}
+
+.lifeservei  li.lifeservei-icon2 i{
+	background-position: right -25px;
+}
+
+.lifeservei  li.lifeservei-icon3 i{
+	background-position: right -50px;
+}
+.lifeservei  li.lifeservei-icon4 i{
+	background-position: right -75px;
+}
+.lifeservei  li.lifeservei-icon5 i{
+	background-position: right -100px;
+}
+.lifeservei  li.lifeservei-icon6 i{
+	background-position: right -125px;
+}
+.lifeservei  li.lifeservei-icon7 i{
+	background-position: right -150px;
+}
+.lifeservei  li.lifeservei-icon8 i{
+	background-position: right -175px;
+}
+.lifeservei  li.lifeservei-icon9 i{
+	background-position: right -200px;
+}
+.lifeservei  li.lifeservei-icon10 i{
+	background-position: right -225px;
+}
+.lifeservei  li.lifeservei-icon11 i{
+	background-position: right -250px;
+}
+.lifeservei  li.lifeservei-icon12 i{
+	background-position: right -275px;
+}
+.todays{
+	position: relative;
+	overflow: hidden;
+}
+.night-l{
+	float: left;
+}
+.night {
+	margin: 10px 0 28px 0;
+}
+.night-r{
+	width: 1000px;
+	height: 160px;
+	float: left;
+}
+.night ul{
+	width: 500%;
+}
+.night-r ul li{
+	float: left;
+	margin-right:1px ;
+}
+.imgright{
+	position: absolute;
+	float: right;
+	height: 40px;
+	width: 20px;
+	background-color: rgba(0,0,0,.2);
+	font: 16px/40px simsun;
+	top: 50%;
+	margin-top:-20px ;
+	right: 0px;
+}
+.imgleft{
+	position: absolute;
+	float: left;
+	left: 210px;
+	height: 40px;
+	width: 20px;
+	background-color: rgba(0,0,0,.2);
+	font: 16px/40px simsun;
+	top: 50%;
+	margin-top:-20px ;
+}
+.imgleft:hover,.imgright:hover{
+	background-color: rgba(0,0,0,.4);
+}
+

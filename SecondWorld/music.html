@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>music</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 1366px;
+            height: 670px;
+            background: url(img/music_bg.jpg) no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .songs {
+            position: relative;
+            left: 30px;
+            width: 300px;
+            height: 625px;
+            /* border: 1px solid red; */
+            text-align: center;
+        }
+
+        .song {
+            width: 300px;
+            height: 65px;
+            /* border: 1px solid red; */
+            line-height: 65px;
+        }
+
+        .song span {
+            cursor: pointer;
+        }
+
+        .box span {
+            text-decoration: none;
+            font-family: "楷体";
+            font-size: 30px;
+            color: white;
+        }
+
+        .search input[type=text] {
+            position: relative;
+            top: 30px;
+            left: 80px;
+        }
+
+        .search img {
+            position: relative;
+            top: 40px;
+            left: 40px;
+        }
+
+        .box .pic {
+            position: absolute;
+            top: 200px;
+            left: 500px;
+            width: 800px;
+            height: 400px;
+            z-index: 0;
+        }
+
+        .sup {
+            width: 1000px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+        }
+
+        .sup,.sub marquee {
+            color: rgb(235, 187, 223);
+            font-size: 25px;
+            font-family: "楷体";
+        }
+
+        .TV {
+            position: absolute;
+            top: 120px;
+            left: 500px;
+        }
+
+        .back {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .back:hover {
+            cursor: pointer;
+        }
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        var count = 0;
+        var T;
+        var arry1 = ["img/hcy/1.jpg", "img/hcy/3.jpg", "img/hcy/4.jpg", "img/hcy/5.jpg", "img/hcy/7.jpg"];
+        var arry2 = ["img/hcy/10.jpg", "img/hcy/6.jpg", "img/hcy/8.jpg", "img/hcy/5.jpg", "img/hcy/10.jpg"];
+        var arry3 = ["img/hcy/9.jpg", "img/hcy/10.jpg", "img/hcy/11.jpg", "img/hcy/20.jpg", "img/hcy/1.jpg"];
+        var arry4 = ["img/hcy/13.jpg", "img/hcy/14.jpg", "img/hcy/15.jpg", "img/hcy/6.jpg", "img/hcy/22.jpg"];
+        var arry5 = ["img/hcy/16.jpg", "img/hcy/17.jpg", "img/hcy/18.jpg", "img/hcy/4.jpg", "img/hcy/29.jpg"];
+        var arry6 = ["img/hcy/19.jpg", "img/hcy/20.jpg", "img/hcy/21.jpg", "img/hcy/2.jpg", "img/hcy/33.jpg"];
+        var arry7 = ["img/hcy/22.jpg", "img/hcy/23.jpg", "img/hcy/24.jpg", "img/hcy/3.jpg", "img/hcy/30.jpg"];
+        var arry8 = ["img/hcy/25.jpg", "img/hcy/26.jpg", "img/hcy/27.jpg", "img/hcy/10.jpg", "img/hcy/15.jpg"];
+        var arry9 = ["img/hcy/28.jpg", "img/hcy/29.jpg", "img/hcy/30.jpg", "img/hcy/11.jpg", "img/hcy/12.jpg"];
+        var arry10 = ["img/hcy/31.jpg", "img/hcy/32.jpg", "img/hcy/33.jpg", "img/hcy/26.jpg", "img/hcy/22.jpg"];
+
+        function origin(){
+            /* clearTimeout(T); */
+            var iamge = document.getElementById("image");
+            $("#image").fadeIn(1000);
+            image.src = arry1[count++];
+            $("#image").fadeOut(1000);
+            if (count == arry1.length) {
+                count = 0;
+            }
+            T = setTimeout(origin, 2000);
+        }
+
+            /*function fun() {
+            clearTimeout(T);
+            var iamge = document.getElementById("image");
+            $("#image").fadeIn(1000);
+            
+            if(this.id == "xun"){
+                image.src = arry2[count++];
+            }
+              switch(this.id){
+                case "xun":
+                    image.src = arry2[count++];
+                    break;
+                case "pfzl":
+                    image.src = arry3[count++];
+                    break;
+                case "sh":
+                    image.src = arry4[count++];
+                    break;
+                case "qt":
+                    image.src = arry5[count++];
+                    break;
+                case "sjg":
+                    image.src = arry6[count++];
+                    break;
+                case "zs":
+                    image.src = arry7[count++];
+                    break;
+                case "hz":
+                    image.src = arry8[count++];
+                    break;
+                case "yr":
+                    image.src = arry9[count++];
+                    break;
+                case "c":
+                    image.src = arry10[count++];
+                    break;
+            }  */
+            
+            /* $("#image").fadeOut(1000);
+            if (count == arry.length) {
+                count = 0;
+            }
+            T = setTimeout(fun, 2000); 
+        }*/
+
+        //播放音乐
+        function fun1() {
+            document.getElementById("music").setAttribute("src", "audio/" + this.id + ".mp3");
+        }
+
+        function baidu_music() {
+            var con = document.getElementById("text").value;
+            window.location.href = "http://music.baidu.com/search?key="+ con;
+        }
+
+        //XML部分
+        var xmlhttprequest;
+
+        function creatXMLHttpRequest() {
+            if (window.XMLHttpRequest) { //非IE
+                xmlhttprequest = new XMLHttpRequest();
+            } else {
+                xmlhttprequest = new ActiveXObject(Micosoft.XMLHttpRequest);
+            }
+            return xmlhttprequest;
+        }
+
+        function dm() {
+            var id = this.id;
+            var xhr = creatXMLHttpRequest();
+            //创建请求
+            xhr.open("get", "info.xml", true);
+            //发送请求
+            xhr.send();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var xmldata = xhr.responseXML;
+                    var singer = xmldata.getElementsByTagName("singer");
+                    switch (id) {
+                        case "xun":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[0].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[0].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[0].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[0].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                        case "pfzl":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[1].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[1].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[1].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[1].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                        case "sh":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[2].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[2].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[2].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[2].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                        case "qt":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[3].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[3].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[3].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[3].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                        case "sjg":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[4].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[4].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[4].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[4].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                        case "zs":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[5].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[5].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[5].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[5].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                        case "hz":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[6].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[6].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[6].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[6].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                        case "yr":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[7].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[7].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[7].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[7].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                        case "c":
+                            document.getElementById("ma2").innerHTML = singer[0].getElementsByTagName("song")[8].getElementsByTagName("name")[0].innerHTML;
+                            document.getElementById("ma3").innerHTML = singer[0].getElementsByTagName("song")[8].getElementsByTagName("time")[0].innerHTML;
+                            document.getElementById("ma4").innerHTML = singer[0].getElementsByTagName("song")[8].getElementsByTagName("album")[0].innerHTML;
+                            document.getElementById("ma5").innerHTML = singer[0].getElementsByTagName("song")[8].getElementsByTagName("lir")[0].innerHTML;
+                            break;
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body onload="origin()">
+    <audio src="audio/article_bg.mp3" id="music" autoplay loop></audio>
+    <div class="box">
+        <div class="search">
+            <input type="text" name="wd" id="text" placeholder="搜索你最喜欢的歌手..." style="border-radius: 30px; width: 200px; height: 25px;"/>
+            <img src="img/search.png" width="30px" id="qq">
+        </div>
+
+        <br>
+        <br>
+        <div class="songs">
+            <div class="song">
+                <span id="xun">寻</span>
+            </div>
+
+            <div class="song">
+                <span id="pfzl">平凡之路</span>
+            </div>
+
+            <div class="song">
+                <span id="sh">山海</span>
+            </div>
+
+            <div class="song">
+                <span id="qt">齐天</span>
+            </div>
+
+            <div class="song">
+                <span id="sjg">双节棍</span>
+            </div>
+
+            <div class="song">
+                <span id="zs">智商250</span>
+            </div>
+
+            <div class="song">
+                <span id="hz">孩子</span>
+            </div>
+
+            <div class="song">
+                <span id="yr">易燃易爆炸</span>
+            </div>
+
+            <div class="song">
+                <span id="c">春</span>
+            </div>
+        </div>
+
+        <div class="sup">
+            <marquee behavior="alternate" direction="right" scrollamount="6" scrolldelay="30">世界上最好的花花</marquee>
+            <marquee direction="left" scrollamount="5" scrolldelay="25" id="ma2">齐天</marquee>
+            <marquee direction="right" scrollamount="7" scrolldelay="20" id="ma3">烟火里的尘埃</marquee>
+            <marquee direction="left" scrollamount="4" scrolldelay="22" id="ma4">春</marquee>
+            <marquee direction="right" scrollamount="8" scrolldelay="25" id="ma5">智商520</marquee>
+        </div>
+        <div class="pic">
+            <img src="img/hcy/1.jpg" id="image" height="400px" style="border-radius:30px;" width="600px">
+        </div>
+
+        <a class="back" href="index.html">
+            <img src="img/back.png" width="200px" id="back">
+        </a>
+    </div>
+</body>
+</html>
+
+<script>
+    var span = document.getElementsByTagName("span");
+    for (var i = 0; i < span.length; i++){
+        span[i].addEventListener("click", fun1, true);
+        span[i].addEventListener("click", dm, true);
+        span[i].addEventListener("click", origin, true);
+    }
+    document.getElementById("qq").addEventListener("click", baidu_music, true);
+</script>

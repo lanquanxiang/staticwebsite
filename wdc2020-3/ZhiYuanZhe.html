@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link type="text/css" rel="stylesheet"  href="css/XuanZhuanMuMastyle.css"/>
+<link type="text/css" rel="stylesheet" href="css/WuJiaoXin.css" />
+<!-- <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> -->
+<script type="text/javascript" src="js/banner.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+			
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link href="css/MousePic.css" />
+
+
+
+<script type="text/javascript">
+		/*自定义的鼠标点击效果*/
+		/* 鼠标特效 */ 
+		var a_idx = 0; 
+		jQuery(document).ready(function($) { 
+		    $("body").click(function(e) { 
+		        var a = new Array("抗击肺炎","富强","民主","文明","和谐","万众一心","自由","平等","公正","法治","武汉加油","爱国","敬业","诚信","友善","中国加油"); 
+		        var $i = $("<span></span>").text(a[a_idx]); 
+		        a_idx = (a_idx + 1) % a.length; 
+		        var x = e.pageX, 
+		        y = e.pageY; 
+		        $i.css({ 
+		            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+		            "top": y - 20, 
+		            "left": x , 
+		            "position": "absolute", 
+		            "font-weight": "bold", 
+		            "color": "rgb(119,136,153)" 
+		        }); 
+		        $("body").append($i); 
+		        $i.animate({ 
+		            "top": y - 180, 
+		            "opacity": 0 
+		        }, 
+		        1500, 
+		        function() { 
+		            $i.remove(); 
+		        }); 
+		    }); 
+		}); 
+		
+	
+		</script>
+</head>
+
+<body>
+<div class="top">
+  <a href="index.html"><img src="images/Top.png" background-size: 100% 100%/></a>
+      </div> 
+    </div>
+ <div class="clear"></div>
+ <div class="nav">
+   <ul>
+    <li><a href="index.html">网站首页</a></li>
+     <!-- 下拉菜单,菜单更新从这里复制-------------------------------------------------------------- -->
+     <li ><a href="shijianzhou.html">疫情时间线</a></li>
+     	 
+     <li><a href="piclist.html" class="MoreNav">更多内容</a> 
+     
+     					<ul >
+     						<li ><a href="JuanZhu.html">捐助</a></li>
+     						<li ><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+     						<li ><a href="zhiyingxiong.html">致英雄</a></li>
+     						<li ><a href="防疫小知识.html">防护小知识</a></li>
+     
+     					</ul>
+     </li>
+     <!-- 以上是下拉菜单，加线方便复制 -->
+        <li><a href="list.html">新闻动态</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="banner">
+      <div class="b-img">
+ <a href="#" style="background:url(images/Roll2.jpg)  center  no-repeat ; background-size: 101% 101%;"></a>
+          <a href="#" style="background:url(images/Roll5.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+		    <a href="#" style="background:url(images/Roll4.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+    	    <a href="#" style="background:url(images/ZhiJing.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+			 <a href="#" style="background:url(images/Roll6.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+<a href="#" style="background:url(images/Roll7.jpg)  center  no-repeat ; background-size: 100% 100%;"></a>   
+      </div>
+      <div class="b-list"> </div>
+    </div>
+    <div class="clear"></div>
+    <div class="bodyBox">
+      <div class="main">
+        <div class="mLeft">
+          <div class="titbox">
+            <p class="ccsl">更多内容</p>
+       </div>
+       <ul class="typename">
+         <li><a href="JuanZhu.html">捐助</a></li>
+                 <li><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+                 <li><a href="piclist.html">致英雄</a></li>
+                 <li><a href="piclist.html">防护小知识</a></li>
+
+       </ul>
+      <div class="titbox">
+        <p class="ccsl">联系我们</p>
+      </div>
+      <div class="lxwm">
+        <div class="con">联系人：陈健<br />
+电    话：18183267596<br />
+Q     Q：915617494<br />
+地    址：四川省攀枝花市东区机场路10号</div>
+      </div>
+    </div>
+    <div class="mRight" style="text-align: center;background-color:#FFFAF4 ;">
+      <div class="brandnav">
+        <div>
+          <p class="ccsl">更多内容</p>
+          <div class="con">位置：首页>更多内容>志愿者</div>
+        </div>
+      </div>
+	
+	<!-- <div class="ZhiYuanZheSpan">
+		<span class="TextArea1"  >
+			<p class="p3">他们，在战“疫”里“绝不缺席”——　彭银华、夏思思，用生命交出了属于“90后”医生的奋斗答卷
+			更多像彭银华、夏思思一样优秀的“90后”“00后”们，仍然义无反顾地冲向了抗疫最前线……</p>
+			<img src="images/RenYuan1.jpg" style="height: 100%;" />
+		</span>
+		<span class="TextArea2"  >
+			<span id="star-five" style="margin-top: 9%;margin-left: 3%;"></span>
+			<span class="YaoQiu">
+				<p class="p4">征集要求：</p>
+				<ul>
+					<li id="PLi">年龄：18岁以上</li>
+					<li id="PLi">有良好的安全卫生意识</li>
+					<li id="PLi">有良好的集体合作能力</li>
+					<li id="PLi">能够全程参与活动</li>
+				</ul>
+			</span>
+			
+			
+		</span>
+		<span class="TextArea3"  >
+			<img src="images/SheQu2.jpg"  style="position: relative;height: 100%;width: 100%;z-index: 0;"/>
+			<p class="p5">做好准备，前往所在的社区报名吧</p>
+		</span>
+	</div> -->
+	<div class="common_style">
+	
+	  <!-- about section -->
+	  <section class="about_section">
+	    <div class="container" style="width: 735px;">
+	      <div class="row">
+	        <div class="col-md-6" style="float: left;">
+	          <div class="about_img-container"  >
+	            <img src="images/ZhiYuanZheTu1.png" alt="" style="float: left;position: relative;width: 100%;margin-left: -65%;margin-top: 30%;">
+	          </div>
+	        </div>
+	        <div class="col-md-6" style="float: right;margin-top: -25%;margin-right: 40px;">
+	          <div class="about_detail-box" style="width: 400px;">
+	            <h3>
+	              志愿者招募
+	            </h3>
+	            <p>
+	              当前，全面防控新型冠状病毒感染肺炎疫情进入关键时期，党中央、国务院作出重要部署，全国上下众志成城。在县委县政府的领导下，共青团正定县委号召广大青年立即行动起来，积极投身疫情防控，以实际行动践行志愿精神，为夺取疫情防控最终胜利贡献力量。
+	            </p>
+	            <div class="">
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </section>
+	
+	
+	  <!-- end about section -->
+	
+	  <!-- admission section -->
+	  <section class="admission_section">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-md-6" style="margin-left: -10px;">
+				
+	          <div class="admission_detail-box"  style="width: 350px;">
+	            <h3>
+	              若有战，召必回，战必胜
+	            </h3>
+	            <p>
+	              疫情就是命令，防控就是责任，我们深深感激主动投身预防新冠病毒肺炎一线的医务人员、防疫人员、公安交警、基层公务人员等工作者，防输入、做筛查，防扩散、细观察，防感染、远疫区，他们用最美的逆行守护群众健康和生命。
+	            </p>
+	            <div class="">
+
+	            </div>
+	          </div>
+	        </div>
+	        <div class="col-md-6" style="float: right;margin-right: -40px;">
+	          <div class="admission_img-container">
+	            <img src="images/ZhiYuanZheTU2.jpg" alt="">
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </section>
+	
+	
+	
+	  <!-- end admission section -->
+	
+	  <!-- why section -->
+	  <section class="why_section">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-md-6">
+	          <div class="why_img-container" >
+	            <img src="images/ZhiYuanZheTu3.jpeg" alt="">
+	          </div>
+	        </div>
+	        <div class="col-md-6" style="padding-left: 70px;">
+	          <div class="why_detail-box"  style="width: 300px;">
+	            <h3 style="margin-left: -10%;">
+	              志愿者招募要求
+	            </h3>
+	            <p style="line-height:40px;margin-left: -20px;">
+	              1.招募对象自愿成为抗疫志愿者，年龄满18周岁，身体健康；<br />
+	              
+	              2.能在街道党工委、办事处疫情防控整体领导下，在小区统一指导和统筹协调下，依法有序开展疫情防控应急志愿服务。<br />
+	              
+	              3.近一个月无发热等病史，无外出本市、无湖北、武汉人员接触史；<br />
+	              
+	              4.遵守国家法律、法规，遵守各项规章制度，无不良嗜好，服从组织安排。<br />
+	            </p>
+	            <div class="">
+
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </section>
+	
+	
+	  <!-- end why section -->
+	
+	  <!-- determine section -->
+	  <section class="determine_section" style="margin-bottom: 20px;">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-md-6" style="margin-left: 100px;">
+	          <div class="determine_detail-box" style="">
+				  <div class="col-md-6" style="">
+				    <div class="determine_img-container" style="width: 517%;margin-left: -100px;">
+				      <img src="images/ZhiYuanZheXiaoQu.jpg" alt="">
+				    </div>
+				  </div>
+	            <h3 style="position: absolute;z-index: 10;">
+	              团结一心，携手抗疫
+	            </h3>
+	            <p style="position: absolute;z-index: 10;margin-top: 60px;line-height: 30px;">
+	              团结一致，万众一心，战胜疫情</br>
+				  </br>
+				  想要成为志愿者</br>
+				  请到本地相关部门了解更多关于志愿者的情况。
+	            </p>
+	            <div class="">
+	            </div>
+	          </div>
+	        </div>
+	      
+	      </div>
+	    </div>
+	  </section>
+	
+	
+	  <!-- end determine section -->
+	
+	</div>
+	
+	
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+   </div> 
+    <div class="clear" ></div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+  <div class="main">
+      <div class="footer1">
+        <div class="con"> 攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+      <div class="footer2">
+        <img src="images/Bottom.jpg" height="230" width="122"/>
+      </div>
+      <div class="footer3">
+        <div>
+          <img src="images/Code.png" width="125" height="125" />
+          <p class="ccsl">扫一扫  加入群聊</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="bottom">
+  <div class="main">
+    <!-- <p class="ccsl"></p> -->
+  </div>
+</div>
+</body>
+</html>
+<style>
+.ZhiYuanZheSpan{
+	text-align: center;
+}
+.TextArea1{
+	
+	display: block;
+	background-color: rgb(18,183,245);
+	margin-top: 1%;
+	width: 100%;
+	height: 200px;
+	border: 2px solid #000000;
+}
+	
+.p3{
+	margin-top: 5%;
+	margin-left: -20%;
+	width: 50%;
+	float: left;
+	font-style: normal;
+	font-family: KaiTi;
+	font-size: 18px;
+	/* 字体间距 */
+	text-indent: 28px;
+	color: snow;
+}
+.TextArea2{
+	
+	display: block;
+	background-color: rgb(18,183,245);
+	margin-top: 1%;
+	width: 100%;
+	height: 200px;
+	border: 2px solid #000000;
+	
+}
+.p4{
+		margin-top: -25%;
+		margin-left: 20%;
+		z-index: 1;
+		font-style: normal;
+		font-family: KaiTi;
+		font-size: 18px;
+		/* 字体间距 */
+		text-indent: 28px;
+		color: snow;
+}
+#PLi{
+	margin-top: 2%;
+	font-style: normal;
+	font-family: KaiTi;
+	font-size: 18px;
+	/* 字体间距 */
+	text-indent: 28px;
+	color: snow;
+}
+.TextArea3{
+	
+	position: relative;
+	
+	display: block;
+	/* background-color: #D9EDF7; */
+	margin-top: 1%;
+	width: 100%;
+	height: 200px;
+	border: 2px solid #000000;
+	margin-bottom: 2%;
+
+}
+.p5{
+	position: relative;
+	margin-top: -15%;
+	margin-left: 3%;
+	z-index: 99;
+	font-style: normal;
+	font-family: KaiTi;
+	font-size: 26px;
+	/* 字体间距 */
+	text-indent: 28px;
+	 color: rgb(245,0,0);
+}
+</style>
+		
+		<!-- 使得左边悬浮 -->
+		<script>  
+		function setNavbar() {
+			
+		    if ($(document).scrollTop() >700) {
+		
+		        $('.mLeft').css({"top":"0","position":"fixed"});
+		    } else {
+		        $('.mLeft').css({"top":"0","position":"static"});
+		    }
+		}                   
+		$(document).ready(function(){
+		    setNavbar();
+		    $(window).scroll(function() {
+		      setNavbar();
+		    });      
+		});
+		</script>  
+		
+		<!-- 返回顶部 ------------------------------------------------------------------------------------------------------>
+		<link href="https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/GoTop.js"></script>
+		<script>
+			new GoTop({
+				hide:true,//当页面不滚动时 是否隐藏 默认false
+				url:'img/3.png',//图片路径 默认我们提供base64的图片
+				state:'',//出现的位置 默认是 下方 提供 center bottom参数
+				height:'50px',//高 默认40px
+				width:'50px',//宽 默认40px
+				scrollTop:500,//滚到什么位置出现 px
+				time:500,//返回顶部多长时间 ms 默认500ms
+				aimation:'animated bounceInDown',//出场动画 默认show（没有出场动画） 这个可以自定义
+				toTop:'',//滚到顶部触发事件
+				toShow:'',//出场时触发事件
+				toHide:function(){
+					$('h1').html('');
+					setTimeout(function(){
+						$('h1').html('');
+					},1000)
+				},//隐藏触发事件
+				go:""//点击返回顶部触发事件
+			});
+		</script>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>food</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul li{
+            list-style: none;
+        }
+        .box{
+            width: 1366px;
+            height: 670px;
+            background: url(img/food_bg.jpg) no-repeat;
+            background-size: cover;
+            opacity: 0.88;
+            background-attachment: fixed;
+        }
+
+        .search input[type=text] {
+            position: relative;
+            top: 30px;
+            left: 80px;
+        }
+
+        .search img {
+            position: relative;
+            top: 40px;
+            left: 40px;
+        }
+
+        .caixi {
+            position: relative;
+            left: 30px;
+            top: 80px;
+            width: 300px;
+            height: 500px;
+            text-align: center;
+        }
+
+        .food {
+            position: relative;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            color: white;
+            font-family: "楷体";
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .chuan,.yue,.su,.lu{
+            display: none;
+        }
+
+        li{
+            color: rgb(189, 183, 183);
+            font-family: "楷体";
+            font-size: 23px;
+        }
+
+        li:hover{
+            cursor: pointer;
+        }
+
+        .con{
+            width: 850px;
+            height: 670px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .con span{
+            display: inline-block;
+            font-family: "楷体";
+            width: 850px;
+            height: 80px;
+            line-height: 80px;
+            font-family: microsoft yahei;
+            text-align: center;
+            font-size: 30px;
+            color: rgba(233, 112, 56, 0.466);
+        }
+        .next_page{
+            width: 1366px;
+            height: 670px;
+            background: url(img/food/food_bg2.jpg);
+            background-size: cover;
+        }
+
+        .next_page .one,.two{
+            float: left;
+            width: 663px;
+            height: 670px;
+            overflow: auto;
+        }
+
+        .next_page>span{
+            position: absolute;
+            left: 50%;
+            margin-left: -80px;
+            text-align: center;
+            text-align: center;
+            font-size: 40px;
+            font-family: "楷体";
+            color: red;
+        }
+
+        .next_page .one span{
+            position: relative;
+            left: 100px;
+            color: white;
+            font-size: 25px;
+            font-family: "楷体";
+        }
+
+        .next_page .two span{
+            position: relative;
+            left: 100px;
+            color: white;
+            font-size: 25px;
+            font-family: "楷体";
+        }
+
+        .next_page .one .con{
+            position: relative;
+            top: 10px;
+            width: 640px;
+            height: 500px;
+            color: white;
+            font-size: 25px;
+            font-family: "楷体";
+            padding: 0px;
+        }
+
+        .next_page .two .con{
+            position: relative;
+            top: 10px;
+            width: 640px;
+            height: 500px;
+            color: white;
+            font-size: 25px;
+            font-family: "楷体";
+            padding: 0px;
+        }
+
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function delicious_food(){
+            var food = document.getElementById("text").value;
+            alert(food);
+            window.location.href="http://home.meishichina.com/search/"+food+"/";
+        }
+
+        function m_click(){
+            window.location.href="https://www.baidu.com/s?wd="+this.innerHTML+"&ie=utf-8&tn=baiduhome_pg";
+        }
+
+        function m_over(){
+            if(this.innerHTML == "川菜"){
+                $(".chuan").slideDown(1000);
+            }else if(this.innerHTML == "鲁菜"){
+                $(".lu").slideDown(1000);
+            }else if(this.innerHTML == "粤菜"){
+                $(".yue").slideDown(1000);
+            }else{
+                $(".su").slideDown(1000);
+            }
+            
+        }
+        function m_out(){
+            $(".chuan,.lu,.yue,.su").slideUp(1000);
+        }
+    </script>
+</head>
+<body>
+    <audio src="audio/food_bg.mp3" autoplay loop></audio>
+    <div class="box">
+        <div class="search">
+            <input type="text" name="wd" id="text" placeholder="搜索你最喜欢的食物..." style="border-radius: 30px; width: 200px; height: 25px;"/>
+            <img src="img/search.png" width="30px" id="qq">
+         </div>
+
+         <div class="caixi">
+             <div class="food">川菜</div>
+             <div class="chuan">
+                <ul>
+                    <li>水煮牛肉</li>
+                    <li>酸菜鱼</li>
+                    <li>鱼香肉丝</li>
+                </ul>
+             </div>
+
+             <div class="food">粤菜</div>
+             <div class="yue">
+                <ul>
+                    <li>叉烧肉</li>
+                    <li>水晶虾饺</li>
+                    <li>烧麦</li>
+                </ul>
+            </div>
+
+             <div class="food">鲁菜</div>
+             <div class="lu">
+                <ul>
+                    <li>醋溜白菜</li>
+                    <li>拔丝苹果</li>
+                    <li>四喜丸子</li>
+                </ul>
+            </div>
+
+             <div class="food">苏菜</div>
+             <div class="su">
+                <ul>
+                    <li>盐水鸭</li>
+                    <li>阳春面</li>
+                    <li>清炖狮子头</li>
+                </ul>
+            </div>
+         </div>
+    </div>
+    <div class="next_page">
+        <br>
+        <span>食谱推荐</span>
+        <div class="one">
+            <br><br>
+            <span>1.日式茶碗蒸制作步骤</span>
+            <br>
+            <div class="con">
+                ①鲜虾去头剥壳抽去肠线， 香菇洗净切十字刀，蟹柳切片。
+                <br><br>
+                ②鸡蛋打入碗中，加盐、生抽、糖、料酒、等量的清水用筷子搅拌打散，倒入蒸碗。
+                <br><br>
+                ③冷水上锅，大火烧开后，转小火蒸4分钟，将虾、香菇、蟹柳片摆放在半凝固的鸡蛋液上。
+                <br><br>
+                ④续蒸5分钟分钟即可，再配上一小碗米饭和泡菜，营养又均衡。
+            </div>
+        </div>
+        <div class="two">
+                <br><br>
+                <span>2.土豆烘煎蛋制作步骤</span>
+                <br>
+                <div class="con">
+                    ①土豆去皮洗净切片，放在清水中片刻，很短的时间，所以水中就没有放盐，洋葱、红椒洗净切小丁
+                    <br><br>
+                    ②土豆片焯水至七分熟捞出，平铺在烤盘中
+                    <br><br>
+                    ③平底锅中放入一大勺蒜香橄榄油，中火炒香洋葱，放入红椒翻炒片刻，放少许的盐拌匀后关火
+                    <br><br>
+                    ④鸡蛋打散在大碗中，放入炒好的洋葱，拌匀待用。土豆片在烤盘中先铺上一层，倒入一半的蔬菜蛋液
+                    <br><br>
+                    ⑤再铺上余下的土豆片，余下的蔬菜蛋液全部倒入，烤箱180度预热，烤盘放入烤箱中层，烤10~15分钟。
+                </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById("qq").addEventListener("click",delicious_food,true);
+    $(".con .title").fadeIn(3000);     
+    var food = document.getElementsByClassName("food");
+    for(var i = 0;i<food.length;i++){
+        food[i].addEventListener("mouseover",m_over,true);
+        food[i].addEventListener("mouseout",m_out,true);
+        food[i].addEventListener("click",m_click,true);
+    }
+</script>

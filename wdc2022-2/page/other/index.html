@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/images/favicon(1).ico" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>-->
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>-->
+        <script src="./assets/js/gsapMy.js"></script>
+        <script src="./assets/js/ScrollTrigger.js"></script>
+        <title>青春心向党</title>
+        <link rel="stylesheet" href="assets/css/gsapDemo.css">
+        <style>
+            #container {
+                /* 将文本在视口里居中 */
+                position: absolute;
+                width: 100vw;
+                /*height: 80pt;*/
+                top: 0;
+                bottom: 0;
+                /* 这个过滤器很神奇哦~可以试着注释一下，看变形是如何工作的~ */
+                filter: url(#threshold) blur(0.6px);
+            }
+
+            #text1, #text2 {
+                position: absolute;
+                width: 100%;
+                display: inline-block;
+                font-family: 'Raleway', sans-serif;
+                font-size: 80pt;
+                text-align: left;
+                color: white;
+                font-weight: bold;
+                user-select: none;
+            }
+            @media (max-width: 1000px) {
+                #text1, #text2{
+                    font-size: 40pt;
+                }
+            }
+            @keyframes move_wave {
+                0% {
+                    transform: translateX(0) translateZ(0) scaleY(1)
+                }
+                50% {
+                    transform: translateX(-25%) translateZ(0) scaleY(0.55)
+                }
+                100% {
+                    transform: translateX(-50%) translateZ(0) scaleY(1)
+                }
+            }
+            .waveWrapper {
+                overflow: hidden;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                margin: auto;
+                /*background: url("./assets/images/eee.png");*/
+            }
+            .waveWrapperInner {
+                position: absolute;
+                width: 100%;
+                overflow: hidden;
+                height: 100%;
+                bottom: -1px;
+                background-image: linear-gradient(to top, #aa0202 20%, #ffffff 80%);
+            }
+            .bgTop {
+                z-index: 15;
+                opacity: 0.5;
+            }
+            .bgMiddle {
+                z-index: 10;
+                opacity: 0.75;
+            }
+            .bgBottom {
+                z-index: 5;
+            }
+            .wave {
+                position: absolute;
+                left: 0;
+                width: 200%;
+                height: 100%;
+                background-repeat: repeat no-repeat;
+                background-position: 0 bottom;
+                transform-origin: center bottom;
+            }
+            .waveTop {
+                background-size: 50% 80px;
+            }
+            .waveAnimation .waveTop {
+                animation: move-wave 3s;
+                -webkit-animation: move-wave 3s;
+                -webkit-animation-delay: 1s;
+                animation-delay: 1s;
+            }
+            .waveMiddle {
+                background-size: 50% 90px;
+            }
+            .waveAnimation .waveMiddle {
+                animation: move_wave 10s linear infinite;
+            }
+            .waveBottom {
+                background-size: 50% 80px;
+            }
+            .waveAnimation .waveBottom {
+                animation: move_wave 15s linear infinite;
+            }
+        </style>
+
+    </head>
+    <body>
+    <!-- 用于创建合并效果的 svg 过滤器 -->
+    <svg id="filter" style="position: absolute">
+        <defs>
+            <filter id="threshold">
+                <!-- 这里只是一个阈值效果--像素足够高的地方不透明度设置为完全不透明，其他地方像素设置为完全透明。 -->
+                <feColorMatrix in="SourceGraphic"
+                               type="matrix"
+                               values="1 0 0 0 0
+                                    0 1 0 0 0
+                                    0 0 1 0 0
+                                    0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+        <header class="header" id="header" >
+            <nav class="nav container">
+                <img src="./assets/images/7.png" style="height: 60px">
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">顶部</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">简介</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#discover" class="nav__link">主题活动</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#place" class="nav__link">经典影片</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+<!--                        <span class="change-theme-name">Dark mode</span>-->
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home" style="position: relative">
+<!--                <img src="assets/img/home1.jpg" alt="" class="home__img">-->
+                <div class="home_head" style="background-size:cover;background-position:center;z-index: 20;position: absolute;width: 100%;height:100%;background-image: url('./assets/images/eee.png')">
+
+                </div>
+                <div class="home__img">
+                    <div class="waveWrapper waveAnimation">
+                        <div class="waveWrapperInner bgTop">
+                            <div class="wave waveTop" style="background-image: url('./assets/images/wave-top.png')"></div>
+                        </div>
+                        <div class="waveWrapperInner bgMiddle">
+                            <div class="wave waveMiddle" style="background-image: url('./assets/images/wave-mid.png')"></div>
+                        </div>
+                        <div class="waveWrapperInner bgBottom">
+                            <div class="wave waveBottom" style="background-image: url('./assets/images/wave-bot.png')"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__container container grid">
+                    <a href="../index.html" class="button" style="font-family: SimSun-ExtB;cursor: pointer;position: absolute;bottom: 100px">返回</a>
+                    <div class="home__data">
+                        <h1 class="home__data-title" style="height: 200px;z-index: 12">
+                            <div id="container">
+                                <span id="text1" style="font-family: SimSun"></span>
+                                <span id="text2" style="font-family: SimSun"></span>
+                            </div>
+                        </h1>
+                        <script>
+                            /*
+	巧妙地利用SVG过滤器来创建“变形文本”效果。
+  从本质上讲，它将两个文本元素层叠在一起，并根据哪个文本应该更突出来模糊它们。
+  一旦应用了模糊，两个文本一起通过一个阈值过滤器，产生“胶粘”效果。
+*/
+
+                            const elts = {
+                                text1: document.getElementById("text1"),
+                                text2: document.getElementById("text2") };
+
+
+                            /* 要在其中变形的字符串。你可以把这些换成你想要的任何东西！ */
+                            const texts = [
+                                "喜迎二十大",
+                                "永远",
+                                "跟党走",
+                                "奋进",
+                                "新征程"
+                            ];
+
+
+                            /* 控制变形的速度。 */
+                            const morphTime = 1;
+                            const cooldownTime = 0.25;
+
+                            let textIndex = texts.length - 1;
+                            let time = new Date();
+                            let morph = 0;
+                            let cooldown = cooldownTime;
+
+                            elts.text1.textContent = texts[textIndex % texts.length];
+                            elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+
+                            function doMorph() {
+                                morph -= cooldown;
+                                cooldown = 0;
+
+                                let fraction = morph / morphTime;
+
+                                if (fraction > 1) {
+                                    cooldown = cooldownTime;
+                                    fraction = 1;
+                                }
+
+                                setMorph(fraction);
+                            }
+
+                            /* 将模糊过滤器应用于文本 */
+                            function setMorph(fraction) {
+                                // fraction = Math.cos(fraction * Math.PI) / -2 + .5;
+
+                                elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                                elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+                                fraction = 1 - fraction;
+                                elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                                elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+                                elts.text1.textContent = texts[textIndex % texts.length];
+                                elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+                            }
+
+                            function doCooldown() {
+                                morph = 0;
+
+                                elts.text2.style.filter = "";
+                                elts.text2.style.opacity = "100%";
+
+                                elts.text1.style.filter = "";
+                                elts.text1.style.opacity = "0%";
+                            }
+
+                            /* 动画循环 */
+                            function animate() {
+                                requestAnimationFrame(animate);
+
+                                let newTime = new Date();
+                                let shouldIncrementIndex = cooldown > 0;
+                                let dt = (newTime - time) / 1000;
+                                time = newTime;
+
+                                cooldown -= dt;
+
+                                if (cooldown <= 0) {
+                                    if (shouldIncrementIndex) {
+                                        textIndex++;
+                                    }
+
+                                    doMorph();
+                                } else {
+                                    doCooldown();
+                                }
+                            }
+
+                            /* 启动动画。 */
+                            animate();
+
+                        </script>
+                    </div>
+
+                    <div class="home__info">
+
+                        <div>
+                            <span class="home__info-title">主题教育实践活动</span>
+                            <a href="https://qnzz.youth.cn/zhuanti/xyesd/" target="_blank" class="button button--flex button--link home__info-button">
+                                了解更多 <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="assets/images/13.png" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">习近平：继续发扬历史主动精神， <br> 以实际行动迎接党的二十大胜利召开</h2>
+                        <p class="about__description">今年是进入全面建设社会主义现代化国家、向第二个百年奋斗目标进军新征程的重要一年，我们党将召开二十大。要全面贯彻党的十
+                            九大和十九届历次全会精神，增强“四个意识”、坚定“四个自信”、做到“两个维护”，对“国之
+                            大者”领悟到位......
+                        </p>
+                        <a href="http://news.youth.cn/sz/202203/t20220301_13488260.htm" target="_blank" class="button">了解更多</a>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="assets/images/hello.png" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="assets/images/14.png" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== DISCOVER ====================-->
+            <section class="discover section" id="discover" style="background: url('../images/first/111.jpg') center;background-size: cover;background-attachment:fixed">
+                <div style="width: 100%;display: flex;justify-content: center">
+                    <img style="width: 430px;margin: 0 auto" src="./assets/images/20220307-02.png">
+                </div>
+                <h2 class="section__title" style="color: black">青年大学习</h2>
+
+                <div class="discover__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--==================== DISCOVER 1 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <a href="https://qnzz.youth.cn/zhuanti/xyesd/ztcp/202203/t20220311_13519914.htm" target="_blank">
+                                <img src="assets/images/qin/W020220311509413301487.jpg" alt="" class="discover__img">
+                            </a>
+<!--                            <div class="discover__data">-->
+<!--                                <h2 class="discover__title">Bali</h2>-->
+<!--                                <span class="discover__description">24 tours available</span>-->
+<!--                            </div>-->
+                        </div>
+
+                        <!--==================== DISCOVER 2 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <a href="http://news.youth.cn/gn/202203/t20220328_13565742.htm" target="_blank">
+                                <img src="assets/images/qin/W020220329491202825226.jpg" alt="" class="discover__img">
+                            </a>
+<!--                            <div class="discover__data">-->
+<!--                                <h2 class="discover__title">Hawaii</h2>-->
+<!--                                <span class="discover__description">15 tours available</span>-->
+<!--                            </div>-->
+                        </div>
+
+                        <!--==================== DISCOVER 3 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <a href="http://news.youth.cn/gn/202204/t20220405_13585600.htm" target="_blank">
+                                <img src="assets/images/qin/W020220406343795284835.jpg" alt="" class="discover__img">
+                            </a>
+<!--                            <div class="discover__data">-->
+<!--                                <h2 class="discover__title">Hvar</h2>-->
+<!--                                <span class="discover__description">18 tours available</span>-->
+<!--                            </div>-->
+                        </div>
+
+                        <!--==================== DISCOVER 4 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <a href="http://news.youth.cn/gn/202204/t20220412_13603924.htm" target="_blank">
+                                <img src="assets/images/qin/W020220412337137106571.jpg" alt="" class="discover__img">
+                            </a>
+<!--                            <div class="discover__data">-->
+<!--&lt;!&ndash;                                <h2 class="discover__title">Whitehaven</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="discover__description" style="cursor: pointer;color: #cc3232">查看详情</span>&ndash;&gt;-->
+<!--                            </div>-->
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience section">
+                <h2 class="section__title">今天，我们比历史上任何时期都更接近、
+                    <br> 更有信心和能力实现中华民族伟大复兴的目标。</h2>
+
+                <div class="experience__container container grid">
+                    <div class='demo-wrapper'>
+                        <section class='demo-text hello'>
+                            <div class='wrapper text' style="color: black;margin-bottom: 10px">
+                                一个有希望的民族不能没有英雄，一个有前途的国家不能没有先锋。崇尚英雄才会产生英雄，争做英雄才能英雄辈出。
+                            </div>
+                        </section>
+                        <section class='demo-gallery hello'>
+                            <ul class='wrapper'>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/1.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/2.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/3.jpg' width='1240'>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class='demo-gallery hello'>
+                            <ul class='wrapper'>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/4.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/5.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/6.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/7.jpg' width='1240'>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class='demo-gallery hello'>
+                            <ul class='wrapper'>
+                                <li>
+                                    <img class="wImg" class="wImg" height='874' src='./assets/images/memor/8.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/9.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/10.jpg' width='1240'>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class='demo-gallery hello'>
+                            <ul class='wrapper'>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/11.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/12.jpg' width='1240'>
+                                </li>
+                                <li>
+                                    <img class="wImg" height='874' src='./assets/images/memor/13.jpg' width='1240'>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class='demo-text hello'>
+                            <div class='wrapper text'>
+                                以青春之我，创造青春之家庭，青春之国家，青春之民族，青春之人类，青春之地球，青春之宇宙，资以乐其无涯之生。
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+                <script>
+                    gsap.registerPlugin(ScrollTrigger);
+                    const images = gsap.utils.toArray('.wImg');
+                    const loader = document.querySelector('.loader--text');
+                    // const updateProgress = (instance) =>
+                    //     loader.textContent = `${Math.round(instance.progressedCount * 100 / images.length)}%`;
+
+                    const showDemo = () => {
+                        document.body.style.overflow = 'auto';
+                        document.scrollingElement.scrollTo(0, 0);
+                        // gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
+
+                        gsap.utils.toArray('.hello').forEach((section, index) => {
+                            // console.log(index)
+                            const w = section.querySelector('.wrapper');
+                            const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1 + 2500 , 1500];
+                            // let x2 = x
+                            // if (index == 4) {
+                            //     x2 = 2000
+                            // }
+                            // console.log(x2,xEnd);
+                            gsap.fromTo(w, {  x  }, {
+                                x: xEnd,
+                                scrollTrigger: {
+                                    trigger: section,
+                                    scrub: 0.5
+                                }
+                            });
+                        });
+                    }
+                    showDemo()
+                    // imagesLoaded(images).on('progress', updateProgress).on('always', showDemo);
+
+                </script>
+            <!--==================== VIDEO ====================-->
+            <section class="video section" style="background: url('./assets/images/eee.png') center;background-size: cover;background-attachment:fixed">
+                <h2 class="section__title" style="color: #cc3232;font-weight: bold;font-family: SimSun">我是党员，我在</h2>
+
+                <div class="video__container container">
+                    <p class="video__description" style="color: black;font-weight: bold">2021年11月11日09:41 | 来源：
+                        <a class="woshi" style="color: black"
+                                href="http://www.news.cn/video/2021-11/10/c_1211440131.htm" target="_blank">新华社</a>
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="http://flv4.people.com.cn/videofile7//pvmsvideo/2021/11/11/DangWang-SongMeiQi_5b026522420c506445959b637cdc2534.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="place" style="background-image: url(images/5.png);background-attachment: fixed">
+                <h2 class="section__title"><img src="./assets/images/ph_tit6.png"></h2>
+
+                <div class="place__container container grid" style="background-image: url(images/5.png);background-attachment: fixed">
+                    <!--==================== PLACES CARD 1 ====================-->
+                    <div class="place__card">
+                        <img src="assets/images/movie/duoguan.jpg" alt="" class="place__img">
+                        <div class="place__content">
+                            <span class="place__rating">
+<!--                                <i class="ri-star-line place__rating-icon"></i>-->
+<!--                                <span class="place__rating-number">4,8</span>-->
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">《夺冠》</h3>
+<!--                                <span class="place__subtitle">Indonesia</span>-->
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <a href="http://dangshi.people.com.cn/n1/2021/1209/c437524-32303855.html" target="_blank" style="color: white"><i class="ri-arrow-right-line"></i></a>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 2 ====================-->
+                    <div class="place__card">
+                        <img src="assets/images/movie/yuan.jpg" alt="" class="place__img">
+
+                        <div class="place__content">
+                            <span class="place__rating">
+<!--                                <i class="ri-star-line place__rating-icon"></i>-->
+<!--                                <span class="place__rating-number">5,0</span>-->
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">《袁隆平》</h3>
+<!--                                <span class="place__subtitle">Polinesia</span>-->
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <a href="http://dangshi.people.com.cn/n1/2021/1209/c437524-32303849.html" target="_blank" style="color: white"><i class="ri-arrow-right-line"></i></a>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 3 ====================-->
+                    <div class="place__card">
+                        <img src="assets/images/movie/qian.jpg" alt="" class="place__img">
+
+                        <div class="place__content">
+                            <span class="place__rating">
+<!--                                <i class="ri-star-line place__rating-icon"></i>-->
+<!--                                <span class="place__rating-number">4,9</span>-->
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">《钱学森》</h3>
+<!--                                <span class="place__subtitle">EE.UU</span>-->
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <a href="http://dangshi.people.com.cn/GB/437145/437524/index.html" target="_blank" style="color: white"><i class="ri-arrow-right-line"></i></a>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 4 ====================-->
+                    <div class="place__card">
+                        <img src="assets/images/movie/shang.jpg" alt="" class="place__img">
+
+                        <div class="place__content">
+                            <span class="place__rating">
+<!--                                <i class="ri-star-line place__rating-icon"></i>-->
+<!--                                <span class="place__rating-number">4,8</span>-->
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">《上甘岭》</h3>
+<!--                                <span class="place__subtitle">Australia</span>-->
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <a href="http://dangshi.people.com.cn/GB/437145/437524/index.html" target="_blank" style="color: white"><i class="ri-arrow-right-line"></i></a>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 5 ====================-->
+                    <div class="place__card">
+                        <img src="assets/images/movie/xiang.jpg" alt="" class="place__img">
+
+                        <div class="place__content">
+                            <span class="place__rating">
+<!--                                <i class="ri-star-line place__rating-icon"></i>-->
+<!--                                <span class="place__rating-number">4,8</span>-->
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">《血战湘江》</h3>
+<!--                                <span class="place__subtitle">Croacia</span>-->
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <a href="http://dangshi.people.com.cn/GB/437145/437524/index.html" target="_blank" style="color: white"><i class="ri-arrow-right-line"></i></a>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SUBSCRIBE ====================-->
+            <section class="subscribe section">
+                <div class="subscribe__bg">
+                    <div class="subscribe__container container">
+                        <h2 class="section__title subscribe__title">思考中...</h2>
+<!--                        <p class="subscribe__description">Subscribe to our newsletter and get a-->
+<!--                            special 30% discount.-->
+<!--                        </p>-->
+
+                        <form action="" class="subscribe__form">
+                            <input type="text" placeholder="Enter email" class="subscribe__input">
+                            <button class="button">
+                                提交
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

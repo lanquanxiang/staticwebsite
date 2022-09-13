@@ -1,0 +1,274 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #f6f6f6;
+}
+.mian{
+	width: 1200px;
+	height: 2767px;
+	margin: auto;
+	background-color: #F8F4ED;
+}
+.banner{
+	background-color: #f6f6f6;
+}
+.banner img{
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+.timebox{
+	width: 148px;
+	height: 272px;
+	position: fixed;
+	left: 2px;
+	top: 170px;
+	line-height: 50px;
+	background-color: #ccc;
+	border-radius: 10px;
+}
+.timebox p{
+	color: #c3131b;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: "新宋体";
+}
+.timebox span{
+	width: 50px;
+	height: 50px;
+	background-color: #c3131b;
+	display: inline-block;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	color: white;
+	margin-bottom: 3px;
+	margin-left: 25px;
+}
+
+a{
+	text-decoration: none;
+	color: white;				
+}
+.nav{
+	background-color: #c3131b;
+	height: 60px;
+	width: 100%;
+	font-size: 22px;
+	text-align: center;				
+	line-height: 60px;
+	margin-bottom: 10px;
+	font-family: "楷体";
+}
+.nav a{
+	display: inline-block;
+	width: 280px;
+}
+.nav a:hover {
+	color: #FFA500;
+}
+.focus{
+	width: 1200px;
+	height: 470px;
+	position: relative;
+	overflow: hidden;
+	background-color: pink;
+}
+.focus ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 600%;
+}
+.focus ul li {
+	list-style: none;
+	width: 1200px;
+	height: 470px;
+	float: left;
+}
+.focus ul li img {
+	width: 100%;
+	height: 100%;
+}
+.focus a {
+	display: none;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	z-index: 4;
+	width: 20px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: rgba(0, 0, 0, .3);
+	color: #fff;	
+}
+.focus a:hover {
+	background: rgba(0, 0, 0, .5);
+}
+.focus .arrow-l {
+	left: 0;
+}
+.focus .arrow-r {
+	right: 0;
+}
+.circle {
+	position: absolute;
+	bottom: 10px;
+	left: 50px;
+}
+.circle li {
+	float: left;
+	list-style: none;
+	width: 8px;
+	height: 8px;
+	border: 2px solid rgba(255, 255, 255, .5);
+	margin: 0 3px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.current {
+    background-color: #fff;
+}
+.vid-title{
+	background-color: #c3131b;
+	height: 60px;
+	width: 100%;
+	font-size: 22px;			
+	line-height: 60px;
+	font-family: "楷体";
+	color: white;
+	margin-top: 10px;
+}
+.vid{
+	width: 100%;
+	height: 338px;
+	margin-top: 5px;
+}
+.vidsorce{
+	position: relative;
+	width: 600px;
+	height: 300px;
+	float: left;
+	background: url(../images/vidimg.png) no-repeat;
+	background-size: 100% 100%;
+	margin-top: 15px;
+}
+/* 动态视频展示开始 */
+.vidsorce .mask {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 600px;
+	height: 300px;
+	text-align: center;
+	line-height: 300px;
+	background-color: #000000;
+	opacity: .5;
+
+}
+.vidsorce .mask a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 46px;
+	margin: 118px auto;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 18px;
+}
+.bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, .3);
+}
+.bigvideo {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 800px;
+	height: 500px;
+	z-index: 9999;
+	transform: translate(-50%, -50%);
+	background-color: #000000;
+
+}
+.bigvideo video {
+	margin: 0;
+	padding: 0;
+	width: 800px;
+	height: 500px;
+}
+.bigvideo .close-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 10000;
+	
+}
+/* 动态视频展示结束 */
+.intro{
+	float: left;
+	margin-left: 30px;
+	width: 500px;
+	font-size: 16px;
+	line-height: 45px;
+}
+.pic{
+	position: relative;
+	height: 300px;
+	padding-left: 6px;
+}
+.pic li{
+	list-style: none;
+	width: 297px;
+	height: 300px;
+	float: left;
+	text-align: center;
+	margin-top: 15px;
+	font-weight: bold;
+}
+.pic li img{
+	width: 95%;
+	height: 67%;
+	margin-bottom: 20px;
+}
+.pic span {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+.pic span .black {
+	color: #000;
+}
+.pic span .black:hover {
+	color: #C3131B;
+}
+.footer{
+	background-color: #c3131b;
+	height: 60px;
+	width: 100%;
+	font-size: 18px;			
+	line-height: 40px;
+	font-family: "楷体";
+	color: white;
+	text-align: center;
+}

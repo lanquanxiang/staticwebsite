@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/banner.js"></script>
+</head>
+
+<script type="text/javascript">
+		/*自定义的鼠标点击效果*/
+		/* 鼠标特效 */ 
+		var a_idx = 0; 
+		jQuery(document).ready(function($) { 
+		    $("body").click(function(e) { 
+		        var a = new Array("抗击肺炎","富强","民主","文明","和谐","万众一心","自由","平等","公正","法治","武汉加油","爱国","敬业","诚信","友善","中国加油"); 
+		        var $i = $("<span></span>").text(a[a_idx]); 
+		        a_idx = (a_idx + 1) % a.length; 
+		        var x = e.pageX, 
+		        y = e.pageY; 
+		        $i.css({ 
+		            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+		            "top": y - 20, 
+		            "left": x , 
+		            "position": "absolute", 
+		            "font-weight": "bold", 
+		            "color": "rgb(119,136,153)" 
+		        }); 
+		        $("body").append($i); 
+		        $i.animate({ 
+		            "top": y - 180, 
+		            "opacity": 0 
+		        }, 
+		        1500, 
+		        function() { 
+		            $i.remove(); 
+		        }); 
+		    }); 
+		}); 
+		
+	
+		</script>
+
+<body>
+<div class="top">
+  <a href="index.html"><img src="images/Top.png" background-size: 100% 100%/></a>
+      </div> 
+    </div>
+  <div class="clear"></div>
+  <div class="nav">
+    <ul>
+     <li><a href="index.html">网站首页</a></li>
+      <!-- 下拉菜单,菜单更新从这里复制-------------------------------------------------------------- -->
+      <li ><a href="shijianzhou.html">疫情时间线</a></li>
+      	 
+      <li><a href="piclist.html" class="MoreNav">更多内容</a> 
+      
+      					<ul >
+      						<li ><a href="JuanZhu.html">捐助</a></li>
+      						<li ><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+      						<li ><a href="zhiyingxiong.html">致英雄</a></li>
+      						<li ><a href="防疫小知识.html">防护小知识</a></li>
+      
+      					</ul>
+      </li>
+      <!-- 以上是下拉菜单，加线方便复制 -->
+         <li><a href="list.html">新闻动态</a></li>
+         <li><a href="contact.html">联系我们</a></li>
+       </ul>
+     </div>
+     <div class="clear"></div>
+     <div class="banner">
+       <div class="b-img">
+ <a href="#" style="background:url(images/Roll2.jpg)  center  no-repeat ; background-size: 101% 101%;"></a>
+          <a href="#" style="background:url(images/Roll5.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+		    <a href="#" style="background:url(images/Roll4.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+    	    <a href="#" style="background:url(images/ZhiJing.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+			 <a href="#" style="background:url(images/Roll6.jpg)  center  no-repeat ; background-size: 100% 100%;"></a> 
+<a href="#" style="background:url(images/Roll7.jpg)  center  no-repeat ; background-size: 100% 100%;"></a>   
+       </div>
+       <div class="b-list"> </div>
+     </div>
+     <div class="clear"></div>
+     <div class="bodyBox">
+       <div class="main">
+         <div class="mLeft">
+           <div class="titbox">
+             <p class="ccsl">更多内容</p>
+        </div>
+        <ul class="typename">
+          <li><a href="JuanZhu.html">捐助</a></li>
+                  <li><a href="ZhiYuanZhe.html">志愿者招募</a></li>
+                  <li><a href="zhiyingxiong.html">致英雄</a></li>
+                  <li><a href="防疫小知识.html">防护小知识</a></li>
+          <!--        <li><a href="piclist.html">金宇骨质瓷小头礼盒</a></li>
+                  <li><a href="piclist.html">骨质瓷产品散件</a></li> -->
+        </ul>
+      <div class="titbox">
+        <p class="ccsl">联系我们</p>
+      </div>
+      <div class="lxwm">
+        <div class="con">攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+    </div>
+    <div class="mRight">
+      <div class="brandnav">
+        <div>
+          <p class="ccsl">新闻动态</p>
+          <div class="con">位置：首页>新闻动态</div>
+        </div>
+      </div>
+      <ul class="listul">
+        <li>
+          <div class="tit">
+            <a href="detail1.html"><p class="ccsl">出现第五代传播！韩国梨泰院关联病例升至219人，感染病毒类型与欧美吻合 </p></a>
+            <span>2020-05-23</span>
+          </div>
+          <div class="sub">截至当地时间23日中午12时，韩国首尔梨泰院地区娱乐场所相关联的新型冠状肺炎确诊感染者已达219人。此轮感染通过练歌房、饭店等持续在韩国出现社区扩散，韩国卫生部门已发现此次感染事件中新冠病毒出现第五代传播。 </div>
+        </li>
+        <li>
+          <div class="tit">
+            <a href="detail2.html"><p class="ccsl">张文宏称全球疫情可能要连续一到两年，输入性偶发病例或成常态</p></a>
+            <span>2020-05-23</span>
+          </div>
+          <div class="sub">张文宏表示：这次疫情到现在为止没有结束，全世界的疫情可能要连续一到两年，也就是说在未来三个月以后或三个月当中都有可能整个世界会重启，整个世界重启的一个标志就是我们会有越来越多的输入性偶发病例。</div>
+        </li>
+        <li>
+          <div class="tit">
+            <a href="detail3.html"><p class="ccsl">又一名英国人被吐口水后死于新冠病毒 </p></a>
+            <span>2020-05-23</span>
+          </div>
+          <div class="sub">据英国媒体报道，继一名英国铁路售票员在执勤时遭人吐口水后死于新冠病毒，另一名出租车司机也在工作中遭遇了类似的情况。这名61岁的司机不仅被一位自称是“新冠肺炎患者”的乘客拒付车费，还被吐口水。他在被确诊感染新冠病毒的数周后，在医院孤独去世。</div>
+        </li>
+        <li>
+          <div class="tit">
+            <a href="detail4.html"><p class="ccsl">刷屏的新冠疫苗最新成果，到底讲了什么？ </p></a>
+            <span>2020-05-23</span>
+          </div>
+          <div class="sub">5月22日晚，世界权威医学期刊《柳叶刀》在线发表了军事科学院军事医学研究院研究员陈薇和江苏省疾控中心朱凤才教授等中国学者的最新研究。</div>
+        </li>
+        <li>
+          <div class="tit">
+            <a href="detail5.html"><p class="ccsl">国产新冠肺炎药物研发有突破！ </p></a>
+            <span>2020-05-22</span>
+          </div>
+          <div class="sub">北京大学团队带头人谢晓亮称，如果顺利，有望在今年冬季成功研发出强效药。当下全球科研正兵分两路，瞄准疫苗和药物两大方向加速冲刺。药物及疫苗研发进展此起彼伏，疫苗可能年底产生，但目前还未出现特效药。</div>
+        </li>
+        <li>
+          <div class="tit">
+            <a href="detail6.html"><p class="ccsl">新型冠状病毒上班感染算工伤吗 </p></a>
+            <span>2020-05-15</span>
+          </div>
+          <div class="sub">新型冠状病毒来势汹汹，很多企业都停产停工，但是预防和救治工作的医务工作人员及一些事业单位的服务人员却一直奋战在第一线，也有人不幸感染了。那么，新型冠状病毒上班感染算工伤吗？ </div>
+        </li>
+		
+		
+		
+		
+		
+      </ul>
+      <div class="clear"></div>
+    <div class="pagebox">
+       <a href="list.html">上一页</a>
+       <a href="list.html">1</a>
+       <a href="listTwo.html">2</a>
+       <a href="listTwo.html">下一页</a>
+     </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+    <div class="main">
+      <div class="footer1">
+        <div class="con"> 攀枝花学院2018级软件工程<br />联 系  人：陈健 <br />
+  电      话：18183267596<br />
+  Q       Q：915617494<br />
+  地      址：四川省攀枝花市东区机场路10号</div>
+      </div>
+      <div class="footer2">
+        <img src="images/Bottom.jpg" height="230" width="122"/>
+      </div>
+      <div class="footer3">
+        <div>
+          <img src="images/Code.png" width="125" height="125" />
+          <p class="ccsl">扫一扫  加入群聊</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="bottom">
+  <div class="main">
+
+  </div>
+</div>
+</body>
+</html>
+<!-- 使得左边悬浮 -->
+		<script>  
+		function setNavbar() {
+			
+		    if ($(document).scrollTop() >700) {
+		
+		        $('.mLeft').css({"top":"0","position":"fixed"});
+		    } else {
+		        $('.mLeft').css({"top":"0","position":"static"});
+		    }
+		}                   
+		$(document).ready(function(){
+		    setNavbar();
+		    $(window).scroll(function() {
+		      setNavbar();
+		    });      
+		});
+		</script>  
+		
+		<!-- 返回顶部 ------------------------------------------------------------------------------------------------------>
+		<link href="https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
+		<script type="text/javascript" src="./js/GoTop.js"></script>
+		<script>
+			new GoTop({
+				hide:true,//当页面不滚动时 是否隐藏 默认false
+				url:'img/3.png',//图片路径 默认我们提供base64的图片
+				state:'',//出现的位置 默认是 下方 提供 center bottom参数
+				height:'50px',//高 默认40px
+				width:'50px',//宽 默认40px
+				scrollTop:500,//滚到什么位置出现 px
+				time:500,//返回顶部多长时间 ms 默认500ms
+				aimation:'animated bounceInDown',//出场动画 默认show（没有出场动画） 这个可以自定义
+				toTop:'',//滚到顶部触发事件
+				toShow:'',//出场时触发事件
+				toHide:function(){
+					$('h1').html('');
+					setTimeout(function(){
+						$('h1').html('');
+					},1000)
+				},//隐藏触发事件
+				go:""//点击返回顶部触发事件
+			});
+		</script>

@@ -1,0 +1,247 @@
+#app a {
+  color: inherit;
+}
+
+.bg {
+  background: inherit;
+  min-height: 100vh;
+  padding: 25vh 0 1.5rem;
+  transition: background 0s 1s, color 0.6s;
+}
+
+.projects {
+  color: #231f20;
+}
+#app {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.bg:after {
+  content: "";
+  border:.75rem solid;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  pointer-events: none;
+  transition: 1s;
+}
+.bio.bg:after {
+  border:.75rem solid #e8e4d2;
+}
+.projects.bg:after {
+  border:.75rem solid #231f20;
+}
+.find-me.bg:after {
+  border:.75rem solid #e8e4d2;
+}
+.bio,
+.link-bio {
+  background:#231f20;
+}
+
+.bio h1 {
+  background-color: #e26961;
+}
+
+.projects,
+.link-projects {
+  background:#e8e4d2;
+}
+
+.find-me,
+.link-find-me {
+  background: #e26961;
+}
+
+.transition {
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  display: block;
+  position: absolute;
+  opacity: 0;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  transform: scale(0.1);
+  transform-origin: 0 0;
+}
+
+.transition-bio {
+  left: 0;
+  background: #231f20;
+}
+
+.transition-projects {
+  left: 7.5rem;
+  background: #e8e4d2;
+}
+
+.transition-find-me {
+  left: 15rem;
+  background:#e26961;
+}
+
+.bio .transition-bio,
+.projects .transition-projects,
+.find-me .transition-find-me {
+  opacity: 1;
+}
+
+.bio .transition-bio {
+  transform: scale(1);
+}
+
+.projects .transition-projects {
+  transform: scale(1) translateX(-7.5rem);
+}
+
+.find-me .transition-find-me {
+  transform: scale(1) translateX(-15rem);
+}
+
+.dots:before,
+.dots:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 11;
+  background-image: linear-gradient(#e26961 20%, transparent 0);
+  background-size: 100% 10px;
+  background-position: 0 0;
+  -webkit-animation: movebg 0.2s linear infinite;
+          animation: movebg 0.2s linear infinite;
+  will-change: transform;
+  width: 2px;
+}
+
+.dots1:before {
+  left: 5%;
+}
+
+.dots1:after {
+  left: 15%;
+}
+
+.dots2:before {
+  right: 75%;
+}
+
+.dots2:after {
+  right: 5%;
+}
+
+.dots:after {
+  animation-direction: reverse;
+}
+
+.projects .dots:before,
+.projects .dots:after {
+  background-image: linear-gradient(#231f20 20%, transparent 0);
+}
+
+.find-me .dots:before,
+.find-me .dots:after {
+  background-image: linear-gradient(#e8e4d2 20%, transparent 0);
+}
+
+@-webkit-keyframes movebg {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0,10px, 0);
+  }
+}
+
+@keyframes movebg {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0,10px, 0);
+  }
+}
+#app h1 {
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  margin: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000), color-stop(0.9, #000), color-stop(1, transparent));
+  transition: background-position 1s, background-color 1s;
+  text-align: center;
+  font-size: calc(15vw + 1rem);
+  font-weight: 400;
+  line-height: 1;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw-o.png"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw6-o.png"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/tw5-o.png");
+  background-size: 45vw auto, 45vw auto, 30vw auto;
+  background-repeat: repeat-x;
+  background-position: 0px 15%, 200px 25%, -50px 2vw;
+}
+
+#app .projects h1 {
+  background-color:#e26961;
+  background-position: -120px 15%, 230px 20%, -100px 3vw;
+}
+
+#app .find-me h1 {
+  background-color: #e8e4d2;
+  background-position: -240px 15%, 260px 25%, -150px 1vw;
+}
+
+#app #mynav {
+  position: absolute;
+  top:.75rem;
+  left: .75rem;
+  z-index: 10;
+}
+#app #mynav ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#app #mynav li {
+  flex: 1 0 5.5rem;
+}
+#app #mynav a {
+  display: block;
+  padding: 0.75rem 0 0.5rem;
+  color:#e8e4d2;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+}
+#app #mynav .link-projects {
+  color:#231f20;
+}
+
+#app main {
+  position: relative;
+  max-width: 36rem;
+  padding: 0 1.5rem;
+  margin: 10rem auto 0;
+  font-size: 2rem;
+}
+
+.slide-fade-enter-active {
+  transition: all 1s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.5s;
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(2rem);
+  opacity: 0;
+}
