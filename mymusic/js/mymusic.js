@@ -7,7 +7,7 @@ var playStyle = 0;
 // 0：列表循环 2：随机播放 4：顺序播放 6：单曲循环
 var playStyleIcon = new Array("&#xe605;", "列表循环", "&#xe6a1;", "随机播放", "&#xe6a2;", "顺序播放", "&#xe6a3;", "单曲循环");
 var soundFlag = 1;
-var path = "/music/";  // 网络资源
+var path = "../music/";  // 网络资源
 // var path = "";  // 本地资源
 $(function () {
     init();         // 初始化一些基本信息
@@ -55,9 +55,10 @@ $(function () {
 // 初始化，通过ajax获取歌曲名，将得到的歌曲名添加到 musicArray 数组
 function init() {
     // 获取音乐信息的xml文件
-   // var musicXml = getXmlDoc(path + "src/musicname.xml");
-    var musics = JSON.parse(getTextDoc(path + "src/music.json")) ;
-    //var musics = musicXml.getElementsByTagName("name");
+    var musicXml = getXmlDoc(path + "src/musicname.xml");
+    //var musics = JSON.parse(getTextDoc(path + "src/music.json")) ;
+	console.log(musicXml)
+    var musics = musicXml.getElementsByTagName("name");
     // 将音乐名添加到数组
     for (var i = 0; i < musics.length; i++) {
        // musicArray.push(musics[i].childNodes[0].nodeValue);
