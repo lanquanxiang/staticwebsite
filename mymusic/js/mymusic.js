@@ -55,15 +55,15 @@ $(function () {
 // 初始化，通过ajax获取歌曲名，将得到的歌曲名添加到 musicArray 数组
 function init() {
     // 获取音乐信息的xml文件
-    var musicXml = getXmlDoc(path + "src/musicname.xml");
-    //var musics = JSON.parse(getTextDoc(path + "src/music.json")) ;
-	console.log(musicXml)
-    var musics = musicXml.getElementsByTagName("name");
+    //var musicXml = getXmlDoc(path + "src/musicname.xml");
+    var musics = JSON.parse(getTextDoc("music.json")) ;
+	//console.log(musicXml)
+    //var musics = musicXml.getElementsByTagName("name");
     // 将音乐名添加到数组
     for (var i = 0; i < musics.length; i++) {
        // musicArray.push(musics[i].childNodes[0].nodeValue);
 	   musicArray.push(musics[i].name);
-	   musicRes.push(musics[i].resource);
+	   musicRes.push(musics[i].name);
     }
     musicCount = musicArray.length;
 }
