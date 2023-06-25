@@ -1,0 +1,14 @@
+	* {
+	    margin: 0;
+	    padding: 0;
+	}
+	#buttom{
+		background-color: rgba(0, 85, 127, 0.1);
+	}
+	#buttom p{
+		align-items: center;
+		color: black;
+		font-family: "楷体";
+		font-size: 20px;
+		text-indent: 200px;
+	}

@@ -1,0 +1,176 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+menu,
+footer,
+header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font: normal 14px/24px "Microsoft YaHei"
+}
+*{
+    box-sizing: border-box;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+
+fieldset,
+img {
+    border: 0
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #ee7700
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ellipsis{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.ellipsis2 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
+.ellipsis3 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;} 
+.no-margin{ margin-right: 0 !important;  }
+
+.no-margin {
+    margin-right: 0 !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.none {
+    display: none;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.btn {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+.btn-check:focus + .btn, .btn:focus{
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+.btn-red {
+    background: #E5505F;
+    color: #FFFFFF;
+}
+.btn-red:hover {
+    background: #e0394a;
+     color: #FFFFFF;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix {
+    -webkit-zoom: 1;
+    -moz-zoom: 1;
+    -ms-zoom: 1;
+    -o-zoom: 1;
+    zoom: 1;
+    *zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+input:focus-visible {
+    border: 0;
+    outline: none;
+}
+
+.tit {
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+ div.item{
+            position: absolute;
+            width: 300px;
+            margin: 10px;
+            /*transition: all 1s;*/
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+
+        }
+         div#content{
+            position: relative;
+
+        }
+        div.item img {
+            width: 100%;
+            display: block;
+            background: pink;
+        }
+        body {
+            padding: 0 80px;
+            box-sizing: border-box;
+        }

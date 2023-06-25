@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>名人堂</title>
+	<link rel='stylesheet' href='../assets//css/person_css/person_zhuanfang.css'>
+	<link rel="stylesheet" href="../assets//css/person_css/person_zhuanfang2.css">
+	<link rel="stylesheet" href="../vendor/layui/css/layui.css">
+	<style type="text/css">
+		.nav {
+			width: 100%;
+			height: 85px;
+			position: fixed;
+			top: 0;
+			background: linear-gradient(to right, #737dfe, #ffcac9 70%);
+			z-index: 1;
+		}
+
+		.nav .navText {
+			position: absolute;
+			color: #ffffff;
+			font-size: 20px;
+			margin-top: 20px;
+			padding-left: 30px;
+			font-weight: bold;
+			font-family: STXinwei;
+		}
+
+		.nav ul {
+			width: 500px;
+			height: 80px;
+			float: right;
+			text-align: center;
+			line-height: 80px;
+		}
+
+		.nav ul>li {
+			list-style: none;
+			width: auto;
+			height: 60px;
+			float: right;
+			font-size: 20px;
+			font-family: "pingfang SC", "helvetica neue", arial, "hiragino sans gb",
+				"microsoft yahei ui", "microsoft yahei", "simsun", sans-serif;
+			margin-right: 20px;
+			margin-top: 10px;
+
+		}
+
+		.nav ul>li a {
+			text-decoration: none;
+			color: #b60d13;
+			font-weight: bold;
+		}
+
+		.nav ul>li:hover a {
+			color: white;
+		}
+
+		.zhuanfang {
+			margin-top: 20%;
+		}
+
+		.yuren {
+			margin-top: -10%;
+			color: deepskyblue;
+		}
+
+		iframe {
+
+			border: none;
+		}
+
+		h1 {
+			color: ;
+		}
+
+		.line {
+			width: 1450px;
+			height: 10px;
+			margin-top: 150%;
+			margin-left: 23px;
+			position: absolute;
+			border-top: 5px solid #bd403a;
+			color: steelblue;
+		}
+
+		.line2 {
+			width: 1450px;
+			height: 10px;
+			margin-top: -40%;
+			margin-left: 23px;
+			position: absolute;
+			border-top: 5px solid #bd403a;
+			color: steelblue;
+		}
+
+		.line3 {
+			width: 1450px;
+			height: 10px;
+			margin-top: 295%;
+			margin-left: 23px;
+			position: absolute;
+			border-top: 5px solid #bd403a;
+			color: steelblue;
+		}
+
+		* {
+			/* 初始化 */
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			/* 100%的窗口高度 */
+			height: 100vh;
+			/* 弹性布局 水平+垂直居中 */
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			background-color: #fffde8;
+			/*    background-image: url(".../assets//img/character.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed; */
+		}
+
+		.card {
+			/* 相对定位 */
+			position: relative;
+			width: 300px;
+			height: 430px;
+			margin: 25px;
+			top: 25%;
+			background-color: #758a99;
+			border-radius: 20px;
+			/* 溢出隐藏 */
+			overflow: hidden;
+			/* 弹性布局 */
+			display: flex;
+			flex-wrap: nowrap;
+			/* 元素纵向排列 */
+			flex-direction: column;
+			/* 居中 */
+			align-items: center;
+			color: #fff;
+			/* 阴影 */
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+		}
+
+		.card .photo img {
+			width: 100%;
+			height: 100%;
+			/* 保持原有尺寸比例,裁切长边 */
+			object-fit: cover;
+		}
+
+		/* 默认大图 */
+		.card .photo {
+			/* 绝对定位 */
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0%;
+			overflow: hidden;
+			/* 动画过渡 */
+			transition: 0.5s;
+		}
+
+		/* 鼠标移入变小图 */
+		.card:hover .photo {
+			top: 30px;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+		}
+
+		/* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+		.card .photo::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, transparent 50%, #222);
+		}
+
+		.card h1 {
+			position: absolute;
+			top: 370px;
+			transition: 0.5s;
+		}
+
+		.card:hover h1 {
+			top: 170px;
+		}
+
+		.card h2 {
+			margin-top: 220px;
+			width: 80%;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+			font-size: 20px;
+			text-align: center;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+		}
+
+		.card p {
+			width: 90%;
+			text-indent: 32px;
+			font-size: 16px;
+			margin-bottom: 15px;
+			line-height: 30px;
+		}
+
+		.card a {
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.8);
+			text-decoration: none;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			padding: 8px 32px;
+			border-radius: 8px;
+		}
+
+		.card a:hover {
+			color: #fff;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+
+		.card1 {
+			/* 相对定位 */
+			position: relative;
+			width: 270px;
+			height: 400px;
+			margin: 25px;
+			top: 25%;
+			background-color: #758a99;
+			border-radius: 20px;
+			/* 溢出隐藏 */
+			overflow: hidden;
+			/* 弹性布局 */
+			display: flex;
+			flex-wrap: nowrap;
+			/* 元素纵向排列 */
+			flex-direction: column;
+			/* 居中 */
+			align-items: center;
+			color: #fff;
+			/* 阴影 */
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+			/* 不让其他被挤压 */
+			flex-shrink: ;
+		}
+
+		.card1 .photo img {
+			width: 100%;
+			height: 100%;
+			/* 保持原有尺寸比例,裁切长边 */
+			object-fit: cover;
+		}
+
+		/* 默认大图 */
+		.card1 .photo {
+			/* 绝对定位 */
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0%;
+			overflow: hidden;
+			/* 动画过渡 */
+			transition: 0.5s;
+		}
+
+		/* 鼠标移入变小图 */
+		.card1:hover .photo {
+			top: 30px;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+		}
+
+		/* 这里加个黑色到透明的渐变背景，可以更好的看清楚名字 */
+		.card1 .photo::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, transparent 50%, #222);
+		}
+
+		.card1 h1 {
+			position: absolute;
+			top: 300px;
+			transition: 0.5s;
+		}
+
+		.card1:hover h1 {
+			top: 150px;
+		}
+
+		.card1 h2 {
+			margin-top: 220px;
+			width: 80%;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+			font-size: 10px;
+			text-align: center;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+		}
+
+		.card1 p {
+			width: 90%;
+			text-indent: 32px;
+			font-size: 16px;
+			margin-bottom: 15px;
+			line-height: 30px;
+		}
+
+		.card1 a {
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.8);
+			text-decoration: none;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			padding: 8px 32px;
+			border-radius: 8px;
+		}
+
+		.card1 a:hover {
+			color: #fff;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+
+		.line3 {
+			width: 1450px;
+			height: 10px;
+			margin-top: 450%;
+			margin-left: 23px;
+			position: absolute;
+			border-top: 5px solid #bd403a;
+			color: steelblue;
+		}
+	</style>
+</head>
+
+<body class="layui-main">
+
+	<div class="nav">
+		<div class="navText">
+			<h1>行走在时光之路：攀枝花学院四十年风华</h1>
+		</div>
+		<ul>
+			<li><a href="./qingchunhuoli.html">青春活力</a></li>
+			<li><a href="./index4.html">今昔对比</a></li>
+			<li><a href="./person.html" style="color: white">人物介绍</a></li>
+			<li><a href="./time.html">学校发展</a></li>
+			<li><a href="../index.html">首页</a></li>
+		</ul>
+	</div>
+	<div class="line2">
+		<h1>名人堂</h1>
+	</div>
+
+
+	<div class="card">
+		<div class="photo">
+			<img src="../assets//img/wangshuguang.jpg" alt="">
+		</div>
+		<h1>王曙光</h1>
+		<h2>现任党委副书记、院长</h2>
+		<p>1964年2月生，中共党员，法学博士，研究员，硕士研究生导师</p>
+		<a href="https://baike.baidu.com/item/%E7%8E%8B%E6%9B%99%E5%85%89/4513499?fr=aladdin">了解更多</a>
+	</div>
+	<div class="card">
+		<div class="photo">
+			<img src="../assets//img/fangyi.jfif" alt="">
+		</div>
+		<h1>方毅</h1>
+		<h2>中国科学院原院长、国务院原副总理</h2>
+		<p>1916年2月26日—1997年10月17日，中国对外经济、科技领域的杰出领导人</p>
+
+	</div>
+	<div class="card">
+		<div class="photo">
+			<img src="../assets//img/wangbing.gif" alt="">
+		</div>
+		<h1>王斌</h1>
+		<h2>攀枝花学院党委书记</h2>
+		<p>1973年1月生，中共党员，教授，硕士研究生导师</p>
+
+	</div>
+
+
+	<div class="zhuanfang">
+		<div>
+			<iframe src="zhuanfang.html" height="600px" width="1450" style="display: block; margin: 10 auto;"></iframe>
+		</div>
+	</div>
+	<div class="line">
+		<h1>优秀育人教师</h1>
+	</div>
+
+
+	<div class="card1">
+		<div class="photo">
+			<img src="../assets//img/zhangxuhui.png" alt="">
+		</div>
+		<h1>张旭辉</h1>
+		<h2>二级教授 博士 享受国务院政府特殊津贴专家</h2>
+		<p>四川省教书育人名师 攀枝花市宣传文化领军人才 攀枝花市市委直接掌握联系高层次人才</p>
+	</div>
+	<div class="card1">
+		<div class="photo">
+			<img src="../assets//img/zhuyunsheng.png" alt="">
+		</div>
+		<h1>朱云生</h1>
+		<h2> 硕士 教授 全国优秀教师 全国优秀思想政治理论课教师</h2>
+		<p>主讲概论、三线建设历史与文化等课程；主持省部级以上课题6项、重大课题2项</p>
+	</div>
+	<div class="card1">
+		<div class="photo">
+			<img src="../assets//img/wangbing.gif" alt="">
+		</div>
+		<h1>杨颖</h1>
+		<h2>教授 博士 硕士生导师 四川省优秀教育工作者</h2>
+		<p>攀枝花市第四批市委直接掌握联系高层次人才，攀枝花市第二批省级专家培养对象</p>
+	</div>
+	<div class="card1">
+		<div class="photo">
+			<img src="../assets//img/jiangjunhui.png" alt="">
+		</div>
+		<h1>江俊辉</h1>
+		<h2>副教授 硕士 四川省优秀教师</h2>
+		<p>参与国家级课题子课题及省级和校级课题4项；参与《大学应用物理》和《大学应用物理实验》两本教材的编写工作</p>
+	</div>
+
+	<div class="card1">
+		<div class="photo">
+			<img src="../assets//img/caolihua.jpg" alt="">
+		</div>
+		<h1>曹利华</h1>
+		<h2>教授 博士 硕士生导师 四川省第十三批学术和技术带头人后备人选</h2>
+		<p>主持国家社科基金一般项目1项、教育部人文社科项目1项、四川省社科规划项目1项</p>
+	</div>
+	<div class="card1">
+		<div class="photo">
+			<img src="../assets//img/denggang.jpg" alt="">
+		</div>
+		<h1>邓刚</h1>
+		<h2>副教授 博士 硕士生导师 四川省第十二批学术和技术带头人后备人选</h2>
+		<p>主讲概论、三线建设历史与文化等课程；主持省部级以上课题6项、重大课题2项</p>
+	</div>
+	<div class="card1">
+		<div class="photo">
+			<img src="../assets//img/huchunsheng.png" alt="">
+		</div>
+		<h1>胡春生</h1>
+		<h2>教授，博士，四川省第十一批学术和技术带头人后备人选，攀枝花市学术和技术带头人</h2>
+		<p>获四川省社会科学优秀成果奖二等奖1项、三等奖3项，获攀枝花市社会科学优秀成果奖一等奖1项</p>
+	</div>
+	<div class="card1">
+		<div class="photo">
+			<img src="../assets//img/jianglong.png" alt="">
+		</div>
+		<h1>姜龙</h1>
+		<h2>教授 博士 四川省学术和技术带头人后备 攀枝花市学术和技术带头人</h2>
+		<p>国家级课题子课题及省级和校级课题4项</p>
+	</div>
+
+
+	<div class="wrapper">
+		<div class="background"><img src="" alt=""></div>
+		<div class="item-bg"></div>
+		<div class="news-slider">
+			<div class="news-slider__wrp swiper-wrapper">
+
+				<div class="news-slider__item swiper-slide">
+					<a href="https://www.pzhu.cn/info/1031/15803.htm" class="news__item">
+						<div class="news-date"> <span class="news-date__title">2</span> <span
+								class="news-date__txt"></span> </div>
+						<div class="news__title">钱平皋</div>
+						<p class="news__txt">慎思勤行，志怀霜雪</p>
+						<div class="news__img"> <img src="../assets//img/TUPIANDesktop/C1.jpg" alt="news"> </div>
+					</a>
+				</div>
+
+				<div class="news-slider__item swiper-slide">
+					<a href="https://www.pzhu.cn/info/1031/15751.htm" class="news__item">
+						<div class="news-date"> <span class="news-date__title">3</span> <span
+								class="news-date__txt"></span> </div>
+						<div class="news__title">洪宝书</div>
+						<p class="news__txt">专注教育十八载，实干笃行出佳绩</p>
+						<div class="news__img"> <img src="../assets//img/TUPIANDesktop/C2.png" alt="news"> </div>
+					</a>
+				</div>
+
+				<div class="news-slider__item swiper-slide">
+					<a href="https://www.pzhu.cn/info/1031/15749.htm" class="news__item">
+						<div class="news-date"> <span class="news-date__title">4</span> <span
+								class="news-date__txt"></span> </div>
+						<div class="news__title">何青</div>
+						<p class="news__txt">为霞漫天映金沙</p>
+						<div class="news__img"> <img src="../assets//img/TUPIANDesktop/C3.jpg" alt="news"> </div>
+					</a>
+				</div>
+
+				<div class="news-slider__item swiper-slide">
+					<a href="https://www.pzhu.edu.cn/info/1031/15041.htm" class="news__item">
+						<div class="news-date"> <span class="news-date__title">5</span> <span
+								class="news-date__txt"></span> </div>
+						<div class="news__title">刘昌庚</div>
+						<p class="news__txt">潜思精研钻学问 递薪传火育桃李</p>
+						<div class="news__img"> <img src="../assets//img/TUPIANDesktop/11.jpg" alt="news"> </div>
+					</a>
+				</div>
+
+				<div class="news-slider__item swiper-slide">
+					<a href="https://www.pzhu.edu.cn/info/1031/15010.htm" class="news__item">
+						<div class="news-date"> <span class="news-date__title">6</span> <span
+								class="news-date__txt"></span> </div>
+						<div class="news__title">帅定新</div>
+						<p class="news__txt">择一事终一生 心安处即是我乡</p>
+						<div class="news__img"> <img src="../assets//img/TUPIANDesktop/22.jpg" alt="news"> </div>
+					</a>
+				</div>
+
+				<div class="news-slider__item swiper-slide">
+					<a href="https://www.pzhu.edu.cn/info/1031/15007.htm" class="news__item">
+						<div class="news-date"> <span class="news-date__title">1</span> <span
+								class="news-date__txt"></span> </div>
+						<div class="news__title">息建国</div>
+						<p class="news__txt">恪尽职守 诲人不倦</p>
+						<div class="news__img"><img src="../assets//img/TUPIANDesktop/33.jpg" alt="news""> </div>
+				</a>
+			</div>
+		</div>
+		
+		<div class=" news-slider__ctr">
+
+							<div class="news-slider__arrows">
+								<button class="news-slider__arrow news-slider-prev">
+									<span class="icon-font">
+										<svg class="icon icon-arrow-left">
+											<use xlink:href="#icon-arrow-left"></use>
+										</svg>
+									</span>
+								</button>
+
+								<button class="news-slider__arrow news-slider-next">
+									<span class="icon-font">
+										<svg class="icon icon-arrow-right">
+											<use xlink:href="#icon-arrow-right"></use>
+										</svg>
+									</span>
+								</button>
+							</div>
+							<div class="news-slider__pagination"></div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+			.fanhui {
+				position: absolute;
+				margin-top: 190%;
+				background: linear-gradient(to right, #737dfe, #ffcac9 70%);
+				border: none;
+				/* 移除边框 */
+				color: white;
+				/* 设置文本颜色 */
+				padding: 10px 20px;
+				/* 设置按钮内部填充 */
+				text-align: center;
+				/* 居中对齐文本 */
+				text-decoration: none;
+				/* 去除下划线 */
+				display: inline-block;
+				/* 将按钮作为行内元素 */
+				font-size: 16px;
+				/* 设置文本字号 */
+				border-radius: 5px;
+				/* 设置圆角 */
+				cursor: pointer;
+				/* 鼠标悬停时显示光标 */
+				z-index: 99;
+			}
+
+			/* 鼠标悬停样式 */
+			.fanhui:hover {
+				background-color: #3e8e41;
+			}
+		</style>
+		<script type="text/javascript">
+			function fun9() {
+				window.location.href = "index.html#section"
+			}
+		</script>
+
+		<svg hidden="hidden">
+			<defs>
+				<symbol id="icon-arrow-left" viewBox="0 0 32 32">
+					<title>arrow-left</title>
+					<path
+						d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
+					</path>
+				</symbol>
+				<symbol id="icon-arrow-right" viewBox="0 0 32 32">
+					<title>arrow-right</title>
+					<path
+						d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
+					</path>
+				</symbol>
+			</defs>
+		</svg>
+
+		<script src="../assets//js/person_js/jquery.min.js"></script>
+		<script src='../assets//js/person_js/swiper.min.js'></script>
+		<script src="../assets//js/person_js/script.js"></script>
+		<div class="line3">
+			<h1>名师访谈</h1>
+		</div>
+</body>
+
+</html>

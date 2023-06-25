@@ -1,0 +1,150 @@
+body {
+    background-image: url(../images/bg2.jpg);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+*{
+    font-family: 'xk';
+}
+
+.swiper-slide img {
+    width: 80%;
+    height: 300px;
+    border: 1px solid #00000025;
+}
+
+header>nav {
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    height: 50px;
+    background-color: #386add;
+}
+
+header>nav>span.layui-breadcrumb a {
+    color: white !important;
+    font-size: 20px;
+}
+
+hr {
+    color: transparent;
+}
+
+span.line {
+    height: 5px;
+    width: 100%;
+    display: block;
+    background-color: brown;
+}
+
+.swiper-slide img {
+    width: 80%;
+    height: 300px;
+    border: 1px solid #00000025;
+}
+
+.layui-panel {
+    background-color: #ffffff9c;
+    height: 450px;
+    text-align: center;
+}
+
+.layui-panel p {
+    line-height: 50px;
+    text-align: center;
+    /* font-family: 'sxt'; */
+    font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
+    color: #386add;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.active {
+    width: 450px;
+}
+
+.inactive {
+    height: 300px;
+    width: 50px;
+}
+
+.inactive:nth-child(n+6) {
+    display: none;
+}
+
+.active,
+.inactive {
+    transition: height 1s ease-in-out, width 1s ease-in-out;
+}
+
+.banner {
+    text-align: center;
+}
+
+.left {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-size: 80px;
+    height: 300px;
+    line-height: 300px;
+    margin-left: 5%;
+}
+
+.right {
+    position: absolute;
+    width: 100px;
+    right: 5%;
+    top: 5%;
+    font-size: 80px;
+    height: 300px;
+    line-height: 300px;
+    margin-right: 5%;
+}
+
+.nav-bar,
+blockquote {
+    background: url(../images/nav.gif);
+}
+
+@media (max-width: 844px) {
+    .inactive {
+        height: 300px;
+        width: 1px;
+        position: absolute;
+        top: 50px;
+
+    }
+
+    .banner{
+        height: 260px;
+    }
+
+    nav a{
+        font-size: 5px!important;
+    }
+
+    .swiper img{
+        width: 100%;
+    }
+
+    .layui-panel p {
+        line-height: 50px;
+        text-align: center;
+        /* font-family: 'sxt'; */
+        font-weight: 700;
+        font-size: 16px;
+        font-weight: 700;
+        color: #386add;
+    }
+}

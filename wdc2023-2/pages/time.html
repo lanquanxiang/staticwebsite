@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="./css/time.css"> -->
+	<link href="../assets/css/time/styles.css" media="all" rel="stylesheet">
+	<link rel="stylesheet" href="../vendor/layui/css/layui.css">
+	<title>历史发展</title>
+	<style type="text/css">
+		.nav {
+			width: 100%;
+			height: 85px;
+			position: fixed;
+			top: 0;
+			background: linear-gradient(to right, #737dfe, #ffcac9 70%);
+			z-index: 999;
+		}
+
+		.nav .navText {
+			position: absolute;
+			color: #ffffff;
+			font-size: 20px;
+			margin-top: -6px;
+			padding-left: 30px;
+			font-weight: bold;
+			font-family: STXinwei;
+		}
+
+		.nav ul {
+			width: 500px;
+			height: 80px;
+			float: right;
+			text-align: center;
+			line-height: 80px;
+
+		}
+
+		.nav ul>li {
+			list-style: none;
+			width: auto;
+			height: 60px;
+			float: right;
+			font-size: 20px;
+			font-family: "pingfang SC", "helvetica neue", arial, "hiragino sans gb",
+				"microsoft yahei ui", "microsoft yahei", "simsun", sans-serif;
+			margin-right: 20px;
+			margin-top: -6px;
+
+		}
+
+		.nav ul>li a {
+			text-decoration: none;
+			color: #b60d13;
+			font-weight: bold;
+		}
+
+		.nav ul>li:hover a {
+			color: white;
+		}
+
+		.box {
+			margin: 10%;
+		}
+
+		.textarea {
+			width: 500px;
+			height: 50%;
+		}
+
+		h1 {
+			font-family: STXinwei;
+			color: steelblue;
+		}
+
+		h1+h1 {
+			color: #ff548c;
+		}
+
+		header {
+			background: linear-gradient(to right, #737dfe, #ffcac9 70%);
+			height: 80px;
+			line-height: 80px;
+		}
+
+		header>nav>.ul-md {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 100px;
+		}
+
+		header>nav>.ul-md a {
+			font-size: 20px;
+			font-weight: 700;
+			color: #b60d13;
+		}
+
+		header>nav>.ul-md a:hover {
+			color: #fff;
+		}
+
+		@media screen and (max-width:768px) {
+            header>h1 {
+                font-size: 12px;
+            }
+
+            header {
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+	</style>
+</head>
+
+<body>
+	<header class="layui-row">
+		<h1 class="layui-col-md6 layui-col-xs7">行走在时光之路：攀枝花学院四十年风华</h1>
+		<nav class="layui-col-md6">
+			<ul class="layui-hide-xs ul-md">
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="./time.html" style="color: white;">学校发展</a></li>
+				<li><a href="./person.html">人物介绍</a></li>
+				<li><a href="./index4.html">今昔对比</a></li>
+				<li><a href="./qingchunhuoli.html">青春活力</a></li>
+			</ul>
+			<ul class="layui-nav layui-hide-md layui-col-xs5"
+				style="background-color: transparent;margin: 0;padding: 0;transform: translateY(-5px)">
+				<li class="layui-nav-item">
+					<a href="javascript:;" style="color: #b60d13;">菜单</i></a>
+					<dl class="layui-nav-child">
+						<dd><a href="../index.html">首页</a></dd>
+						<dd><a href="./time.html" >学校发展</a></dd>
+						<dd><a href="./person.html">人物介绍</a></dd>
+						<dd><a href="./index4.html">今昔对比</a></dd>
+						<dd><a href="./qingchunhuoli.html">青春活力</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="timeline animated">
+
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-primary"></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>提出建立</h2>
+					<p>学校的成立和发展离不开各级领导的关怀，攀枝花是四川省的一个地级市，位于中国西南部。在20世纪80年代初，当时的渡口市（今属攀枝花市）教育事业相对薄弱，缺乏高等教育机构。1982年，方毅视察渡口市时提出了办学的想法，他建议在当地创办一所大学，并表示这所大学应该具有“闻名于世”的水平。
+					</p>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-warning"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<blockquote>
+						<p>
+							方毅的倡议得到了中央政府和四川省政府的支持，随后在攀枝花市成立了攀枝花学院，这是攀枝花地区第一所高等教育机构。1983年，攀枝花学院正式开学，最初仅有两个本科专业：电信工程和计算机科学与技术。1983年攀枝花大学成立后，宋任穷、李铁映、杨汝岱、杨海波、张保庆、张学忠、张中伟等中央、部、省领导以及市历届主要领导多次来校视察并指导工作，关心支持学校的建设和发展。此后，学院逐步扩大规模，增设了更多的本科专业和研究生课程，发展成为现在的攀枝花学院。攀枝花大学的创办不仅为攀枝花提供了高等教育资源，也促进了该地区经济社会的发展。在此过程中，方毅的重要贡献不可忽视，他的倡议和支持为创立攀枝花学院铺平了道路。
+						</p>
+						<small></small>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>历史沿革</h2>
+					<img class="img-responsive" src="../assets//img/校园.webp" width="500px" height="250px" />
+					<p>学校始建于1983年成立的短期职业大学攀枝花大学，1994年，与攀枝花教育学院合并、之后，攀枝花卫生学校、攀枝花市高级技工学校、攀枝花市中西医结合医院与金江铁路医院相继并入，为学科专业注入了新鲜的活力，为本科教学工作水平的进一步提高奠定了坚实的基础。
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></div>
+			</div>
+			<section id="section"></section>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>艰苦办学历程</h2>
+					<img class="img-responsive" src="../assets//img/E1.jpg" width="500px" height="250px" />
+					<p> 40年的办学历程，全面体现了学校始终坚持和弘扬“艰苦创业、无私奉献、开拓进取、团结协作、科学求实”的攀枝花精神。上世纪60年代，由于国际局势紧张，国家随时面临战争威胁，由于攀枝花矿产资源丰富，地处国家的大后方，国家从战略安全转移需要，就把三线建设的“钉子”钉在了攀枝花，毛主席曾说，“攀枝花建立不起来我睡不好觉”。在党中央的号召下，40多万热血青年投入到以攀枝花为重心的三线建设之中，到了攀枝花才发现当时的攀枝花无水、无电、无路、无桥，吃、穿、住存在严重的问题，工作和生活条件十分艰苦，建设者们发扬“艰苦创业，无私奉献、团结协作、勇于创新”的三线精神，采用三块砖头架起一口锅，在山窝窝搭帐篷等方式克服了一切困难，终于在1966年，雅江桥和渡口大桥通车，1970年攀钢1号高炉出铁，成昆铁路通车。上世纪80年代，攀枝花发展遇到了人才补充困难，外面人才进不来，里面人才留不住，教育滞后，中央领导在视察攀枝花时发现和了解了这个问题之后，多次指示要办自己的大学，闻名于世，市委市政府也积极酝酿兴办自己的大学。
+						<a href="history.html" style="color: blue;">点击了解更多</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-primary"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>校徽</h2>
+					<img class="img-responsive" src="../assets//img/E2.jpg" width="300px" height="300px" />
+					<p>攀枝花学院校徽：，由古鼎、正圆、书、校训、校名和时间元素组成，“古鼎、正圆和书”组合暗含P、Z、H三个字母，表示学校地处攀枝花；“明德砺志、博学笃行”则是我校的校训。
+
+						<br>我校的校训是。“明德砺志、博学笃行” “明德”凝聚着教师以德树人、学生以德立身的德育思想；
+						“砺志”激励着师生坚持理想、执着追求的人生信仰；“博学笃行”警策着师生读万卷书与行万里路所带来的获取知识与实践真理的可贵。
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-warning"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<blockquote>
+						<p>
+						<h1>回顾了学校发展变革的历史，见证了攀枝花学院这颗高校之星拨开云雾、顺势生长、发光闪耀的过程，现在，让我们一起走进</h1>
+						<h1>“前进中的攀枝花学院”</h1>
+						</p>
+						<small></small>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2 style="color: #ff548c;">前进中的攀枝花学院</h2>
+					<img class="img-responsive" src="../assets//img/E3.jpg" width="500px" />
+					<p>经过四十年的不懈努力，今天的攀枝花学院已经成为了教育部布点在川西南、滇西北唯一的一所以工为主的综合性普通本科院校。（基本形成了以工为主、多学科兼容，普通高等教育、高等职业教育、成人高等教育协调发展的办学格局，初步构建了“植根攀西沃土、服务资源开发 、坚持学产研结合、培养应用型人才”的办学特色。学校曾被《中国大学排行榜》课题研究组列为近年全国发展最快的30所高校之一)。
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-primary"></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>学校概况</h2>
+					<p>目前，学校有13个教学单位、现开设了56个本科专业和
+						8个专科专业，涵盖理、工、文、法、经、管、医、艺、农9个学科门类。面向全国28个省、市、自治区招收本专科生和研究生，同时开展成人高等教育。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>办学条件</h2>
+					<p>师资队伍建设方面：目前，学校在编教职工1068人，其中，博士256人，正高级专业技术职务132人， 省市级专家、学者74人次。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>建筑与藏书体系</h2>
+					<p>截止目前，占地面积81.51万平方米，总建筑面积58.72万平方米，学校有21个实验中心，校内实验实训场所295个，省级实验教学示范中心5个，省级虚拟仿真实验教学中心1个。教学科研设备总值10个多亿，学校还拥有一个国家钒钛检测重点实验室，服务于学校科研教学和对外检测；图书馆现有图书文献总量504万册，形成理、工、文、法、经、管、医、艺、农相结合的、以工为主多学科兼容的藏书体系，一度是学生最喜爱的地方，运动场馆面积7.71万平方米。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>教育教学板块</h2>
+					<p>学校共建设有国家级特色专业1个，省级一流本科专业9个，省级特色专业7个；省级一流课程15门，省级示范课程6门，省级精品课程11门，省级创新创业教育示范课程1门。近年来，学校高度重视毕业设计（论文）规范化、科学化管理，注重过程管理，坚持执行毕业设计(论文)“三检查一评估”的过程管理制度，不断优化管理流程，严把“选题关”、“指导关”和“答辩关”，有效确保毕业设计（论文）质量。与此同时，学校积极倡导结合行业企业生产实际、科研项目、社会实践等组织毕业设计(论文)。近三年毕业论文合格率都在99%以上。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>实践平台</h2>
+					<p>学校积极完善创新创业实践平台，强力有序推进跨学院、跨学科、跨专业交叉培养的创新创业人才培养模式，逐步建立并形成包括创新创业教育、创新创业竞赛、创新创业实训、创新创业实践、创新创业研究“五位一体”的工作格局。开设《大学生就业指导教育》、《职业生涯规划》、《创业学》等相关课程，认真组织开展创新创业训练，近三年，学校共计立项大学生创新创业训练计划项目996项。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>培养人才</h2>
+					<p>目前，学校先后与45个地市县机关事业单位、40多所高等院校和科研院所建立合作关系，合作开展了300多项横向课题研究，近三年学校成功孵化创业项目30家，带动参与创业大学生超过10000人次；创业事迹还多次被相关媒体报道，为了提升人才培养质量，进行了教研教改和卓越工程计划等5大举措。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-info"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<h2>合作交流</h2>
+					<p>学校坚持开放办学，重视开展和稳步推进对外交流与合作工作，国际上：与瑞典哈姆斯塔大学、泰国商会大学等国外高校开展合作办学，2011年至今共招收95名留学生,
+						。2003年至今，学校也派出一百余名名学生出国交流与学习，）国内交流与合作方面：从1988年开始便与四川大学，西华大学等国内高校开办本专科生、研究生教育。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="timeline-row">
+			<div class="timeline-time"><small></small></div>
+			<div class="timeline-icon">
+				<div class="bg-warning"></i></div>
+			</div>
+			<div class="panel timeline-content">
+				<div class="panel-body">
+					<blockquote>
+						<p>
+						<h1>
+							<h1>40年风雨兼程，40年春华秋实。攀枝花学院作为一所优秀高校，其辉煌成就离不开众多攀枝花市民的纷纷投身与无私奉献，同时还得益于国家和社会各界的大力支持和帮助。我们要铭记历史，不忘初心，以攀枝花学院为代表，不断从过去的成功经验中吸取营养，不断创新和进步，在未来的发展过程中继续发掘自身潜力，为乡村振兴、为社会发展作出更大的贡献。
+							</h1>
+						</h1>
+
+						</p>
+						<small></small>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+		<button class="fanhui" onclick="fun9()">返回</button>
+	</div>
+	<style type="text/css">
+		.fanhui {
+			background: linear-gradient(to right, #737dfe, #ffcac9 70%);
+			border: none;
+			/* 移除边框 */
+			color: white;
+			/* 设置文本颜色 */
+			padding: 10px 20px;
+			/* 设置按钮内部填充 */
+			text-align: center;
+			/* 居中对齐文本 */
+			text-decoration: none;
+			/* 去除下划线 */
+			display: inline-block;
+			/* 将按钮作为行内元素 */
+			font-size: 16px;
+			/* 设置文本字号 */
+			border-radius: 5px;
+			/* 设置圆角 */
+			cursor: pointer;
+			/* 鼠标悬停时显示光标 */
+		}
+
+		/* 鼠标悬停样式 */
+		.fanhui:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+	<script type="text/javascript">
+		function fun9() {
+			window.location.href = "../index.html#section"
+		}
+	</script>
+
+	<script type="text/javascript" src="../assets/js/time/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../assets/js/time/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/js/time/main.js"></script>
+
+	<!-- 			<div class="box">
+				<ul id="first-list">
+					<li>
+						<span></span>
+						<div class="title"></div>
+						<div class="info">
+							学校的成立和发展离不开各级领导的关怀，攀枝花是四川省的一个地级市，位于中国西南部。在20世纪80年代初，当时的渡口市（今属攀枝花市）教育事业相对薄弱，缺乏高等教育机构。1982年，方毅视察渡口市时提出了办学的想法，他建议在当地创办一所大学，并表示这所大学应该具有“闻名于世”的水平。
+							方毅的倡议得到了中央政府和四川省政府的支持，随后在攀枝花市成立了攀枝花学院，这是攀枝花地区第一所高等教育机构。1983年，攀枝花学院正式开学，最初仅有两个本科专业：电信工程和计算机科学与技术。1983年攀枝花大学成立后，宋任穷、李铁映、杨汝岱、杨海波、张保庆、张学忠、张中伟等中央、部、省领导以及市历届主要领导多次来校视察并指导工作，关心支持学校的建设和发展。此后，学院逐步扩大规模，增设了更多的本科专业和研究生课程，发展成为现在的攀枝花学院。攀枝花大学的创办不仅为攀枝花提供了高等教育资源，也促进了该地区经济社会的发展。在此过程中，方毅的重要贡献不可忽视，他的倡议和支持为创立攀枝花学院铺平了道路。
+						</div>
+						<div class="name"></div>
+						<div class="time">
+							<span>提出建立<sup></sup></span>
+							<span></span>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div class="title"></div>
+						<div class="info">
+							学校始建于1983年成立的短期职业大学攀枝花大学，1994年，与攀枝花教育学院合并、之后，攀枝花卫生学校、攀枝花市高级技工学校、攀枝花市中西医结合医院与金江铁路医院相继并入，为学科专业注入了新鲜的活力，为本科教学工作水平的进一步提高奠定了坚实的基础。
+						</div>
+						<div class="name"></div>
+						<div class="time">
+							<span>历史沿革<sup></sup></span>
+							<span></span>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div class="title"></div>
+						<div class="info">
+							40年的办学历程，全面体现了学校始终坚持和弘扬“艰苦创业、无私奉献、开拓进取、团结协作、科学求实”的攀枝花精神。上世纪60年代，由于国际局势紧张，国家随时面临战争威胁，由于攀枝花矿产资源丰富，地处国家的大后方，国家从战略安全转移需要，就把三线建设的“钉子”钉在了攀枝花，毛主席曾说，“攀枝花建立不起来我睡不好觉”。在党中央的号召下，40多万热血青年投入到以攀枝花为重心的三线建设之中，到了攀枝花才发现当时的攀枝花无水、无电、无路、无桥，吃、穿、住存在严重的问题，工作和生活条件十分艰苦，建设者们发扬“艰苦创业，无私奉献、团结协作、勇于创新”的三线精神，采用三块砖头架起一口锅，在山窝窝搭帐篷等方式克服了一切困难，终于在1966年，雅江桥和渡口大桥通车，1970年攀钢1号高炉出铁，成昆铁路通车。上世纪80年代，攀枝花发展遇到了人才补充困难，外面人才进不来，里面人才留不住，教育滞后，中央领导在视察攀枝花时发现和了解了这个问题之后，多次指示要办自己的大学，闻名于世，市委市政府也积极酝酿兴办自己的大学。
+						</div>
+						<div class="name"><a href="history.html">点击了解更多</a></div>
+						<div class="time">
+							<span>艰苦办学<br>历程<sup></sup></span>
+							<span></span>
+						</div>
+					</li>
+				</ul>
+
+				<ul id="second-list">
+					<li>
+						<span></span>
+						<div class="title"></div>
+						<div class="info">
+							经过四十年的不懈努力，今天的攀枝花学院已经成为了教育部布点在川西南、滇西北唯一的一所以工为主的综合性普通本科院校。（基本形成了以工为主、多学科兼容，普通高等教育、高等职业教育、成人高等教育协调发展的办学格局，初步构建了“植根攀西沃土、服务资源开发
+							、坚持学产研结合、培养应用型人才”的办学特色。学校曾被《中国大学排行榜》课题研究组列为近年全国发展最快的30所高校之一)。</div>
+						<div class="name"></div>
+						<div class="time">
+							<span>前进中的<br>攀枝花学院<sup></sup></span>
+							<span></span>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div class="title"></div>
+						<div class="info">目前，学校有13个教学单位、现开设了56个本科专业和
+							8个专科专业，涵盖理、工、文、法、经、管、医、艺、农9个学科门类。面向全国28个省、市、自治区招收本专科生和研究生，同时开展成人高等教育。
+
+							目前，学校先后与45个地市县机关事业单位、40多所高等院校和科研院所建立合作关系，合作开展了300多项横向课题研究，近三年学校成功孵化创业项目30家，带动参与创业大学生超过10000人次；创业事迹还多次被相关媒体报道，为了提升人才培养质量，进行了教研教改和卓越工程计划等5大举措。
+
+						</div>
+						<div class="name"></div>
+						<div class="time">
+							<span>学校概况<sup></sup></span>
+							<span></span>
+						</div>
+					</li>
+				</ul>
+
+				<script src="../assets/js/time.js"></script>
+			</div> -->
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	/* width: 100%; */
+	height: 100%;
+	/* overflow: hidden; */
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+li {
+	display: inline-block;
+	padding: 0 20px;
+	font-size: 20px;
+}
+.box img {
+	position: absolute;
+	left: 225px;
+	top: 90px;
+}
+.button {
+  position: absolute;
+  top: 70%;
+  left: 600px;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  z-index: 999;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+#haha {
+	position: absolute !important;
+	top: 10%;
+	right: 20%;
+	text-align: initial;
+	width: 40px;
+
+}
+#haha span {
+	position: absolute;
+	color: #F6F4F3;
+	right: 60px;
+	top: 230px;
+
+}
+#haha span i {
+	font-weight: normal;
+	display: inline-block;
+	width: 1px;
+	height: 10px;
+	text-align: left;
+}
+
+
+

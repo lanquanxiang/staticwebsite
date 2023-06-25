@@ -1,0 +1,407 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta width='device-width' initial-scale='1.0' user-scalable='yes'>
+
+	<title>记忆</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: "Microsoft Yahei";
+			font-size: 14px;
+			background-color: #F1F1F1;
+		}
+
+		a,
+		a:hover {
+			text-decoration: none;
+			color: #333;
+		}
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		svg {
+			fill: currentColor;
+		}
+
+		.container p {
+			font-size: 20px;
+			line-height: 24px;
+			vertical-align: middle;
+			padding: 20px;
+		}
+
+		.mt-tabpage {
+			width: 1100px;
+			box-shadow: 0 0 5px #999;
+			background-color: #FFFFFF;
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 10px;
+			margin-left: auto;
+		}
+
+		.mt-tabpage-title {
+			height: 44px;
+			font-size: 30px;
+			background-color: #fff;
+			width: 94%;
+			margin: auto;
+			background: #fff;
+			border-bottom: 1px solid #f1f1f1;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.mt-tabpage-title .mt-tabpage-item {
+			display: inline-block;
+			width: 105px;
+			height: 44px;
+			line-height: 44px;
+			text-align: center;
+			color: #666;
+			font-size: 20px;
+		}
+
+		.mt-tabpage-title .mt-tabpage-item:hover {
+			color: #eb4537;
+		}
+
+		.mt-tabpage img:hover {
+			font-size: 20px;
+			transform: scale(1.1);
+		}
+
+		.mt-tabpage-title .mt-tabpage-item-cur {
+			color: #eb4537;
+			font-size: 24px;
+			border-bottom: 1px solid #F85B5E;
+		}
+
+		.mt-tabpage-count {
+			position: relative;
+			width: 1100px;
+			height: 1040px;
+			overflow: hidden;
+			margin-bottom: -10px;
+		}
+
+		.mt-tabpage-cont__wrap {
+			position: absolute;
+		}
+
+		.mt-tabpage-count .mt-tabpage-item {
+			width: 1100px;
+			height: 1040px;
+
+			text-align: center;
+
+		}
+
+		.slide-content {
+			padding: 0px;
+			height: 340px;
+			width: 300px;
+			float: left;
+			margin-left: 50px;
+		}
+
+		.slide-content-text {
+			height: 32px;
+			margin-top: 0px;
+			padding-top: 8px;
+			font-size: 16px;
+		}
+
+		.container {
+			height: 950px;
+			width: 1100px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 20px;
+			margin-top: 10px;
+		}
+
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.box1 {
+			width: 1100px;
+			height: 250px;
+		}
+
+		.box2 {
+			width: 1100px;
+			height: 700px;
+		}
+
+		.box1-1 {
+			width: 540px;
+			height: 250px;
+			float: left;
+			margin: 0px;
+		}
+
+		.box1-2 {
+			width: 300px;
+			height: 250px;
+			float: left;
+			margin: 0px;
+		}
+
+		.box1-3 {
+			width: 260px;
+			height: 250px;
+			float: left;
+			margin: 0px;
+		}
+
+		.box2-1 {
+			width: 275px;
+			height: 700px;
+			float: left;
+			margin: 0px;
+		}
+
+		.box2-1-1 {
+			width: 275px;
+			height: 300px;
+			margin: 0px;
+		}
+
+		.box2-1-2 {
+			width: 275px;
+			height: 400px;
+			margin: 0px;
+		}
+
+		.box2-2 {
+			width: 550px;
+			height: 700px;
+			float: left;
+			margin: 0px;
+		}
+
+		.box2-2-1 {
+			width: 550px;
+			height: 450px;
+			margin: 0px;
+		}
+
+		.box2-2-2 {
+			width: 550px;
+			height: 200px;
+			margin: 0px;
+		}
+	</style>
+	<link href="../css/banner-style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="../js/index.js"></script>
+
+	<div class="mt-tabpage" js-tab="2">
+		<div class="mt-tabpage-title">
+			<a href="javascript:;" class="mt-tabpage-item mt-tabpage-item-cur">四十周岁</a>
+			<a href="javascript:;" class="mt-tabpage-item">校园风景</a>
+			<a href="javascript:;" class="mt-tabpage-item">校内活动</a>
+		</div>
+		<div class="mt-tabpage-count">
+			<ul class="mt-tabpage-cont__wrap">
+				<li class="mt-tabpage-item">
+					<!-- img大小：550*450 -->
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/03.png" />
+						<div class="slide-content-text">升旗奏歌</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/13.jpg" />
+						<div class="slide-content-text">文艺汇演</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/05.jpg" />
+						<div class="slide-content-text">校庆风采比赛</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/10.jpg" />
+						<div class="slide-content-text">文艺绘展</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/1.png" />
+						<div class="slide-content-text">校庆篮球赛</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/19.jpg" />
+						<div class="slide-content-text">青年之家</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/18.jpg" />
+						<div class="slide-content-text">静明湖之声</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/2.png" />
+						<div class="slide-content-text">传承精神</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/album1/12.png" />
+						<div class="slide-content-text">排球比赛</div>
+					</div>
+				</li>
+				<li class="mt-tabpage-item">
+					<!-- img大小：550*450 -->
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/24.jpg" />
+						<div class="slide-content-text">樱花</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/14.jpg" />
+						<div class="slide-content-text">大王椰子</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/22.jpg" />
+						<div class="slide-content-text">攀大日出</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/25.jpg" />
+						<div class="slide-content-text">明德楼</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/05.jpg" />
+						<div class="slide-content-text">塘中荷花</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/06.jpg" />
+						<div class="slide-content-text">湖上倒影</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/road.png" />
+						<div class="slide-content-text">香樟路</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/08.jpg" />
+						<div class="slide-content-text">学校长廊</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/scenery/09.jpg" />
+						<div class="slide-content-text">校园一角</div>
+					</div>
+				</li>
+				<li class="mt-tabpage-item">
+					<!-- img大小：550*450 -->
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/01.jpg" />
+						<div class="slide-content-text">学习雷锋</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/09.jpg" />
+						<div class="slide-content-text">小学捐赠</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/02.jpg" />
+						<div class="slide-content-text">创文活动</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/03.jpg" />
+						<div class="slide-content-text">三线精神宣讲</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/04.jpg" />
+						<div class="slide-content-text">爱心接力</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/05.jpg" />
+						<div class="slide-content-text">涂鸦校园</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/06.jpg" />
+						<div class="slide-content-text">致敬劳动者</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/07.jpg" />
+						<div class="slide-content-text">激情球场</div>
+					</div>
+					<div class="slide-content"><img width="300" height="300" src="../imgs/active/14.jpg" />
+						<div class="slide-content-text">社团文化节</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/mt-tabpage.js"></script>
+
+	<script>
+		$(function () {
+			$('[js-tab=2]').tab({
+				curDisplay: 1,
+				changeMethod: 'horizontal'
+			});
+
+			$('[js-tab=3]').tab({
+				curDisplay: 1,
+				changeMethod: 'horizontal'
+			});
+		});
+	</script>
+	<hr />
+
+	<br>
+
+
+
+	<iframe src="./praise.html" frameborder="0" scrolling="no" height="750" width="1500"></iframe>
+
+
+
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="../css/svg_style.css">
+	<div class="to_top">
+		<img src="../fonts/backtop.svg"></img>
+	</div>
+	<script>
+		$(function () {
+			//设置.to_top显示与消失
+			var toolTop = $(".mt-tabpage-count").offset().top;
+			toggleTool();//封装函数，这样每次刷新页面，就不会用滚动来触发fixedTools的显示与消失
+			function toggleTool() {
+				if ($(document).scrollTop() >= toolTop) {
+					$('.to_top').fadeIn();
+				} else {
+					$('.to_top').fadeOut();
+				}
+			}
+			$(window).scroll(function () {
+				toggleTool();
+				//页面滚动到某个内容区域,实现动态刷新
+			})
+			//导航至top：
+			$(".to_top").on("click", function () {
+				/*  $("body,html").stop().animate({
+					 scrollTop: 0
+				 }) */
+				// $("body").animate({ "scrollTop": top });
+				console.log(11);
+				$("html,body").animate({ scrollTop: 0 }, 1000);
+			})
+		})
+	</script>
+
+
+
+
+
+	<footer>
+		<div id="footer" style="font-size: 16px; font-family: Roboto, cursive"">
+
+			<p>攀枝花学院网页设计大赛</p><br>
+			<p>团队名：啊对对对你说什么都对队</p><br>
+			<p>设计人员：杨自强，刘杰</p>
+		</div>
+
+	</footer>
+
+</body>
+
+</html>

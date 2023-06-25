@@ -1,0 +1,57 @@
+#scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #009688;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#scroll.active {
+    opacity: 1;
+}
+
+.layui-panel{
+    background-color: rgba(255,255,255,0.6);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../images/bg1.jpg);
+    overflow-x: hidden;
+    padding: 1.25rem;
+}
+
+nav a {
+    font-size: 1.125rem !important;
+    color: black !important;
+}
+
+.layui-panel img {
+    width: 90%;
+    height: 22rem;
+}
+
+.layui-panel p {
+    font-size: 1.375rem;
+    color: rgb(84, 43, 29);
+    font-family: '华文行楷', serif;
+    margin: 10% 0;
+}
+
+hr {
+    color: transparent;
+}
+
+span.line {
+    height: 5px;
+    width: 100%;
+    display: block;
+    background-color: brown;
+}

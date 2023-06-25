@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Alimamabig';
+    src: url('../../assets/fonts/阿里妈妈大楷/阿里妈妈大楷/1MUeFIPZ6Bes.woff2') format('woff2'),
+        url('../../assets/fonts/阿里妈妈大楷/阿里妈妈大楷/1MUeFIPZ6Bes.woff') format('woff');
+}
+@font-face {
+    font-family: 'sct';
+    src: url('../../assets/fonts/手写体/鸿雷板书简体.ttf') format('ttf');
+}

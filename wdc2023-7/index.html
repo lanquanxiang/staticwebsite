@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+	<link rel="stylesheet" type="text/css" href="css/buttom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/lb.js"></script>
+	<script src="./js/jquery.lazyload.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+
+</head>
+    <meta charset="UTF-8">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        margin-top: 0;
+        background-color: #ffffff;
+		
+    }
+
+    .header {
+        padding-bottom: 40px;
+	top: 0;
+		
+    }
+	a{
+		text-decoration: none;
+	}
+
+    .tops {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		top:0;
+		z-index: 999;
+        display:flex; 
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-top: 15px;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		background-color: #13abfd;
+		margin-bottom: 50px;
+			
+    }
+    .tops div {
+		
+        display: flex;
+        height: 40px;
+        align-items: center;
+        background-color: #13abfd;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 12px;
+        box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
+        transition: 0.5s ease-in-out;
+    }
+	.tops div img{
+		align-content: flex-start;
+	}
+	
+	.top div img{
+		height: 20px;
+		align-items: flex-start;
+	}
+
+    .tops div:hover {
+        border-radius: 25px;
+    }
+
+    .tops div h5 {
+        color: white;
+        margin-left: 6px;
+    }
+
+
+    .tops h4 {
+        font-weight: bold;
+    }
+
+    .data-box {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data-div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 300px;
+        height: 430px;
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px;
+        flex: 1 0 300px;
+        box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.01);
+    }
+
+    .card:hover {
+        animation-name: myAnimation; /* 指定动画名称 */
+        animation-duration: 2s; /* 动画持续时间 */
+        animation-timing-function: ease-in-out; /* 动画缓动函数 */
+        animation-iteration-count: infinite; /* 动画循环次数 */
+    }
+
+    /*属性动画定义*/
+    @keyframes myAnimation {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.03);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .card div:first-child {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .card div:first-child div {
+        margin-left: 5px;
+    }
+
+    .card div:first-child div h5 {
+        margin-top: 3px;
+        font-size: 6px;
+    }
+
+    .card div:first-child img {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .card div:nth-child(2) {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card div:nth-child(2) h5 {
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: lightslategrey;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* 最多显示 3 行 */
+        overflow: hidden;
+    }
+
+    .card div:nth-child(2) img {
+        width: 350px;
+        height: 200px;
+        object-fit: cover;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 0 1px 35px 1px rgba(0, 0, 0, 0.1);
+        margin: auto 5px;
+    }
+
+    .but {
+        height: 50px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 5px;
+        border-width: 3px;
+        border-color: #13abfd;
+        border-style: solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    /*鼠标监控*/
+    .but:hover {
+        background-color: #13abfd;
+        color: white;
+    }
+
+    .but b {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .t-tab {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+	.btm{
+		height:60px;
+		margin-top:100px;
+	}
+	#car{
+		width: 100px;
+	}
+	
+</style>
+
+<body>
+
+<div class="header">
+    <!--头部-->
+   <div class="tops" >
+        <h4  style="color: white">攀枝花学院<small>[首页]</small></h4>
+		<img src="img/攀大logo.png"/>
+		<a><h3 style="color: white;">记录攀大</h2></a>
+		<a href="food.html" ><h3 style="color: white;">美食攀大</h3></a>
+		<a href="panda.html"><h3 style="color: white;">青春活力</h3></a>
+		<a href="https://mp.weixin.qq.com/s?__biz=MzIzMTIwNTUzMQ==&mid=2247542690&idx=1&sn=bc825978dcc08d1c44ac705441b14e5f&chksm=e8a5d856dfd25140a400e0dcb1798e5480ad78a46a2db3d380360c5ad832a6c9131770a8ac84&scene=27"><h3 style="color: white;">攀大历程</h3></a>
+    </div>
+	<!-- 滚动条 -->
+	<div class="btm" style="background-color:#ffffff;"><marquee loop="infinite" ><h1>庆祝攀枝花学院40周年校庆,展望未来,明德砺志，博学笃行!</h1></marquee></div>
+    <!--卡片列表区-->
+    <div class="data-box">
+        <!--flex适配-->
+        <div class="data-div">
+            <!--卡片-->
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="https://www.pzhu.edu.cn/__local/A/C4/82/62B362FD9FFA7C26A6D7952F1A2_B3F3DC64_D4AA.jpg?e=.jpg"/>
+                    <div class="t-tab">
+                       <h4>攀大</h4>
+                        <h5>攀枝花学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/大门.png"/>
+                    <h5>攀枝花学院（Panzhihua University）是教育部布点在川西南、滇西北的一所以工为主的综合性普通本科院校，是硕士学位授予单位， [1] 学校坐落于四川省攀枝花市。实行“省市共建，以市为主”的管理体制； [35] 入选“教育部·中兴通讯ICT产教融合创新基地项目”第二批合作高校，是四川省知识产权优势培育单位、四川省首批激励科技人员创新创业改革试点高校、四川省职务科技成果权属混合所有制改革试点单位。
+
+                    </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+			<div class="card">
+			    <div>
+			        <img class="head-icon" src="img/数计.png"/>
+			        <div class="t-tab">
+			           <h4>数计学院</h4>
+			            <h5>数学与计算机学院</h5>
+			        </div>
+			        <div>
+			            <i class="mdui-icon material-icons">more_vert</i>
+			        </div>
+			    </div>
+			
+			    <div>
+			        <img src="https://jsj.pzhu.cn/__local/F/4F/7B/58D269C078FA2B2F61C4917BA18_5EBB742B_11628.jpg"/>
+			        <h5>攀枝花学院数学与计算机学院，现有计算机科学与技术、软件工程、网络工程、信息与计算科学、数据科学与大数据技术五个本科专业。学院以“据于道 、精于用、 成于业”为办院理念，本着“学生为本、实践育人”的工作理念，推行订单式培养、工程化教育和企业级实训的办学模式，通过实践教学、专业社团、学科竞赛、工程项目和校企合作等方式，着力实现高品质就业目标。
+			        </h5>
+			    </div>
+			
+			    <div class="but">
+			        <b>阅读详细内容</b>
+			    </div>
+			</div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/农学院.jpg"/>
+                    <div class="t-tab">
+                        <h4>生化学院</h4>
+                        <h5>生物与化学工程学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/生化学院.jpg"/>
+                    <h5>攀枝花学院生物与化学工程学院以化工、生物学科为基础，立足攀西、面向西南，重在为区域资源开发服务；学院以本科教育为主，设有化学工程与工艺、生物工程、应用化学、园艺四个本科专业；培养基础理论扎实、实践动手能力强、富有团队精神的高素质工程应用型人才。
+
+学院现有专兼职教师42人，其中教授3人、副教授12人，具有博士学位教师16人（含在读），具有硕士学位教师19人，在校学生848人。学院建有各类教学实验室25个，仪器设备总值达730万。攀钢集团、德胜煤化工、华森糖业、重啤集团等大型企业与学院签有产学研合作协议，为学院学生实习与业提供了坚实的支撑。
+
+学院设有四川省钒钛工程技术钛材料实验室、细鳞片石墨深加工四川省高校实验室、攀枝花市干热河谷特色生物资源工程技术、攀枝花化工资源有效利用、攀枝花市冶金辅料实验室等科研平台；
+                    </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/艺术.png"/>
+                    <div class="t-tab">
+                        <h4>艺术学院</h4>
+                        <h5>艺术学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/艺术院.jpg"/>
+                    <h5>艺术学院创办于1994年，秉承：“志于道、励学躬行；游于艺、和而不同”的办院理念，培养具有创新精神、创业意识和职业能力的应用型艺术设计高级专门人才。现有视觉传达设计、环境设计、服装与服饰设计、产品设计、数字媒体艺术、工艺美术6个本科专业，雕刻艺术设计1个专科专业，在校生1036人。学院现有教职工58人，其中教授6人、副教授15人，博士3人，在读博士6人，硕士以上学历教师42人，硕士研究生导师2人。学院现有省级一流课程、省级虚仿项目、省级实践示范中心项目各1个，校级重点学科、校级教学团队、校级虚仿项目、校级一流专业和一流课程各1个。实验仪器设备总值达560万元，校外实习基地45个。</h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/电气球.png"/>
+
+                    <div class="t-tab">
+                        <h4>电气学院</h4>
+                        <h5>电气信息工程学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://dxxy.pzhu.cn/__local/C/C3/35/6B8F0BB2A159A995A3EA548D3D0_14D73306_91869.png"/>
+                    <h5>电气信息工程学院是学校最早成立的院系之一，现设有自动化、电气工程及其自动化、电子信息工程、测控技术与仪器四个本科专业及生产过程自动化技术一个专科专业，在校学生人数1296人。学院专兼职教师60人，其中教授9人，副教授21人；博士及在读博士9人、硕士33人；四川省学术和技术带头人后备人选1人，攀枝花市市级专家2人，校学术梯队成员6人。学院现有省级特色专业2个（自动化、电气工程及其自动化专业），省级教学团队1个，省级精品课程1门；近年来，学院主持各级科研项目30余项，出版学术著作10余部，攀枝花市科技进步二等奖2项，四川省教育教学成果一等奖1项，二等奖2项，三等奖1项。 </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/土建.png"/>
+                    <div class="t-tab">
+                        <h4>土建学院</h4>
+                        <h5>土木与建筑工程学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://tmxy.pzhu.cn/IMG_7641.JPG"/>
+                    <h5>土木与建筑工程学院始建于1984年，是我校成立最早，规模较大的院系之一。学院秉承“厚土秀木，建人筑心，微工精管，规划未来”的办学理念，形成了“433”工程应用型人才培养模式，培养具有较强执业工作能力和创新创业能力的高素质应用型人才。</h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/外国语.jpg"/>
+                    <div class="t-tab">
+                        <h4>外国语学院</h4>
+                        <h5>外国语学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://www.pzhu.cn/__local/4/2C/97/25763AA2A96B3F10EF71B35ADCE_D9D7E23D_C1F13.png"/>
+                    <h5>攀枝花学院外国语学院是攀枝花学院的二级学院。学院在四川、云南、江苏、浙江、上海、福建、广东、深圳、广西等省建立了30余个教学实习与就业基地。设有英语、商务英语和翻译3个本科专业和英语教育1个专科专业，与西华大学联合培养硕士研究生。现有学生近1000人。  </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/经管.jpg"/>
+                    <div class="t-tab">
+                        <h4>经管学院</h4>
+                        <h5>经济与管理学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://jgxy.pzhu.cn/__local/B/38/A9/A1A5369B00916911317C763EC4D_4773DF0A_15E35.jpg"/>
+                    <h5>学院具有三十七年的办学历史，秉承“通管达理、经世济民”的办院理念，致力于培养高素质应用型经管人才。学院开设有会计学、财务管理、工商管理、市场营销、物流管理、国际经济与贸易、大数据管理与应用7个本科专业。其中，会计学为省级特色专业、省级一流专业和省级应用型示范专业，物流管理为省级专业综合改革试点专业，工商管理为校级特色专业。现有“中国攀西康养产业发展研究中心”和“资源型城市发展研究中心”两个省级重点研究基地。   </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/钒钛学院.jpg"/>
+
+                    <div class="t-tab">
+                        <h4>钒钛学院</h4>
+                        <h5>钒钛学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://ftxy.pzhu.cn/TP1.jpg"/>
+                    <h5>2018年1月8日，学校在原材料工程学院、资源与环境工程学院、攀西科技创新中心、检测中心等基础上创新组建了钒钛学院，秉承“钒品钛质、大美于是”的办院理念，致力于培养优秀的钒钛产业应用型人才，服务攀西试验区钒钛产业转型升级。      </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/法学院.png"/>
+
+                    <div class="t-tab">
+                        <h4>法学院</h4>
+                        <h5>法学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://law.pzhu.cn/__local/E/23/68/8C153713D80CB3C7A4336159A09_4540B765_4460E.jpg"/>
+                    <h5>数据在内存中的地址也称为指针，如果一个变量存储了一份数据的指针，我们就称它为指针变量。
+
+                        在C语言中，允许用一个变量来存放指针，这种变量称为指针变量。指针变量的值就是某份数据的地址，这样的一份数据可以是数组、字符串、函数，也可以是另外的一个普通变量或指针变量。
+
+                        现在假设有一个 char 类型的变量 c，它存储了字符 'K'（ASCII码为十进制数 75），并占用了地址为 0X11A
+                        的内存（地址通常用十六进制表示）。另外有一个指针变量 p，它的值为 0X11A，正好等于变量 c 的地址，这种情况我们就称
+                        p 指向了 c，或者说 p 是指向变量 c 的指针。
+                    </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/智能学院.jpg"/>
+                    <div class="t-tab">
+                        <h4>智能制造学院</h4>
+                        <h5>智能制造学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://znzz.pzhu.cn/__local/5/46/74/3F437DB3C3B696975C32F1DB2BF_5E4B5C0A_909E.png"/>
+                    <h5>数据在内存中的地址也称为指针，如果一个变量存储了一份数据的指针，我们就称它为指针变量。
+
+                        在C语言中，允许用一个变量来存放指针，这种变量称为指针变量。指针变量的值就是某份数据的地址，这样的一份数据可以是数组、字符串、函数，也可以是另外的一个普通变量或指针变量。
+
+                        现在假设有一个 char 类型的变量 c，它存储了字符 'K'（ASCII码为十进制数 75），并占用了地址为 0X11A
+                        的内存（地址通常用十六进制表示）。另外有一个指针变量 p，它的值为 0X11A，正好等于变量 c 的地址，这种情况我们就称
+                        p 指向了 c，或者说 p 是指向变量 c 的指针。
+                    </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/文.png"/>
+
+                    <div class="t-tab">
+                        <h4>文学院</h4>
+                        <h5>文学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://wxy.pzhu.cn/__local/B/5A/AC/C2880AF8ACDA5302BB3146E21BB_53E89FD9_17019.jpg"/>
+                    <h5>文学院是攀枝花学院办学历史最悠久的教学单位之一，办学历史悠久、办学基础牢固、办学成效显著。1984年，攀枝花大学第一届招生，即招收了中文师资、中文秘书两个专业。学院现有汉语言文学、秘书学两个本科专业，学前教育一个专科专业。在校学生近900人。 </h5>
+                </div>
+
+                <div class="but" id="car">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img class="head-icon" src="img/医学院.jpg"/>
+
+                    <div class="t-tab">
+                        <h4>医学院</h4>
+                        <h5>基础医学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://yxx.pzhu.edu.cn/__local/B/33/B2/2CB1B249E0B9B0E658BFFFFC203_F6A612D4_144A9.png"/>
+                    <h5>医学院前身为始建于1972年12月的“四川省渡口卫生学校”，1998 年8月卫校并入攀枝花大学，成立攀枝花大学医学系，并保留“四川省攀枝花卫生学校”校名，2006年12月医学系更名为医学院。
+
+学院现有1个临床医学本科和临床医学、医学检验技术、眼视光技术3个专科专业。临床医学（5年制本科）为四川省卓越医生教育培养计划专业，四川省一流本科专业，是学校重点建设学科，也是目前学校唯一一个在一本招生的专业。2020年通过临床医学专业认证（有效期5年），现有全日制本、专科在校学生1273人，国际留学生63人；教师998人，其中高级职称教师412人，博士18人，硕士168人。  </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+           
+            <div class="card" id="car">
+                <div>
+                    <img class="head-icon" src="img/康养.jpeg"/>
+
+                    <div class="t-tab">
+                        <h4>康养学院</h4>
+                        <h5>康养学院</h5>
+                    </div>
+                    <div>
+                        <i class="mdui-icon material-icons">more_vert</i>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://kyxy.pzhu.cn/__local/1/54/34/125266AE2A56E5EDD9DBD74D226_F2427C15_1B936.jpg"/>
+                    <h5>攀枝花学院康养学院是全国第一所以康养为特色的学院，也是一所涵盖本科、专科、中职、成人教育等多学历层次的、具有国际化特色的攀枝花学院二级学院。
+
+学院秉承“促进健康、科学养生”的办学理念，培养服务生命全周期、健康全过程具有创新精神、创业意识和职业能力的人民健康守护者。   </h5>
+                </div>
+
+                <div class="but">
+                    <b>阅读详细内容</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 漂浮 -->
+<div id="adu0" width="159" style="z-index: 10; left: 270px; position: absolute; top: 113px;"> 
+<iframe frameborder="0" src="about:blank" style="position:absolute;Z-index:-1;width:100%;height:100%;top:0;left:0;scrolling:no;filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0)"></iframe>
+    <table cellspacing="0" cellpadding="0" border="0">   
+    <tbody>   
+        <tr align="center">   
+            <td align="left"><a  onclick="_addDynClicks('wbimage',1661414865,66170)"><img src="img/校庆-2.png" width="200" height="200" border="0"></a></td> 
+        </tr>
+   
+        <tr>   
+            <td align="right" style="padding-top:1px"><table border="0" cellpadding="10" cellspacing="0"><tbody><tr><td style="background-color:#ffffff;padding:1px"><a href="javascript:showimagecloseu0();" class="closestyle274787">关闭</a></td></tr></tbody></table></td> 
+        </tr>   
+    </tbody> 
+    </table> 
+</div>
+	<script>   
+	function showimagecloseu0()   
+	{   
+	    var obju0=document.getElementById("adu0");   
+	    obju0.style.display = 'none';   
+	};   
+	//水平             //上下    
+	   
+	var xu0 = 0;yu0 = 0;   
+	   
+	var xinu0 = true; yinu0 = true;   
+	var stepu0 = 1;   
+	   
+	var delayu0 = 30;   
+	 
+	var obju0=document.getElementById("adu0");
+	var bdyu0 = document.body;  
+	    if (document.compatMode && document.compatMode != "BackCompat")
+	        bdyu0 = document.documentElement;
+	    else
+	        bdyu0 = document.body;
+	function floatADu0()
+	{
+	    var bdy_scrollTop = document.body.scrollTop | document.documentElement.scrollTop;
+	    var Lu0=Tu0=0;   
+	    var Ru0= bdyu0.clientWidth-obju0.offsetWidth;  
+	    var Bu0 = bdyu0.clientHeight-obju0.offsetHeight; 
+	    obju0.style.left = xu0 + bdyu0.scrollLeft+"px";   
+	    obju0.style.top = yu0 + bdy_scrollTop+"px";   
+	    xu0 = xu0 + stepu0*(xinu0?1:-1);    
+	    if(xu0 < Lu0) 
+	    { 
+	        xinu0 = true;
+	        xu0 = Lu0;
+	    }  
+	    if(xu0 > Ru0)
+	    { 
+	        xinu0 = false; 
+	        xu0 = Ru0;
+	    }  
+	    yu0 = yu0 + stepu0*(yinu0?1:-1);    
+	    if(yu0 < Tu0) 
+	    { 
+	        yinu0 = true; 
+	        yu0 = Tu0; 
+	    }
+	    if(yu0 > Bu0) 
+	    { 
+	        yinu0 = false; 
+	        yu0 = Bu0; 
+	    }
+	} 
+	var itlu0;
+	if(window.navigator.userAgent.indexOf("MSIE")>=1)
+	{
+	    window.attachEvent('onload', adftu0);
+	}
+	else
+	{
+	    window.addEventListener('load',adftu0, false);
+	}
+	function adftu0()
+	{
+	    itlu0 = setInterval("floatADu0()", delayu0);   
+	}
+	    obju0.onmouseover=function(){clearInterval(itlu0);};   
+	    obju0.onmouseout=function(){itlu0=setInterval("floatADu0()", delayu0)};      
+	   
+	</script><br>
+   <footer>
+     <div id="buttom" style="font-size: 10px;">
+       <p>攀枝花学院网页设计大赛</p ><br>
+       <p>团队名：无名小卒</p ><br>
+       <p>设计人员：木怕伍沙</p >
+     </div>
+ 
+   </footer>
+</body>
+</html>

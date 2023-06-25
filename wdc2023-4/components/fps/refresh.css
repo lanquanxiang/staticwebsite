@@ -1,0 +1,12 @@
+.refresh {
+    position: fixed;
+    top: 10px; /* 将元素固定到页面顶部 */
+    left: 10px;
+    background-image: linear-gradient(to bottom, #ff0000, #800080);
+    background-clip: text;
+    -webkit-background-clip: text; /* 兼容旧版 Safari */
+    color: transparent;
+    font-size: 1.375rem;
+    font-weight: bold; /* 加粗效果更佳 */
+    z-index: 99999;
+  }

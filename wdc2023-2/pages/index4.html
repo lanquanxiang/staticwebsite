@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>今昔对比</title>
+	<link rel="stylesheet" href="../assets/css/compare.css">
+	<link rel="stylesheet" href="../assets/css/index4/style.css">
+	<link rel="stylesheet" href="../vendor/layui/css/layui.css">
+	<style type="text/css">
+		.nav {
+			width: 100%;
+			height: 85px;
+			position: fixed;
+			top: 0;
+			background: linear-gradient(to right, #737dfe,#ffcac9  70%);
+			z-index: 1;
+			line-height: 85px;
+		}
+		
+		.nav .navText {
+			position: absolute;
+			color: #ffffff;
+			font-size: 20px;
+			margin-top: -5px;
+			padding-left: 30px;
+			font-weight: bold;
+			font-family: STXinwei;
+		}
+		
+		.nav ul {
+			width: 500px;
+			height: 80px;
+			float: right;
+			text-align: center;
+			line-height: 80px;
+		}
+		
+		.nav ul>li {
+			list-style: none;
+			width: auto;
+			height: 60px;
+			float: right;
+			font-size: 20px;
+			font-family: "pingfang SC", "helvetica neue", arial, "hiragino sans gb",
+				"microsoft yahei ui", "microsoft yahei", "simsun", sans-serif;
+			margin-right: 20px;
+			margin-top: -5px;
+		
+		}
+
+		h1{
+			font-size: 30px;
+		}
+		
+		.nav ul>li a {
+			text-decoration: none;
+			color: #b60d13;
+			font-weight: bold;
+		}
+		
+		.nav ul>li:hover a {
+			color: white;
+		}
+		body{
+			background-color: #fffde8;
+		}
+	</style>
+</head>
+<body class="layui-main">
+	<div class="nav">
+		<div class="navText">
+			<h1>行走在时光之路：攀枝花学院四十年风华</h1>
+		</div>
+		<ul>
+			<li><a href="./qingchunhuoli.html">青春活力</a></li>
+			<li><a href="./index4.html" style="color: white">今昔对比</a></li>
+			<li><a href="./person.html">人物介绍</a></li>
+			<li><a href="./time.html">学校发展</a></li>
+			<li><a href="../index.html" >首页</a></li>
+		</ul>
+	</div>
+	
+	<div id="app" data-state="0">
+		  <div class="ui-big-images">    
+		    <div class="ui-big-image" data-key="0">
+		      <img src="../assets/img/compare/U12.jpg" alt=""/>
+		    </div>
+		    <div class="ui-big-image" data-key="1">
+		      <img src="../assets/img/compare/Q3.jpg" alt=""/>
+			  </div>
+		    <div class="ui-big-image" data-key="2">
+		      <img src="../assets/img/compare/U17.jpg" alt=""/>
+			  </div>
+		    <div class="ui-big-image" data-key="3">
+		      <img src="../assets/img/compare/Q7.jpg" alt=""/>
+			  </div>
+		    <div class="ui-big-image" data-key="4">
+		      <img src="../assets/img/compare/Q9.jpg" alt=""/>
+			  </div>
+		    <div class="ui-big-image" data-key="5">
+		      <img src="../assets/img/compare/Q2.jpg" alt=""/>
+			  </div>
+		  </div>
+		  <div class="ui-thumbnails">
+		    <div class="ui-thumbnail" tabindex="-1" data-key="0">
+		      <img src="../assets/img/compare/U13.jpg" alt=""/>
+			  <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="1">
+		      	      <img src="../assets/img/compare/Q4.jpg" alt=""/>
+			  <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="2">
+		      	      <img src="../assets/img/compare/Q6.jpg" alt=""/>
+			  <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="3">
+		      	      <img src="../assets/img/compare/Q8.jpg" alt=""/>
+			  <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="4">
+		      	      <img src="../assets/img/compare/Q10.jpg" alt=""/>
+			  <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		    <div class="ui-thumbnail" tabindex="-1" data-key="5">
+		      	      <img src="../assets/img/compare/Q1.jpg" alt=""/>
+			  <div class="ui-cuticle" data-flip-key="cuticle"></div>
+		    </div>
+		  </div>
+		  <div class="ui-content">
+		    
+		    <nav class="ui-nav">
+		      <button id="prev" tabindex="-1" title="Previous">&lt;</button>
+		      <button id="next" tabindex="-1" title="Next">&gt;</button>
+		    </nav>
+		    
+		    <div class="ui-articles">
+		      <article class="ui-article" data-key="0">
+		        <h2 class="ui-heading">操场对比</h2>
+		        <p class="ui-paragraph"></p>
+		      </article>
+		      <article class="ui-article" data-key="1">
+		        <h2 class="ui-heading">多功能教室对比</h2>
+		        <p class="ui-paragraph"></p>
+		      </article>
+		      <article class="ui-article" data-key="2">
+		        <h2 class="ui-heading">图书馆对比</h2>
+		        <p class="ui-paragraph"></p>
+		      </article>
+		      <article class="ui-article" data-key="3">
+		        <h2 class="ui-heading">篮球场对比</h2>
+		        <p class="ui-paragraph"></p>
+		      </article>
+		      <article class="ui-article" data-key="4">
+		        <h2 class="ui-heading">宿舍对比</h2>
+		        <p class="ui-paragraph"></p>
+		      </article>
+		      <article class="ui-article" data-key="5">
+		        <h2 class="ui-heading">体育馆阶梯对比</h2>
+		        <p class="ui-paragraph"></p>
+		      </article>
+		    </div>
+		  </div>
+		</div>
+		
+	<script  src="../assets/js/index4/script.js"></script>
+	<script src='../assets/js/flipping.web.js'></script>
+	<script>
+
+		const elPrevButton = document.querySelector('#prev');
+		const elNextButton = document.querySelector('#next');
+		const flipping = new Flipping();
+
+		const elImages = Array.from(document.querySelectorAll('.ui-big-image'));
+		const elThumbnails = Array.from(document.querySelectorAll('.ui-thumbnail'));
+
+		let state = {
+		  photo: 0
+		};
+
+		function send(event) {
+		  // read cuticle positions
+		  flipping.read();
+		  
+		  const elActives = document.querySelectorAll('[data-active]');
+		  
+		  Array.from(elActives)
+		    .forEach(el => el.removeAttribute('data-active'));
+
+		  switch (event) {
+		    case 'PREV':
+		      state.photo--;
+		      // Math.max(state.photo - 1, 0);
+		      break;
+		    case 'NEXT':
+		      state.photo++;
+		      // Math.min(state.photo + 1, elImages.length - 1);
+		      break;
+		    default:
+		      state.photo = +event;
+		      break;
+		  }
+		  
+		  var len = elImages.length;
+		  // Loop Around
+		  //state.photo = ( ( state.photo % len) + len ) % len;
+		  state.photo = Math.max(0, Math.min( state.photo, len - 1) );
+
+		  Array.from(document.querySelectorAll(`[data-key="${state.photo}"]`))
+		    .forEach( el => {
+		    el.setAttribute('data-active', true);
+		  });
+		  
+		  // execute the FLIP animation
+		  flipping.flip();
+		}
+
+		elThumbnails.forEach( thumb => { 
+		  thumb.addEventListener('click', () => {
+		    send(thumb.dataset.key);
+		  });
+		});
+
+		elPrevButton.addEventListener('click', () => {
+		  send('PREV');
+		});
+
+		elNextButton.addEventListener('click', () => {
+		  send('NEXT');
+		});
+
+		send(0);
+	</script>
+</body>
+</html>

@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喜迎攀枝花学院四十周年校庆</title>
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./vendor/layui/css/layui.css">
+    <link rel="stylesheet" href="./vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="./components/iconfonts/fonts.css">
+    <link rel="stylesheet" href="./assets/css/tanchuang.css">
+    <link rel="stylesheet" href="./vendor/aos/aos.css">
+    <link rel="stylesheet" href="./components/dl/denglong.css">
+    <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./components/flower/flower.css">
+    <link rel="stylesheet" href="./components/wave/wave.css">
+    <link rel="stylesheet" href="./components/fps/refresh.css">
+    <link rel="stylesheet" href="./components/click/click.css">
+    <link rel="stylesheet" href="./components/fixedBar/fixedBar.css">
+</head>
+
+<body>
+    <div class="refresh" id="fps"></div>
+    <div id="scroll"></div>
+    <div id="lantern-component"></div>
+    <header>
+        <div class="layui-row">
+            <div class="layui-col-xs12 layui-col-md8">
+                <div class="banner">
+                    <h5>40周年倒计时</h5>
+                    <div class="timer">
+                        <span>88</span>
+                        <span>天</span>
+                        <span>88</span>
+                        <span>时</span>
+                        <span>88</span>
+                        <span>分</span>
+                        <span>88</span>
+                        <span>秒</span>
+                    </div>
+
+                    <div class="text">
+                        <h1 class="h1-left">攀</h1>
+                        <p class="animate__animated animate__bounceInLeft animate__delay-0s">金沙泱泱，攀大辉煌；天时顺遂，锦绣华章</p>
+                        <p class="animate__animated animate__fadeInRight animate__delay-1s">四秩砥砺，三线荣光；勠力奋进，玹歌铿锵</p>
+                        <p class="animate__animated animate__bounceInLeft animate__delay-2s">江河奔腾，自律更新；树惠滋兰，事业蒸蒸</p>
+                        <p class="animate__animated animate__fadeInRight animate__delay-3s">江山有待，情怀赤诚，躬逢盛事，邀约嘉明</p>
+                        <h1 class="h1-right">大</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-xs6 layui-col-md4">
+                <div class="layui-inline date-box" id="ID-laydate-static-1"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="layui-hide-md layui-show-xs">
+            <button class="layui-btn layui-btn-primary layui-btn-fluid" id="mobile-nav">
+                <i class="layui-icon">&#xe602;</i> 菜单
+            </button>
+            <div class="layui-collapse" id="nav-collapse">
+                <ul class="layui-nav layui-bg-gray layui-nav-tree" lay-filter="mobile-nav">
+                    <li class="layui-nav-item"><a href="#intro">攀大树洞</a></li>
+                    <li class="layui-nav-item"><a href="#hist">历史征程</a></li>
+                    <li class="layui-nav-item"><a href="#zilv">自律攀大</a></li>
+                    <li class="layui-nav-item"><a href="#znkx">周年快讯</a></li>
+                    <!-- <li class="layui-nav-item"><a href="#pandou">攀豆青年</a></li> -->
+                    <li class="layui-nav-item"><a href="#lingxiu">攀豆领袖</a></li>
+                    <li class="layui-nav-item"><a href="#xyzf">校友祝福</a></li>
+                    <li class="layui-nav-item"><a href="#xyfg">校园风光</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-row layui-hide-xs layui-show-md-block nav-bar">
+            <nav class="layui-nav layui-bg-gray layui-col-xs12 layui-col-md10">
+                <li class="layui-nav-item"><a href="#intro">攀大树洞</a></li>
+                <li class="layui-nav-item"><a href="#hist">历史征程</a></li>
+                <li class="layui-nav-item"><a href="#zilv">自律攀大</a></li>
+                <li class="layui-nav-item"><a href="#znkx">周年快讯</a></li>
+                <!-- <li class="layui-nav-item"><a href="#pandou">攀豆青年</a></li> -->
+                <li class="layui-nav-item"><a href="#lingxiu">攀豆领袖</a></li>
+                <li class="layui-nav-item"><a href="#xyzf">校友祝福</a></li>
+                <li class="layui-nav-item"><a href="#xyfg">校园风光</a></li>
+            </nav>
+            <div class="layui-col-xs0 layui-col-md2 logo">
+                <img class="layui-unselect" src="./assets/images/logo.min.jpg" alt="">
+            </div>
+        </div>
+
+        <section>
+            <a name="intro"></a>
+            <div class="layui-panel part" data-aos="fade-up-right">
+                <blockquote class="layui-elem-quote">
+                    <h1 class="arc-title">攀大树洞</h1>
+                </blockquote>
+                <span class="line"></span>
+                <div class="panel-container">
+                    <div class="layui-collapse intro" lay-accordion>
+                        <div class="layui-colla-item">
+                            <div class="layui-colla-title">关于我们的攀大你了解多少？</div>
+                            <div class="layui-colla-content">
+                                <ul>
+                                    <li data-aos="fade-right">
+                                        <p>5月13日上午，省人社厅党组成员、副厅长刘晓博一行到我校调研指导工作，市人社局党组书记、局长刘敏，党组成员、副局长徐洪江，校党委常委、副校长张旭辉陪同调研，相关职能部门负责同志参加调研座谈。
+                                        </p>
+                                        <img class="layui-unselect" src="./assets/images/intro/01.jpg" width="500px">
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <p>5月12日下午，副校长朱波强在外国语学院多功能厅以《加强党性修养永葆政治本色》为题讲授主题教育专题党课，外语学院、工会、保卫处、后勤管理处和资产经营公司教师党员50余人参加学习。
+                                        </p>
+                                        <img class="layui-unselect" src="./assets/images/intro/02.jpg" width="500px"
+                                            alt="">
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <p>根据学习贯彻习近平新时代中国特色社会主义思想主题教育相关工作部署，按照“学思想、强党性、重实践、建新功”的主题教育总要求，为把习近平新时代中国特色社会主义思想转化为坚定理想、锤炼党性和指导实践、推动工作的强大力量，5月12日下午，副校长张旭辉在行政楼416会议室以《全面贯彻新时代人才工作新理念新战略新举措扎实推进“人才强校”战略》为题讲授主题教育专题党课。党委组织部、人事处（党委教师工作部、职改办）、发展规划处、国际教育学院（国际交流与合作处）和经管学院教师党员60人参加党课学习。
+                                        </p>
+                                        <img class="layui-unselect" src="./assets/images/intro/03.jpg" width="500px"
+                                            alt="">
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <p>为认真贯彻落实《2019—2023年全国党员教育培训工作规划》和全省、全市组织部长会议精神，攀枝花市组织开展“百堂党课下基层”活动，5月10日和12日下午，攀枝花市档案馆一级调研员曹修源和攀枝花市委副秘书长、市委政策研究室主任付建平应邀为我校师生党员讲授党课。
+                                        </p>
+                                        <img class="layui-unselect" src="./assets/images/intro/04.jpg" width="500px"
+                                            alt="">
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <p>为不断强化学生防震减灾意识，掌握正确的应急避震知识，沉着应对、规范行动，提升应急避险能力和自救互救技能，进一步检验《突发事件应急预案》的可操作性。5月11日上午，在第15个全国防灾减灾日前夕，我校组织全体学生开展了地震应急综合演练。副校长朱波强、市应急管理局专家王建立到场指导和督查。
+                                        </p>
+                                        <img class="layui-unselect" src="./assets/images/intro/05.jpg" width="500px"
+                                            alt="">
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <p>为进一步推进警校共育，打造自律奋进、健康阳光的精神风貌，攀枝花市东区分局党支部、东华派出所党支部部分党员，攀枝花学院机关党委第五支部全体党员和学生代表共计100余人在攀枝花学院南苑运动场举行了“盘不落地
+                                            永不言弃”为主题的趣味飞盘活动。4月27日开展了预赛，5月9日举行了决赛。评选出一、二、三等奖和道德风尚奖共四支团队。</p>
+                                        <img class="layui-unselect" src="./assets/images/intro/06.jpg" width="500px"
+                                            alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <div class="layui-colla-title">有关攀大的从A到Z的故事</div>
+                            <div class="layui-colla-content">
+                                <ul>
+                                    <li data-aos="fade-right">
+                                        <p>从北到南，朝朝暮暮</p>
+                                        <p>从A到Z，点点滴滴</p>
+                                        <p>关于攀大的26张小纸条</p>
+                                        <p>留待每一位攀豆儿亲启</p>
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <h5>Advance(前进)</h5>
+                                        <p>九月温柔的风，将我带到你的身边,
+                                            此后的每一天、每一段故事,
+                                            都关乎我们前进的脚步</p>
+                                        <img class="layui-unselect" src="./assets/images/intro/07.jpg" width="500px">
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <h5>Balance(平衡)</h5>
+                                        <p>在努力学习之余享受生活，
+                                            在享受生活之时不忘学习，
+                                            我们努力在学习和生活中穿行，
+                                            寻求着难能可贵的平衡与快活。
+                                        </p>
+                                        <img class="layui-unselect" src="./assets/images/intro/08.jpg" width="500px">
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <h5>Challenge(挑战)</h5>
+                                        <p>我们步履匆匆，
+                                            我们在知识的海洋里自由徜徉，
+                                            我们在运动场上挥汗如雨，
+                                            我们肩并肩一起，
+                                            面对未知的挑战。
+                                        </p>
+                                        <img class="layui-unselect" src="./assets/images/intro/09.jpg" width="500px">
+                                    </li>
+                                    <li data-aos="fade-right">
+                                        <h5>Challenge(挑战)</h5>
+                                        <p>行走在这美如诗画的校园,
+                                            沉醉于朝霞或晚霞中,
+                                            是那么肆意洒脱,
+                                            因为这里承载了我们的理想和热爱
+                                        </p>
+                                        <img class="layui-unselect" src="./assets/images/intro/10.jpg" width="500px">
+                                    </li>
+                                    <li onclick="tofun('https://mp.weixin.qq.com/s/N0Dke-dLa2sqsF4uk7yI0g')">
+                                        ReadMore？</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <div class="layui-colla-title">惊！攀大出现大量神秘的“小动物“</div>
+                            <div class="layui-colla-content">
+                                <ul>
+                                    <li data-aos="fade-right">
+                                        <p>它们出现在各栋楼的寝室门口,
+                                            它们灵动 、可爱 、有趣,
+                                            令人爱不释手 ,
+                                            被大量挂到朋友圈调侃 ,
+                                            究竟是什么原因呢</p>
+                                    </li>
+                                    <li onclick="tofun('https://mp.weixin.qq.com/s/nVxx_igrPAgW14fVdOosGA')">
+                                        点击这里查看更多</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <div class="layui-colla-title"
+                                onclick="tofun('https://mp.weixin.qq.com/s/AhsyW4vAXsePSNJS2VvimA')">攀大温度
+                                | 热爱生活的每一度</div>
+
+                        </div>
+                        <div class="layui-colla-item">
+                            <div class="layui-colla-title">
+                                <a href='./pages/qsjs.html'>攀大的那些变化你知道多少？</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a name="hist"></a>
+            <div class="layui-panel part" data-aos="fade-up-left">
+                <blockquote class="layui-elem-quote">
+                    <h1 style="text-align: right;">历史征程</h1>
+                </blockquote>
+                <span class="line"></span>
+                <div class="panel-container">
+                    <div class="layui-timeline">
+                        <div class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis layui-icon-face-smile"></i>
+                            <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title layui-elip">2021年，学校获批硕士学位授予单位。</div>
+                            </div>
+                        </div>
+                        <div class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis layui-icon-face-smile"></i>
+                            <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title layui-elip">
+                                    2018年6月，学校与华为技术有限公司签订校企合作协议，共建攀枝花学院华为信息与网络技术学院。</div>
+                            </div>
+                        </div>
+                        <div class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis layui-icon-fire"></i>
+                            <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title layui-elip">2017年，学校入选四川省知识产权优势培育单位。</div>
+                            </div>
+                        </div>
+                        <div class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis layui-icon-face-smile"></i>
+                            <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title layui-elip">
+                                    2016年，学校入选“教育部·中兴通讯ICT产教融合创新基地项目”第二批合作高校。同年，学校入选四川省职务科技成果权属混合所有制改革试点单位。</div>
+                            </div>
+                        </div>
+                        <div class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis layui-icon-fire"></i>
+                            <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title layui-elip">2015年，学校入选四川省首批激励科技人员创新创业改革试点高校。</div>
+                            </div>
+                        </div>
+                        <div class="layui-timeline-item">
+                            <i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop layui-timeline-axis"></i>
+                            <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title layui-elip"><a href="./pages/timer.html">ReadMore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a name="zilv"></a>
+            <div class="zilv layui-row part" data-aos="fade-up" data-aos-duration="3000">
+                <div class="layui-panel layui-col-xs12 layui-col-md12">
+                    <blockquote class="layui-elem-quote">
+                        <h1 class="arc-title">自律攀大</h1>
+                    </blockquote>
+                    <span class="line"></span>
+                    <div class="panel-container">
+                        <div class="layui-col-xs12 layui-col-md4">
+                            <ul class="mune">
+                                <li onmouseover="showDiv('jiaju')">自律佳句</li>
+                                <li onmouseover="showDiv('wenhui')">自律文汇</li>
+                                <li onmouseover="showDiv('pandar')">自律攀大人</li>
+                            </ul>
+                        </div>
+                        <div class="layui-col-xs12 layui-col-md8">
+                            <div class="jiaju" id="jiaju">
+                                <ul>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1034/16042.htm">用知识改变命运，用奋斗成就未来，拼搏逐梦、不负韶华，自律自强，不负美好时代。</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1034/16041.htm">统一思想、凝心聚力、自律奋进、实干笃行，扎实推进统一战线“自律攀大人”品牌建设。</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1033/15099.htm">古人说：“师者，人之模范也。”在学生眼里，老师是“吐辞为经、举足为法”，一言一行都给学生以极大影响。</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1033/15112.htm">少而好学，如日出之阳；壮而好学，如日中之光；老而好学，如秉烛之明。</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1033/15107.htm">为学须先立志。志既立,则学问可次第着力。立志不定,终不济事。</a>
+                                    </li>
+                                    <li><a href="https://www.pzhu.cn/info/1033/15121.htm">夫祸患常积于忽微，而智勇多困于所溺，岂独伶人也哉！</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wenhui hidden" id="wenhui">
+                                <ul>
+                                    <li><a href="https://www.pzhu.cn/info/1035/15911.htm">“不自律的人就是情欲、欲望和感情的奴隶。”</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1035/15995.htm">你所逃避的，都蕴藏着你的自由。行动起来，才是摆脱焦虑与迷茫的最优解。</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1035/15994.htm">不争，乃大争。不争，则天下人与之不争。”是非也好，名利也罢，不争，方能赢得云淡风轻</a>
+                                    </li>
+                                    <li><a href="https://www.pzhu.cn/info/1035/15991.htm">“自由”，不是随心所欲，不是你想做什么就做什么。</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1035/15990.htm">一个人的行为模式，很难超出周围人的群体共识，长期处于一个圈子里，无异于困守人生的瓶颈。</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1035/15998.htm">人生就是一个酸甜苦辣的过程，有阳光明媚，也有阴霾重重；有春暖花开，也有冰霜雨雪。</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pdr hidden" id="pandar">
+                                <ul>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1031/15751.htm">【自律攀大人】专注教育十八载，实干笃行出佳绩——专访老校长洪宝书</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1031/15749.htm">【自律攀大人】为霞漫天映金沙——记攀大创建时期老同志何青教授</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1031/15187.htm">【自律攀大人】既已选择，请自律不懈——专访钒钛学院学子李锦秀</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1031/15188.htm">【自律攀大人】热爱可解行路难——专访外国语学院学子罗秋凤</a>
+                                    </li>
+                                    <li><a href="https://www.pzhu.cn/info/1031/15005.htm">【自律攀大人】执行力，才是一个人最顶级的自律—
+                                            —专访生化优秀学子周攀</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.pzhu.cn/info/1031/15008.htm">【自律攀大人】专访原攀枝花大学副校长、原攀枝花卫生学校党委书记、校长龚明生</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <a name="znkx"></a>
+            <div class="layui-panel part" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <blockquote class="layui-elem-quote">
+                    <h1>周年快讯</h1>
+                </blockquote>
+                <span class="line"></span>
+                <div class="layui-panel layui-col-xs12 layui-col-md12 znkx">
+                    <div class="panel-container layui-row">
+                        <ul class="layui-col-xs12 layui-col-md6">
+                            <li><a href="https://mp.weixin.qq.com/s/lIq-aOtJ6w7ee_tk9DIz6A">攀大40周年校庆公告（第一号）</a></li>
+                            <li><a href="https://mp.weixin.qq.com/s/oQoUtulMXAh5F7ifORLiSg">这个班同学用插画为40周年校庆献礼！</a>
+                            </li>
+                            <li><a href="https://mp.weixin.qq.com/s/HRBibBTrst_sWTUd667TWQ">40周年校庆LOGO你最想选哪几个？</a>
+                            </li>
+                            <li><a href="https://mp.weixin.qq.com/s/DaYu8m0e7YWQinOe7AnOTw">有一首专属我们的歌，需要倾听你的意见！</a>
+                            </li>
+                            <li><a href="https://mp.weixin.qq.com/s/TPaq9d4GevuuvT0LVGKCgQ">攀枝花学院40周年校庆史料、实物征集启事</a>
+                            </li>
+                            <li><a href="https://mp.weixin.qq.com/s/TkPydpdjTDLw1TZ_JhOWvA">我校召开新学期工作大会暨40周年校庆工作动员会</a>
+                            </li>
+                        </ul>
+                        <ul class="layui-col-xs12 layui-col-md6">
+                            <li><a href="https://mp.weixin.qq.com/s/Fq6uJUQ6qNQ5vJUJD6pqIA">新年献词：在团结奋斗中续写过程一流的自律华章</a>
+                            </li>
+                            <li><a href="https://mp.weixin.qq.com/s/XLIsGI9UxgXjFvyeHJFeIQ">为霞漫天映金沙——记攀大创建时期老同志何青教授</a>
+                            </li>
+                            <li><a href="https://mp.weixin.qq.com/s/TMZfd-Geq7zEGdFntdbFZw">我校第六届校运社团美食文化活动节隆重开幕</a>
+                            </li>
+                            <li><a href="https://mp.weixin.qq.com/s/MYV8h6dwBHprTwnDPBQcjA">攀枝花学院第五届“静明”大学生网络文化节</a>
+                            </li>
+                            <li><a href="https://mp.weixin.qq.com/s/EwL56aDmogWsEyApbkVAyA">强化引领 凝心聚力 助推学校高质量发展
+                                    ——学校召开2023年统战工作会</a></li>
+                            <!-- <li><a href=""></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr style="color: transparent;">
+            <a name="lingxiu"></a>
+            <div class="layui-panel part" data-aos="zoom-out-left">
+                <div class="layui-panel">
+                    <blockquote class="layui-elem-quote">
+                        <h1 style="text-align: right;">攀大领袖</h1>
+                    </blockquote>
+                    <span class="line"></span>
+                    <div class="panel-container">
+                        <div class="layui-collapse" lay-accordion>
+                            <div class="layui-colla-item">
+                                <div class="layui-colla-title">领导班子</div>
+                                <div class="layui-colla-content">
+                                    <div class="img-content">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="ld-swiper-slide swiper-slide">
+                                                    <a href="https://www.pzhu.cn/info/1233/14055.htm">
+                                                        <span class="img-item">
+                                                            <img src="./assets/images/ld/wb.jpg" alt="">
+                                                            <p>王斌，男，汉族，1973年1月生，四川广安人，1992年6月加入中国共产党，
+                                                                1994年7月参加工作，四川大学建环学院给水排水工程专业毕业，研究生学历，法学硕士，教授。
+                                                                现任攀枝花学院党委书记。</p>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="ld-swiper-slide swiper-slide">
+                                                    <a href="https://www.pzhu.cn/info/1236/14058.htm">
+                                                        <span class="img-item">
+                                                            <img src="./assets/images/ld/wsg.png" alt="">
+                                                            <p>王曙光，汉族，1964年3月生，山西临猗人，1985年12月加入中国共产党，1987年5月参加工作，法学博士，研究员，硕士生导师。
+                                                                现任四川攀枝花学院院长、党委副书记。</p>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="ld-swiper-slide swiper-slide">
+                                                    <a href="https://www.pzhu.cn/info/1234/14072.htm">
+                                                        <span class="img-item">
+                                                            <img src="./assets/images/ld/xg.jpg" alt="">
+                                                            <p>胥刚，1968年8月生，中共党员，研究员，硕士研究生导师。现任攀枝花学院党委副书记。是四川省社会科学评奖专家、省教学指导委员会委员、省社会科学高水平研究团队及四川省社科普及基地负责人，是攀枝花市有突出贡献专家、政协攀枝花市第八届、九届委员。
+                                                            </p>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="ld-swiper-slide swiper-slide">
+                                                    <a href="https://jqxy.pzhu.cn/info/1237/14068.htm">
+                                                        <span class="img-item">
+                                                            <img src="./assets/images/ld/llx.jpg" alt="">
+                                                            <p>刘立新，1967年6月生，中共党员，教授，硕士研究生导师。现任学校党委常委、副院长。教育部高等教育评估专家库成员、工程认证专家库成员、四川省高等教育学会高教专委会常务理事、四川省教学指导委员会委员、攀枝花市有突出贡献专家、政协攀枝花市第十届委员。
+                                                            </p>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="ld-swiper-slide swiper-slide">
+                                                    <a href="https://www.pzhu.cn/info/1238/14137.htm">
+                                                        <span class="img-item">
+                                                            <img src="./assets/images/ld/zbq.jpg" alt="">
+                                                            <p>朱波强，1965年5月生，中共党员，博士，教授，硕士研究生导师。现任攀枝花学院党委常委、副院长。四川省第六批学术和技术带头人后备人选、省级会计学特色专业和省级会计学一流专业负责人。
+                                                            </p>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="ld-swiper-slide swiper-slide">
+                                                    <a href="https://www.pzhu.cn/info/1238/14138.htm">
+                                                        <span class="img-item">
+                                                            <img src="./assets/images/ld/swf.jpg" alt="">
+                                                            <p>石维富，1965年6月生，中共党员，教授。现任攀枝花学院党委常委、副院长。 </p>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="ld-swiper-slide swiper-slide">
+                                                    <a href="https://www.pzhu.cn/info/1240/14139.htm">
+                                                        <span class="img-item">
+                                                            <img src="./assets/images/ld/wbin.jpg" alt="">
+                                                            <p>王兵，1967年10月生，民盟盟员，教授。现任攀枝花学院副院长。攀枝花市第十一届人民代表大会常务委员会委员、教育科学文化卫生委员会委员。
+                                                            </p>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="ld-swiper-slide swiper-slide">
+                                                    <a href="https://www.pzhu.cn/info/1241/14140.htm">
+                                                        <span class="img-item">
+                                                            <img src="./assets/images/ld/zxh.png" alt="">
+                                                            <p>张旭辉，1968年8月生，中共党员，教授，博士，硕士研究生导师。现任攀枝花学院党委常委、副院长。享受国务院政府特殊津贴专家，四川省第十一批学术和技术带头人、四川省社会科学评奖专家、四川省教书育人名师、四川省社会科学重点研究基地“中国攀西康养产业研究中心”负责人，攀枝花市委直接掌握联系高层次人才。
+                                                            </p>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <div class="layui-colla-title">中共攀枝花学院委员会（按姓氏笔画为序）</div>
+                                <div class="layui-colla-content">
+                                    <div class="bit3Mode1 bit3Mode2 fpx16 clear" style="display: block;">
+                                        <table cellspacing="10" cellpadding="100" width="100%" border="0">
+                                            <tbody>
+                                                <tr height="40">
+                                                    <td>王&nbsp;&nbsp;&nbsp;军&nbsp;</td>
+                                                    <td>王&nbsp;&nbsp;&nbsp;斌&nbsp;</td>
+                                                    <td>王明辉 &nbsp;</td>
+                                                    <td>王曙光&nbsp;</td>
+                                                    <td>石维富 &nbsp;</td>
+                                                    <td>田巨龙&nbsp;</td>
+                                                </tr>
+                                                <tr height="40">
+                                                    <td>朱云生&nbsp;</td>
+                                                    <td>朱波强&nbsp;</td>
+                                                    <td>刘立新&nbsp;</td>
+                                                    <td>苏兴仁&nbsp;</td>
+                                                    <td>廖&nbsp;&nbsp;&nbsp;红&nbsp;</td>
+                                                    <td>张&nbsp;&nbsp;&nbsp;勤&nbsp;</td>
+                                                </tr>
+                                                <tr height="40">
+                                                    <td>张旭辉&nbsp;</td>
+                                                    <td>张敬东&nbsp;</td>
+                                                    <td>周传兴&nbsp;</td>
+                                                    <td>湛红艳&nbsp;</td>
+                                                    <td>钟玉泉&nbsp;</td>
+                                                    <td>胥&nbsp;&nbsp;&nbsp;刚&nbsp;</td>
+                                                </tr>
+                                                <tr height="40">
+                                                    <td>彭&nbsp;&nbsp;&nbsp;徐&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <div class="layui-colla-title">中共攀枝花学院纪律检查委员会（按姓氏笔画为序）</div>
+                                <div class="layui-colla-content">
+                                    <div class="bit3Mode1 bit3Mode2 fpx16 clear" style="display: block;">
+                                        <table width="100%" border="0">
+                                            <tbody>
+                                                <tr height="40">
+                                                    <td>王&nbsp;&nbsp;&nbsp;超&nbsp;</td>
+                                                    <td>包家新&nbsp;</td>
+                                                    <td>许开华&nbsp;</td>
+                                                    <td>李&nbsp;&nbsp;&nbsp;勇&nbsp;</td>
+                                                    <td>张&nbsp;&nbsp;&nbsp;靖&nbsp;</td>
+                                                    <td>张清学&nbsp;</td>
+                                                </tr>
+                                                <tr height="40">
+                                                    <td>彭&nbsp;&nbsp;&nbsp;华&nbsp;</td>
+                                                    <td>彭&nbsp;&nbsp;&nbsp;徐&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <div class="layui-colla-title">攀枝花学院学术委员会</div>
+                                <div class="layui-colla-content">
+                                    <table width="100%" border="0">
+                                        <tbody>
+                                            <tr height="40">
+                                                <td>马&nbsp;&nbsp;&nbsp;兰 &nbsp;</td>
+                                                <td>王春梅&nbsp;</td>
+                                                <td>龙&nbsp;&nbsp;&nbsp;军&nbsp;</td>
+                                                <td>付&nbsp;&nbsp;&nbsp;乔&nbsp;</td>
+                                                <td>许开华&nbsp;</td>
+                                                <td>朱波强&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>李&nbsp;&nbsp;&nbsp;勇&nbsp;</td>
+                                                <td>江俊福&nbsp;</td>
+                                                <td>张&nbsp;&nbsp;&nbsp;勤&nbsp;</td>
+                                                <td>岐世峰&nbsp;</td>
+                                                <td>陈&nbsp;&nbsp;&nbsp;军&nbsp;</td>
+                                                <td>陈&nbsp;&nbsp;&nbsp;容&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>杨领航&nbsp;</td>
+                                                <td>罗钧梅&nbsp;</td>
+                                                <td>周&nbsp;&nbsp;&nbsp;敏&nbsp;</td>
+                                                <td>郑&nbsp;&nbsp;&nbsp;辉&nbsp;</td>
+                                                <td>赵&nbsp;&nbsp;&nbsp;艳&nbsp;</td>
+                                                <td>祝&nbsp;&nbsp;&nbsp;慧&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>唐&nbsp;&nbsp;&nbsp;林&nbsp;</td>
+                                                <td>梁士海&nbsp;</td>
+                                                <td>黄步光&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <div class="layui-colla-title">攀枝花学院教职工代表大会执行委员会</div>
+                                <div class="layui-colla-content">
+                                    <table width="100%" border="0">
+                                        <tbody>
+                                            <tr height="40">
+                                                <td>主&nbsp;&nbsp;&nbsp;任&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>石维富&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>副主任&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>陈&nbsp;&nbsp;&nbsp;伟&nbsp;</td>
+                                                <td>钟玉泉&nbsp;</td>
+                                                <td>蒋志强&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>委&nbsp;&nbsp;&nbsp;员&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>石维富&nbsp;</td>
+                                                <td>张旭辉&nbsp;</td>
+                                                <td>陈&nbsp;&nbsp;&nbsp;伟&nbsp;</td>
+                                                <td>钟玉泉&nbsp;</td>
+                                                <td>蒋志强&nbsp;</td>
+                                                <td>王&nbsp;&nbsp;&nbsp;军&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>田从学&nbsp;</td>
+                                                <td>姜&nbsp;&nbsp;&nbsp;龙&nbsp;</td>
+                                                <td>刘丹丹&nbsp;</td>
+                                                <td>刘继光&nbsp;</td>
+                                                <td>张颖娟&nbsp;</td>
+                                                <td>韦会平&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>李会容&nbsp;</td>
+                                                <td>向国齐&nbsp;</td>
+                                                <td>张建华&nbsp;</td>
+                                                <td>刘昌庚&nbsp;</td>
+                                                <td>蒋秀碧&nbsp;</td>
+                                                <td>蔡宏图&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>兰&nbsp;&nbsp;&nbsp;玛 &nbsp;</td>
+                                                <td>陈&nbsp;&nbsp;&nbsp;芳&nbsp;</td>
+                                                <td>冉明志&nbsp;</td>
+                                                <td>郑&nbsp;&nbsp;&nbsp;彬&nbsp;</td>
+                                                <td>赖&nbsp;&nbsp;&nbsp;奇&nbsp;</td>
+                                                <td>杨绍利&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>卿丽华&nbsp;</td>
+                                                <td>闫&nbsp;&nbsp;&nbsp;飞&nbsp;</td>
+                                                <td>高泽莉&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>秘书长&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr height="40">
+                                                <td>钟玉泉&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a name="xyzf"></a>
+            <div class="xyzf layui-panel" data-aos="zoom-out-right" style="margin-top: 1rem;">
+                <div class="layui-panel">
+                    <blockquote class="layui-elem-quote">
+                        <h1>校友祝福</h1>
+                        <label>写下你的祝福：<input type="text" id="Dmtext"></label><button id="submitDm"
+                            lay-on="msg">完成</button>
+                        <label class="liuyanban-btn"><button id="switch"><img src="./assets/images/开关.svg" alt=""
+                                    srcset=""></button></label>
+                    </blockquote>
+                    <span class="line"></span>
+                    <div id="container"></div>
+                </div>
+            </div>
+            <a name="xyfg"></a>
+            <div class="xyfg layui-panel" style="margin-top: 1rem;" data-aos="zoom-out-down">
+                <blockquote class="layui-elem-quote">
+                    <h1 style="text-align: right;">校园风光</h1>
+                </blockquote>
+                <span class="line"></span>
+                <div class="layui-panel layui-col-xs12 layui-col-md12">
+                    <div class="panel-container layui-row">
+                        <div class="layui-col-md3 layui-col-xs12">
+                            <div class="xyfg-part tq">
+                                <p><img src='./assets/images/tq/国家_地区.svg'>地区：<span id="city"></span></p>
+                                <p><img src='./assets/images/tq/天气.svg'>天气:<span id="weather"></span></p>
+                                <p><img src='./assets/images/tq/天气-风向.svg'>风向:<span id="wind"></span></p>
+                                <p><img src='./assets/images/tq/温度.svg'>温度:<span id="temp"></span></p>
+                                <p><img src='./assets/images/tq/时间.svg'>更新时间:<span id="time"></span></p>
+                            </div>
+                        </div>
+                        <div class="layui-col-md3 layui-col-xs12">
+                            <a href="./pages/panda.html#pdqn">
+                                <div class="xyfg-part jxff">
+                                    <span>攀豆儿们</span>
+                                    <img src="./assets/images/other/jxff/QQ图片20230526104415.jpg" alt="">
+                                </div>
+                            </a>
+                            <a href="./pages/panda.html#pdfj">
+                                <div class="xyfg-part jxff" style="margin-top: 5px;">
+                                    <span>学校风景</span>
+                                    <img src="./assets/images/other/pdfj/QQ图片20230526105732.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="layui-col-md2 layui-col-xs5 pdms" style="margin-top: 8px;">
+                            <a href="/pages/panda.html#pdms">
+                                <div class="xyfg-part pdms">
+                                    <span>攀大美食</span>
+                                    <img src="./assets/images/xyfg/05.jpg" alt="" srcset="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="layui-col-md3 layui-col-xs5" style="margin-top: 8px;">
+                            <a href="/pages/panda.html#sthd">
+                                <div class="xyfg-part sthd">
+                                    <span>社团活动</span>
+                                    <img src="./assets/images/other/pdst/QQ图片20230526104933.jpg" alt="" srcset="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="layui-panel sp layui-row" data-aos="zoom-out-up" style="margin-top: 10px;">
+                <div class="panel-container layui-row">
+                    <blockquote class="layui-elem-quote">
+                        <h1>关于攀大那些精彩的瞬间</h1>
+                    </blockquote>
+                    <div class="layui-col-md6 layui-col-xs12">
+                        <video src="http://76cos.zuziy.cn/47%E6%94%80.mp4" controls muted></video>
+                    </div>
+                    <div class="layui-col-md6 layui-col-xs12">
+                        <video src="http://76cos.zuziy.cn/6%20%E9%81%87%E8%A7%81%20.mp4" controls muted></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wave-container">
+            <canvas id="wave-canvas"></canvas>
+        </div>
+        <div class="foot-container">
+            <div class="layui-row">
+                <div class="layui-col-md4 layui-hide-xs">
+                    <img src="./assets/images/pdzl.png" alt="" srcset="">
+                    <p style="color: white;font-size: 18px;">攀枝花学院是教育部布点在川西南、滇西北唯一一所以工为主的综合性普通本科院校，是全国首批100所国家级创新创业学院之一。
+                    </p>
+                </div>
+                <div class="layui-col-md8 layui-col-xs12">
+                    <div class="info">
+                        攀枝花学院 地址：四川省攀枝花市东区三线大道北段10号<br>
+                        邮编：617000<br>
+                        电话：0812-3371118<br>
+                        招生咨询：0812-3370868/5712507
+                    </div>
+                    <div class="yqlj">
+                        <ul>
+                            <li>友情链接：</li>
+                            <li><a href="https://www.pzhu.cn/">攀枝花学院官网</a></li>
+                            <li><a href="https://zs.pzhu.cn/">攀枝花学院招生网</a></li>
+                            <li><a href="https://zsw.pzhu.cn/">攀枝花学院招生信息网</a></li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        Copyright © 2023 · 攀大四十周年 · 2021级网络工程2班张棋.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./vendor/layui/layui.js"></script>
+    <script src="./vendor/jquery-3.5.0/jquery-3.5.0.min.js"></script>
+    <script src="./components/timer.js"></script>
+    <script src="./components/tchuang.js"></script>
+    <script src="./vendor/aos/aos.js"></script>
+    <script src="./components/aos.js"></script>
+    <script src="./components/dl/lantern.js"></script>
+    <script src="./vendor/swiper/swiper-bundle.min.js"></script>
+    <script>
+        layui.use(function () {
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#ID-laydate-static-1',
+                position: 'static'
+            });
+        });
+    </script>
+    <script src="./assets/js/topscrool.js"></script>
+    <script>
+        function tofun(link) {
+            window.location.href = link
+        }
+    </script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper', {
+            autoplay: true,
+            loop: true,
+            effect: 'coverflow',
+            slidesPerView: 5,
+            centeredSlides: true,
+            breakpoints: {
+                // 当窗口宽度小于等于768像素且大于或等于320像素时，将slidesPerView属性更改为1
+                768: {
+                    slidesPerView: 6,
+                },
+                320: {
+                    slidesPerView: 1,
+                }
+            }
+        })
+    </script>
+    <script>
+        function showDiv(id) {
+            document.getElementById('jiaju').classList.add('hidden')
+            document.getElementById('wenhui').classList.add('hidden')
+            document.getElementById('pandar').classList.add('hidden')
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
+    <script src="./assets/js/tanmu.js"></script>
+    <script src="./assets/js/nav.js"> </script>
+    <script src="./components/click/click.js"></script>
+    <script src="./components/fps/refresh.js"></script>
+    <script src="./components/flower/flower.js"></script>
+    <script src="./components/wave/wave.js"></script>
+    <script src="./components/fixedBar/fixedBar.js"></script>
+    <script>
+        $(() => {
+            if (sessionStorage.getItem('danmu') == 1) {
+                $('#switch>img').attr('src', './assets/images/开关-开.svg')
+                $('#container').attr('style', 'height:0px')
+            } else {
+                $('#switch>img').attr('src', './assets/images/开关.svg')
+                $('#container').attr('style', 'height:400px')
+            }
+        })
+
+        $('#switch').click(() => {
+            if (sessionStorage.getItem('danmu') != 1) {
+                $('#switch>img').attr('src', './assets/images/开关-开.svg')
+                $('#container').attr('style', 'height:0px')
+                sessionStorage.setItem('danmu', 1)
+            }
+            else {
+                $('#switch>img').attr('src', './assets/images/开关.svg')
+                $('#container').attr('style', 'height:400px')
+                sessionStorage.setItem('danmu', 0)
+            }
+        })
+    </script>
+    <script>
+
+        const url = 'https://restapi.amap.com/v3/weather/weatherInfo?key=f9ff4167f7444583435adbfb9f435b67&city=510402&extensions=base'
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.lives[0])
+                $('#city').html(`${data.lives[0].province}.攀枝花市.${data.lives[0].city}`)
+                $('#weather').html(`${data.lives[0].weather}`)
+                $('#wind').html(`${data.lives[0].winddirection}`)
+                $('#temp').html(`${data.lives[0].temperature}℃`)
+                $('#time').html(`${data.lives[0].reporttime}`)
+            });
+    </script>
+</body>
+
+</html>

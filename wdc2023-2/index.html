@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./vendor/layui/css/layui.css">
+    <style>
+        header {
+            background: linear-gradient(to right, #737dfe, #ffcac9 70%);
+            height: 80px;
+            line-height: 80px;
+        }
+
+        header>nav>.ul-md {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 100px;
+        }
+
+        header>nav>.ul-md a {
+            font-size: 20px;
+            font-weight: 700;
+            color: #b60d13;
+        }
+
+        header>nav>.ul-md a:hover {
+            color: #fff;
+        }
+
+        .banner {
+            width: 90vw;
+            margin: 40px auto;
+        }
+
+        .md-banner img {
+            width: 100%;
+        }
+
+        .xs-banner img {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .project {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1152px;
+            margin: 0 auto;
+        }
+
+        .project .project-item {
+            margin: 0 15px;
+            height: 380px;
+            width: 260px;
+            background-image: url(./assets/image/a7.jpg);
+            border-radius: 20px;
+        }
+
+        .project .project-item div {
+            color: rgba(255, 254, 255, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            transition: all .1s;
+            flex-direction: column;
+        }
+
+
+        .project .project-item h1 {
+            font-size: 128px;
+        }
+
+        .project .project-item span {
+            font-size: 28px;
+        }
+
+        .project .project-item a {
+            color: #000;
+        }
+
+        .project .project-item a::before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            content: '阅读更多';
+            font-size: 18px;
+            width: 110px;
+            height: 35px;
+            margin-top: 50px;
+            background-color: #fff;
+        }
+
+        .project .project-item:hover div {
+            display: flex;
+        }
+
+        .xs-project-item {
+            background-color: #000;
+        }
+
+        #greeting-form {
+            margin-top: 50px;
+            margin-left: 10%;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 19px;
+            width: 40%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+        }
+
+        #greeting-wall {
+            margin-top: -24.5%;
+            background-color: #fff;
+            margin-left: 60%;
+            border-radius: 5px;
+            width: 25%;
+            height: 40%;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #greeting-form button[type="submit"] {
+            display: block;
+            width: 90%;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #0077cc;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        #greeting-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .layui-carousel {
+            margin: 0 auto;
+        }
+
+
+        .layui-carousel-ind ul {
+            display: none;
+        }
+
+        .layui-carousel {
+            overflow: hidden;
+            border: 10px dashed orange;
+            z-index: 50;
+        }
+
+        .donate {
+            position: relative;
+            margin-top: -5%;
+            margin-left: 10%;
+            padding: 8%;
+            z-index: 99;
+        }
+
+        .donate img {
+            --color: #8A9B0F;
+            --border: 10px;
+            --offset: 20px;
+            --gap: 5px;
+            --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)), var(--color) 0;
+            --_o: calc(3*var(--offset));
+            padding: calc(var(--gap) + var(--border)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border));
+            background: linear-gradient(var(--_c)) var(--_o) var(--_o),
+                linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+            background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+            background-repeat: no-repeat;
+            filter: grayscale(.4);
+            transition: .5s;
+            cursor: pointer;
+        }
+
+
+        .label {
+            font-size: 2.2rem;
+            background: url("./assets/image/6368077651977322227241996.png");
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: moveBg 30s linear infinite;
+            width: 500px;
+            margin: 0 auto;
+            z-index: 99;
+            transform: translateY(200px);
+        }
+        
+        @keyframes moveBg {
+            0% {
+                background-position: 0% 30%;
+            }
+            
+            100% {
+                background-position: 1000% 500%;
+            }
+        }
+        
+        .time {
+            transform: translateY(200px);
+            margin: 0 auto;
+            width: 500px;
+            color: #d99c3b;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .time div {
+            font-size: 30px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #737dfe, #ffcac9 70%);
+            z-index: -99;
+        }
+
+        @media screen and (max-width:768px) {
+            header>h1 {
+                font-size: 12px;
+            }
+
+            header {
+                height: 50px;
+                line-height: 50px;
+            }
+
+            .project {
+                width: 100vw;
+                transform: translateY(120px);
+            }
+
+            .project .project-item {
+                height: 100px;
+            }
+
+            .project .project-item h1 {
+                font-size: 28px;
+            }
+
+            .project .project-item span {
+                font-size: 18px;
+            }
+
+            .project .project-item a::before {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+
+            #greeting-form {
+                margin: 0;
+                margin-top: 160px;
+                width: 100%;
+            }
+
+            #greeting-wall {
+                margin: 0;
+                margin-top: -10px;
+                width: 100%;
+                left: 0;
+            }
+
+            .layui-carousel {
+                height: 192px !important;
+            }
+
+            .donate img {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            .time{
+                font-size: 10px;
+                width: 300px;
+            }
+            .label{
+                font-size: 18px;
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="layui-row">
+        <h1 class="layui-col-md6 layui-col-xs7">行走在时光之路：攀枝花学院四十年风华</h1>
+        <nav class="layui-col-md6">
+            <ul class="layui-hide-xs ul-md">
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./pages/time.html">学校发展</a></li>
+                <li><a href="./pages/person.html">人物介绍</a></li>
+                <li><a href="./pages/index4.html">今昔对比</a></li>
+                <li><a href="./pages/qingchunhuoli.html">青春活力</a></li>
+            </ul>
+            <ul class="layui-nav layui-hide-md layui-col-xs5"
+                style="background-color: transparent;margin: 0;padding: 0;transform: translateY(-5px)">
+                <li class="layui-nav-item">
+                    <a href="javascript:;" style="color: #b60d13;">菜单</i></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="./index.html">首页</a></dd>
+                        <dd><a href="./pages/time.html">学校发展</a></dd>
+                        <dd><a href="./pages/person.html">人物介绍</a></dd>
+                        <dd><a href="./pages/index4.html">今昔对比</a></dd>
+                        <dd><a href="./pages/qingchunhuoli.html">青春活力</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner layui-row">
+            <div class="md-banner layui-col-md12 layui-hide-xs" id="banner">
+                <img id="img" src="./assets/image/640.gif" alt="" srcset="">
+            </div>
+            <div class="layui-hide-md layui-col-xs12 xs-banner">
+                <img src="./assets/image/640.gif" alt="" srcset="">
+            </div>
+        </div>
+        <div class="project layui-row">
+            <div class="project-item">
+                <div class="layui-anim layui-anim-up">
+                    <h1>01</h1><span >时光之路</span>
+                    <p id="section"><a href="./pages/time.html">
+                </div></a></p>
+            </div>
+            <div class="project-item">
+                <div class="layui-anim layui-anim-up">
+                    <h1>02</h1><span>名人堂</span>
+                    <p><a href="./pages/person.html">
+                </div></a></p>
+            </div>
+            <div class="project-item">
+                <div class="layui-anim layui-anim-up">
+                    <h1>03</h1><span>璀璨校友</span>
+                    <p><a href="./pages/youxiuxiaoyou.html">
+                </div></a></p>
+            </div>
+            <div class="project-item">
+                <div class="layui-anim layui-anim-up">
+                    <h1>04</h1><span>青春活力</span>
+                    <p><a href="./pages/qingchunhuoli.html">
+                </div></a></p>
+            </div>
+        </div>
+        <div class="liuyan layui-row">
+            <form id="greeting-form" class="layui-col-md6">
+                <img src="./assets/image/zaixianzhufu.png" alt=""><br>
+                <label for="name-input">姓名：</label>
+                <input type="text" id="name-input" name="name" required /><br />
+                <label for="message-input">祝福语：</label>
+                <textarea id="message-input" name="message" rows="5" cols="30" maxlength="200"
+                    required></textarea><br />
+                <button type="submit" name="submit-btn">发送祝福</button>
+            </form>
+            <div id="greeting-wall" class="layui-col-md6">
+                <h2>祝福墙</h2>
+                <ul id="greeting-list"><img src="./assets/image/zhufu.png" alt=""></ul>
+            </div>
+        </div>
+        <div class="layui-carousel layui-row" id="ID-carousel-image">
+            <div carousel-item>
+                <div><img src="./assets/image/schoolscenery/a1.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a2.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a3.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a4.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a5.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a6.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a7.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a8.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a9.jpg" alt="" /></div>
+                <div><img src="./assets/image/schoolscenery/a10.jpg" alt="" /></div>
+            </div>
+        </div>
+        <div class="donate">
+            <img src="./assets/image/U5.jpg" width="250px" height="250px" onclick="fun()">
+            <img src="./assets/image/U6.jpg" style="--color:#4ECDC4" width="250px" height="250px" onclick="fun1()">
+            <img src="./assets/image/U7.jpg" style="--color:#FF6B6B" width="250px" height="250px" onclick="fun2()">
+        </div>
+
+        <div class="middle">
+            <h1 class="label" id="newYear">距离攀枝花学院四十周年倒计时</h1>
+            <div class="time">
+                <span>
+                    <div id="d">
+                        00
+                    </div>
+                    Days
+                </span> <span>
+                    <div id="h">
+                        00
+                    </div>
+                    Hours
+                </span> <span>
+                    <div id="m">
+                        00
+                    </div>
+                    Minutes
+                </span> <span>
+                    <div id="s">
+                        00
+                    </div>
+                    Seconds
+                </span>
+            </div>
+        </div>
+
+        <script src="./assets/js/index_daojishi.js"></script>
+        <script src="./vendor/layui/layui.js"></script>
+        <script src="./assets/js/jquery.min.js"></script>
+        <script>
+            const multiple = 40;
+            const mouseOverContainer = document.getElementById('banner')
+            const element = document.getElementById('img')
+
+            const transformElement = (x, y, z) => {
+                let box = element.getBoundingClientRect();
+                let calcX = -(y - box.y - (box.height / 2)) / multiple;
+                let calcY = (x - box.x - (box.width / 2)) / multiple;
+                let calcZ = (z - box.z - (box.width / 2)) / multiple;
+                element.style.transform = "rotateX(" + calcX + "deg) "
+                    + "rotateY(" + calcY + "deg)";
+            }
+            mouseOverContainer.addEventListener('mousemove', (e) => {
+                window.requestAnimationFrame(function () {
+                    transformElement(e.clientX, e.clientY);
+                });
+            });
+        </script>
+        <script>
+            // 获取表单和祝福列表元素
+            const greetingForm = document.querySelector("#greeting-form");
+            const greetingList = document.querySelector("#greeting-list");
+
+            //用于接收所有的弹幕
+            var arr = []
+            // 监听表单提交事件
+            greetingForm.addEventListener("submit", (event) => {
+
+                // 阻止表单默认的提交行为
+                event.preventDefault();
+
+                // 获取表单中的姓名和祝福语
+                const nameInput = greetingForm.querySelector("#name-input");
+                const messageInput = greetingForm.querySelector("#message-input");
+                const name = nameInput.value.trim();
+                const message = messageInput.value.trim();
+
+                // 如果姓名或祝福语为空，则不发送祝福
+                if (!name || !message) {
+                    alert("请输入姓名和祝福语！");
+                    return;
+                }
+                var span = $("<span class=\"danmu\"></span>").text(name + "发送了祝福:" + message)
+                span.css({
+                    left: 400,
+                    top: 100,
+                    top: Math.floor(100 + Math.random() * (230 - 100)),
+                    color: color()
+                })
+                arr.push(span);
+                for (var i = 0; i < arr.length; i++) {
+                    arr[i].appendTo("#greeting-wall")
+                    addInterval(arr[i])
+                }
+
+
+                //循环方法
+                function addInterval(span) {
+                    var setInter = setInterval(function () {
+                        span.css({
+                            left: parseInt(span.css("left")) - 5
+                        })
+                        if (parseInt(span.css("left")) == 0) {
+                            span.css({
+                                left: 400
+                            })
+                        }
+                    }, 100);
+                }
+                //重置输入框的值
+                nameInput.value = "";
+                messageInput.value = "";
+            })
+            //字体颜色
+            function color() {
+                var r = Math.floor(Math.random() * 256)
+                var g = Math.floor(Math.random() * 256)
+                var b = Math.floor(Math.random() * 256)
+                return "rgb(" + r + "," + g + "," + b + ")"
+            }
+        </script>
+        <script>
+            layui.use(function () {
+                var carousel = layui.carousel;
+                carousel.render({
+                    elem: '#ID-carousel-image',
+                    width: '65vw',
+                    height: '350px',
+                    interval: 3000
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            function fun() {
+                window.location.href = "https://www.pzhu.cn/whpd/zlpdr.htm";
+            }
+            function fun1() {
+                window.location.href = "https://board.pzhu.cn/content.jsp?urltype=news.NewsContentUrl&wbtreeid=1031&wbnewsid=3381";
+            }
+            function fun2() {
+                window.location.href = "https://jsj.pzhu.cn/";
+            }
+        </script>
+</body>
+
+</html>

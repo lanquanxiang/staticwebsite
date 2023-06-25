@@ -1,0 +1,30 @@
+#drag-element {
+    width: 100px;
+    height: 100px;
+    background: url(../../assets/images/吊坠_正方形.svg);
+    background-size: contain;
+    position: fixed;
+    top: 0px;
+    right: 100px;
+    transition: top .3s ease-out;
+    cursor: pointer;
+    z-index: 999999;
+}
+
+#drag-element.dragging {
+    top: 0;
+}
+
+#drag-line {
+    position: fixed;
+    top: 0;
+    right: 150px;
+    width: 2px;
+    background-color: black;
+    display: none;
+}
+
+.show-line {
+    display: block!important;
+    z-index: 999999;
+}

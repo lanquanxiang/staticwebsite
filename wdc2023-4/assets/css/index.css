@@ -1,0 +1,744 @@
+* {
+    font-family: 'xk', '楷体';
+    font-weight: 500;
+}
+
+
+.layui-timeline-title:hover {
+    color: red;
+    opacity: 0.8;
+
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+a {
+    transition: color 0.5s ease;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-image: url(../../assets/images/bg1.jpg);
+    padding: 10px;
+}
+
+header {
+    background-image: url(../../assets/images/banner.jpg);
+    width: 100%;
+    height: 400px;
+    border: 1px solid #000;
+    /* border-radius: 1.875rem; */
+    overflow: hidden;
+    color: aliceblue;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+
+}
+
+.banner>h5 {
+    text-align: center;
+    margin: 20px;
+    font-size: 3rem;
+}
+
+.banner>.timer {
+    text-align: center;
+}
+
+.banner>.timer>span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 2.5rem;
+    /* background-color: red; */
+}
+
+.banner>.text {
+    margin: 60px;
+    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.banner>.text>.h1-left {
+    position: absolute;
+    left: 5rem;
+    bottom: 2.8rem;
+    font-size: 2.875rem;
+}
+
+.banner>.text>.h1-right {
+    position: absolute;
+    right: 5rem;
+    bottom: 2.8rem;
+    font-size: 2.875rem;
+}
+
+
+.layui-text {
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.date-box {
+    border-radius: 1.875rem;
+    width: 100%;
+    text-align: center;
+    height: 400px;
+    margin-top: 1.875rem;
+}
+
+nav {
+    /* background-color: rgb(200, 62, 62); */
+    height: 80px;
+    padding: 0;
+}
+
+nav>ul {
+    margin: 0;
+    height: 100%;
+    line-height: 80px;
+    /* background-color: rgb(255, 255, 255) !important; */
+}
+
+.layui-nav * {
+    font-size: 1.575rem;
+}
+
+.layui-bg-gray {
+    background-color: rgba(255, 255, 255, .5) !important;
+    color: #5f5f5f !important;
+}
+
+
+.layui-unselect {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.nav-fixed {
+    display: flex;
+    top: 1px;
+}
+
+#scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, blue, pink);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#scroll.active {
+    opacity: 1;
+}
+
+
+
+.intro>.layui-colla-item>.layui-colla-title {
+    font-size: 1.375rem;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.layui-panel {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 8%);
+    /* background-color: #f4433617; */
+    color: #5f5f5f;
+}
+
+.layui-colla-title {
+    position: relative;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 15px 0 35px;
+    color: #333;
+    background-color: #fafafaa3;
+    cursor: pointer;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.layui-laydate-footer {
+    display: none;
+}
+
+.layui-laydate,
+.layui-laydate-hint {
+    border: 1px solid #d2d2d2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+    background-color: #e91e630f;
+    color: #000000;
+}
+
+.intro .layui-colla-content ul>li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.intro .layui-colla-content ul>li>p {
+    font-size: 1.3rem;
+    color: #000000cb;
+}
+
+.layui-panel>h1,
+.layui-panel>h1 {
+    font-size: 40px;
+}
+
+.pandou .swiper-slide img {
+    width: 25rem;
+    height: 20rem;
+    border: 1px solid #000;
+    border-radius: 1.25rem;
+}
+
+.pandou .swiper-slide .text {
+    font-size: 1.5rem;
+    height: 100%;
+    line-height: 3.875rem;
+    color: coral;
+    padding: 10px;
+}
+
+section>.part {
+    margin-top: 10px;
+    /* border-radius: 1.875rem; */
+}
+
+.layui-laydate,
+.layui-laydate-hint {
+    border: 1px solid #d2d2d200;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+    background-color: #ffffff00;
+    color: #777;
+}
+
+span.line {
+    height: 5px;
+    width: 100%;
+    display: block;
+    background-color: brown;
+}
+
+.layui-carousel img {
+    width: 30.9375rem;
+    height: 100%;
+}
+
+.layui-carousel>[carousel-item]>* {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f800;
+    transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+}
+
+.layui-carousel {
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: #f8f8f800;
+}
+
+.zilv .mune {
+    margin-left: 100px;
+}
+
+.zilv .mune>li {
+    font-size: 1.2rem;
+    text-align: center;
+    height: 60px;
+    margin: 20px 0;
+    width: 100px;
+    line-height: 60px;
+    background-color: rgb(234, 255, 0);
+    position: relative;
+    /* 父级元素设置为相对定位 */
+}
+
+.zilv .mune>li::after {
+    content: "";
+    display: block;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid rgb(234, 255, 0);
+    /* 左边为对角线长度的一半，右边为0 */
+    position: absolute;
+    /* 绝对定位在父级元素左侧 */
+    left: 100px;
+    /* 偏移量为该元素宽度的负值 */
+    top: 50%;
+    /* 垂直居中 */
+    transform: translateY(-50%);
+    /* 上下平移一半自身高度实现垂直居中 */
+}
+
+.zilv .jiaju {
+    margin-top: 20px;
+}
+
+.zilv .jiaju li,
+.wenhui li,
+.pdr li {
+    margin-top: 1rem;
+    height: 20px;
+    font-size: 1.125rem;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block
+}
+
+#container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+
+.znkx li {
+    margin: 1.25rem 0;
+}
+
+.znkx li>a:hover {
+    color: red;
+}
+
+
+
+.layui-colla-content {
+    transition: all 0.3s ease-out;
+}
+
+.layui-colla-item .layui-colla-title {
+    cursor: pointer;
+}
+
+.layui-colla-item .layui-colla-title:hover {
+    color: #1E9FFF;
+}
+
+
+.img-item {
+    position: relative;
+    display: inline-block;
+}
+
+.img-item>img {
+    width: 200px;
+    height: 300px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.img-item p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 85%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.img-item:hover p {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.layui-bg-gray {
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: #5f5f5f !important;
+}
+
+.layui-laydate,
+.layui-laydate-hint {
+    border: 1px solid #d2d2d200;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+    background-color: #ffffff00;
+    color: #fff;
+}
+
+.layui-laydate tbody td {
+    color: white;
+}
+
+.nav-bar,
+blockquote {
+    background: url(../images/nav.gif);
+}
+
+.foot-container {
+    margin-top: 10px;
+    height: 150px;
+    background-color: #aa0000;
+    padding: 10px;
+}
+
+.foot-container .row p {
+    font-size: 20px;
+    color: white;
+}
+
+.foot-container .layui-col-md8,
+.yqlj ul a {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+
+.foot-container .layui-col-md8 .yqlj ul {
+    display: flex;
+    justify-content: center
+}
+
+.foot-container .layui-col-md8 .yqlj ul>li {
+    margin-right: 20px;
+}
+
+.liuyanban-btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.liuyanban-btn>button {
+    position: absolute;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.liuyanban-btn>button>img {
+    width: 70px;
+    height: 50px;
+}
+
+.layui-colla-content {
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 15px;
+    line-height: 1.6;
+    color: #5f5f5f;
+}
+
+.layui-show {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.panel-container {
+    padding: 32px;
+}
+
+.xyfg {
+    height: 350px;
+}
+
+
+.xyfg-part {
+    padding: 10px;
+    height: 200px;
+    font-size: 1.25rem;
+    background-color: white;
+    border-radius: 20px;
+    color: #000;
+    text-align: left;
+    line-height: 40px;
+}
+
+.sp {
+    height: 420px;
+}
+
+.sp video {
+    width: 100%;
+    height: 300px;
+}
+
+.xyfg-part:hover {
+    animation: jump 0.5s infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.tq img {
+    width: 20px;
+}
+
+.jxff {
+    margin-left: 50px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+}
+
+.jxff img {
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.jxff span {
+    position: absolute;
+    font-size: 30px;
+    top: 25%;
+    left: 25%;
+}
+
+.pdms {
+
+    text-align: center;
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.pdms img {
+    height: 100%;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.pdms span {
+    position: absolute;
+    font-size: 30px;
+    writing-mode: vertical-lr;
+    right: 40%;
+    top: 25%;
+}
+
+.sthd img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sthd span {
+    position: absolute;
+    font-size: 30px;
+    right: 25%;
+    top: 35%;
+}
+
+#container div {
+    font-family: 'sxt' !important;
+}
+
+
+@media (max-width: 844px) {
+    .banner>.text {
+        margin: 30px;
+        text-align: center;
+        position: relative;
+        font-size: 1px;
+    }
+
+    .date-box {
+        display: none;
+    }
+
+    .banner .text h1 {
+        display: none;
+    }
+
+    .banner>div.timer>span {
+        display: inline-block;
+        width: 20px;
+        height: 40px;
+        text-align: center;
+        line-height: 80px;
+        font-size: 12px;
+        /* background-color: red; */
+    }
+
+    div.banner,
+    header {
+        width: 100%;
+        height: 200px !important;
+    }
+
+    div.banner h5 {
+        font-size: 15px;
+    }
+
+
+    ul.mune>li {
+        margin-right: 40px !important;
+    }
+
+    .intro li p {
+        font-size: 5px !important;
+    }
+
+    .intro li img {
+        display: none;
+    }
+
+    section {
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    .layui-text .layui-timeline-title {
+        font-size: 1px;
+        height: 18px;
+        line-height: 18px;
+    }
+
+    .zilv .mune {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        margin: 0;
+    }
+
+    .zilv .mune>li {
+        font-size: .5rem;
+        text-align: center;
+        height: 60px;
+        /* margin: 20px 0; */
+        width: 80px;
+        line-height: 60px;
+        background-color: rgb(234, 255, 0);
+        position: relative;
+    }
+
+
+    .zilv li a {
+        font-size: 5px;
+    }
+
+    .intro .layui-colla-title {
+        font-size: 5px !important;
+    }
+
+    .liuyanban-btn {
+        position: absolute;
+        right: 30px !important;
+        top: 0 !important;
+    }
+
+    .panel-container {
+        padding: 2px !important;
+    }
+
+    .foot-container div.info {
+        font-size: 12px;
+    }
+
+    .foot-container div.copy {
+        font-size: 12px;
+    }
+
+    .foot-container div.yqlj ul li,
+    .foot-container div.yqlj ul li a {
+        font-size: 1px;
+        width: 100%;
+    }
+
+    .foot-container {
+        margin-top: 10px;
+        height: 130px;
+        background-color: #aa0000;
+        padding: 10px;
+    }
+
+    .tq p {
+        font-size: 10px;
+        line-height: 10px;
+        height: 45px;
+        display: block;
+    }
+
+    .xyfg-part {
+        width: 100%;
+        left: 0;
+    }
+
+    a {
+        padding: 0;
+        margin: 0;
+    }
+
+    .jxff {
+        margin: 0;
+    }
+
+    .pdms img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .sthd span {
+        position: absolute;
+        font-size: 30px;
+        right: 4%;
+        top: 35%;
+    }
+
+}

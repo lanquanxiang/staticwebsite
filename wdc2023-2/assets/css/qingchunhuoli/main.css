@@ -1,0 +1,205 @@
+			body {
+				background-color: #fffde8;
+			}
+
+			.video {
+				position: absolute;
+				margin-top: 5%;
+				margin-left: 25%;
+
+
+			}
+
+			video {
+				width: 70%;
+				height: 70%;
+
+			}
+
+			pre {
+				font-family: STXinwei;
+				color: black;
+				font-size: 22px;
+			}
+
+			.line {
+				width: 1450px;
+				height: 10px;
+				margin-top: 9%;
+				margin-left: 23px;
+				position: relative;
+				border-top: 5px solid #bd403a;
+				color: lightblue;
+				font-size: 20px;
+			}
+
+			.line2 {
+				width: 1450px;
+				height: 10px;
+				margin-top: 40%;
+				margin-left: 23px;
+				position: relative;
+				border-top: 5px solid #bd403a;
+				color: lightblue;
+				font-size: 20px;
+			}
+
+			.line3 {
+				width: 1450px;
+				height: 10px;
+				margin-top: -40%;
+				margin-left: 23px;
+				position: relative;
+				border-top: 5px solid #bd403a;
+				color: lightblue;
+				font-size: 20px;
+			}
+
+			.poem {
+				margin-top: 45%;
+				margin-left: 20%;
+				position: absolute;
+				font-size: 20px;
+
+
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+
+			.container {
+				/* 弹性布局 */
+				display: flex;
+				width: 100vw;
+				max-width: 1500px;
+				height: 500px;
+				/* 溢出隐藏 */
+				overflow: hidden;
+				margin-top: 60%;
+			}
+
+			.item {
+				/* 相对定位 */
+				position: relative;
+				width: 60px;
+				margin: 10px;
+				cursor: pointer;
+				border-radius: 30px;
+				/* 保持原有尺寸比例,裁剪长边 */
+				background-size: cover;
+				/* 定位背景图片为最中间 */
+				background-position: center;
+				/* 过渡 时长 贝塞尔曲线 */
+				transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+				overflow: hidden;
+			}
+
+			.item .shadow {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 100px;
+				transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+			}
+
+			.item .content {
+				display: flex;
+				position: absolute;
+				left: 10px;
+				right: 0;
+				bottom: 10px;
+				height: 60px;
+				transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+			}
+
+			.item .content .icon {
+				min-width: 40px;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 16px;
+			}
+
+			.item:nth-child(1) .fa {
+				color: #fc6e51;
+			}
+
+			.item:nth-child(2) .fa {
+				color: #ffce54;
+			}
+
+			.item:nth-child(3) .fa {
+				color: #2ecc71;
+			}
+
+			.item:nth-child(4) .fa {
+				color: #5d9cec;
+			}
+
+			.item:nth-child(5) .fa {
+				color: #ac92ec;
+			}
+
+			.item .content .text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin-left: 10px;
+				color: #fff;
+				width: 100%;
+			}
+
+			.item .content .text div {
+				/* 超出显示省略号（需要设置width） */
+				width: calc(100% - 70px);
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				opacity: 0;
+				transition: opacity 0.5s ease-out;
+			}
+
+			.item .content .text .tit {
+				font-weight: bold;
+				font-size: 18px;
+				height: 50px;
+			}
+
+			.item .content .text .sub {
+				/* 设置过渡效果延迟时间 */
+				transition-delay: 0.1s;
+				height: 50px;
+				width: 5000px;
+				font-weight: 100;
+				font-size: 15px;
+			}
+
+			/* 选中态样式 */
+			.item.active {
+				flex: 1;
+				margin: 0;
+				border-radius: 0.1s;
+			}
+
+			.item.active .shadow {
+				background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 65%, transparent);
+			}
+
+			.item.active .content {
+				bottom: 20px;
+				left: 20px;
+				height: 100px;
+			}
+
+			.item.active .content .text div {
+				opacity: 1;
+
+			}

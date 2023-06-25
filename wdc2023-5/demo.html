@@ -1,0 +1,714 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- 设置网页的初始大小 -->
+	<meta width='device-width' initial-scale='1.1' user-scalable='yes'>
+	<script src="js/swiper.min.js"></script>
+	<script src="./js/jQuery.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<title>网页设计大赛</title>
+
+	<!-- totop -->
+	<link rel="stylesheet" href="./css/svg_style.css">
+	<link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+
+
+	<!-- 翻转 -->
+	<style type="text/css">
+		.container {
+			max-width: 1100px;
+			margin-top: 50px;
+			margin-right: auto;
+			margin-bottom: auto;
+			margin-left: auto;
+		}
+
+		.card {
+			width: 100%;
+			height: 450px;
+			padding: 0px;
+			margin-bottom: 80px;
+			position: relative;
+		}
+
+		.card .card-text p {
+			font-family: "微软雅黑";
+			font-size: 20px;
+			line-height: 30px;
+			margin-top: 30px;
+		}
+
+		.card-img-left {
+			width: 600px;
+			height: 450px;
+			float: left;
+			overflow: auto;
+		}
+
+		.card .card-text h3 {
+			font-family: "微软雅黑";
+			font-size: 36px;
+			text-align: center;
+		}
+
+		.btn {
+			font-size: 24px;
+			vertical-align: sub;
+			text-align: justify;
+			position: absolute;
+			bottom: 0px;
+			right: 20px;
+			border: 2px solid #F00;
+		}
+
+		.btn-left {
+			font-size: 24px;
+			vertical-align: sub;
+			text-align: justify;
+			position: absolute;
+			bottom: 0px;
+			left: 20px;
+			border: 2px solid #F00;
+		}
+
+		.card-img-right {
+			width: 600px;
+			height: 450px;
+			float: right;
+			overflow: auto;
+		}
+
+		.card-text {
+			width: 460px;
+			margin: 0 20px;
+			height: 450px;
+			float: left;
+		}
+
+		.banner-bg {
+			position: relative;
+			left: 380px;
+			bottom: 70px;
+		}
+	</style>
+	<link href="./css/aos.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" href="./css/style6.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+
+		.menus.menus1 h1 {
+			vertical-align: sub;
+			float: left;
+			margin-top: 30px;
+			font-size: 54px;
+			text-transform: none;
+			font-family: "华文行楷";
+			font-weight: lighter;
+			/* color: #F89165; */
+			color: rgb(255, 47, 47);
+		}
+
+		.banenr {
+			height: 80px;
+			width: 2000px;
+			background-color: rgb(201, 18, 24);
+		}
+
+		.banenr .banner-bg h3 {
+			font-size: 36px;
+			font-weight: lighter;
+			float: left;
+			margin-top: -42px;
+			color: #f1f1f1;
+			margin-left: -20px;
+		}
+
+		.banner-bg {
+			margin: auto;
+			width: 1300px;
+			height: 80px;
+			padding-left: 0px;
+		}
+
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+
+
+
+		li {
+			list-style: none;
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		.menus {
+			width: 1100px;
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 0px;
+			margin-left: auto;
+			height: 100px;
+		}
+
+		.menus ul {
+			width: 500px;
+			position: relative;
+			float: right;
+			margin-top: 20px;
+			font-style: italic;
+			border-bottom-width: 2px;
+			border-bottom-style: solid;
+			border-bottom-color: #ff5a5a;
+		}
+
+		.menus li {
+			float: left;
+			width: 100px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			cursor: pointer;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			transition: all 0.5s;
+			font-size: 24px;
+		}
+
+		.menus li:nth-child(2) {
+			color: #fff;
+		}
+
+		.menus .bg {
+			width: 100px;
+			height: 40px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			transition: all 0.5s;
+			background-image: url("./imgs/ban.png");
+		}
+
+		.tab {
+			width: 750px;
+			height: 500px;
+			border: 1px solid #000;
+			margin-top: 20px;
+			font-size: 40px;
+			line-height: 500px;
+			text-align: center;
+			color: #888;
+			font-weight: bold;
+			display: none;
+		}
+
+		.show {
+			display: block;
+		}
+
+		#footer {
+			text-align: center;
+			vertical-align: middle;
+			height: 150px;
+			padding-top: 50px;
+			color: #FFF;
+			/* background-color: #333; */
+
+
+		}
+
+		body {
+			margin: 0px;
+			background-color: rgb(241, 241, 241);
+
+		}
+
+		.slider {
+			background-color: #C99;
+			height: 620px;
+			width: 1100px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			border-radius: 12px;
+			padding-bottom: 0px;
+		}
+
+
+
+		body {
+			width: auto;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.slider1 {
+			height: 600px;
+			width: 1080px;
+			margin-top: 10px;
+			margin-right: 10px;
+
+			margin-left: 10px;
+			overflow: hidden;
+			border-radius: 12px;
+		}
+
+		.welcome-text {
+			height: 200px;
+			width: 1100px;
+			margin-top: 12px;
+			margin-right: auto;
+			margin-bottom: 0px;
+			margin-left: auto;
+			background-color: #f1f1f1;
+			font-size: 20px;
+			text-align: left;
+			vertical-align: left;
+			padding-top: 40px;
+			text-indent: 2em;
+			font-family: 'STHeiti';
+		}
+
+
+		.scroll-td-text {
+			height: 40px;
+			width: 280px;
+			text-align: center;
+			vertical-align: left;
+			padding-top: 10px;
+			font-size: 24px;
+		}
+
+		.introduce {
+			height: 40px;
+			width: 1100px;
+			margin-right: auto;
+			margin-left: auto;
+			font-size: 24px;
+			padding-top: 8px;
+			border-bottom-width: 2px;
+			border-left-width: 10px;
+			border-bottom-style: solid;
+			border-left-style: solid;
+			border-bottom-color: #F00;
+			border-left-color: #9F3;
+		}
+
+		.introduce-content {
+			height: 500px;
+			width: 1100px;
+			margin-right: auto;
+			margin-left: auto;
+			background-color: #F0EBDB;
+			margin-bottom: 5px;
+			border-radius: 15px;
+		}
+
+		#img-introduce {
+			background-color: #CC0;
+			float: left;
+			height: 480px;
+			width: 620px;
+			margin: 10px;
+		}
+
+		#text-introduce {
+			margin: 10px;
+			height: 480px;
+			width: 440px;
+			float: left;
+		}
+
+		.text-introducce {
+			height: 100px;
+			width: 440px;
+			margin-bottom: 20px;
+			margin-top: 10px;
+		}
+
+		.scroll {
+			height: 380px;
+			width: 1000px;
+			margin-right: auto;
+			background-color: #FFF;
+			position: relative;
+			overflow: hidden;
+			margin-top: 20px;
+			margin-bottom: auto;
+			margin-left: auto;
+		}
+
+		.ms-ex {
+			padding: 10px;
+			height: 440px;
+			width: 1100px;
+			border: 1px solid #999;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 14px;
+			margin-bottom: 14px;
+		}
+
+		.text-box {
+			height: 40px;
+			width: 150px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			margin-left: 10px;
+			float: left;
+			font-size: 30px;
+			text-align: center;
+			vertical-align: middle;
+			padding-top: 10px;
+
+		}
+
+		.ms-exhibition p {
+			height: 36px;
+			margin-top: 0px;
+		}
+
+
+		.ms-exhibition {
+			margin-right: auto;
+			font-size: 36px;
+			padding-top: 0px;
+			text-align: center;
+			height: 36px;
+			width: 1000px;
+			margin-left: auto;
+			margin-bottom: 0px;
+			margin-top: 0px;
+			background-color: #f1f1f1;
+		}
+
+		#text-box1 {
+			background-color: #FF6;
+			border-radius: 12px;
+		}
+
+		#text-box3 {
+			background-color: #F03;
+			border-radius: 12px;
+		}
+
+		#text4 #text-box4 {
+			background-color: #6F6;
+			border-radius: 12px;
+		}
+
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+			margin-left: auto;
+			margin-right: auto;
+
+
+		}
+
+		#text-box2 {
+			background-color: #09F;
+			border-radius: 12px;
+		}
+
+		.text-box-right {
+			float: left;
+			height: 80px;
+			width: 250px;
+			margin-top: 16px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 10px;
+			font-size: 18px;
+		}
+
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+			margin-top: 10px;
+
+
+
+		}
+
+		.scroll-in {
+			height: 300px;
+			width: 1080px;
+			margin-top: 40px;
+			margin-right: auto;
+			margin-left: auto;
+
+		}
+
+		.scroll-td {
+			height: 280px;
+			width: 280px;
+			margin-left: 0px;
+		}
+
+		h3 {
+			font-size: 24px;
+			line-height: 30px;
+			font-family: "微软雅黑";
+			text-indent: 48px;
+		}
+
+		h1 {
+			line-height: 24px;
+			font-size: 44px;
+		}
+
+		footer {
+			/* background-color: #C91218; */
+			background-color: #0162C4;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<section data-aos="flip-right" style="padding-left: 160px; ">
+		<div class="card">
+			<!-- <div class="card-img-left"><img src="../images/noodle/7.jpg" /></div> -->
+			<div class="card-text">
+				<!-- 中心大图报 -->
+				<div class="slider">
+					<div class="slider1">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<!-- img: 1080*600 -->
+								<div class="swiper-slide"><img width="1080" height="600" src="./imgs/logo/02.png" />
+								</div>
+								<div class="swiper-slide"><img width="1080" height="600"
+										src="./imgs/big_center/01.png" /> </div>
+								<div class="swiper-slide"><img width="1080" height="600"
+										src="./imgs/big_center/11.jpg" /> </div>
+								<div class="swiper-slide"><img width="1080" height="600"
+										src="./imgs/big_center/13.jpg" /> </div>
+								<div class="swiper-slide"><img width="1080" height="600"
+										src="./imgs/big_center/09.jpg" /> </div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+						<!-- Initialize Swiper -->
+						<script>
+							var swiper = new Swiper('.swiper-container', {
+								slidesPerView: 1,
+								spaceBetween: 30,
+								loop: true,
+								pagination: {
+									el: '.swiper-pagination',
+								},
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev',
+								},
+							});
+						</script>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<br><br><br><br><br><br><br>
+	<hr />
+	<br>
+	<div style="padding-left: 160px;">
+		<center>
+			<!-- fade-up -->
+			<section data-aos="fade-up">
+				<div class="card">
+					<!-- <div class="card-img-left"><img src="../imgs/outstanding/01.png" width="600" height="450" /></div> -->
+					<div class="card-text">
+						<div class="introduce">&nbsp;学校简介</div>
+						<div class="introduce-content">
+							<div id="img-introduce"><img src="./imgs/door1.webp" width="620" height="480" /> </div>
+							<div id="text-introduce" class="text-introduce">
+								<div class="text-introducce" id="text1">
+									<div class="text-box" id="text-box1"> ·历史沿革·</div>
+
+									<div class="text-box-right" id="box-right1">学校始建于1983年，党和国家领导人方毅、费孝通先后题写“攀枝花大学”校名。
+									</div>
+								</div>
+								<div class="text-introducce" id="text2">
+									<div class="text-box" id="text-box2"> ·科学研究·</div>
+									<div class="text-box-right" id="box-right2">学校聚焦经济主战场、区域发展战略开展科学研究。</div>
+								</div>
+								<div class="text-introducce" id="text3">
+									<div class="text-box" id="text-box3"> ·专业建设·</div>
+									<div class="text-box-right" id="box-right-3"> 学校学科门类齐全，特色鲜明</div>
+								</div>
+								<div class="text-introducce" id="text4">
+									<div class="text-box" id="text-box4"> ·自律奋进·</div>
+									<div class="text-box-right" id="box-right4">
+										“明德砺志，博学笃行”的“自律攀大人”</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- zoom-in-left -->
+			<section data-aos="zoom-in-left">
+				<div class="card" style="height: 350px;">
+					<div class="card-text">
+						<div class="welcome-text">
+							<p3 class=" welcome-text-p3">攀枝花学院 (Panzhihua
+								University)
+								是教育部布点在川西南、滇西北的一所以工为主的综合性普通本科院校，是硕士学位授予单位，学校坐落于四川省攀枝花市。实行“省市共建，以市为主”的管理体制；入选“教育部·中兴通讯ICT
+								产教融合创新基地项目”第二批合作高校，是四川省知识产权优势培育单位、四川省首批激励科技人员创新创业改革试点高校、四川省职务科技成果权属混合所有制改革试点单位。截至2022年12月，学校占地总面积约1450亩，校舍面积57.42万平方米、馆藏文献509万册；设有21个教学单位、1个科研单位、6个教辅单位和1个直管三甲附属医院开设63个本科专业；
+								有2个专业硕士学位授权点；有在编教职工1050人(不含附属医院)，其中专任教师923人；有全日制本专科在校生及研究生、留学生14588人，中专、技校在校生1483名，成人教育学生2940人。
+							</p3>
+							<br>
+							<p3 class="welcome-text-p3">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学校始建于1983年的攀枝花大学，1994年与攀枝花教育学院合并。1998年四川省攀枝花卫生学校并入，2001年经教育部批准改建为本科院校并更名为攀枝花学院，2004年攀枝花市高级技工学校整体划归学校，2005年增列为学士学位授予单位，2007年通过教育部本科教学工作水平评估，2017。
+								年开始举办留学生教育，2018年高质量通过教育部本科教学审核评估，2021年获批硕士学位授予单位。
+							</p3>
+						</div>
+					</div>
+					<!-- <div class="card-img-left"><img src="./imgs/outstanding/04.jpg" width="600" height="450" /></div> -->
+
+				</div>
+			</section>
+
+		</center>
+	</div>
+
+
+	<script type="text/javascript" src="./js/aos.js"></script>
+	<script>
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 2000
+		});
+	</script>
+
+	<hr />
+
+	<div class="ms-ex">
+		<div class="ms-exhibition">
+			<p>校内亮点速览</p>
+		</div>
+		<div class="scroll">
+			<marquee direction="right" behavior="alternate" scrolldelay="200" onmouseover="stop()" onmouseout="start()">
+				<table width="2400" border="0" cellspacing="20" cellpadding="0">
+					<tr>
+						<td class="scroll-td"><img src="./imgs/footer/flower.jpg" width="280" height="280" /></td>
+						<td class="scroll-td"><img src="./imgs/footer/Goodtime.jpg" width="280" height="280" /></td>
+						<td class="scroll-td"><img src="./imgs/footer/panda.jpg" width="280" height="280" /></td>
+						<td class="scroll-td"><img src="./imgs/footer/dimLight.jpg" width="280" height="280" /></td>
+						<td class="scroll-td"><img src="./imgs/footer/pzh.jpg" width="280" height="280" /></td>
+						<td class="scroll-td"><img src="./imgs/footer/rainbow.jpg " width="280" height=" 280" /></td>
+						<td class="scroll-td"><img src="./imgs/footer/road.jpg" width="280" height="280" /></td>
+						<td class="scroll-td"><img src="./imgs/footer/jinzhongyun.jpg" width="280" height="280" /></td>
+					</tr>
+					<tr>
+						<td class="scroll-td-text">静明荷花</td>
+						<td class="scroll-td-text">美好的时光</td>
+						<td class="scroll-td-text">自律的panda人</td>
+						<td class="scroll-td-text">攀大日出</td>
+						<td class="scroll-td-text">好看的攀枝花</td>
+						<td class="scroll-td-text">雨后彩虹</td>
+						<td class="scroll-td-text">学院香樟路</td>
+						<td class="scroll-td-text">镜中云</td>
+					</tr>
+				</table>
+			</marquee>
+		</div>
+	</div>
+
+
+	<div class="to_top">
+		<img src="./fonts/backtop.svg"></img>
+	</div>
+	<script src="./js/font-top.js"></script>
+
+	<footer style="height: 292px;">
+		<div>
+			<div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 100 100">
+					<defs>
+						<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+							<stop offset="0%" stop-color="#00bc9b" />
+							<stop offset="100%" stop-color="#5eaefd" />
+						</linearGradient>
+						<linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+							<stop offset="0%" stop-color="#5eaefd" />
+							<stop offset="100%" stop-color="#00bc9b" />
+						</linearGradient>
+					</defs>
+				</svg>
+				<div class="group">
+					<ul class="c-nav underliner">
+						<li class=" c-nav__item" style="position: relative; left: -390px; top: 50px; float: left;"><a
+								href="https://www.pzhu.cn/"><img src="./imgs/logo.png" alt="" width="300" height="70">
+						</li>
+					</ul>
+					<ul class="c-nav underliner" style="position: relative; left:300px; top: -120px;  ">
+						<li class="c-nav__item"><a></a></li>
+						<li class="c-nav__item"><a href="https://www.pzhu.cn/images/dpqq.jpg" target="_blank"><img
+									src="./fonts/icons/QQ.svg" alt=""></a></li>
+						<li class="c-nav__item"><a href="https://www.weibo.com/panzhihuauniversity" target="_blank"><img
+									src="./fonts/icons/weibo.svg" alt=""></a></li>
+						<li class="c-nav__item"><a href="https://www.pzhu.cn/weixin.png" target="_blank"><img
+									src="./fonts/icons/weixing.svg" alt=""></a></li>
+						<li class="c-nav__item"><a target="_blank"
+								href="https://www.douyin.com/user/MS4wLjABAAAAxOZHZi6L_UqlvzwUV4pQWO_-cIX1pqVBNVkpeZPj7nU">
+								<img src="./fonts/icons/dy.svg" alt=""></a></li>
+						<li></li>
+						<div style="position: relative; left:-255px; top: 60px; ">
+							<li class="c-nav__item"><a>
+									攀枝花学院 地址：四川省攀枝花市东区三线大道北段10号<br>
+									邮编：617000 <br>
+									电话：0812-3371118 招生咨询：0812-3370868/5712507
+								</a></li>
+						</div>
+					</ul>
+				</div>
+				<script src="./js/script.js"></script>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+article {
+    border-radius: 20px;
+    /* height: 1100px; */
+    width: 1000px;
+    text-decoration-color: azure;
+    /* background-color: chocolate; */
+    margin: 50px auto;
+    margin-top: 0px;
+
+}
+
+section {
+    height: 200px;
+    background-color: aqua;
+    width: 100px;
+    margin: 20px;
+}
+
+.title-1 {
+    /* text-align: center; */
+    font-size: 20px;
+    font-family: 'SimSun';
+    font-weight: bold;
+
+}
+
+.container {
+    /* border: 1px red dashed; */
+    border: 2px rgb(223, 33, 59) dotted;
+    width: 1000px;
+    height: auto;
+}
+
+.container p {
+    text-indent: 2pc;
+    font-size: 20px;
+    font-family: 'FangSong';
+}
+
+.title-2 {
+    /*  line-height: 16px;
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    border-bottom: dotted #FF0000 3px;
+    border-right: solid red 2px;
+    border-top: red dotted 3px;
+    border-left: red solid 2px;
+    border-radius: 10%; */
+    /*double双实线  dashed虚线  dotted点线  solid实线 */
+
+}
+
+.title-3 {
+    font-size: 30px;
+    margin: 0px 10px;
+    font-family: 'FangSong';
+    font-weight: bold;
+    /* color: red; */
+
+    color: rgb(234, 4, 12);
+}
+
+.title-4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    /* color: red; */
+    color: rgb(234, 4, 12);
+    font-style: italic;
+}
