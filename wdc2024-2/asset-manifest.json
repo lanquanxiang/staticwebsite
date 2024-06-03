@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "./static/css/main.53572363.css",
+    "main.js": "./static/js/main.5f99c047.js",
+    "static/media/04.mp4": "./static/media/04.62e6bba79bdf3faa971d.mp4",
+    "static/media/03.mp4": "./static/media/03.332826de2c05844771ff.mp4",
+    "static/media/01.mp4": "./static/media/01.2ede9e1f8f70353dfee7.mp4",
+    "static/media/2.mp4": "./static/media/2.d7851ed67ca7c64c30ce.mp4",
+    "static/media/1.mp4": "./static/media/1.f7c820d66d866e7f85c9.mp4",
+    "static/media/02.mp4": "./static/media/02.b1f05304a2c2fbd2e8b2.mp4",
+    "static/media/nuli.jpg": "./static/media/nuli.a8e9f550e94bfbf52421.jpg",
+    "static/media/06.jpg": "./static/media/06.1255798ea3bbee2db0e4.jpg",
+    "static/media/foudou.jpg": "./static/media/foudou.88c778ac1784449de0fe.jpg",
+    "static/media/05.jpeg": "./static/media/05.7f06bf2fb12f61b2c3d0.jpeg",
+    "static/media/sun.jpeg": "./static/media/sun.32b527b56144ef7b6806.jpeg",
+    "static/media/03.jpeg": "./static/media/03.a8761a2c012c574d6e16.jpeg",
+    "static/media/02.jpeg": "./static/media/02.a86c8d28621e56cd41f3.jpeg",
+    "static/media/hushi.jpeg": "./static/media/hushi.377221e86231c6aaea26.jpeg",
+    "static/media/01.jpeg": "./static/media/01.1b980c0e8b79bafdebed.jpeg",
+    "static/media/04.jpeg": "./static/media/04.d2dbd8cf6d8e9e2944b7.jpeg",
+    "static/media/01.jpg": "./static/media/01.5def24c954ce23017501.jpg",
+    "static/media/03.jpg": "./static/media/03.f9313d21d9c28b650aff.jpg",
+    "static/media/02.jpg": "./static/media/02.45e236e015241d00f29c.jpg",
+    "static/media/pinbo.jpg": "./static/media/pinbo.61a46abaf8cfa4620b1a.jpg",
+    "static/media/07.jpg": "./static/media/07.2f7365853147f5731c02.jpg",
+    "static/media/back.jpg": "./static/media/back.ea020bc7e31c9f4c6ca9.jpg",
+    "static/media/06.jpeg": "./static/media/06.85182cbf972a8a025fbb.jpeg",
+    "static/media/caiyuanpei.jpg": "./static/media/caiyuanpei.6b49025eb0043d626122.jpg",
+    "static/media/intro.jpeg": "./static/media/intro.1e95efa580e030a78489.jpeg",
+    "static/media/08.jpg": "./static/media/08.8f3f5a28d773c8dfb695.jpg",
+    "static/media/05.jpg": "./static/media/05.5763639488ae578de5ba.jpg",
+    "static/media/lidazhao.jpg": "./static/media/lidazhao.fa2b2195209d2e87fa6e.jpg",
+    "static/media/chenduxiu.jpeg": "./static/media/chenduxiu.b6e11a834a686c2cc725.jpeg",
+    "index.html": "./index.html",
+    "main.53572363.css.map": "./static/css/main.53572363.css.map",
+    "main.5f99c047.js.map": "./static/js/main.5f99c047.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53572363.css",
+    "static/js/main.5f99c047.js"
+  ]
+}
