@@ -1,0 +1,826 @@
+/*默认样式*/
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none; 
+    scroll-behavior: smooth;
+}
+/*点击超链接回到书签位置样式*/
+#TOP1{
+    display: none;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    right: 5%;
+    top: 400px;
+    background: url(../img/蝴蝶.png) no-repeat center center/100% ;
+    z-index: 300;
+    transform: rotateY(180deg);
+    animation: hudie 1.5s linear infinite;/*翻转动画*/
+}
+/*鼠标移动到超链接上出现的提示文字*/
+#SPAN{
+    display: none;
+    width: 90px;
+    height: 90px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    right: 5%;
+    top: 355px;
+    z-index: 280;
+    background: url(../img/对话框1.png) no-repeat 1px 3px/100% ;
+}
+/*这个超链接背景是只蝴蝶，因为素材的原因需要翻转图像*/
+@keyframes hudie{
+    0%{opacity: 1;transform: scale(1) rotateY(180deg);}
+    50%{opacity: 0.8;transform: scale(0.8) rotateY(180deg);}
+    100%{opacity: 1;transform: scale(1) rotateY(180deg);}
+}
+/*头部样式开始*/ 
+header{
+    width: 100%;
+    height: 620px;
+    font-family: "华文行楷";
+    font-size: "300px";
+    position: absolute;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header #logo1{/*头部logo*/
+    width: 70px;
+    height: 30px;
+    margin: 10px auto;
+    position: absolute;
+    left: 47.5%;
+    z-index: 20;
+}
+header .maobi{/*毛笔装饰*/
+    width: 330px;
+    margin: 10px auto;
+    position: absolute;
+    top: 200px;
+    left: 60%;
+    transform: rotate(18deg);
+    z-index: 20;
+    animation: right1 2s linear 1;/*毛笔动画*/
+}
+/*毛笔从右侧飞入动画*/
+@keyframes right1 {
+    0%{transform: translateX(300px) rotate(18deg);}
+    100%{transform: translateX(0px) rotate(18deg);}
+}
+header p{/*网站名称样式*/
+    transform: scale(1.5);
+    position: absolute;
+    margin-top: 50px;
+    left: 46.4%;
+    text-align: center;
+    z-index: 20;
+}
+/*导航栏样式*/
+header ul{
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: 80px;
+    z-index: 30;
+}
+header ul li{
+    width: 146px;
+    height: 50px;
+    font-size: 20px;
+    font-family: "华文行楷";
+    line-height: 50px;
+    text-align: center;
+    float: left;
+}
+header ul li a{
+    display: block;
+    width: 146px;
+    height: 50px;
+    color: black;
+    transition: all 0.3s;
+    background-position: right center;
+}
+header ul li a:hover{/*导航栏超链接悬停样式*/
+    width: 146px;
+    height: 50px;
+    color: white;
+    background: url(../img/笔墨.png) no-repeat right center/90%;
+}
+header .color{/*当前页面超链接默认样式*/
+    color: white;
+    background: url(../img/笔墨.png) no-repeat right center/90%;
+}
+/*banner样式*/
+header .banner {
+    width: 100%;
+    height: 620px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+#slide {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#slide section {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+}
+/*banner图片切换*/
+#slide section .tupian {
+    width: 100%;
+    height: 100%;
+}
+#slide section .tupian .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*banner图片切换动画*/
+.yun {
+    animation: bian 5s linear infinite;
+}
+@keyframes bian {
+    0%,
+    100% {
+        opacity: 0.2;
+        backdrop-filter: blur(10px);
+    }
+    30%,
+    80% {
+        opacity: 1;
+        backdrop-filter: blur(0px);
+    }
+}
+/*banner底部小圆点切换样式*/
+#slide .select {
+    position: absolute;
+    bottom: 10px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#slide .select .dian {
+    margin: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+}
+#slide .select .dian:hover {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.check {
+    background-color: rgb(0, 0, 0);
+}
+/*banner图片切换左右点击切换样式*/
+#slide section .bt {
+    position: absolute;
+    top: 40%;
+    width: 50px;
+    line-height: 100px;
+    height: 100px;
+    background-color: rgba(82, 81, 81, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0;
+}
+header:hover #slide section .bt{
+    opacity: 1;
+}
+#slide section .left {
+    left: 20px;
+}
+#slide section .right {
+    right: 20px;
+}
+#slide section .anniu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    font-weight: lighter;
+    font-family: MD;
+    color: rgb(0, 0, 0);
+    user-select: none;
+    transition: all 0.3s;
+}
+/*banner文字字体*/
+@font-face{
+    src:url(../font/MD.ttf);
+    font-family:MD;
+}
+header .text1{
+    display: inline-block;
+    width: 300px;
+    height: 280px;
+    line-height: 50px;
+    text-align: left;
+    vertical-align: text-bottom;
+    font-size: 25px;
+    font-family: MD;
+    position: absolute;
+    top: 190px;
+    left: 30%;
+    writing-mode: vertical-lr;
+}
+header .text1 span{
+    display: inline-block;
+    transform: translateX(0px);
+    animation: left1 2.5s linear 1;/*banner文字动画*/
+}
+/*banner文字从左侧进入动画*/
+@keyframes left1 {
+    0%{transform: translateX(-300px);}
+    100%{transform: translateX(0px);}
+}
+/*banner蝴蝶*/
+#butterfly{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/蝴蝶.png) center center/100%;
+    animation: butterfly1 30s linear infinite;/*banner蝴蝶动画 */
+}
+/*banner蝴蝶移动路径动画*/
+@keyframes butterfly1 {
+    0%{transform: translateX(0px);opacity: 0;}
+    5%{transform: translateX(100px) translateY(100px);}
+    10%{transform: translateX(200px) translateY(40px);opacity: 1}
+    11%{transform: translateX(200px) translateY(40px);}
+    20%{transform: translateX(400px) translateY(200px);opacity: 0.2;}
+    30%{transform: translateX(600px) translateY(80px);}
+    31%{transform: translateX(600px) translateY(80px);}
+    45%{transform: translateX(900px) translateY(300px);opacity: 1}
+    55%{transform: translateX(1000px) translateY(200px);}
+    60%{transform: translateX(950px) translateY(100px);}
+    65%{transform: translateX(1100px) translateY(150px);}
+    70%{transform: translateX(1200px) translateY(200px);opacity: 1;}
+    90%{transform: translateX(1600px) translateY(400px);opacity: 0;}
+    100%{opacity: 0;}
+}
+/*头部样式结束*/
+
+/*主体样式开始*/
+main{
+    width: 100%;
+    height: 2730px;
+    font-family: "华文行楷";
+    font-size: "65px";
+    position: absolute;
+    top: 620px;
+    overflow: hidden;
+    background: url(../img/背景4.jpg) top center/100%;
+}
+/*文字滚动*/
+main #long{
+    width: 1024px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: url(../img/边框6.png) no-repeat center center/1000px 140px;
+    animation: ll 1.5s linear 1;/*文字出现动画*/
+    z-index: 1000;
+}
+/*文字出现动画*/
+@keyframes ll {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+main #long span:nth-child(1){/*"活动公告"文字样式*/
+    position: relative;
+    left: 50px;
+    top: 30px;
+    font-size: 22px;
+}
+main #long span:nth-child(2){/*"活动公告"内容样式*/
+    display: inline-block;
+    width: 820px;
+    height: 20px;
+    position: relative;
+    left:60px;
+    top: 30px;
+    font-size: 18px;
+    font-family: "仿宋";
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+main #long b{
+    display: inline-block;
+    animation: gundong1 60s linear infinite;/*滚动动画*/
+}
+/*内容滚动动画*/
+@keyframes gundong1 {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-1800px);} 
+}
+/*样式开始*/
+#Painting{
+    width: 1100px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+}
+#Painting p{/*标题样式*/
+    font-size: 35px;
+}
+#Painting a{
+    color: rgb(255, 255, 255);
+}
+#Painting .yu1{/*标题背景样式*/
+    width: 200px;
+    position: relative;
+    top: -75px;
+    left: 0%;
+    opacity: 0.7;
+}
+/*标题背景图片动画*/
+@keyframes rx {
+    0%{opacity: 0.3;transform: scale(0);}
+    100%{opacity: 0.7;transform: scale(1);}
+}
+/*内容样式*/
+#Painting ul{
+    width: 100%;
+    height: 520px;
+    position: relative;
+    top: -80px;
+    font-size: 28px;
+}
+#Painting ul li{
+    width: 200px;
+    height: 80px;
+    line-height: 70px;
+    float: left;
+    margin: 0 37.5px;
+}
+#Painting ul li img{
+    width: 200px;
+   
+}
+#Painting ul li:nth-child(1),#Painting ul li:nth-child(3){/*第一张图和第三张图下降*/
+    position: relative;
+    top: 80px;
+}
+/*内容出场翻转动画*/
+@keyframes zhankai {
+    0%{transform: rotateY(180deg);}
+    50%{transform: rotateY(0deg);}
+    100%{transform: rotateY(180deg);}
+}
+/*内容悬停样式*/
+#Painting ul li .s1,#Painting ul li .s2,#Painting ul li .s3,#Painting ul li .s4{
+    display: inline-block;
+    width: 160px;
+    height: 315px;
+    padding: 20px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: left;
+    writing-mode: vertical-lr;
+    transition: all 0.5s;
+    opacity: 0;
+    background: url(../img/云2.png) no-repeat center right/80% rgba(0, 0, 0, 0.3);
+}
+#Painting ul li .s1,#Painting ul li .s2,#Painting ul li .s3,#Painting ul li .s4{
+    position: relative;
+    left: 0;
+    top: -383px;
+}
+#Painting ul li .s1:hover,#Painting ul li .s2:hover,#Painting ul li .s3:hover,#Painting ul li .s4:hover{
+    opacity: 1;
+}
+
+
+/*样式开始*/
+#company_profile{
+    width: 1100px;
+    height: 520px;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 80px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+#company_profile p{
+    font-size: 35px;
+}
+#company_profile .yu2{
+    width: 200px;
+    position: relative;
+    top: -75px;
+    left: 0%;
+    opacity: 0.7;
+}
+/*左侧水墨蒙版*/
+#company_profile .masking_out{
+    width: 510px;
+    height: 350px;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    background: url(../img/背景10.png) no-repeat center center/100%;
+    z-index: 200;
+}
+/*左侧图片轮播*/
+#company_profile .left1 {
+    width: 510px;
+    height: 350px;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    list-style: none;
+    overflow: hidden;
+	background: url(../img/写意画3.jpg) no-repeat;
+}
+/*图片轮播动画*/
+@keyframes lunbo2{
+	0%{background: url(../img/写意画3.jpg) no-repeat;}
+	20%{background: url(../img/水墨画2.jpg) no-repeat;}
+	40%{background: url(../img/水墨画3.jpg) no-repeat;}
+	60%{background: url(../img/写意画2.jpg) no-repeat;}
+	80%{background: url(../img/水墨画4.jpg) no-repeat;}
+	100%{background: url(../img/写意画3.jpg) no-repeat;}
+}
+/*图片出场动画*/
+@keyframes left1 {
+    0%{transform: translateX(-400px);}
+    100%{transform: translateX(0);}
+}
+/*概况文字内容*/
+#company_profile .right1{
+    width: 500px;
+    height: 240px;
+    text-indent: 2em;
+    font-size: 18px;
+    line-height: 35px;
+    border-bottom: 2px solid #000;
+    font-family: "仿宋";
+    font-weight: bold;
+    text-align: left;
+    margin-top: 120px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+#company_profile .right1 a{
+    display: block;
+    width: 130px;
+    height: 50px;
+    text-align: left;
+    margin: 10px auto;
+    line-height: 45px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background: url(../img/笔墨.png) no-repeat right center/85% ;
+}
+#company_profile .right1 a:hover{
+    background: url(../img/笔墨-3.png) no-repeat right center/85%;
+    transition: all 0.3s;
+}
+/*文字内容出场动画*/
+@keyframes right2 {
+    0%{transform: translateX(400px);}
+    100%{transform: translateX(0);}
+}
+
+
+/*新闻中心样式开始*/
+#press_center{
+    width: 1100px;
+    height: 680px;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 40px;
+    text-align: center;
+}
+/*新闻中心标题*/
+#press_center p{
+    font-size: 35px;
+}
+/*新闻中心标题背景图片*/
+#press_center .yu3{
+    width: 200px;
+    position: relative;
+    top: -75px;
+    opacity: 0.7;
+}
+#press_center .left2 img,#press_center .right2 img{/*新闻中心图片样式*/
+    width: 300px;
+    height: 180px;
+    float: left;
+}
+#press_center .left2 img{
+    margin-right: 15px;
+}
+/*新闻中心左侧内容样式*/
+#press_center .left2 {
+    width: 750px;
+    height: 550px;
+    font-family: "仿宋";
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    list-style: none;
+    text-align: left !important;
+    overflow: hidden;
+}
+/*新闻中心左侧上方内容样式*/
+#press_center .left2 .pc1{
+    width: 100%;
+    height: 210px;
+    line-height: 20px;
+    color: rgb(36, 36, 35);
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+#press_center .left2 .pc1 a{
+    display: block;
+    width: 300px;
+    height: 180px;
+    float: left;
+    margin-right: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+#press_center .left2 .pc1 a:hover{
+    box-shadow: 4px 4px 10px rgb(85, 85, 85);
+}
+#press_center .left2 .pc1 a img{
+    width: 300px;
+    transition: all 0.5s;
+}
+#press_center .left2 .pc1 a:hover img{
+    transform: scale(1.2);
+}
+#press_center .left2 .pc1 span:nth-child(2){
+    font-size: 25px;
+}
+#press_center .left2 .pc1 span:nth-child(5){
+    font-size: 14px;
+    font-weight: lighter;
+    color: rgb(119, 113, 113);
+}
+#press_center b:nth-child(1){
+    cursor: pointer;
+    font-weight: lighter;
+    color: red;
+}
+#press_center .b2{
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    width: 100%;
+    text-align: right;
+    font-weight: lighter;
+    color: rgb(119, 107, 107) !important;
+}
+/*新闻中心左侧下方内容样式*/
+#press_center .left2 .pc2{
+    width: 100%;
+    height: 280px;
+    line-height: 24px;
+    margin-top: 20px;
+    color: rgb(88, 88, 86);
+    font-weight: inherit;
+    z-index: 10;
+    cursor: pointer;
+}
+#press_center .left2 li{
+    transition: all 0.3s;
+}
+#press_center .left2 li:hover{
+    color: red;
+}
+#press_center .left2 .pc2 span{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: -20px;
+    vertical-align: top;
+    text-align: right;
+    color: rgb(190, 190, 190);
+}
+/*新闻中心右侧内容样式*/
+#press_center .right2 {
+    width: 299px;
+    height: 550px;
+    position: absolute;
+    right: 0;
+    top: 130px;
+    font-family: "仿宋";
+    list-style: none;
+    border-left: 1px solid rgb(170, 170, 170);
+    overflow: hidden;
+}
+#press_center .right2 a{
+    display: block;
+    width: 250px;
+    height: 140px;
+    position: relative;
+    left: 40px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+#press_center .right2 a img{
+    width: 300px;
+    transition: all 0.5s;
+}
+#press_center .right2 a:hover{
+    box-shadow: 4px 4px 4px rgb(160, 160, 160);
+}
+#press_center .right2 a:hover img{/*新闻中心图片悬停时放大*/
+    transform: scale(1.2);
+}
+#press_center .right2 .title1{
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 8px;
+    color: rgb(48, 48, 47);
+}
+#press_center .right2 .rq1{
+    font-size: 13px;
+    display: inline-block;
+    width: 80%;
+    text-align: right;
+    color: rgb(153, 147, 147);
+}
+#press_center .right2 span{
+    display: inline-block;
+    margin-left: 40px;
+    text-align: left;
+    font-size: 14px;
+    color: rgb(71, 70, 70);
+}
+/*新闻中心右侧内容出场动画*/
+@keyframes right3 {
+    0%{transform: translateY(400px);}
+    100%{transform: translateY(0);}
+}
+/*新闻中心左侧下方内容出场动画*/
+@keyframes right4 {
+    0%{transform: translateX(400px);}
+    100%{transform: translateX(0);}
+}
+/*新闻中心样式结束*/
+
+
+#Acquisition_process{
+    width: 1100px;
+    height: 300px;
+    position: relative;
+    margin: 0px auto;
+    padding-top: 60px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#Acquisition_process p{
+    font-size: 35px;
+}
+
+#Acquisition_process .yu4{
+    width: 200px;
+    position: relative;
+    top: -75px;
+    opacity: 0.7;
+}
+#Acquisition_process ul{
+    width: 1100px; 
+    height: 100px;
+    position: relative;
+    top: -40px;
+}
+#Acquisition_process ul li{
+    width: 150px; 
+    height: 150px; 
+    float: left; 
+    background: url(../img/边框4.png) no-repeat center center/100% ;
+    margin-left: 60px;
+    padding-top: 14px;
+    line-height: 44px; 
+    text-align: center; 
+    font-size: 26px;
+    font-family: "仿宋";
+    font-weight: bolder;
+}
+@keyframes right5 {
+    0%{transform: translateX(600px);}
+    100%{transform: translateX(0);}
+}
+/*主体样式结束*/
+
+/*底部样式开始*/
+footer{
+    width: 100%;
+    height: 240px;
+    position: absolute;
+    top: 3150px;
+    background-color: #eaddca;
+    font-family: "仿宋";
+}
+footer #foot{/*底部内容*/
+    width: 1100px;
+    height: 230px;
+    margin: 0 auto;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+    overflow: hidden;
+}
+footer #foot span{
+    font-size: 14px;
+    float: left;
+}
+footer #foot .foot1{
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 110px;
+}
+footer #foot .foot2{
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 140px;
+}
+footer #foot .foot3{
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 170px;
+}
+footer #foot img{/*底部图片*/
+    position: relative;
+    bottom: -50px;
+    right: 0px;
+    width: 100px;
+    margin-right: 40px;
+}
+/*底部导航栏*/
+footer ul{
+    width: 1100px;
+    height: 44px;
+    margin: 0 auto;
+    float: right;
+    position: relative;
+    top: 20px;
+    border-bottom: 2px solid #59aca2;
+    z-index: 30;
+}
+footer ul li{
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    font-family: "仿宋";
+    line-height: 50px;
+    text-align: left;
+    float: left;
+    margin-right: 30px;
+}
+footer ul li a{
+    display: block;
+    width: 80px;
+    height: 40px;
+    color: white;
+    transition: all 0.2s;
+    background-position: right center;
+}
+footer ul li a:hover{/*导航栏超链接悬停样式*/
+    width: 80px;
+    height: 40px;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+footer .color{/*当前页面超链接默认样式*/
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+/*底部样式结束*/

@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    height:640px;
+    margin: 10px auto;
+}
+
+.wrap p {
+    color: black;
+    text-align: center;
+    line-height: 20px;
+    background-color: white;
+}
+
+.wrap img {
+    vertical-align: middle;
+    width: 100%;
+    height: 650px;
+}
+
+.wrap button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 30px;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.btn1 {
+    right: 0;
+}
+
+.btn2 {
+    left: 0;
+}

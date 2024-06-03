@@ -1,0 +1,44 @@
+main{
+    height: 1500px;
+}
+main ul a{
+    color: #000;
+}
+.details{
+    width: 1100px;
+    margin: 0 auto;
+    line-height: 30px;
+    font-family: "微软雅黑";
+}
+.details a{
+    display: block;
+    float: right;
+    width: 100px;
+    height: 10px;
+    font-size: 13px;
+    color: #000;
+}
+.details a:hover{
+    color: red;
+}
+.details .image{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #000;
+    background-image: url(../images/ls7.jpeg);
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.details .image[zoomed]{
+    background-size: 900px 900px;
+    background-position: calc(var(--x)*100%) calc(var(--y) * 100%);
+}
+.details p{
+    text-indent: 2em;
+}
+footer{
+    background-color: #6a8a87;
+    top: 1700px;
+}

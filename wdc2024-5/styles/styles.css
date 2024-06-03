@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* 设置网页的背景颜色 */
+}
+
+nav {
+    /* background-image: url(../img/bg10086.jpg); /* 设置导航栏背景图片 */ */
+    background-size: cover; /* 确保背景图片覆盖整个导航栏 */
+    background-position: center; /* 背景图片居中 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+}
+
+nav ul {
+    background-color: rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* 将导航栏文字向右对齐 */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: whitesmoke; /* 根据需要设置文字颜色 */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+	font-size: 25px;
+	font-family:'宋体';
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    /* background-color: rgba(139, 0, 18, 0.5);  */
+    /* 设置悬停效果，可以是半透明 */
+	color: rgb(255, 0, 0);
+	 /* 设置文字颜色 */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 25px; 
+	font-family:'宋体';
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* 确保视频在其他内容的后面 */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保视频覆盖整个容器 */
+    pointer-events: none; /* 确保视频不可点击 */
+	z-index: -1;
+}
+
+main {
+    position: relative;
+    z-index: 1; /* 确保主要内容在视频上面 */
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* 给主要内容一个半透明的背景色以便与视频对比 */
+    margin-top: -100vh; /* 确保内容位于视频容器的顶部 */
+}

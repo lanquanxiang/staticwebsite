@@ -1,0 +1,93 @@
+/*全局样式*/
+*{padding:0px;margin:0px;}
+html,body{height:100%;color:#333}
+a{text-decoration: none;color:#333}
+ul li{list-style: none;}
+.clear{clear:both;}
+body{font-family: Arial, Helvetica, sans-serif;}
+.w1100{width:1100px;margin:0 auto;}
+.lr{float:right;}
+.lf{float:left}
+.header{padding:15px 0px;}
+.header .s{line-height: 30px;border-radius: 30px;border:1px solid #ccc;padding:3px 10px;margin-top:10px;}
+.logo{width:300px;}
+.logo img{height:70px;}
+.nav{background:red;height:60px;line-height: 60px;}
+.menu ul li a{width:110px; height: 50px;display: block;text-align:center;font-size:16px;float:left;line-height:60px;color:#fff;padding:0px 20px;}
+.menu ul li a:hover,.menu ul li a.on{color:#FFFFFF;background:crimson}
+
+
+.c-banner{width:100%;position:relative}
+.c-banner img{width:100%}
+.c-banner .banner ul{list-style:none;padding-left:0px;margin-bottom:0px}
+.c-banner .banner ul li{position:absolutedisplay:none;opacity:0}
+.c-banner .banner ul li:nth-child(1){opacity:1;display:block}
+.c-banner .banner ul li img{width:100%;position:absolute;top:0px}
+.c-banner .banner ul li:first-child img{position:relative}
+.c-banner .jumpBtn{width:100%;position:absolute;bottom:20px;text-align:center}
+.c-banner .jumpBtn ul{margin-bottom:0px;padding:0px}
+.c-banner .jumpBtn ul li{width:10px;height:10px;border-radius:50%;display:inline-block;background-color:white;opacity:0.9;margin-left:10px}
+.c-banner .jumpBtn ul li:first-child{margin-left:0px}
+
+
+.about{margin:0px auto;margin-top:150px;margin-bottom:80px;background: red;position: relative;}
+.about h2{font-size:30px;font-weight: 500;line-height: 50px;color:#fff;text-align: center;}
+.box01{width:570px;padding: 15px;}
+.box02{width:500px;margin-top:20px;position: absolute;top:-80px;right:-20px;}
+.box02 img{width: 100%;border: 5px solid #fff;}
+.box01 h3{line-height: 40px;font-size:20px;color:#fff;}
+.box01 p{margin-bottom: 10px;line-height: 30px;font-size:16px;text-indent:2rem;color:#fff}
+
+
+.jd{background:#f3f4f9;padding:40px 0px;}
+.dg h2,.jd h2{text-align: center;font-size:32px;font-weight: 500;line-height: 50px;padding-bottom: 40px}
+.jdlist ul{display:flex;}
+.jdlist ul li{margin:15px;}
+.jdlist ul li img{width: 100%;}
+.jdlist ul li p{text-align: center;background:#fff;line-height: 32px;}
+
+
+.list ul{display:flex;}
+.list ul li{margin:15px;}
+.list ul li img{width: 100%;}
+.list ul li p{text-align: center;background:#fff;line-height: 32px;}
+
+
+.con{padding:30px 0px;}
+.con p{margin-bottom: 10px;line-height: 30px;font-size:16px;text-indent:2rem;color:#666}
+.con h3{color:#6e2e0a;text-align: center;line-height: 50px;}
+
+
+
+.zanyu{background:#296f6f url(../images/bg01.jpg) no-repeat center center;padding: 60px 0;position: relative;background-repeat: no-repeat;background-position: center;background-size: cover;background-attachment: fixed;}
+.zanyu h2{line-height: 60px;font-size:40px;font-weight: 500;text-align: center;padding-bottom: 30px;color:#fff}
+.zanyu h3{line-height: 50px;text-align: center;color:#fff;font-size:22px;font-weight: 500;}
+.zanyu p{font-size:16px;padding:20px 0px;text-align: center;color:#fff;line-height: 32px;}
+
+.footer{background:wheat;color:black;padding:40px 0px;}
+.footer p{line-height: 32px;}
+.flogo{border-radius: 50%}
+
+
+.nbanner{background:url(../images/bg.jpg) center center no-repeat;background-size: cover;margin-top:10px;}
+.nbanner h2,.jdbanner h2,.wcbanner h2{padding:150px 0px;text-align: center;color:#fff;font-size:36px;}
+.jdbanner{background:url(../images/bg01.jpg) center center no-repeat;background-size: cover;margin-top:10px;margin-bottom: 10px;}
+.wcbanner{background:url(../images/bg02.jpg) center center no-repeat;background-size: cover;margin-top:10px;margin-bottom: 10px;}
+.h30{height:30px;}
+
+
+.tc{padding:40px 0px;}
+.tclist{display: block;}
+.tclist li{width: 100%; padding:20px 10px;box-sizing: border-box; margin-left: 0; border-bottom: 1px solid #d8d8d8;transition: all 0.6s;display: flex;justify-content: space-between; }
+.tclist li h2{color: #333333;  margin-bottom: 20px;}
+.tclist li P{color: #666666;}
+.tclist li .text{width: 73%; flex: 1; padding: 0 2vw; box-sizing: border-box;}
+.tclist li .img{width: 27%; }
+.tclist li .img img{display: block; width: 100%; height: 100%; object-fit: cover;}
+
+
+.liuyan{margin:0 auto;width:460px}
+.item input{margin-bottom:15px;line-height: 32px;padding:2px 5px;width:450px;border:1px solid #ccc;}
+.item  .btn{background:#225a5b;color:#fff;width:200px;mrgin:0 auto;text-align: center;}
+
+

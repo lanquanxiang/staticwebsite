@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+}
+
+p {
+    cursor: text;
+}
+
+a {
+    cursor: pointer;
+}
+
+body{
+	padding: 0px;
+	padding-bottom: 0px;
+}

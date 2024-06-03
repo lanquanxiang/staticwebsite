@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>历史长廊</title>
+		<style scoped>
+			/* body {
+			    background: radial-gradient(220% 105% at top center, #fa8686, #ffb9b9, #ffb9b9, #fa8686);
+			    background-attachment: fixed;
+			} */
+			.tou {
+				color: lightyellow;
+				text-align: center;
+				/* 文字居中 */
+				font-size: 22px;
+				/* 初始字体大小 */
+				animation: fontSizeIncrease 2s ease-in-out forwards;
+				/* 动画持续2秒，缓入缓出，动画结束后保持最终状态 */
+			}
+
+			@keyframes fontSizeIncrease {
+				0% {
+					font-size: 22px;
+					/* 初始字体大小 */
+				}
+
+				100% {
+					font-size: 66px;
+					/* 最终字体大小 */
+				}
+			}
+
+			body {
+				background: url("img/timeback.jpg") no-repeat center center fixed;
+				-webkit-background-size: cover;
+				background-size: cover;
+				padding-top: 10px;
+			}
+
+			.outerBox {
+				/* 竖线样式 高度根据事件的多少调整*/
+				width: 5px;
+				height: 3500px;
+				background: white;
+				margin: 40px auto;
+				position: relative;
+				-webkit-animation: heightSlide 2s linear;
+			}
+
+			@-webkit-keyframes heightSlide {
+
+				/* 竖线的动画效果：以百分比来规定改变发生的时间，0% 是动画的开始时间，100% 动画的结束时间 */
+				0% {
+					height: 0;
+				}
+
+				100% {
+					height: 900px;
+				}
+			}
+
+			.outerBox:after {
+				/* 竖线末尾文字样式 */
+				content: "未完待续";
+				width: 100px;
+				color: white;
+				position: absolute;
+				margin-left: -48px;
+				text-align: center;
+				bottom: -30px;
+				-webkit-animation: showIn 5.5s ease;
+			}
+
+			.outerBox .dateBox,
+			.outerBox .dateLeftBox {
+				/* 球球的样式 */
+				position: absolute;
+				margin-left: -4px;
+				margin-top: -10px;
+				width: 13px;
+				height: 13px;
+				border-radius: 50%;
+				border: 4px solid white;
+				background: gray;
+				-webkit-transition: all 0.5s;
+				-webkit-animation: showIn ease;
+			}
+
+			.outerBox .dateBox:nth-child(1) {
+				/* 第一个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 1s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(2) {
+				/* 第二个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 1.5s;
+			}
+
+			.outerBox .dateBox:nth-child(3) {
+				/* 第三个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 2s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(4) {
+				/* 第四个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 2.5s;
+			}
+
+			.outerBox .dateBox:nth-child(5) {
+				/* 第五个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 3s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(6) {
+				/* 第六个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 3.5s;
+			}
+
+			.outerBox .dateBox:nth-child(7) {
+				/* 第七个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 4s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(8) {
+				/* 第八个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 4.5s;
+			}
+
+			.outerBox .dateBox:nth-child(9) {
+				/* 第九个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 5s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(10) {
+				/* 第十个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 5.5s;
+			}
+
+			.outerBox .dateBox:nth-child(11) {
+				/* 第十一个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 6s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(12) {
+				/* 第十二个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 6.5s;
+			}
+
+			.outerBox .dateBox:nth-child(13) {
+				/* 第十三个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 7s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(14) {
+				/* 第十四个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 7.5s;
+			}
+
+			.outerBox .dateBox:nth-child(15) {
+				/* 第十五个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 8s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(16) {
+				/* 第十六个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 8.5s;
+			}
+
+			.outerBox .dateBox:nth-child(17) {
+				/* 第十七个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 9s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(18) {
+				/* 第十八个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 9.5s;
+			}
+
+			.outerBox .dateBox:nth-child(19) {
+				/* 第十九个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 10s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(20) {
+				/* 第二十个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 10.5s;
+			}
+
+			.outerBox .dateBox:nth-child(21) {
+				/* 第二一个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 11s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(22) {
+				/* 第二二个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 11.5s;
+			}
+
+			.outerBox .dateBox:nth-child(23) {
+				/* 第二三个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 12s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(24) {
+				/* 第二四个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 12.5s;
+			}
+
+			.outerBox .dateBox:nth-child(25) {
+				/* 第二五个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 13s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(26) {
+				/* 第二六个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 13.5s;
+			}
+
+			.outerBox .dateBox:nth-child(27) {
+				/* 第二七个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 14s;
+			}
+
+			.outerBox .dateLeftBox:nth-child(28) {
+				/* 第二八个事件 设置动画在几秒内完成 */
+				-webkit-animation-duration: 14.5s;
+			}
+
+			@-webkit-keyframes showIn {
+
+				/* 球球、竖线、左右的模块的动画 */
+				0%,
+				70% {
+					opacity: 0;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
+
+			.outerBox .dateBox h2,
+			.outerBox .dateLeftBox h2 {
+				/* 日期的样式 */
+				background: white;
+				position: absolute;
+				margin-left: -200px;
+				margin-top: 25px;
+				color: black;
+				font-size: 22px;
+				cursor: pointer;
+				/* -webkit-animation: showIn 3s ease; */
+			}
+
+			.outerBox .dateLeftBox h2 {
+				/* 右边日期的样式 */
+				margin-left: 60px;
+				width: 135px;
+			}
+
+			.outerBox .dateBox:hover,
+			.outerBox .dateLeftBox:hover {
+				/* 触摸事件后球球的样式 */
+				border: 4px solid firebrick;
+				background: white;
+				box-shadow: 0 0 2px 2px white;
+			}
+
+			.outerBox .dateBox div,
+			.outerBox .dateLeftBox div {
+				/* 左右事件的样式 */
+				background: white;
+				position: absolute;
+				top: 50%;
+				margin-top: -10px;
+				left: 50px;
+				width: 300px;
+				height: 50px;
+				border: 2px solid rgb(84, 84, 85);
+				border-radius: 6px;
+				z-index: 2;
+				overflow: hidden;
+				cursor: pointer;
+				/* -webkit-animation: showIn 5s ease; */
+				-webkit-transition: all 0.5s;
+			}
+
+			.outerBox .dateLeftBox div {
+				/* 左边事件的样式 */
+				left: -337px;
+			}
+
+			.outerBox .dateBox div:hover,
+			.outerBox .dateLeftBox div:hover {
+				/* 触摸事件后的高度 */
+				height: 135px;
+			}
+
+			.outerBox .dateBox div p,
+			.outerBox .dateLeftBox div p {
+				/* 左右事件的字体样式 */
+				color: rgb(84, 84, 85);
+				font-weight: bold;
+				text-align: center;
+			}
+
+			.outerBox .dateBox:before,
+			.outerBox .dateLeftBox:before {
+				/* 右边事件的角标样式 */
+				content: "";
+				position: absolute;
+				top: -4px;
+				left: 37px;
+				width: 0px;
+				height: 0px;
+				border: 7px solid transparent;
+				border-right: 7px solid rgb(84, 84, 85);
+				z-index: -1;
+				-webkit-animation: showIn 5s ease;
+			}
+
+			.outerBox .dateLeftBox:before {
+				/* 左边事件的角标样式 */
+				left: -38px;
+				border: 7px solid transparent;
+				border-left: 7px solid rgb(84, 84, 85);
+			}
+
+			.outerBox .dateBox div ul,
+			.outerBox .dateLeftBox div ul {
+				/* 左右事件触摸展开后内容的样式 */
+				list-style: none;
+				width: 300px;
+				padding: 4px;
+				border-top: 2px solid rgb(84, 84, 85);
+				color: rgb(84, 84, 85);
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tou">五四运动事件及其时间节点</div>
+		<div>
+			<!-- 最外层的盒子 -->
+			<div class="outerBox">
+				<!-- 第一大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox">
+					<h2>1919/03/06</h2>
+					<div>
+						<p>梁启超致电北京政府总统外交委员会</p>
+						<ul>梁启超致电北京政府总统外交委员会委员长、事务长报告他从和会上获知的段祺瑞与日本借款和山东问题。</ul>
+					</div>
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 120px;">
+					<h2>1919/04/24</h2>
+					<div>
+						<p>梁启超致电国民外交协会</p>
+						<ul>梁启超致电国民外交协会，发布归还青岛通电。</ul>
+					</div>
+				</div>
+
+				<!-- 第二大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 240px;">
+					<h2>1919/04/29</h2>
+					<div>
+						<p>巴黎和会代表参加会议</p>
+						<ul>巴黎和会代表参加会议，凡尔赛合约关于山东问题条款【第156、157、158条】，德国在山东权益让与日本。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 360px;">
+					<h2>1919/05/01</h2>
+					<div>
+						<p>陆征祥电告北京政府</p>
+						<ul>中国谈判代表、外交总长陆征祥将此事电告北京政府，并称如不签约，则对撤废领事裁判权、取消庚子赔款、关税自主及赔偿损失等等有所不利。</ul>
+					</div>
+				</div>
+
+				<!-- 第三大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 480px;">
+					<h2>1919/05/02</h2>
+					<div>
+						<p>林长民发文</p>
+						<ul>北京政府密电中国代表可以签约。外交委员会事务长、国民外交协会理事林长民在《晨报》、《国民公报》撰文：“山东亡矣，国将不国矣，愿合四万万众誓死图之。”</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 600px;">
+					<h2>1919/05/03</h2>
+					<div>
+						<p>学生决定4日在天安门示威游行</p>
+						<ul>蔡元培将外交失败转报学生。当晚北大学生在北河沿北大法科礼堂召开学生大会，并约请北京13所中等以上学校代表参加，大会决定于4日（星期天）天安门举行示威游行。</ul>
+					</div>
+				</div>
+
+				<!-- 第四大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 720px;">
+					<h2>1919/05/04</h2>
+					<div>
+						<p>大规模游行</p>
+						<ul>北京学生3000育人汇集天安门，队伍向使馆区出发，学生代表求会见四国公使，仅美国使馆人员同意接受了学生的陈词书。随后发生学生大规模游行。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 840px;">
+					<h2>1919/05/05</h2>
+					<div>
+						<p>罢课，被捕，返校</p>
+						<ul>北京各大专学校总罢课。清华学生宣布“从今日起与各学校一致行动”。蔡元培为首的校长团斡旋，被捕学生返校，学生复课。</ul>
+					</div>
+				</div>
+
+				<!-- 第五大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 960px;">
+					<h2>1919/05/07</h2>
+					<div>
+						<p>上海60多个团体举行国民大会</p>
+						<ul>上海60多个团体举行国民大会。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 1080px;">
+					<h2>1919/05/09</h2>
+					<div>
+						<p>蔡元培出走、上海各学校全部罢课</p>
+						<ul>蔡元培出走。上海各学校全部罢课。</ul>
+					</div>
+				</div>
+
+				<!-- 第六大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 1200px;">
+					<h2>1919/05/11</h2>
+					<div>
+						<p>上海学生联合会成立、北京各大专学校教职联合会成立</p>
+						<ul>上海学生联合会成立。北京各大专学校教职联合会成立。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 1320px;">
+					<h2>1919/05/13</h2>
+					<div>
+						<p>北京各大专校长递交辞呈</p>
+						<ul>北京各大专校长递交辞呈。</ul>
+					</div>
+				</div>
+
+				<!-- 第七大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top:1440px;">
+					<h2>1919/05/19</h2>
+					<div>
+						<p>学生再次总罢课，开展爱国活动</p>
+						<ul>北京25000名学生再次总罢课，之后开展演讲、抵制日货、发行爱国日刊等活动，组织“护鲁义勇队。”</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 1560px;">
+					<h2>1919/06/01</h2>
+					<div>
+						<p>政府查禁联合会</p>
+						<ul>政府查禁联合会。</ul>
+					</div>
+				</div>
+
+				<!-- 第八大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 1680px;">
+					<h2>1919/06/03</h2>
+					<div>
+						<p>170多名学生被捕</p>
+						<ul>北京学生因政府为曹汝霖、章宗祥、陆宗舆辩护，举行大规模街头演讲，当日170多名学生被捕。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 1800px;">
+					<h2>1919/06/04</h2>
+					<div>
+						<p>700多名学生被捕</p>
+						<ul>北京学生出动比昨日多一倍的人数上街演讲，当日700多名学生被捕。</ul>
+					</div>
+				</div>
+
+				<!-- 第九大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 1920px;">
+					<h2>1919/06/05</h2>
+					<div>
+						<p>学生获释</p>
+						<ul>全国各大城市罢课、罢工、罢市，声援北京学生的爱国行动。被监禁的学生获释。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 2040px;">
+					<h2>1919/06/06</h2>
+					<div>
+						<p>罢工规模扩大</p>
+						<ul>罢工规模扩大。</ul>
+					</div>
+				</div>
+
+				<!-- 第十大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 2160px;">
+					<h2>1919/06/09</h2>
+					<div>
+						<p>南京路工人示威</p>
+						<ul>南京路工人示威。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 2280px;">
+					<h2>1919/06/10</h2>
+					<div>
+						<p>北京政府撤销曹、章、陆等职务</p>
+						<ul>北京政府撤销曹、章、陆等职务。</ul>
+					</div>
+				</div>
+
+				<!-- 第十一大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 2400px;">
+					<h2>1919/06/11</h2>
+					<div>
+						<p>徐世昌总统咨参众两院请职，未被接受</p>
+						<ul>徐世昌总统咨参众两院请求辞职，未被接受。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 2520px;">
+					<h2>1919/06/12</h2>
+					<div>
+						<p>商人开市、钱能训内阁全体请辞</p>
+						<ul>商人开市。钱能训内阁全体请辞。</ul>
+					</div>
+				</div>
+
+				<!-- 第十二大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 2640px;">
+					<h2>1919/06/13</h2>
+					<div>
+						<p>特任龚心湛蓝兼代内阁总理</p>
+						<ul>准钱能训辞职，特任龚心湛蓝兼代内阁总理。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 2760px;">
+					<h2>1919/0617</h2>
+					<div>
+						<p>北京政府致电专使在合约上签字</p>
+						<ul>北京政府致电专使在合约上签字。</ul>
+					</div>
+				</div>
+
+				<!-- 第十三大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top: 2880px;">
+					<h2>1919/06/22</h2>
+					<div>
+						<p>国务院通电全国，徐世昌总统打消辞意</p>
+						<ul>国务院通电全国，徐世昌总统打消辞意。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 3000px;">
+					<h2>1919/06/23</h2>
+					<div>
+						<p>陆征祥从缓签字</p>
+						<ul>徐世昌会见山东各代表，表示政府已电令中国全权代表陆征祥从缓签字。</ul>
+					</div>
+				</div>
+
+				<!-- 第十四大块 -->
+				<!-- 左边整体的内容 -->
+				<div class="dateBox" style="top:3120px;">
+					<h2>1919/06/27</h2>
+					<div>
+						<p>京津学生，留日留美学生请愿</p>
+						<ul>京津学生，留日留美学生请愿。</ul>
+					</div>
+
+				</div>
+				<!-- 右边整体的内容 -->
+				<div class="dateLeftBox" style="top: 3240px;">
+					<h2>1919/06/28</h2>
+					<div>
+						<p>决绝合约签字</p>
+						<ul>原定签约之日，中国代表团驻地被留学生包围，代表团发表声明，拒绝在合约上签字。</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			export default {};
+		</script>
+
+
+	</body>
+</html>

@@ -1,0 +1,123 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+#messageBoard {
+	width: 650px;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+
+}
+
+#messages {
+	margin-bottom: 20px;
+}
+
+#messages p {
+	margin: 10px 0;
+}
+
+#messages span {
+	font-weight: bold;
+}
+
+#messageForm input,
+#messageForm textarea {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-radius: 10px;
+	border: #000000 1px solid;
+}
+
+#messageForm button {
+	padding: 5px 10px;
+	cursor: pointer;
+	background-color: #EADDCA;
+	border: 1px #000000 solid;
+	border-radius: 10px;
+}
+
+.shell1 {
+	position: relative;
+	min-width: 1000px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	transform-style: preserve-3d;
+	perspective: 900px;
+}
+
+.shell1 .boxxx {
+	position: relative;
+	width: 180px;
+	height: 350px;
+	margin: 15px;
+	transition: .3s;
+	overflow: 30px;
+	transform: rotateY(0);
+	transition-delay: .1s;
+	border-radius: 5px;
+	border: #FFFFFF 5px solid;
+}
+
+.shell1 .boxxx .images1 img {
+	width: 100%;
+}
+
+.shell1:hover .boxxx {
+	transform: rotateY(20deg);
+}
+
+.shell1 .boxxx:hover {
+	transform: rotateY(0deg) scale(1.25);
+	box-shadow: 0 25px 40px rgba(0, 0, 0, .7);
+	z-index: 1;
+}
+
+.shell1 .boxxx:hover~.boxxx {
+	transform: rotateY(-20deg);
+}
+
+.shell1 .boxxx .container1 {
+	position: absolute;
+	top: 0;
+	width: 90%;
+	height: 90%;
+	padding: 15px;
+}
+
+.shell1 .boxxx .container1 h2 {
+	color: black;
+	transition: .3s;
+	font-size: 20px;
+	transform: translateY(-50px);
+	display: none;
+}
+
+.shell1 .boxxx:hover .container1 h2 {
+	transform: translateY(-15px);
+	display: inline-block;
+}
+
+.shell1 .boxxx .container1 .puls {
+	color: #000000;
+	transition: .3s;
+	font-size: 14px;
+	transform: translateY(400px);
+	background-color: rgba(255, 255, 255, .7);
+}
+
+.shell1 .boxxx:hover .container1 .puls {
+	transform: translateY(150px);
+}

@@ -1,0 +1,86 @@
+/*主体样式开始*/
+main .p2{
+    left: 610px;
+}
+/*活动资讯导航栏*/
+main .tab_box{
+    width: 1100px; 
+    margin: 0px auto; 
+    font-family: "仿宋";
+    position: relative;
+    top: -50px;
+}
+/*活动资讯列表*/
+main .tab_box ul{
+    margin: 0 auto;
+    height: 38px;
+}
+main .tab_box ul li{
+    text-align: center;
+    font-size: 20px;
+    width: 160px;
+}
+main .tab_box ul li:nth-child(1){
+    margin-left: 310px;
+}
+main .link{
+    float: left;
+    height: 50px; 
+    font-size: 14px; 
+    line-height: 50px; 
+    cursor: pointer;
+    top: 2px;
+}
+main .hover{/*活动资讯导航栏悬停*/
+    float: left; 
+    height: 50px; 
+    font-size: 14px; 
+    line-height: 50px; 
+    cursor: pointer; 
+    font-weight: bold;
+    background: url(../img/边框9.jpg) no-repeat center center/100% 50px;
+}
+main .box{/*活动资讯内容*/
+    width: 1100px;
+    height: 600px; 
+    margin-top: 40px;
+    position: relative; 
+}
+main .box ul{
+    width: 100%;
+}
+
+main .box ul li:nth-child(1){
+    margin-left: 0px;
+}
+ main .box ul li{
+     width: 1060px;
+     height: 50px; 
+     line-height: 50px;
+     font-size: 16px;
+     text-align: left;
+     position: relative; 
+     border-bottom: 1px solid #ccc;
+ }
+main .box ul li:hover{
+    color: red;
+    cursor: pointer;
+}
+main .box ul li span{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    position: absolute;
+    left: 960px;
+    color: #ccc;
+}
+main .content{
+    width: 800px;
+    padding: 15px 0 0 20px; 
+    line-height: 24px; 
+    display: none;
+}
+footer{
+    top: 1480px;
+	  border-bottom: 2px solid #59aca2;
+}
